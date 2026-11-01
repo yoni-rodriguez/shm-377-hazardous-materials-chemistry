@@ -12,6 +12,12 @@ format:
     self-contained-math: true
     html-math-method: katex
     lightbox: auto
+  pdf:
+    toc: true
+    documentclass: scrartcl
+    geometry:
+      - margin=0.75in
+    fontsize: 11pt
 editor: visual
 execute:
   echo: false
@@ -21,358 +27,894 @@ execute:
 
 ```{=html}
 <style>
-/* SHM 377 Lecture 04: adapted from Lecture 03 */
-body { color: #212529; }
-blockquote { color: #212529; font-size: inherit; font-style: normal; }
-.callout { margin: 1.25rem 0; }
-.evidence-callout { background: #f2f3f5; border-left: 4px solid #737980; border-radius: 4px; padding: 0.8rem 1rem; margin: 1.25rem 0; }
-.evidence-callout h2 { font-size: 1.05rem; margin-top: 0; }
-.table-responsive { overflow-x: auto; }
-.katex-display { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 0.5rem 0; -webkit-overflow-scrolling: touch; }
-@media (max-width: 768px) { img { max-width: 100%; height: auto; } p, li, figcaption { overflow-wrap: anywhere; } .katex-display > .katex { font-size: 0.9em; } }
+/* =========================================================
+   SHM 377 Lecture Styling
+   ========================================================= */
+
+body {
+  color: #212529;
+}
+
+blockquote {
+  color: #212529;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: normal;
+}
+
+blockquote strong {
+  color: #212529;
+}
+
+.text-center {
+  color: #212529;
+}
+
+/* =========================================================
+   Lecture Cover
+   ========================================================= */
+
+.cover-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cover-image p {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   Scientific Evidence Callout
+   Compact formatting
+   ========================================================= */
+
+.evidence-callout {
+  background-color: #f2f3f5;
+  border-left: 3px solid #737980;
+  border-radius: 4px;
+  padding: 0.55rem 0.75rem;
+  margin: 0.5rem 0 0;
+  color: #212529;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.evidence-callout h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  color: #343a40;
+}
+
+.evidence-callout p {
+  margin: 0 0 0.45rem;
+}
+
+.evidence-callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   Chemical and Nuclear Equations
+   Responsive KaTeX display
+   ========================================================= */
+
+.katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+  margin: 1rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.katex-display > .katex {
+  white-space: nowrap;
+}
+
+/* =========================================================
+   Mobile Responsiveness
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Stack lecture cover columns vertically */
+
+  .columns {
+    display: block !important;
+  }
+
+  .columns > .column {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .columns > .column:empty {
+    display: none !important;
+  }
+
+  /* Scale images to mobile screen width */
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .cover-image img {
+    height: auto;
+  }
+
+  /* Prevent long text from overflowing */
+
+  p, li, figcaption {
+    overflow-wrap: anywhere;
+  }
+
+  /* Slightly reduce equation size on mobile */
+
+  .katex-display > .katex {
+    font-size: 0.9em;
+  }
+}
+
 </style>
 ```
 
-# Introduction: From Solids to Radiation
+::::::: {.columns style="align-items: flex-start;"}
+:::: {.column width="46%"}
+::: cover-image
+![The sun emits a significant solar flare on December 19, 2014, as observed by NASA's Solar Dynamics Observatory. Source: [TIME (2014)](https://time.com/3644785/space-most-beautiful-photos-2014/). Image credit: SDO/NASA.](sun-emits-solar-flare-12-19-2014.jpg){fig-alt="NASA Solar Dynamics Observatory image showing a significant solar flare erupting from the Sun on December 19, 2014"}
+:::
+::::
 
-In Lecture 03, we examined how the physical form of a solid can change the hazards associated with that material. A solid object may present a different exposure problem than the same material dispersed into small airborne particles. We also considered how chemical reactions can change materials and create new hazards.
-
-We now extend that reasoning. **How do the properties of a material help us anticipate what it will do, where it will travel, and how it may affect people?** Some solids can burn or explode when dispersed as dust. Others contain unstable atoms that release ionizing radiation as they decay. These hazards require different ways of thinking about exposure.
-
-::: callout-note
-## Our reasoning framework
-
-We are not trying to memorize every hazardous substance. We are learning to **think like chemists**: identify what we can observe or measure, use that evidence to reason about material behavior, and explain the implications for hazardous-materials management.
+::: {.column width="4%"}
 :::
 
-## Learning objectives
+::: {.column width="50%"}
+## SHM 377: Hazardous Materials Management
+
+### Chemistry of Hazardous Materials: Solids and Radiation
+
+**Lecture 04 · Fall 2026**
+
+Yoni Rodriguez\
+Engineering Technologies, Safety, and Construction\
+Central Washington University\
+[Yoni.Rodriguez\@cwu.edu](mailto:Yoni.Rodriguez@cwu.edu)
+:::
+:::::::
+
+------------------------------------------------------------------------
+
+# Introduction: From Atomic Structure to Nuclear Chemistry and Radiation
+
+In Lecture 02, *Chemistry of Hazardous Materials: Matter*, we introduced the fundamental principles of chemistry and explored how scientists use observations and experimental evidence to understand the composition and behavior of matter. We examined how John Dalton developed his atomic theory without being able to observe individual atoms directly, demonstrating how scientific reasoning allows us to explain and predict the behavior of materials.
+
+In Lecture 03, *Chemistry of Hazardous Materials: Solids*, we applied these principles to understand how atomic arrangements, chemical bonding, and the physical and chemical properties of solids influence their behavior and associated hazards.
+
+In this lecture, we will return to the atom and examine how scientists discovered the structure of atoms and their smaller subatomic particles. Through the experimental work of scientists such as J. J. Thomson, Henri Becquerel, Ernest Rutherford, and James Chadwick, we will explore how our understanding of atomic structure developed and how these discoveries contributed to the field of nuclear chemistry.
+
+We will then examine the structure of the atomic nucleus, the differences between isotopes, and the forces that determine nuclear stability. These principles will help us understand why certain nuclei are unstable, how radioactive decay occurs, and why different forms of ionizing radiation are emitted.
+
+Finally, we will apply these chemical principles to hazardous materials management by examining how ionizing radiation interacts with matter, how radiation exposure can affect human health, and how the principles of health physics guide radiation protection and emergency response.
+
+As in our previous chemistry lectures, **our objective is not simply to memorize scientific terminology or equations, but to use scientific evidence to understand hazardous materials, predict their behavior, and make informed decisions that protect workers, the public, and the environment.**
+
+## Learning Objectives
 
 By the end of this lecture, students should be able to:
 
-1.  Distinguish physical properties from chemical properties and explain why both matter during an incident.
-2.  Describe how solid materials can create hazards through contact, ingestion, or airborne dust.
-3.  Explain how physical state, temperature, and related properties influence material behavior.
-4.  Distinguish radioactivity from radiation and explain the meaning of radioactive decay.
-5.  Compare alpha, beta, gamma, and neutron radiation in terms of exposure concerns and penetration.
-6.  Distinguish radiation exposure, radioactive contamination, activity, and instrument count rate.
-7.  Interpret radiation dose rate and use half-life to reason about changes in radioactive activity over time.
+1.  **Explain the development of the atomic model** using experimental evidence from the discovery of subatomic particles, radioactivity, and the atomic nucleus.
 
-# 1. Describing Hazardous Materials
+2.  **Describe atomic and nuclear structure**, including the properties of protons, neutrons, and electrons, and distinguish between atomic number, mass number, and isotopes.
 
-## Physical properties versus chemical properties
+3.  **Explain nuclear stability** by examining the strong nuclear interaction, electrostatic repulsion, and the relationship between neutrons and protons.
 
-A **chemical property** describes a material's tendency to undergo chemical change. Reactivity, flammability, and heat released during combustion are examples. These properties help us anticipate what may happen when a substance reacts with another material or encounters an ignition source.
+4.  **Describe radioactive decay** and explain how unstable nuclei undergo nuclear transformations, producing daughter nuclei and releasing particles or energy.
 
-A **physical property** describes characteristics we can observe or measure without changing the chemical identity of the substance. Examples include physical state, vapor pressure, specific gravity, boiling point, solubility, and viscosity.
+5.  **Distinguish between the major types of ionizing radiation**, including alpha particles, beta particles, gamma rays, and neutron radiation, based on their origins, physical properties, and interactions with matter.
 
-These categories answer different questions. A chemical property helps us ask, *What could this material become or do during a reaction?* A physical property helps us ask, *How might this material behave in its container or after release?*
+6.  **Interpret fundamental concepts of radioactivity**, including nuclear equations, radioactive decay series, half-life, and activity.
 
-## The vocabulary of chemical behavior
+7.  **Explain the biological effects of ionizing radiation**, including how energy deposited in biological tissues can cause cellular damage and influence health outcomes.
 
-Before moving into radiation, recall several terms from our earlier lectures:
+8.  **Apply fundamental radiation protection principles**, including time, distance, shielding, and contamination control, to evaluate radiation hazards and identify appropriate protective measures during hazardous materials incidents.
 
-| Term | Meaning in this lecture |
-|:---|:---|
-| **Atom** | Basic building block of an element. |
-| **Element** | Pure substance identified by the kind of atoms it contains. |
-| **Compound** | Substance formed by chemically bonded atoms of different elements. |
-| **Mixture** | Two or more substances physically combined while retaining their chemical identities. |
-| **Solution** | Homogeneous mixture with dissolved material distributed through a solvent. |
-| **Ion** | Atom or group of atoms carrying a net electrical charge. |
-| **Chemical change** | Process that produces substances with different chemical identities. |
-| **Endothermic process** | Process that absorbs heat from its surroundings. |
-| **Exothermic process** | Process that releases heat to its surroundings. |
+# Part I. Atoms and the Periodic Table
 
-::: callout-note
-## Connect to Lecture 03
+*Primary source: Chemistry: Atoms First, 2nd ed., Chapter 2*
 
-A change in physical form is not necessarily a chemical reaction. Melting changes a solid into a liquid; combustion produces different substances. Why would that distinction matter when deciding how to manage an incident?
-:::
+![Periodic Table of the Elements.](periodic-table.jpg){#fig-periodic-table fig-alt="Periodic table showing the chemical elements organized by increasing atomic number, with elements arranged into periods and groups" width="100%"}
 
-# 2. What Makes a Solid Hazardous?
+## 4.1 Atoms First
 
-## Normal physical state and routes of exposure
+Let's review two fundamental concepts from our previous chemistry lectures:
 
-The textbook describes a material's **normal physical state** as its form—solid, liquid, or gas—at approximately 68–77 °F (20–25 °C).
+- An **atom** is the smallest unit of an element that retains the chemical properties of that element.
+- An **element** is a substance that cannot be broken down into two or more simpler substances by chemical means.
 
-Solids commonly present contact or ingestion hazards. But that generalization has important exceptions. A finely divided solid may become airborne, creating an inhalation hazard. A combustible dust dispersed in air may also create an explosion hazard under suitable conditions.
+**Examples of elements:**
 
-Examples of combustible dusts identified in the textbook include:
+- **Potassium (K):** Metal
+- **Oxygen (O):** Nonmetal
+- **Silicon (Si):** Metalloid
 
-- Agricultural products such as flour and grain.
-- Metals such as aluminum, magnesium, and titanium.
-- Coal and sulfur dust.
+### Understanding Atoms: An Analogy
 
-A material's chemical identity matters, but so does **the size and distribution of its particles**. A bulk material and a cloud of fine particles can behave very differently.
+A useful analogy can help us visualize why an atom represents the smallest unit of an element that retains its chemical identity.
 
-## A second exception: radioactive solids
+Imagine you have a collection of CDs. You can separate the collection into smaller and smaller groups until you are left with a single CD.
 
-Some solid materials contain radioactive atoms. Their hazard cannot be evaluated from visible shape, particle size, or chemical reactivity alone. Radioactive atoms can release ionizing radiation during decay, even when the material appears unchanged.
+You could break that CD into smaller pieces, but would those pieces still be a CD?
 
-The textbook identifies naturally occurring radioactive elements such as uranium, radium, and polonium, as well as radon, a radioactive gas.
+**No.** You would have pieces of a CD that no longer function as an individual CD.
 
-::: callout-important
-## A question for the class
+Similarly, a collection of atoms can be separated into smaller groups until only one atom remains. Although an atom contains smaller particles, separating those particles would mean it no longer retains the identity of the original element.
 
-Imagine two sealed containers holding solid materials. Both look ordinary from the outside. One contains combustible dust; the other contains a radioactive source. **What different kinds of information would we need before deciding how to approach each container?**
-:::
+![Analogy comparing a collection of CDs with a collection of atoms, illustrating how each can be separated into smaller groups until only one remains.](cd-atom-anology.jpg){#fig-cd-atom-analogy fig-alt="Two parallel sequences showing four CDs reduced to two CDs and then one CD, and four atoms reduced to two atoms and then one atom" width="100%"}
 
-# 3. Physical Properties That Influence Hazard Behavior
+Remember, John Dalton? Dalton said "that atoms, of which all matter consists, are tiny, indivisible particles." However, we know that atoms are divisible and made up of smaller subatomic particles.
 
-The following properties are introduced in the textbook's discussion of chemical and physical characteristics. We will use them to connect the behavior of solids to other hazardous-material forms.
+## 4.2 Subatomic Particles and Atomic Structure
 
-## Temperature and changes of state
+### Discovery of the Electron
 
-**Temperature** affects both the hazards presented by a material and the options available to manage it. Some materials change physical state as temperature changes.
+In Lecture 02, we discussed how John Dalton proposed that atoms were tiny, indivisible particles. However, scientific discoveries in the late nineteenth century began to challenge this model.
 
-- **Melting point:** temperature at which a solid becomes a liquid under specified pressure.
-- **Boiling point:** temperature at which a liquid's vapor pressure equals the surrounding pressure.
-- **Sublimation:** transition from solid directly to gas, without passing through the liquid state.
+In 1897, the British physicist **J. J. Thomson** investigated the behavior of cathode rays produced when a high voltage was applied between two electrodes inside a vacuum tube.
 
-The textbook identifies dry ice and naphthalene as examples of materials that sublime. The rate of sublimation can increase as temperature increases.
+![J. J. Thomson and his experimental apparatus.](j-j-thomson.jpg){#fig-jj-thomson fig-alt="J. J. Thomson and his experimental apparatus used to investigate cathode rays" width="85%"}
 
-A solid can therefore produce a vapor hazard without first forming a visible pool of liquid.
+The rays traveled from the negatively charged electrode, known as the **cathode**, toward the opposite end of the tube, where they could produce a visible glow on a fluorescent screen.
 
-## Vapor pressure and volatility
+Thomson observed that the rays could be deflected by an electric field. From these observations, he concluded that cathode rays consisted of streams of negatively charged particles, which we now call **electrons**.
 
-**Vapor pressure** is the pressure exerted by vapor in equilibrium with its liquid or solid at a given temperature. In general, increasing temperature increases vapor pressure.
+Importantly, Thomson found that these particles behaved the same way regardless of the metal used to produce them. This observation led him to conclude that electrons are part of the makeup of all atoms.
 
-**Volatility** describes how readily a substance enters the vapor phase. A material with a higher vapor pressure at the same temperature generally has a greater tendency to evaporate.
+![Cathode-ray tube illustrating the deflection of an electron beam by an electric field.](cathode-ray-tube.jpg){#fig-cathode-ray-tube fig-alt="Side-view schematic of an evacuated cathode-ray tube showing the cathode, anode, magnet, positively and negatively charged deflection plates, and electron beam bending toward the positive plate" width="100%"}
 
-The textbook contrasts rapidly evaporating isopropyl alcohol with less volatile motor oil. These examples help illustrate why materials released under similar conditions do not necessarily produce the same vapor hazard.
+#### Determining the Electron's Charge and Mass
 
-## Specific gravity, solubility, and viscosity
+Thomson's discovery of the electron was not the result of a single observation. Instead, he conducted a series of experiments to investigate the physical properties of cathode rays.
 
-**Specific gravity** compares a material's density with the density of a reference substance, typically water for liquids and solids. Materials with specific gravity below 1 tend to float on water if they do not mix with it; materials above 1 tend to sink.
+By applying electric and magnetic fields, Thomson observed that cathode rays could be deflected from their original paths.
 
-**Solubility** describes how much of a substance can dissolve in a specified medium. **Miscibility** describes whether liquids mix to form a single homogeneous phase in the proportions being considered.
+When an electric field was applied, the rays were attracted toward the positively charged plate and repelled by the negatively charged plate.
 
-**Viscosity** describes resistance to flow. A low-viscosity liquid can spread readily, while a more viscous liquid resists flow.
+This provided experimental evidence that cathode rays consisted of negatively charged particles.
 
-::: callout-note
-## Predicting behavior from properties
+Thomson's experiments also demonstrated that these particles were much smaller than atoms, providing further evidence that atoms were not indivisible.
 
-Suppose a released substance is less dense than water and does not mix with it. Where would you expect the substance to accumulate? How might your prediction change if the material were miscible with water instead?
-:::
+**Scientific significance:** Thomson's discovery challenged Dalton's original atomic model and established that atoms contain smaller, negatively charged particles called electrons.
 
-# 4. What Is Radioactivity?
+### Millikan's Oil-Drop Experiment
 
-## Unstable atoms and radioactive decay
+Following Thomson's discovery of the electron, scientists understood that atoms contained negatively charged particles. However, they still did not know the magnitude of the electric charge carried by an individual electron.
 
-Everything we have discussed in this course begins with atoms. Most of the chemical reactions in our previous lectures involved the rearrangement of electrons and chemical bonds. **Radioactive decay is different:** it involves a change in an unstable atomic nucleus.
+In the early twentieth century, the American physicist **Robert Millikan**, working with his graduate student **Harvey Fletcher**, developed an ingenious experiment to investigate this question.
 
-A **radioactive material** contains atoms with unstable nuclei. As those nuclei transform, they emit radiation. This process is called **radioactive decay**.
+Their approach was to study the behavior of extremely small, electrically charged droplets of oil.
 
-**Radiation** is energy emitted or transmitted as particles or electromagnetic waves. **Radioactivity** refers specifically to spontaneous nuclear transformations of unstable atoms.
+#### How the Experiment Worked
 
-Radioactive materials occur naturally and are also used in industrial, medical, and research settings. The textbook mentions uranium, radium, radon, and polonium as examples of naturally occurring radioactive materials.
+Millikan and Fletcher introduced tiny oil droplets into a chamber containing two electrically charged metal plates.
 
-## Ionizing versus nonionizing radiation
+The droplets were affected by two opposing forces:
 
-Radiation can be divided into two broad categories:
+1.  **Gravity:** Pulled the oil droplets downward.
+2.  **Electric force:** Could push the charged droplets upward or downward, depending on their electric charge and the direction of the electric field.
 
-| Category | Distinguishing characteristic | Examples from the textbook |
-|:---|:---|:---|
-| **Nonionizing** | Does not carry enough energy per photon or particle to remove an electron from an atom through direct ionization. | Radio waves, microwaves, infrared radiation, visible light. |
-| **Ionizing** | Can remove electrons from atoms and create ions. | Alpha particles, beta particles, gamma rays, neutrons, and X-rays. |
+By adjusting the voltage between the plates, the researchers could change the electric force acting on a droplet.
 
-The ability to ionize matter matters because ionization can damage biological molecules and cells.
+For some droplets, they could adjust the electric field until the upward electric force balanced the downward pull of gravity.
 
-::: callout-note
-## A distinction worth remembering
+When these forces were balanced, the droplet remained suspended rather than rising or falling.
 
-A substance can be chemically hazardous without being radioactive. A radioactive substance can also present chemical hazards. We must consider the hazards independently rather than assuming that one description tells us everything about the material.
-:::
+![Millikan's oil-drop experiment, illustrating the apparatus and the opposing electrical and gravitational forces acting on a charged oil droplet.](robert-millikan-oil-experiment.jpg){#fig-millikan-oil-drop fig-alt="Millikan oil-drop apparatus showing oil droplets released from a sprayer between two electrically charged plates, a microscope used to observe the droplets, and opposing upward electric and downward gravitational forces acting on a selected droplet" width="85%"}
 
-# 5. Four Types of Ionizing Radiation
+#### What Did the Researchers Discover?
 
-## Alpha particles
+Millikan and Fletcher found that the charge on any particular drop was always a multiple of $-1.6022 \times 10^{-19}\ \mathrm{C}$, which they deduced was the charge on a single electron.
 
-**Alpha particles** are relatively large particles emitted from certain unstable nuclei. They have limited penetration and can be stopped by a sheet of paper or the outer dead layer of skin.
+#### Why Was This Discovery Important?
 
-This limited penetration does **not** mean that alpha-emitting materials are harmless. The textbook emphasizes that alpha radiation is especially concerning when radioactive material enters the body through inhalation or ingestion.
+Millikan and Fletcher's experiments combined with Thomson's allowed scientists to calculate the mass of an electron:
 
-## Beta particles
+$$
+m_e = \frac{\text{Charge}}{\text{Charge/Mass}} = \frac{-1.6022 \times 10^{-19}\ \cancel{\mathrm{C}}}{-1.76 \times 10^{8}\ \cancel{\mathrm{C}}/\mathrm{g}} = 9.10 \times 10^{-28}\ \mathrm{g}
+$$
 
-**Beta particles** are high-speed electrons or positrons emitted during nuclear decay. They generally penetrate farther than alpha particles and can create both external and internal exposure concerns.
+### Radioactivity
 
-The textbook identifies materials such as plastic, glass, and thin metal shielding as possible barriers, depending on the radiation energy.
+### Radioactivity
 
-## Gamma rays
+While scientists were investigating the electron, other experiments revealed that certain materials could spontaneously emit radiation.
 
-**Gamma rays** are high-energy electromagnetic radiation emitted during nuclear transitions. Their ability to penetrate materials makes them an important external exposure concern. The degree of penetration depends on photon energy and shielding material.
+In 1896, French physicist **Henri Becquerel** observed that uranium oxide left in a drawer with photographic plates darkened areas of the plates. From his observations he realized that uranium must give off some kind of "radiation." Also, this observation gave evidence that radiation could originate from within matter itself.
 
-## Neutron radiation
+![Photographic plates darkened by radiation emitted from uranium compounds during Henri Becquerel's experiments.](becquerel-photographic-plates.jpg){#fig-becquerel-photographic-plates fig-alt="Photographic plates showing darkened regions caused by radiation from uranium compounds during Becquerel's experiments" width="85%"}
 
-**Neutron radiation** consists of free neutrons. Neutrons can penetrate matter and produce secondary interactions; they are a whole-body exposure concern in settings where neutron radiation is present.
+**Marie Curie** demonstrated that the radiation emitted by uranium, which she called **radioactivity**, was independent of the chemical compound in which the uranium was found. She concluded that the source of this radiation must be the uranium atoms themselves.
 
-## Comparing the radiation types
+![Marie Curie, whose research contributed to the understanding of radioactivity and the discovery of radium and polonium.](marie-curie.jpg){#fig-marie-curie fig-alt="Historical photograph of physicist and chemist Marie Curie" width="65%"}
 
-| Radiation | Nature | Primary point for students to remember |
-|:---|:---|:---|
-| **Alpha (α)** | Particle made of two protons and two neutrons | Limited external penetration; important internal hazard. |
-| **Beta (β)** | Electron or positron | Can pose both internal and external hazards. |
-| **Gamma (γ)** | Electromagnetic radiation | Highly penetrating external exposure hazard. |
-| **Neutron** | Uncharged nuclear particle | Penetrating radiation requiring specialized assessment and shielding. |
+Together with her husband, **Pierre Curie**, she received the Nobel Prize in Physics for their research on radiation phenomena. Their investigations also contributed to the discovery of the radioactive elements **polonium** and **radium**, while thorium was also identified as radioactive.
 
-::: callout-important
-## Think about the exposure pathway
+Marie Curie later received a second Nobel Prize, this time in Chemistry, for her discovery of radium and polonium and her research on radium.
 
-Why might an alpha-emitting material be of relatively limited concern when securely contained, but much more concerning if dispersed into breathable dust? Connect your answer to our discussion of particle size in Lecture 03.
-:::
+**Key definitions:**
 
-# 6. Radiation Exposure and Measurement
+- **Radioactivity:** The spontaneous emission of radiation by atomic nuclei.
+- **Radioactive:** Having the ability to emit ionizing radiation spontaneously.
 
-## Exposure is not the same as contamination
+![Ernest Rutherford (1871–1937), physicist whose research contributed to the understanding of radioactivity and atomic structure.](ernest-rutherford.jpg){#fig-ernest-rutherford fig-alt="Historical photograph of physicist Ernest Rutherford" width="45%"}
 
-**Radiation exposure** occurs when radiation reaches a person or object. **Radioactive contamination** occurs when radioactive material is deposited on or inside a person, object, or environment.
+*Photograph source: [Rincón Educativo](https://rinconeducativo.org/en/anniversaries/august-30-1871-birth-ernest-rutherford-nobel-prize-considered-one-of-the-fathers-atomic-physics/).*
 
-A person can be exposed to radiation without becoming contaminated. Contamination, however, can continue to create exposure concerns until it is removed or the radioactive material decays.
+Radioactivity was a mystery because the structure of the atomic nucleus was still unknown. **Ernest Rutherford** took the first steps in discovering its origin when he identified three different types of electric fields on radioactive emissions:
 
-## Radiation quantities and units
+These emissions include:
 
-The textbook introduces several measurement concepts:
+- **Alpha particles (**$\alpha$): Positively charged particles.
+- **Beta particles (**$\beta$): Charged particles, including electrons emitted from the nucleus during radioactive decay.
+- **Gamma rays (**$\gamma$): High-energy electromagnetic radiation that carries no electric charge, emitted by the nuclei. 
 
-| Quantity | Unit or instrument reading | What it describes |
-|:---|:---|:---|
-| **Exposure** | Roentgen (R) | Historical unit for ionization produced in air by X-rays or gamma rays. |
-| **Absorbed dose** | Rad | Energy deposited per unit mass of material. |
-| **Dose equivalent** | Rem | Absorbed dose adjusted to account for the biological effectiveness of radiation. |
-| **Radioactive activity** | Becquerel (Bq), curie (Ci) | Number of nuclear transformations per unit time. |
-| **Instrument count rate** | Counts per minute (CPM), counts per second (CPS) | Number of detection events registered by an instrument. |
+![Separation of alpha particles, beta particles, and gamma rays in an electric field.](radiation-emission-types.jpg){#fig-radiation-emission-types fig-alt="Beta particles (red) deflect toward the positive plate, alpha particles (blue) deflect toward the negative plate, and gamma rays (green) continue straight without deflection." width="100%"}
 
-A detector's count rate is **not automatically a dose rate**. Interpretation depends on the type and energy of radiation, the detector, and its calibration.
+Because alpha and beta particles carry electric charge, their paths can be deflected by electric or magnetic fields. Gamma rays do not undergo this type of deflection because they have no electric charge.
 
-## Dose rate and time
+**What can we learn about an unknown form of radiation by observing how it responds to an electric field?**
 
-The textbook compares dose rate to a vehicle's speed and accumulated dose to distance traveled. A higher rate or longer duration increases the total accumulated dose.
+These discoveries provided additional evidence that atoms were more complex than Dalton's original model suggested.
 
-For a constant dose rate:
+### The Proton and the Nuclear Model of the Atom
 
-**Accumulated dose = dose rate × time**
+Although Thomson demonstrated that atoms contain negatively charged electrons, another question remained:
 
-For example, if a radiation field is measured at **50 mR per hour**, then an exposure lasting **30 minutes (0.5 hour)** corresponds to:
+**If atoms contain negatively charged electrons, why are atoms electrically neutral?**
 
-**50 mR/hour × 0.5 hour = 25 mR**
+Scientists reasoned that atoms must also contain positive charge to balance the negative charge of their electrons.
 
-This is a simplified exposure calculation using the same example as the textbook. Actual dose assessment depends on the quantity measured, radiation type, geometry, and instrument calibration.
+Thomson proposed a plum-pudding model in which negatively charged electrons were embedded within a region of distributed positive charge.
 
-## Background radiation and detection
+![J. J. Thomson's plum-pudding model of the atom, showing negatively charged electrons embedded within a region of distributed positive charge.](thomson-plum-pudding-model.jpg){#fig-thomson-plum-pudding fig-alt="Schematic illustration of Thomson's plum-pudding atomic model, showing negatively charged electrons embedded in a uniformly distributed positive charge" width="75%"}
 
-The textbook notes that background radiation varies with location, elevation, terrain, and building characteristics. Instruments must distinguish normal background readings from readings that may indicate a radioactive source or contamination.
+*Image source: [Khan Academy, Discovery of the Electron and Nucleus](https://www.khanacademy.org/science/cambridge-o-level-physics-cie/x0e04e0cb682fb793:nuclear-physics/x0e04e0cb682fb793:the-atom/a/discovery-of-the-electron-and-nucleus).*
 
-Instrument performance depends on factors such as radiation type and energy, detector size, construction, and detecting medium.
+However, subsequent experiments challenged this explanation.
 
-::: callout-note
-## Interpret the measurement
+#### Rutherford's Gold Foil Experiment
 
-If two instruments display different count rates near the same source, does that necessarily mean one is defective? What information about the instruments would you need before drawing a conclusion?
-:::
+**Ernest Rutherford**, working with **Hans Geiger and Ernest Marsden**, investigated how positively charged alpha particles interacted with thin metal foil.
 
-# 7. Radioactive Decay and Half-Life
+The researchers directed alpha particles toward the foil and observed their scattering using a fluorescent screen.
 
-## What does half-life mean?
+![Rutherford's gold foil experiment illustrating the predicted and observed scattering of alpha particles, including particles passing through the foil, particles experiencing deflection, and particles reversing direction.](gold-foil-experiment.jpg){#fig-gold-foil-experiment fig-alt="Diagram of Rutherford's gold foil experiment showing an alpha particle emitter, thin gold foil, zinc-sulfide detection screen, and alpha-particle trajectories. Most particles pass through with little or no deflection, some scatter at an angle, and a small number reverse direction toward the source." width="100%"}
 
-**Half-life** is the time required for the activity of a radioactive sample to fall to one-half of its initial value through radioactive decay.
+They made three important observations:
 
-Different radionuclides decay at different rates. The textbook gives examples ranging from very short-lived radionuclides to materials with half-lives lasting many years.
+1.  **Most alpha particles passed through the foil** with little or no change in direction.
+2.  **Some alpha particles were deflected** from their original paths.
+3.  **A very small number of alpha particles experienced a large repulsive force and therefore a large deflection**, making the alpha particle traveling directly toward the nucleus completely repelled and reverse in direction.
 
-The key idea is that decay occurs by a repeated fraction, **not by subtracting the same amount every time**.
+From these observations, Rutherford concluded that most of an atom consists of relatively empty space, while its positive charge and most of its mass are concentrated in a small, dense region called the **atomic nucleus**.
 
-## Following radioactive activity over time
+This became known as the **nuclear model of the atom**.
 
-The textbook presents an example of a source with an initial reading of 100 units and a half-life of 24 hours. Assuming a fixed measurement setup and a reading proportional to source activity, the pattern is:
+#### From the Nucleus to the Proton
 
-| Elapsed time | Half-lives elapsed | Remaining fraction | Reading (same units as initial) |
-|:---|---:|---:|---:|
-| Start | 0 | 100% | 100 |
-| 24 hours | 1 | 50% | 50 |
-| 48 hours | 2 | 25% | 25 |
-| 72 hours | 3 | 12.5% | 12.5 |
-| 96 hours | 4 | 6.25% | 6.25 |
-| 120 hours | 5 | 3.125% | 3.125 |
-| 144 hours | 6 | 1.5625% | 1.5625 |
-| 168 hours | 7 | 0.78125% | 0.78125 |
+The positive charge of the nucleus is associated with particles called **protons**.
 
-After seven half-lives, less than 1% of the original activity remains. After ten half-lives, approximately 0.1% remains.
+A proton carries a positive electric charge equal in magnitude to the negative charge of an electron.
 
-For reference, the general relationship is:
+In an electrically neutral atom, the number of protons equals the number of electrons.
 
-**Remaining activity = initial activity × (1/2)\^(elapsed time ÷ half-life)**
+For example, an aluminum atom has an atomic number of 13. This means its nucleus contains 13 protons. A neutral aluminum atom also contains 13 electrons.
 
-This relationship describes radioactive decay; it does not account for changes in detector position, shielding, background radiation, or contamination movement.
+**Scientific significance:** Rutherford's scattering experiment demonstrated that an atom's positive charge is concentrated in a small nucleus rather than distributed uniformly throughout the atom.
 
-## Why does half-life matter during an incident?
+### The Neutron
 
-The textbook discusses how half-life can inform decisions about contaminated equipment and the recovery phase of a radiological incident. For some short-lived radionuclides, securely isolating material while it decays may be a consideration. For longer-lived radionuclides, contamination can remain a concern for extended periods.
+Although Rutherford's nuclear model explained the concentration of positive charge within the nucleus, protons and electrons alone could not account for the mass of many atoms.
 
-The textbook also cites Chernobyl (1986) and Fukushima Daiichi (2011) as examples of incidents with long-term recovery implications.
+- It was known that hydrogen, the simplest atom, contained only one proton.
+- It was also known that the helium atom contained two protons.
+- Therefore, the ratio of the mass of a helium atom to that of a hydrogen atom should be 2:1 (because electrons are much lighter than protons).
+- In reality, the mass ratio was approximately 4:1.
 
-::: callout-important
-## Reason through the evidence
+This led Rutherford and others to think that there must be another type of subatomic particle in the atomic nucleus.
 
-Two radioactive materials have identical measured activity today. One has a half-life of one day; the other has a half-life of many years. **Will their activities change at the same rate over the next week?** Explain your answer using the concept of half-life.
-:::
+In 1932, British physicist **James Chadwick** bombarded a thin sheet of beryllium with alpha particles. A very high-energy radiation was emitted by the metal that was not deflected by either electric or magnetic fields, similar to gamma rays. Later experiments showed that the radiation consisted of a third type of subatomic particle, which Chadwick named **neutrons**.
 
-# 8. Connecting Solids and Radiation
+![James Chadwick, the British physicist whose experiments in 1932 provided evidence for the existence of the neutron.](james-chadwick.jpg){#fig-james-chadwick fig-alt="Historical portrait of British physicist James Chadwick, who discovered the neutron in 1932" width="55%"}
 
-Return to our starting question: **What makes a material hazardous?**
+*Photograph source: [Wikipedia, James Chadwick](https://en.wikipedia.org/wiki/James_Chadwick).*
 
-A solid's physical form can affect whether it is likely to remain in place, be handled directly, or become suspended in air. Its chemical properties can indicate whether it might burn or react with other substances. If it contains unstable nuclei, it can also emit ionizing radiation.
+The discovery of the neutron helped explain the mass of atomic nuclei.
 
-These are not competing explanations. They are different pieces of evidence that help us understand the same material.
+We now understand that atoms contain three fundamental subatomic particles:
 
-Consider a radioactive solid that breaks into fine dust. The material's nuclear properties determine the radiation it emits, while its particle size influences whether it can be dispersed and inhaled. To understand the hazard, we need both perspectives.
+- **Protons:** Positively charged particles that determine the identity of an element.
+- **Neutrons:** Electrically neutral particles that contribute to nuclear mass and influence nuclear stability.
+- **Electrons:** Negatively charged particles that occupy the region surrounding the nucleus.
 
-::: callout-note
-## Our reasoning framework revisited
+![Comparison of atomic and nuclear scales, illustrating the region occupied by electrons and an enlarged nucleus containing protons and neutrons.](atom-nucleus-model.jpg){#fig-atom-nucleus-model fig-alt="Diagram comparing the approximate size of an atom, 10^-10 meters, with its nucleus, 10^-14 meters. The atom is represented by a large electron-containing region, while the enlarged nucleus shows positively charged protons and electrically neutral neutrons." width="100%"}
 
-Like John Dalton, we cannot directly see every atomic-scale process involved in a hazardous-material incident. We use observable behavior, measurements, and scientific models to infer what is happening and make defensible decisions.
-:::
+![If the nucleus of an atom were the size of a fly at the center of a baseball field, then the space occupied by the surrounding electrons would be about the size of the entire stadium](dodger-stadium.jpg){#fig-dodger-stadium fig-alt="Photograph of Dodger Stadium illustrating the relative scale of an atomic nucleus and the much larger region occupied by electrons, using a fly at the center of the baseball field as an analogy." width="100%"}
 
-# Review Questions
+*Photograph source: [Wikipedia, Dodger Stadium](https://en.wikipedia.org/wiki/Dodger_Stadium).*
 
-1.  How does a physical property differ from a chemical property? Give one example of each from this lecture.
-2.  Why might a bulk solid and the same substance as fine airborne dust present different hazards?
-3.  What is the difference between radioactive decay and an ordinary chemical reaction?
-4.  Why is alpha radiation particularly concerning when alpha-emitting material enters the body?
-5.  Explain the difference between radiation exposure and radioactive contamination.
-6.  What is the difference between a detector's count rate and a radiation dose rate?
-7.  A source has a half-life of 24 hours. What fraction of its original activity remains after 72 hours?
-8.  Why is half-life useful information when considering the recovery phase of a radiological incident?
+**Table reference:** Chemistry: Atoms First, Table 2.1 (masses and electric charges of electrons, protons, and neutrons).
 
-# Key Terms
+**Scientific significance:** Chadwick's discovery helped establish our modern understanding of the nucleus as a structure containing both protons and neutrons.
 
-| Term | Working definition |
-|:---|:---|
-| **Physical property** | Observable or measurable characteristic that does not require a change in chemical identity. |
-| **Chemical property** | Characteristic describing a substance's tendency to undergo chemical change. |
-| **Sublimation** | Direct transition from solid to gas. |
-| **Vapor pressure** | Pressure exerted by vapor in equilibrium with a substance at a specified temperature. |
-| **Specific gravity** | Density relative to a reference material, commonly water for liquids and solids. |
-| **Solubility** | Amount of substance that can dissolve in a specified medium. |
-| **Viscosity** | Resistance of a fluid to flow. |
-| **Radioactive material** | Material containing unstable atomic nuclei that undergo radioactive decay. |
-| **Radioactivity** | Spontaneous transformation of unstable atomic nuclei. |
-| **Ionizing radiation** | Radiation capable of producing ions by removing electrons from atoms. |
-| **Alpha particle** | Nuclear particle containing two protons and two neutrons. |
-| **Beta particle** | Electron or positron emitted during nuclear decay. |
-| **Gamma ray** | High-energy electromagnetic radiation associated with nuclear transitions. |
-| **Neutron radiation** | Radiation consisting of free neutrons. |
-| **Exposure** | Irradiation of a person or object by radiation. |
-| **Radioactive contamination** | Unwanted radioactive material on or inside a person, object, or environment. |
-| **Absorbed dose** | Radiation energy deposited per unit mass. |
-| **Dose rate** | Dose or exposure quantity accumulated per unit time. |
-| **Activity** | Rate of radioactive nuclear transformations. |
-| **Half-life** | Time required for radioactive activity to decrease by one-half. |
+### Historical Development of Atomic Structure and Radioactivity
 
-# Source and Copyright & Use
+Our understanding of atomic structure developed through a series of scientific discoveries. Each discovery provided new experimental evidence that challenged earlier explanations of matter and helped scientists develop a more complete understanding of the atom.
 
-**Course reference:** *Hazardous Materials: Managing the Incident*, textbook excerpts supplied for Lecture 04, including the sections on chemical and physical properties, physical states, radioactive materials, radiation measurement, and half-life. Textbook figures and tables are not reproduced here.
+1.  **John Dalton (Early 1800s): Atomic Theory**
+
+    Dalton proposed that matter consists of tiny, indivisible particles called atoms. His atomic theory provided a foundation for explaining the composition and behavior of matter.
+
+2.  **Henri Becquerel (1896): Discovery of Radioactivity**
+
+    Becquerel observed that uranium-containing materials could darken photographic plates without exposure to light. His observations provided evidence that radiation could originate from within matter itself.
+
+3.  **J. J. Thomson (1897): Discovery of the Electron**
+
+    Thomson investigated cathode rays and demonstrated that they consisted of negatively charged particles called electrons. His experiments provided evidence that atoms contain smaller subatomic particles and are not indivisible.
+
+4.  **Marie and Pierre Curie (1898 onward): Investigations of Radioactivity**
+
+    Marie Curie demonstrated that radioactivity was associated with atoms rather than their chemical compounds. Together, Marie and Pierre Curie investigated radioactive materials and contributed to the discovery of polonium and radium.
+
+5.  **Robert Millikan and Harvey Fletcher (Early 1900s): Measurement of the Electron's Charge**
+
+    Through their oil-drop experiments, Millikan and Fletcher determined the magnitude of the elementary electric charge. Combined with Thomson's measurements, their findings allowed scientists to calculate the mass of an electron.
+
+6.  **Ernest Rutherford (1911): Discovery of the Atomic Nucleus**
+
+    Rutherford, working with Hans Geiger and Ernest Marsden, investigated the scattering of alpha particles through thin metal foil. Their observations provided evidence that most of an atom consists of relatively empty space, with its positive charge and most of its mass concentrated in a small, dense nucleus.
+
+7.  **James Chadwick (1932): Discovery of the Neutron**
+
+    Chadwick investigated radiation produced when beryllium was bombarded with alpha particles. His experiments provided evidence for the existence of electrically neutral particles called neutrons, helping explain the mass and composition of atomic nuclei.
+
+**Scientific significance:** These discoveries demonstrate how scientific understanding develops through observations, experimentation, and the evaluation of evidence. Scientists were able to investigate the structure of atoms and identify subatomic particles even though they could not directly observe individual atoms.
+
+Together, these discoveries established the foundation for our modern understanding of atomic structure, radioactivity, and nuclear chemistry.
+
+
+
+
+
+
+## 4.3 Atomic Number, Mass Number, and Isotopes
+
+All elements on the periodic table can be identified by the following:
+
+- The **atomic number ($Z$)**: the number of protons in the nucleus of each atom of an element.
+- The **mass number ($A$)**: the total number of neutrons *AND* protons. Often referred to *jointly* as **nucleons**.
+
+Therefore:
+
+$$
+\text{Mass number } (A) = \text{Number of protons } (Z) + \text{Number of neutrons}
+$$
+
+or
+
+$$
+\text{Number of neutrons} = \text{Mass number } (A) - \text{Number of protons } (Z)
+$$
+
+or
+
+$$
+\text{Number of protons (Z)} = \text{Mass number } (A) - \text{Number of neutrons}
+$$
+
+![Nuclear notation illustrating the atomic number, mass number, and chemical element symbol.](atomic-number-mass-number-element-symbol.jpg){#fig-atomic-number-mass-number fig-alt="Diagram showing the element symbol X with mass number A in the upper left and atomic number Z in the lower left. The mass number represents the total number of protons and neutrons, while the atomic number represents the number of protons." width="100%"}
+
+
+
+
+What do we call an atom that has the same atomic number (Z) but different mass numbers (A)? 
+
+### Isotopes
+
+Most elements have two or more isotopes, atoms that have the same atomic number (same number of protons *and* electrons) but different number of neutrons. 
+
+How do we identify an isotope from an element? 
+
+- We write the mass number after the name of the element. Take Uranium of example: 
+
+![Comparison of uranium-238 and uranium-235, illustrating two isotopes of uranium with the same atomic number but different mass numbers.](uranium-isotope.jpg){#fig-uranium-isotopes fig-alt="Side-by-side comparison of uranium-238 and uranium-235 showing the same atomic number of 92 and different mass numbers of 238 and 235." width="100%"}
+
+The isotope Uranium-235 (U-235) has 143 neutrons in its nucleus (235-92 = 143) and is used in nuclear reactors and atomic bombs, whereas U-238 does not behave the same way in these applications.
+
+NOTE: the chemical properties of an element are determined primarily by the number of protons and electrons in its atoms; not by the number of neutrons. Therefore, isotopes of the same element usually, not always, exhibit very similar chemical properties. 
+
+## 4.4 Nuclear Stability
+
+![Periodic Table of the Elements.](periodic-table.jpg){#fig-periodic-table fig-alt="Periodic table showing the chemical elements organized by increasing atomic number, with elements arranged into periods and groups" width="100%"}
+
+The nuclei of some elements are stable, but others decay seconds after they are formed. Therefore, patterns of stability and instability of nuclei are useful to make predictions regarding nuclear decay.
+
+
+The principal factor that determines whether a nucleus is stable is the *neutron-to-proton ratio (n/p)*. For atoms of elements having low atomic numbers (less than or equal to 20; calcium), the *n/p* value is close to 1. The increase in the ratio of neutrons-to-protons with increasing atomic number can be explained by considering the role of the neutrons in helping to overcome the electrical repulsion between protons. The strong force holds that protons and neutrons together in a nucleus is powerful enough to overcome the electrostatic repulsion between the protons, but it can act over only a very short distance, about the diameter of a nucleus. 
+
+Given that neutrons are uncharged, they can contribute to the strong force without adding to the electrostatic repulsion. Therefore, a lot of neutrons are needed to overcome the mutal repulsion of the protons in a nucleus of high atomic number, which explains why the band of stability curves upward. 
+
+![Belt of nuclear stability showing how the neutron-to-proton ratio increases with atomic number.](neutron-to-proton-plot.jpg){#fig-neutron-proton-stability fig-alt="Graph showing the number of protons on the horizontal axis and the number of neutrons on the vertical axis. A straight red diagonal line represents a 1:1 neutron-to-proton ratio. An orange belt of stability curves upward above the red line as atomic number increases, indicating that heavier stable nuclei require more neutrons than protons." width="100%"}
+
+*Figure adapted from Figure 2.9, "Plot of Neutrons Versus Protons," Chapter 2: Atoms and the Periodic Table, in Chemistry: Atoms First by Julia Burdge and Jason Overby.*
+
+
+General patterns: 
+
+- **magic numbers** there are more stable nuclei containing *2, 8, 20, 50, 82, and 126* protons or neutrons than there are containing other numbers of protons or neutrons. 
+  - Example: tin (Sn) vs. antimony (Sb): 
+  
+  | Element     | atomic number | stable isotopes |
+|:----------    |--------------:|----------------:|
+| Tin (Sn)      |            50 |              10 |
+| Antimony (Sb) |            51 |               2 |
+
+- There are more stable nuclei with even numbers of both protons and neutrons than with odd numbers of these particles. 
+
+- All isotopes of the elements with atomic numbers higher than 82 are radioactive.
+  - NOTE: Bismuth Z = 83 was long thought to have a stable isotope but it was found to decay       very slowly. 
+  
+- All isotopes of technetium (Tc, Z = 43) and promethium (Pm, Z = 61) are radioactive. 
+
+
+
+# Part II. Nuclear Chemistry
+
+*Primary source: Chemistry: Atoms First, 2nd ed., Chapter 20, uploaded photographs.*
+
+## 20.1 Nuclei and Nuclear Reactions
+
+Unstable nuclei can undergo radioactive decay. Nuclear transmutation can also result from bombardment with neutrons, protons, or other particles. Unlike ordinary chemical reactions, nuclear reactions can change one element into another and involve changes in nuclear composition.
+
+**Table 20.1: Comparison of Chemical Reactions and Nuclear Reactions.** Chemical reactions rearrange atoms through bonds and electron interactions; nuclear reactions involve changes in the nucleus and can release much larger amounts of energy. Their controlling conditions differ.
+
+### Writing and Balancing Nuclear Equations
+
+The sums of mass numbers and atomic numbers must balance on both sides of a nuclear equation. Particle notation includes a neutron \$ {}\^{1}*{0}n \$, proton \$ {}\^{1}*{1}p \$, electron/beta particle \$ {}\^{0}*{-1}e \$, positron \$ {}\^{0}*{+1}e \$, and alpha particle \$ {}\^{4}\_{2}\mathrm{He} \$.
+
+**Worked Example 20.1:** Determine unknown nuclear species using conservation of total mass number and atomic number.
+
+## 20.2 Nuclear Stability
+
+Nuclei outside the belt of stability undergo processes that move their proton-neutron composition toward a more stable arrangement.
+
+### Types of Nuclear Decay
+
+**Beta-minus emission** converts a neutron into a proton and emits an electron. **Positron emission** converts a proton into a neutron and emits a positron. **Electron capture** absorbs an inner-shell electron, also converting a proton into a neutron. Alpha emission is particularly important among very heavy nuclei.
+
+### Nuclear Binding Energy
+
+Binding energy measures the energy associated with separating a nucleus into constituent nucleons. The difference between measured nuclear mass and the sum of component particle masses is the **mass defect**. Einstein's mass-energy relation links the two:
+
+$$ E = mc^2 $$
+
+Binding energy per nucleon permits comparisons among nuclei of different sizes. Figure 20.1 graphs binding energy per nucleon against mass number. The chapter develops a fluorine-19 example and Worked Example 20.2.
+
+## 20.3 Natural Radioactivity
+
+Naturally occurring unstable isotopes form decay chains. Figure 20.2 follows the uranium-238 series and shows how successive emissions produce daughter nuclei. Radioactive decay is described by first-order kinetics.
+
+### Kinetics of Radioactive Decay
+
+$$ N(t)=N_0e^{-\lambda t} $$
+
+$$ t_{1/2}=\frac{\ln 2}{\lambda} $$
+
+Here $N$ is the number of undecayed nuclei and $\lambda$ is the decay constant. The half-life is the time required for half the original radioactive nuclei to decay.
+
+### Dating Based on Radioactive Decay
+
+Carbon-14 dating compares radioactive activity in an artifact with a reference activity to estimate age. Worked Example 20.3 demonstrates this approach. Other isotope systems can be used for much older geological materials.
+
+## 20.4 Nuclear Transmutation
+
+Bombarding a nucleus with a particle can produce a different nuclide. Rutherford's nitrogen-to-oxygen experiment illustrates induced transmutation. The textbook uses reaction notation and Worked Example 20.5 to balance bombardment reactions. Particle accelerators allow researchers to synthesize isotopes and heavier elements; Table 20.2 lists transuranium elements.
+
+## 20.5 Nuclear Fission
+
+In fission, a heavy nucleus divides into smaller nuclei and releases energy and neutrons. Under suitable conditions, emitted neutrons cause additional fissions, producing a chain reaction. The **critical mass** is the minimum quantity of fissionable material necessary to sustain the chain reaction under specified conditions.
+
+### Chain Reactions, Reactors, and Controls
+
+The chapter distinguishes an uncontrolled chain reaction from a controlled reactor process. Moderators slow neutrons; control rods absorb neutrons; cooling systems remove heat. Figures 20.7–20.13 illustrate product yields, chain reactions, reactor components, and nuclear fuels.
+
+## 20.6 Nuclear Fusion
+
+Fusion combines light nuclei to form heavier nuclei and releases energy. The Sun's energy production involves fusion. Achieving sustained fusion on Earth requires extremely high temperatures and confinement of plasma. The chapter discusses magnetic confinement (tokamak) and laser-driven inertial confinement (Figures 20.14 and 20.15), as well as technical challenges.
+
+**Connection to Chemistry Principles, Focus 9:** \[Cross-reference to be verified against the separate Focus 9 source.\]
+
+## 20.7 Uses of Isotopes
+
+### Chemical Analysis
+
+Radioactive labels can trace the movement of atoms through reactions. The chapter uses sulfur-35 labeling to illustrate how an isotope can identify the destination of a sulfur atom in a reaction, and discusses isotope tracing in photosynthesis.
+
+### Isotopes in Medicine
+
+Radioisotopes can serve as tracers for imaging and diagnostic measurements. The textbook discusses sodium-24, iodine-131, iodine-123, and technetium-99m, as well as boron neutron capture therapy and brachytherapy. Figure 20.17 shows medical brain imaging; Figure 20.18 illustrates a Geiger counter.
+
+## 20.8 Biological Effects of Radiation
+
+Radiation activity and absorbed dose are not interchangeable. Activity counts transformations per unit time; absorbed dose describes energy deposited per unit mass; biological effect also depends on radiation type and tissue sensitivity. The chapter introduces curie, rad, and rem and discusses relative biological effectiveness.
+
+### Ionization and Biological Injury
+
+Ionizing radiation can eject electrons, creating ions and reactive radicals that can damage cellular components including DNA. Exposure can produce somatic effects, while heritable genetic changes are a separate category. Table 20.4 provides historical average annual radiation dose estimates; use its dates and units when discussing its applicability.
+
+**Connection to Chemistry Principles, Focus 9:** \[Cross-reference to be verified against the separate Focus 9 source.\]
+
+# Part III. Radiation and Hazardous Materials Management
+
+*Primary source: Hazardous Materials Chemistry, radiation chapter, uploaded scanned pages.*
+
+## Radiation
+
+Hazardous materials responders may encounter radiation from radioactive substances or radiation-producing equipment. Radiation behavior depends on the type of emission, the source, and the pathway to the responder. Distinguish radioactive material from the radiation it emits.
+
+### Alpha Particles
+
+Alpha particles contain two protons and two neutrons and carry a positive charge. They are strongly ionizing but have limited penetration. The important exposure distinction is external irradiation versus internal contamination through inhalation, ingestion, or wounds.
+
+### Beta Particles
+
+Beta particles are high-speed electrons or positrons emitted during nuclear transformations. They have greater penetration than alpha particles but less than high-energy gamma radiation; protective materials and secondary radiation must be considered.
+
+### Gamma Radiation
+
+Gamma radiation consists of high-energy electromagnetic photons. It can penetrate materials deeply, so external exposure and suitable shielding are significant considerations. The chapter includes diagrams of gamma emissions and the electromagnetic spectrum.
+
+## Understanding Radioactivity and Radiation Absorbed Dose
+
+Activity describes nuclear transformations occurring in a source; dose describes energy delivered to material and, with appropriate weighting, potential biological impact. The chapter discusses units and distinguishes how the same activity can produce different exposures depending on geometry, distance, time, shielding, and contamination pathways.
+
+### Radiation Penetration and Shielding
+
+The source figure compares alpha, beta, gamma, and neutron penetration. Appropriate shielding depends on radiation type: low-penetration alpha radiation may be stopped by a thin barrier; beta radiation requires different considerations; gamma and neutron radiation can require more substantial, specifically selected shielding.
+
+## Radiation Hazard
+
+The chapter identifies four broad exposure-control considerations:
+
+1.  **Time:** limit time near a radiation source.
+2.  **Distance:** increase separation from the source.
+3.  **Amount:** reduce or isolate the amount of radioactive material when feasible.
+4.  **Shielding:** place appropriate material between the source and people.
+
+### Protective Action Guides
+
+Protective Action Guides support decisions about protective measures during radiological emergencies. These are planning and decision aids, not a substitute for measuring actual incident conditions or consulting incident-specific authorities.
+
+### Stay Time Charts
+
+The chapter relates allowable stay time to a dose limit and the dose rate:
+
+$$ \text{Stay time}=\frac{\text{allowable dose}}{\text{dose rate}} $$
+
+**Instructor discussion:** What assumptions are required for this expression? How might a changing dose rate affect a responder's plan?
+
+### Case Study, Wrap-Up, Key Terms, and Review Questions
+
+The source concludes with a case study and its answers, a summary, a glossary, review questions, and problem-set answers. These are retained as photographed source pages in the appendix for the instructor to review and adapt into original classroom questions.
+
+# Synthesis: Thinking Like a Chemist and a HazMat Responder
+
+We began with evidence for atomic structure and used that model to explain nuclear stability, radioactive decay, radiation interactions, and protective action. The central question is not merely *what is the radioactive substance?* but *what is being emitted, how can it reach people, and what controls are defensible?*
+
+# Source-Page Appendix
+
+The photographs below are included for side-by-side verification and instructor transcription or revision. They reproduce the user-provided source images and are not licensed as original course content. The images are bundled locally so the Quarto document can render offline.
+
+## Chemistry: Atoms First — Chapter 2
+
+### Source image 1
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 2, image 1.](source-pages/atoms-ch2-01.png){fig-alt="Photographed textbook source page 1; refer to the original for precise wording and figures"}
+
+### Source image 2
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 2, image 2.](source-pages/atoms-ch2-02.png){fig-alt="Photographed textbook source page 2; refer to the original for precise wording and figures"}
+
+### Source image 3
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 2, image 3.](source-pages/atoms-ch2-03.png){fig-alt="Photographed textbook source page 3; refer to the original for precise wording and figures"}
+
+### Source image 4
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 2, image 4.](source-pages/atoms-ch2-04.png){fig-alt="Photographed textbook source page 4; refer to the original for precise wording and figures"}
+
+### Source image 5
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 2, image 5.](source-pages/atoms-ch2-05.png){fig-alt="Photographed textbook source page 5; refer to the original for precise wording and figures"}
+
+### Source image 6
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 2, image 6.](source-pages/atoms-ch2-06.png){fig-alt="Photographed textbook source page 6; refer to the original for precise wording and figures"}
+
+### Source image 7
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 2, image 7.](source-pages/atoms-ch2-07.png){fig-alt="Photographed textbook source page 7; refer to the original for precise wording and figures"}
+
+### Source image 8
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 2, image 8.](source-pages/atoms-ch2-08.png){fig-alt="Photographed textbook source page 8; refer to the original for precise wording and figures"}
+
+### Source image 9
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 2, image 9.](source-pages/atoms-ch2-09.png){fig-alt="Photographed textbook source page 9; refer to the original for precise wording and figures"}
+
+### Source image 10
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 2, image 10.](source-pages/atoms-ch2-10.png){fig-alt="Photographed textbook source page 10; refer to the original for precise wording and figures"}
+
+### Source image 11
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 2, image 11.](source-pages/atoms-ch2-11.png){fig-alt="Photographed textbook source page 11; refer to the original for precise wording and figures"}
+
+## Chemistry: Atoms First — Chapter 20
+
+### Source image 1
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 1.](source-pages/atoms-ch20-01.png){fig-alt="Photographed textbook source page 1; refer to the original for precise wording and figures"}
+
+### Source image 2
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 2.](source-pages/atoms-ch20-02.png){fig-alt="Photographed textbook source page 2; refer to the original for precise wording and figures"}
+
+### Source image 3
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 3.](source-pages/atoms-ch20-03.png){fig-alt="Photographed textbook source page 3; refer to the original for precise wording and figures"}
+
+### Source image 4
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 4.](source-pages/atoms-ch20-04.png){fig-alt="Photographed textbook source page 4; refer to the original for precise wording and figures"}
+
+### Source image 5
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 5.](source-pages/atoms-ch20-05.png){fig-alt="Photographed textbook source page 5; refer to the original for precise wording and figures"}
+
+### Source image 6
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 6.](source-pages/atoms-ch20-06.png){fig-alt="Photographed textbook source page 6; refer to the original for precise wording and figures"}
+
+### Source image 7
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 7.](source-pages/atoms-ch20-07.png){fig-alt="Photographed textbook source page 7; refer to the original for precise wording and figures"}
+
+### Source image 8
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 8.](source-pages/atoms-ch20-08.png){fig-alt="Photographed textbook source page 8; refer to the original for precise wording and figures"}
+
+### Source image 9
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 9.](source-pages/atoms-ch20-09.png){fig-alt="Photographed textbook source page 9; refer to the original for precise wording and figures"}
+
+### Source image 10
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 10.](source-pages/atoms-ch20-10.png){fig-alt="Photographed textbook source page 10; refer to the original for precise wording and figures"}
+
+### Source image 11
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 11.](source-pages/atoms-ch20-11.png){fig-alt="Photographed textbook source page 11; refer to the original for precise wording and figures"}
+
+### Source image 12
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 12.](source-pages/atoms-ch20-12.png){fig-alt="Photographed textbook source page 12; refer to the original for precise wording and figures"}
+
+### Source image 13
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 13.](source-pages/atoms-ch20-13.png){fig-alt="Photographed textbook source page 13; refer to the original for precise wording and figures"}
+
+### Source image 14
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 14.](source-pages/atoms-ch20-14.png){fig-alt="Photographed textbook source page 14; refer to the original for precise wording and figures"}
+
+### Source image 15
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 15.](source-pages/atoms-ch20-15.png){fig-alt="Photographed textbook source page 15; refer to the original for precise wording and figures"}
+
+### Source image 16
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 16.](source-pages/atoms-ch20-16.png){fig-alt="Photographed textbook source page 16; refer to the original for precise wording and figures"}
+
+### Source image 17
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 17.](source-pages/atoms-ch20-17.png){fig-alt="Photographed textbook source page 17; refer to the original for precise wording and figures"}
+
+### Source image 18
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 18.](source-pages/atoms-ch20-18.png){fig-alt="Photographed textbook source page 18; refer to the original for precise wording and figures"}
+
+### Source image 19
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 19.](source-pages/atoms-ch20-19.png){fig-alt="Photographed textbook source page 19; refer to the original for precise wording and figures"}
+
+### Source image 20
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 20.](source-pages/atoms-ch20-20.png){fig-alt="Photographed textbook source page 20; refer to the original for precise wording and figures"}
+
+### Source image 21
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 21.](source-pages/atoms-ch20-21.png){fig-alt="Photographed textbook source page 21; refer to the original for precise wording and figures"}
+
+### Source image 22
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 22.](source-pages/atoms-ch20-22.png){fig-alt="Photographed textbook source page 22; refer to the original for precise wording and figures"}
+
+### Source image 23
+
+![Uploaded textbook photograph, Chemistry: Atoms First — Chapter 20, image 23.](source-pages/atoms-ch20-23.png){fig-alt="Photographed textbook source page 23; refer to the original for precise wording and figures"}
+
+## Hazardous Materials Chemistry — Radiation
+
+### Source image 1
+
+![Uploaded textbook photograph, Hazardous Materials Chemistry — Radiation, image 1.](source-pages/hazmat-radiation-01.png){fig-alt="Photographed textbook source page 1; refer to the original for precise wording and figures"}
+
+### Source image 2
+
+![Uploaded textbook photograph, Hazardous Materials Chemistry — Radiation, image 2.](source-pages/hazmat-radiation-02.png){fig-alt="Photographed textbook source page 2; refer to the original for precise wording and figures"}
+
+### Source image 3
+
+![Uploaded textbook photograph, Hazardous Materials Chemistry — Radiation, image 3.](source-pages/hazmat-radiation-03.png){fig-alt="Photographed textbook source page 3; refer to the original for precise wording and figures"}
+
+### Source image 4
+
+![Uploaded textbook photograph, Hazardous Materials Chemistry — Radiation, image 4.](source-pages/hazmat-radiation-04.png){fig-alt="Photographed textbook source page 4; refer to the original for precise wording and figures"}
+
+### Source image 5
+
+![Uploaded textbook photograph, Hazardous Materials Chemistry — Radiation, image 5.](source-pages/hazmat-radiation-05.png){fig-alt="Photographed textbook source page 5; refer to the original for precise wording and figures"}
+
+### Source image 6
+
+![Uploaded textbook photograph, Hazardous Materials Chemistry — Radiation, image 6.](source-pages/hazmat-radiation-06.png){fig-alt="Photographed textbook source page 6; refer to the original for precise wording and figures"}
+
+### Source image 7
+
+![Uploaded textbook photograph, Hazardous Materials Chemistry — Radiation, image 7.](source-pages/hazmat-radiation-07.png){fig-alt="Photographed textbook source page 7; refer to the original for precise wording and figures"}
+
+### Source image 8
+
+![Uploaded textbook photograph, Hazardous Materials Chemistry — Radiation, image 8.](source-pages/hazmat-radiation-08.png){fig-alt="Photographed textbook source page 8; refer to the original for precise wording and figures"}
+
+### Source image 9
+
+![Uploaded textbook photograph, Hazardous Materials Chemistry — Radiation, image 9.](source-pages/hazmat-radiation-09.png){fig-alt="Photographed textbook source page 9; refer to the original for precise wording and figures"}
+
+### Source image 10
+
+![Uploaded textbook photograph, Hazardous Materials Chemistry — Radiation, image 10.](source-pages/hazmat-radiation-10.png){fig-alt="Photographed textbook source page 10; refer to the original for precise wording and figures"}
+
+### Source image 11
+
+![Uploaded textbook photograph, Hazardous Materials Chemistry — Radiation, image 11.](source-pages/hazmat-radiation-11.png){fig-alt="Photographed textbook source page 11; refer to the original for precise wording and figures"}
+
+### Source image 12
+
+![Uploaded textbook photograph, Hazardous Materials Chemistry — Radiation, image 12.](source-pages/hazmat-radiation-12.png){fig-alt="Photographed textbook source page 12; refer to the original for precise wording and figures"}
+
+# Copyright & Use
 
 **SHM 377: Hazardous Materials Management**\
 © 2026 Yoni Rodriguez
 
 Except where otherwise noted, original course materials are licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
 
-Third-party materials remain subject to their respective copyright and licensing terms.
+Third-party textbook pages and figures remain subject to their respective copyright and licensing terms.

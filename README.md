@@ -1,7 +1,11 @@
-# SHM 377: Hazardous Materials Management
+# Hazardous Materials: Chemistry
 
-Course materials for **SHM 377: Hazardous Materials Management** at
-Central Washington University.
+**SHM 377 | Central Washington University**
+
+**Official catalog title:** Hazardous Materials Management  
+**Proposed course title and repository theme:** Hazardous Materials: Chemistry
+
+This public teaching repository reflects a chemistry-centered approach to SHM 377. The proposed title is a teaching and curriculum-development direction, not an approved change to the CWU catalog.
 
 **Professor:** Yoni Rodriguez, M.S.  
 **Program:** Occupational Safety and Health Management  
@@ -11,6 +15,13 @@ Central Washington University.
 ---
 
 ## Course Overview
+
+**The central question:** How can chemistry help us anticipate, recognize, evaluate, and manage hazardous materials?
+
+Students learn to **think like chemists**: use observable evidence, atomic and molecular models, properties of matter, and quantitative reasoning to predict material behavior and identify hazards. The goal is not to turn students into chemists, but to use chemistry to support occupational and environmental health and safety decisions.
+
+The chemistry sequence moves from defining hazardous materials and recognizing hazards to classifying matter, understanding solids and airborne particles, interpreting chemical reactions, and examining atomic structure, isotopes, nuclear chemistry, and ionizing radiation. These foundations support later work involving exposure, controls, regulations, transportation, storage, emergency response, and waste management.
+
 
 SHM 377 examines the management of hazardous materials, including the
 scientific principles, professional practices, and regulatory frameworks
@@ -48,6 +59,7 @@ SHM 377 is offered in Ellensburg during Fall Quarter 2026.
 - **Location:** HOGU 226
 - **Professor:** Yoni Rodriguez, Assistant Professor
 - **Office Hours:** Monday and Wednesday, 10:00–11:30 AM, drop in, and by appointment
+- **Email:** Yoni.Rodriguez@cwu.edu
 
 Office hours are time reserved for students. Students do not need to be
 struggling or have an emergency to attend. Office hours may be used to ask
@@ -125,10 +137,24 @@ hazardous-material problems throughout the quarter.
 
 ---
 
+## Chemistry Lecture Sequence
+
+The course's developing chemistry sequence includes:
+
+| Lecture | Focus | Hazardous-materials connection |
+|---|---|---|
+| 01: Introduction to Hazardous Materials Management | Hazards, hazardous materials, exposure, dose, and material life cycles | Recognize hazards and understand how context changes risk |
+| 02: Chemistry of Hazardous Materials: Matter | John Dalton, matter, classification, and physical and chemical properties | Use scientific evidence to explain and predict material behavior |
+| 03: Chemistry of Hazardous Materials: Solids | Particle size, dust, smoke, solid hazards, chemical reactions, and conservation of mass | Connect physical form and chemical transformations to exposure and control |
+| 04: Chemistry of Hazardous Materials: Solids & Radiation | Atomic structure, isotopes, nuclear stability, radioactivity, and radiation effects | Interpret radiological hazards and relevant protective principles |
+
+This sequence describes the materials currently being developed and taught; it does not replace the official syllabus or guarantee the same sequence in future offerings.
+
+---
+
 ## Chemistry and Quantitative Reasoning
 
-Chemistry is used as a tool for understanding hazardous-material behavior
-rather than treated as a separate general chemistry course.
+Chemistry is the central scientific framework for understanding hazardous-material behavior, rather than a disconnected review of general chemistry. Students use evidence and models to reason about material identity, physical form, transport, reactivity, exposure, and appropriate management.
 
 Students apply concepts such as:
 
@@ -172,7 +198,7 @@ appropriate action.
 
 ---
 
-## R and RStudio
+## Data Analysis: R, RStudio, and Other Tools
 
 SHM 377 uses **R and RStudio** as tools for analyzing and communicating
 hazardous-material and exposure data.
@@ -335,35 +361,24 @@ student.
 
 ---
 
-## Laboratory Reports
+## Laboratory Presentations
 
-The four graded laboratories are intended to provide students with sufficient
-time to investigate a hazardous-material problem, work with relevant data or
-technical resources, troubleshoot analytical methods, interpret findings, and
-produce a thoughtful professional report.
+The four graded laboratories emphasize students' ability to investigate a hazardous-material problem, analyze evidence, and **explain their findings orally to Professor Rodriguez**.
 
-Students are not expected to complete a formal graded laboratory report every
-week.
+**Students must present their laboratory work to receive credit.** Grading is based on the oral presentation and demonstrated understanding, **not on a written laboratory report**. Written notes, calculations, code, tables, or figures may be used to prepare and support the presentation, but they are not substitutes for presenting.
 
-Laboratory reports should generally:
+Students should be prepared to:
 
-- Use complete sentences where interpretation or explanation is required
-- Clearly label tables and figures
-- Include informative axis labels and appropriate units
-- Include units in calculations and final answers
-- Document calculations clearly enough for the reasoning to be followed
-- Interpret numerical results in the context of the hazardous-material problem
-- Cite data sources, technical references, and regulatory resources when
-  appropriate
-- Distinguish results from interpretation and management recommendations
-- Preserve enough of the analytical workflow to make results reproducible when
-  R is used
+- Define the hazardous-material problem and explain its relevance.
+- Describe the material's chemistry, properties, and behavior when relevant.
+- Explain their methods, calculations, assumptions, and units.
+- Present readable, accurately labeled figures or tables when useful.
+- Interpret evidence rather than merely display software output.
+- Identify uncertainty, limitations, and relevant technical or regulatory sources.
+- Explain the implications for exposure, hazards, risk, and management decisions.
+- Answer questions about their reasoning and recommendations.
 
-Students should not submit unexplained computer output in place of written
-interpretation.
-
-When R and Quarto are used, the guiding principle is that the analytical
-reasoning should be traceable:
+The goal is to communicate and defend the analysis, not simply produce a calculation or a polished document. The four laboratories progressively prepare students for greater independence in the final project.
 
 ```text
 Correct Calculation / Analysis
@@ -377,69 +392,44 @@ Correct Calculation / Analysis
  Hazardous-Material Significance
             ↓
      Management Decision
+            ↓
+   Oral Explanation and Defense
 ```
 
 ---
 
 ## Final Group Project
 
-The final group project is worth **100 points** and accounts for **50% of the
-total course grade**.
+The final project is a chemistry-centered investigation of a **specific hazardous material or chemical hazard in a realistic occupational or industrial setting**. Students may work individually or in groups, subject to the project guidelines. The objective is to use **chemistry, credible evidence, and risk-management principles** to explain what can happen and recommend practical controls.
 
-The project serves as the culminating application of the SHM 377 hazardous
-materials reasoning framework.
+The project follows this reasoning framework:
 
-Students will work in teams to investigate a complex hazardous materials
-management scenario provided by Professor Rodriguez. The scenario will require
-students to integrate multiple stages of hazardous materials management rather
-than solve a single isolated problem.
+**Material → Chemistry → Behavior → Hazards → Risk → Management**
 
-Depending on the scenario, teams may need to consider:
+Presentations should:
 
-- Material characterization
-- Receiving and acquisition
-- Storage
-- Use and handling
-- Exposure and release potential
-- Controls and safety protocols
-- Emergency considerations
-- Waste generation and management
-- Transportation and shipment
-- Disposal
-- Regulatory requirements
-- Management recommendations
-- Professional communication
+1. Define the industrial setting, process, and hazardous-material problem.
+2. Identify the material, its composition, relevant properties, and authoritative sources.
+3. Explain the chemistry underlying the material's behavior and hazardous mechanisms.
+4. Analyze routine operations and at least one credible upset, failure, or exposure scenario.
+5. Distinguish inherent hazards from risk under specific conditions, acknowledging uncertainties.
+6. Recommend and justify prevention, handling, storage, exposure-control, emergency, and waste-management measures as relevant.
+7. Conclude with a defensible management decision supported by evidence.
 
-Students will determine what information is needed, locate appropriate technical
-and regulatory resources, evaluate available evidence, perform appropriate
-analyses where necessary, identify limitations or missing information, and
-develop defensible management recommendations.
+### Presentation Requirements
 
-Project work will develop throughout the quarter. Selected laboratory periods
-will provide dedicated time for groups to conduct research, analyze information,
-develop recommendations, prepare their presentation, ask questions, and receive
-feedback.
+Final project presentations are scheduled for **Monday, November 30, and Wednesday, December 2, 2026**. The proposed presentation schedule provides **20 minutes per presentation plus 5 minutes for questions and discussion**. Each student must contribute meaningfully and be prepared to explain the overall analysis.
 
-Project deliverables may include a professional written report, figures and
-tables, applied calculations, data analysis, regulatory analysis, management
-recommendations, and an oral presentation.
+Use readable slides, citations alongside relevant claims, and a final reference list. **A separate written project report is not required under the current draft guidelines.** No hazardous experiments, uncontrolled demonstrations, or handling of hazardous substances are authorized for this project.
 
-### Final Project Presentations
+### Evaluation and Audience Feedback
 
-Final projects will be presented during the final week of instruction on
-**Monday, November 30 and Wednesday, December 2, 2026**.
+The uploaded **Final Project Guidelines and Rubric (Draft 01)** proposes two components:
 
-Each group will select one of the two presentation dates, and all members of the
-group must agree on the selected date. All groups must complete their
-presentation by December 2.
+- **Research presentation:** 100 points, emphasizing problem definition, material properties, chemical reasoning, hazard and risk evaluation, management recommendations, scientific evidence, and oral communication.
+- **Audience feedback:** 100 proposed points, based on five evaluations of other presentations at 20 points each. Students must attend and submit their own printed feedback forms to Professor Rodriguez at the end of each presentation day. Missed presentations earn no audience feedback points for that presentation.
 
-Each group will have approximately **20 minutes to present**, followed by
-approximately **5 minutes for questions and discussion**. Every group member is
-expected to participate meaningfully in the presentation.
-
-Detailed project instructions, group assignments, milestones, written
-deliverable requirements, scheduling procedures, and the grading rubric will be
-provided during the quarter.
+**The project guidelines identify these weights as proposed.** The final grading allocation, presentation order, and submission deadlines will be confirmed in Canvas. Until that confirmation, the course assessment table above reflects the published syllabus rather than assuming the proposed additional audience-feedback points are approved.
 
 ---
 
@@ -516,14 +506,13 @@ shm-377-hazardous-materials-management/
 │
 ├── assessments/
 ├── course-resources/
+│   └── shm-377-course-blueprint.qmd
 ├── final-project/
 ├── images/
 ├── labs/
 ├── lectures/
 ├── resources/
 ├── syllabus/
-│
-│   └── shm-377-course-blueprint.qmd
 ├── LICENSE.md
 ├── README.md
 └── shm-377-hazardous-materials-management.Rproj
@@ -614,7 +603,10 @@ developed and refined.
 
 ## Course Development
 
-This repository supports SHM 377 Hazardous Materials Management at Central
+The proposed title **Hazardous Materials: Chemistry** describes the emphasis of this professor-developed public repository. Any formal change to the SHM 377 course title or catalog description would require review and approval through the appropriate CWU program and curriculum processes. Until then, the official course title remains **Hazardous Materials Management**.
+
+
+This repository supports SHM 377, officially titled Hazardous Materials Management, at Central
 Washington University.
 
 Course materials are designed to evolve as hazardous materials practices,
