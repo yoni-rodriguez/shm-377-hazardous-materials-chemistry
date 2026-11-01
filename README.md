@@ -69,7 +69,7 @@ troubleshoot an analysis, or develop a plan for succeeding in the course.
 Students who would like to meet privately or cannot attend the scheduled
 drop in office hours may email Professor Rodriguez to arrange an appointment.
 
-The course uses a weekly lecture–laboratory structure.
+The course uses a weekly lecture/laboratory structure.
 
 Monday meetings generally introduce hazardous-material concepts, case
 contexts, scientific principles, quantitative methods, and technical or
