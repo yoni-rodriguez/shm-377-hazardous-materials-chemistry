@@ -143,7 +143,7 @@ The course's developing chemistry sequence includes:
 
 | Lecture | Focus | Hazardous-materials connection |
 |---|---|---|
-| 01: Introduction to Hazardous Materials Management | Hazards, hazardous materials, exposure, dose, and material life cycles | Recognize hazards and understand how context changes risk |
+| 01: Introduction to Hazardous Materials Chemistry | Hazards, hazardous materials, exposure, dose, and material life cycles | Recognize hazards and understand how context changes risk |
 | 02: Chemistry of Hazardous Materials: Matter | John Dalton, matter, classification, and physical and chemical properties | Use scientific evidence to explain and predict material behavior |
 | 03: Chemistry of Hazardous Materials: Solids | Particle size, dust, smoke, solid hazards, chemical reactions, and conservation of mass | Connect physical form and chemical transformations to exposure and control |
 | 04: Chemistry of Hazardous Materials: Solids & Radiation | Atomic structure, isotopes, nuclear stability, radioactivity, and radiation effects | Interpret radiological hazards and relevant protective principles |
