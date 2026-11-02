@@ -1,7 +1,7 @@
 
 ---
 title: "Virtual Lab 02"
-subtitle: "Scientific Reasoning and Hazardous Materials Investigation"
+subtitle: "Hazardous Materials Chemistry"
 author: "Professor Yoni Rodriguez"
 date: "2026-10-10"
 

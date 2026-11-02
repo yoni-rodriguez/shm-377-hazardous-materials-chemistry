@@ -1,6 +1,6 @@
 ---
 title: "Chemistry of Hazardous Materials: Solids & Radiation"
-subtitle: "SHM 377 | Hazardous Materials Management | Lecture 04"
+subtitle: "SHM 377 | Hazardous Materials Chemistry | Lecture 04"
 format:
   html:
     toc: true
@@ -159,6 +159,37 @@ blockquote strong {
     font-size: 0.9em;
   }
 }
+
+
+
+
+/* =========================================================
+   Chemical vs. Nuclear Reactions Comparison Table
+   ========================================================= */
+
+table.reaction-comparison {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+table.reaction-comparison th,
+table.reaction-comparison td {
+  width: 50%;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: break-word;
+  padding: 0.75rem;
+}
+
+/* Vertical divider between the two columns */
+
+table.reaction-comparison th:first-child,
+table.reaction-comparison td:first-child {
+  border-right: 1px solid #adb5bd;
+}
+
+
 
 </style>
 ```
@@ -360,7 +391,7 @@ These emissions include:
 
 - **Alpha particles (**$\alpha$): Positively charged particles.
 - **Beta particles (**$\beta$): Charged particles, including electrons emitted from the nucleus during radioactive decay.
-- **Gamma rays (**$\gamma$): High-energy electromagnetic radiation that carries no electric charge, emitted by the nuclei. 
+- **Gamma rays (**$\gamma$): High-energy electromagnetic radiation that carries no electric charge, emitted by the nuclei.
 
 ![Separation of alpha particles, beta particles, and gamma rays in an electric field.](radiation-emission-types.jpg){#fig-radiation-emission-types fig-alt="Beta particles (red) deflect toward the positive plate, alpha particles (blue) deflect toward the negative plate, and gamma rays (green) continue straight without deflection." width="100%"}
 
@@ -487,17 +518,12 @@ Our understanding of atomic structure developed through a series of scientific d
 
 Together, these discoveries established the foundation for our modern understanding of atomic structure, radioactivity, and nuclear chemistry.
 
-
-
-
-
-
 ## 4.3 Atomic Number, Mass Number, and Isotopes
 
 All elements on the periodic table can be identified by the following:
 
-- The **atomic number ($Z$)**: the number of protons in the nucleus of each atom of an element.
-- The **mass number ($A$)**: the total number of neutrons *AND* protons. Often referred to *jointly* as **nucleons**.
+- The **atomic number (**$Z$): the number of protons in the nucleus of each atom of an element.
+- The **mass number (**$A$): the total number of neutrons *AND* protons. Often referred to *jointly* as **nucleons**.
 
 Therefore:
 
@@ -519,79 +545,391 @@ $$
 
 ![Nuclear notation illustrating the atomic number, mass number, and chemical element symbol.](atomic-number-mass-number-element-symbol.jpg){#fig-atomic-number-mass-number fig-alt="Diagram showing the element symbol X with mass number A in the upper left and atomic number Z in the lower left. The mass number represents the total number of protons and neutrons, while the atomic number represents the number of protons." width="100%"}
 
-
-
-
-What do we call an atom that has the same atomic number (Z) but different mass numbers (A)? 
+What do we call an atom that has the same atomic number (Z) but different mass numbers (A)?
 
 ### Isotopes
 
-Most elements have two or more isotopes, atoms that have the same atomic number (same number of protons *and* electrons) but different number of neutrons. 
+Most elements have two or more isotopes, atoms that have the same atomic number (same number of protons *and* electrons) but different number of neutrons.
 
-How do we identify an isotope from an element? 
+How do we identify an isotope from an element?
 
-- We write the mass number after the name of the element. Take Uranium of example: 
+- We write the mass number after the name of the element. Take Uranium of example:
 
 ![Comparison of uranium-238 and uranium-235, illustrating two isotopes of uranium with the same atomic number but different mass numbers.](uranium-isotope.jpg){#fig-uranium-isotopes fig-alt="Side-by-side comparison of uranium-238 and uranium-235 showing the same atomic number of 92 and different mass numbers of 238 and 235." width="100%"}
 
 The isotope Uranium-235 (U-235) has 143 neutrons in its nucleus (235-92 = 143) and is used in nuclear reactors and atomic bombs, whereas U-238 does not behave the same way in these applications.
 
-NOTE: the chemical properties of an element are determined primarily by the number of protons and electrons in its atoms; not by the number of neutrons. Therefore, isotopes of the same element usually, not always, exhibit very similar chemical properties. 
+NOTE: the chemical properties of an element are determined primarily by the number of protons and electrons in its atoms; not by the number of neutrons. Therefore, isotopes of the same element usually, not always, exhibit very similar chemical properties.
 
 ## 4.4 Nuclear Stability
 
-![Periodic Table of the Elements.](periodic-table.jpg){#fig-periodic-table fig-alt="Periodic table showing the chemical elements organized by increasing atomic number, with elements arranged into periods and groups" width="100%"}
+![Periodic Table of the Elements.](periodic-table.jpg){fig-alt="Periodic table showing the chemical elements organized by increasing atomic number, with elements arranged into periods and groups" width="100%"}
 
 The nuclei of some elements are stable, but others decay seconds after they are formed. Therefore, patterns of stability and instability of nuclei are useful to make predictions regarding nuclear decay.
 
+The principal factor that determines whether a nucleus is stable is the *neutron-to-proton ratio (n/p)*. For atoms of elements having low atomic numbers (less than or equal to 20; calcium), the *n/p* value is close to 1. The increase in the ratio of neutrons-to-protons with increasing atomic number can be explained by considering the role of the neutrons in helping to overcome the electrical repulsion between protons. The strong force holds that protons and neutrons together in a nucleus is powerful enough to overcome the electrostatic repulsion between the protons, but it can act over only a very short distance, about the diameter of a nucleus.
 
-The principal factor that determines whether a nucleus is stable is the *neutron-to-proton ratio (n/p)*. For atoms of elements having low atomic numbers (less than or equal to 20; calcium), the *n/p* value is close to 1. The increase in the ratio of neutrons-to-protons with increasing atomic number can be explained by considering the role of the neutrons in helping to overcome the electrical repulsion between protons. The strong force holds that protons and neutrons together in a nucleus is powerful enough to overcome the electrostatic repulsion between the protons, but it can act over only a very short distance, about the diameter of a nucleus. 
-
-Given that neutrons are uncharged, they can contribute to the strong force without adding to the electrostatic repulsion. Therefore, a lot of neutrons are needed to overcome the mutal repulsion of the protons in a nucleus of high atomic number, which explains why the band of stability curves upward. 
+Given that neutrons are uncharged, they can contribute to the strong force without adding to the electrostatic repulsion. Therefore, a lot of neutrons are needed to overcome the mutal repulsion of the protons in a nucleus of high atomic number, which explains why the band of stability curves upward.
 
 ![Belt of nuclear stability showing how the neutron-to-proton ratio increases with atomic number.](neutron-to-proton-plot.jpg){#fig-neutron-proton-stability fig-alt="Graph showing the number of protons on the horizontal axis and the number of neutrons on the vertical axis. A straight red diagonal line represents a 1:1 neutron-to-proton ratio. An orange belt of stability curves upward above the red line as atomic number increases, indicating that heavier stable nuclei require more neutrons than protons." width="100%"}
 
 *Figure adapted from Figure 2.9, "Plot of Neutrons Versus Protons," Chapter 2: Atoms and the Periodic Table, in Chemistry: Atoms First by Julia Burdge and Jason Overby.*
 
+General patterns:
 
-General patterns: 
+- **magic numbers** there are more stable nuclei containing *2, 8, 20, 50, 82, and 126* protons or neutrons than there are containing other numbers of protons or neutrons.
 
-- **magic numbers** there are more stable nuclei containing *2, 8, 20, 50, 82, and 126* protons or neutrons than there are containing other numbers of protons or neutrons. 
-  - Example: tin (Sn) vs. antimony (Sb): 
-  
-  | Element     | atomic number | stable isotopes |
-|:----------    |--------------:|----------------:|
-| Tin (Sn)      |            50 |              10 |
-| Antimony (Sb) |            51 |               2 |
+  - Example: tin (Sn) vs. antimony (Sb):
 
-- There are more stable nuclei with even numbers of both protons and neutrons than with odd numbers of these particles. 
+  | Element       | atomic number | stable isotopes |
+  |:--------------|--------------:|----------------:|
+  | Tin (Sn)      |            50 |              10 |
+  | Antimony (Sb) |            51 |               2 |
+
+- There are more stable nuclei with even numbers of both protons and neutrons than with odd numbers of these particles.
 
 - All isotopes of the elements with atomic numbers higher than 82 are radioactive.
-  - NOTE: Bismuth Z = 83 was long thought to have a stable isotope but it was found to decay       very slowly. 
-  
-- All isotopes of technetium (Tc, Z = 43) and promethium (Pm, Z = 61) are radioactive. 
+
+  - NOTE: Bismuth Z = 83 was long thought to have a stable isotope but it was found to decay very slowly.
+
+- All isotopes of technetium (Tc, Z = 43) and promethium (Pm, Z = 61) are radioactive.
+
 
 
 
 # Part II. Nuclear Chemistry
 
-*Primary source: Chemistry: Atoms First, 2nd ed., Chapter 20, uploaded photographs.*
+*Primary source: Chemistry: Atoms First, 2nd ed., Chemical Principles Focus 9: Nuclear Chemistry.*
 
-## 20.1 Nuclei and Nuclear Reactions
 
-Unstable nuclei can undergo radioactive decay. Nuclear transmutation can also result from bombardment with neutrons, protons, or other particles. Unlike ordinary chemical reactions, nuclear reactions can change one element into another and involve changes in nuclear composition.
 
-**Table 20.1: Comparison of Chemical Reactions and Nuclear Reactions.** Chemical reactions rearrange atoms through bonds and electron interactions; nuclear reactions involve changes in the nucleus and can release much larger amounts of energy. Their controlling conditions differ.
+## 4.4 Nuclei and Nuclear Reactions
 
-### Writing and Balancing Nuclear Equations
+### Nuclei
 
-The sums of mass numbers and atomic numbers must balance on both sides of a nuclear equation. Particle notation includes a neutron \$ {}\^{1}*{0}n \$, proton \$ {}\^{1}*{1}p \$, electron/beta particle \$ {}\^{0}*{-1}e \$, positron \$ {}\^{0}*{+1}e \$, and alpha particle \$ {}\^{4}\_{2}\mathrm{He} \$.
+Rutherford showed that each type of radiation is produced by **nuclear decay.** A change in the composition of a nucleus is called a **nuclear reaction.** Understand, that a specific atom with a given atomic number (Z) and mass number (A) is called a **nuclide.** For example, ${}^{1}_{1}\mathrm{H}$, ${}^{2}_{1}\mathrm{H}$, ${}^{16}_{8}\mathrm{O}$ are three different nucldies, the first two being isotopes of the same element. Nuclei that change their *structure spontaneously* and *emit radiation* are described as **radioactive.** Often the results is a nucleus of a different element.
 
-**Worked Example 20.1:** Determine unknown nuclear species using conservation of total mass number and atomic number.
+### Understanding the Nuclear Notation
 
-## 20.2 Nuclear Stability
+Nuclear notation identifies an element and its atomic number and mass number.
+
+$$
+{}^{A}_{Z}\mathrm{X}
+$$
+
+- **A (upper left):** Mass number, the total number of protons and neutrons.
+- **Z (lower left):** Atomic number, the number of protons.
+- **X (right):** Chemical symbol of the element.
+
+**For hydrogen-1:**
+
+$$
+{}^{1}_{1}\mathrm{H}
+$$
+
+- Mass number = 1
+- Atomic number = 1
+- Number of protons = 1
+- Number of neutrons = 1 − 1 = 0
+
+
+
+
+### Understanding Nuclear Reactions
+
+Nuclear reactions differ in some important ways from chemical reactions.
+
+1. Different isotopes of the same element undergo essentially the same chemical reactions but undergo very different nuclear reactions.
+
+2. Some nuclear reactions, such as those in which $\alpha$ or $\beta$ particles are emitted from the nucleus, leave behind a nucleus with a different number of protons and which is therefore the nucleus of an atom of a different element. The product nucleus is called a **daughter nucleus.**
+
+    For example, when atmospheric ${}^{14}_{7}\mathrm{N}$, is convereted to ${}^{14}_{6}\mathrm{C}$ and ${}^{1}_{1}\mathrm{H}$, which results when the nitrogen isotpoe is bombarded by neutrons (from the sun), **nuclear transmuation** has taken place. This type of transmuation occurs naturally in outer space, but it can also be achieved artificially.
+
+3. Another important difference between nuclear and chemical reactions is that energy changes are very much greater for nuclear reactions than for chemical reactions.
+
+    For example, the combustion of $1.0\ \mathrm{g}$ of methane produces about $52\ \mathrm{kJ}$ of energy as heat. In contrast, a nuclear reaction of $1.0\ \mathrm{g}$ of uranium-235 produces about $8.2 \times 10^{7}\ \mathrm{kJ}$ of energy, more than a million times as much.
+
+    To put that energy into perspective:
+
+    - A moving baseball: A 250-gram baseball thrown or hit at roughly 20 meters per second (45 mph) carries about 50 joules of kinetic energy.
+    - Walking/Climbing: Walking up a flight of stairs (roughly 10 to 12 steps) uses around 2 to 4 kilojoules depending on your body weight.
+
+
+| Chemical Reactions | Nuclear Reactions |
+|:-------------------|:------------------|
+| 1. Atoms are rearranged by the breaking and forming of chemical bonds. | 1. Elements are converted to other elements (or isotopes). |
+| 2. Only electrons in atomic or molecular orbitals are involved in the reaction. | 2. Protons, neutrons, electrons, and other subatomic particles such as $\alpha$ particles may be involved. |
+| 3. Reactions are accompanied by the absorption or release of relatively small amounts of energy. | 3. Reactions are accompanied by the absorption or release of tremendous amounts of energy. |
+| 4. Rates of reaction are influenced by temperature, pressure, concentration, and catalysts. | 4. Rates of reaction normally are not affected by temperature, pressure, or catalysts. |
+
+: Comparison of Chemical Reactions and Nuclear Reactions {#tbl-chemical-nuclear-reactions .reaction-comparison}
+
+*Source: Burdge, J., & Overby, J. (2018). Chemistry: Atoms First (2nd ed.), Chapter 20, Table 20.1, "Comparison of Chemical Reactions and Nuclear Reactions."*
+
+
+### Key Definitions
+
+- **nuclear decay:** the partial breakup of a nucleus
+- **nuclear reaction:** a change that a nucleus undergoes
+- **nuclide:** An atom of specified atomic number and mass number. *Examples* ${}^{1}_{1}\mathrm{H}$, ${}^{16}_{8}\mathrm{O}$
+- **radioactive:** A nucleus is radioactive if it can change its structure spontaneously and emit radiation.
+- **daughter nucleus:** a nucleus that is the produce of a nuclear decay.
+- **nuclear transmutation:** The conversion of one element into another.
+
+
+---------------------------------------------------------------------------
+
+
+### Types of Nuclear Radiation
+
+Rutherford identified three common types of nuclear radiation: alpha ($\alpha$) particles, beta ($\beta$) particles, and gamma ($\gamma$) rays. Each differs in its physical characteristics, electric charge, and degree of penetration.
+
+#### Alpha Particles ($\alpha$)
+
+**Alpha-particle radiation:** ${}^{4}_{2}\alpha$ is positively charged and can be thought of as a tightly bound cluster of two protons and two neutrons. An alpha particle is also often referred to as a helium nucleus: ${}^{4}_{2}\mathrm{He}$.
+
+When a nucleus emits an alpha particle, its **atomic number decreases by two** and its **mass number decreases by four.**
+
+
+
+When a nucleus emits an alpha particle, its **atomic number decreases by two** and its **mass number decreases by four**.
+
+We can represent this transformation using a **nuclear equation**, which shows how an unstable nucleus changes into a different nucleus while emitting radiation.
+
+For example, when polonium-212 undergoes alpha decay:
+
+$$
+{}^{212}_{84}\mathrm{Po}
+\;\longrightarrow\;
+{}^{4}_{2}\alpha
+\;+\;
+{}^{208}_{82}\mathrm{Pb}
+$$
+
+In this nuclear equation:
+
+- **Parent nucleus:** Polonium-212 (${}^{212}_{84}\mathrm{Po}$)
+- **Emitted particle:** Alpha particle (${}^{4}_{2}\alpha$)
+- **Daughter nucleus:** Lead-208 (${}^{208}_{82}\mathrm{Pb}$)
+
+The atomic number decreases from 84 to 82, while the mass number decreases from 212 to 208.
+
+
+
+**Degree of penetration:** Alpha particles have very limited penetration. They can travel only a short distance through air (*~4 inches from their source*) and can be stopped by a sheet of paper or the outer layer of skin.
+
+Although alpha particles generally present a limited external radiation hazard, radioactive material that emits alpha particles can be particularly damaging if it enters the body through inhalation, ingestion, or wounds.
+
+*Source: Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.). Jones & Bartlett Learning, Chapter 3, "Alpha Particles."*
+
+#### Beta Particles ($\beta$)
+
+**Beta-particle radiation:** ${}^{0}_{-1}\beta$ is negatively charged, and by measuring the charge and mass of these particles, Rutherford showed that they are electrons. Given that a beta particle has no protons or neutrons, its mass number is 0 and can be written as ${}^{0}_{-1}\mathrm{e}$.
+
+Beta particles are high-speed electrons emitted during nuclear transformations.
+
+
+During negative beta decay ($\beta^{-}$), **a neutron** in the nucleus is **converted into a proton**, and an **electron is emitted**. **The atomic number increases by one**, while **the mass number remains unchanged**.
+
+We can represent this transformation using the following nuclear equation:
+
+$$
+{}^{1}_{0}\mathrm{n}
+\;\longrightarrow\;
+{}^{1}_{1}\mathrm{p}
+\;+\;
+{}^{0}_{-1}\mathrm{e}
+$$
+
+
+
+
+When a nucleus emits a beta particle ($\beta^{-}$), its **atomic number increases by one** while its **mass number remains unchanged**.
+
+We can represent this transformation using a **nuclear equation**, which shows how an unstable nucleus changes into a different nucleus while emitting radiation.
+
+For example, when strontium-90 undergoes beta-minus decay:
+
+$$
+{}^{90}_{38}\mathrm{Sr}
+\;\longrightarrow\;
+{}^{0}_{-1}\beta
+\;+\;
+{}^{90}_{39}\mathrm{Y}
+$$
+
+In this nuclear equation:
+
+- **Parent nucleus:** Strontium-90 (${}^{90}_{38}\mathrm{Sr}$)
+- **Emitted particle:** Beta particle (${}^{0}_{-1}\beta$)
+- **Daughter nucleus:** Yttrium-90 (${}^{90}_{39}\mathrm{Y}$)
+
+The atomic number increases from 38 to 39, while the mass number remains 90.
+
+
+
+**Degree of penetration:** Beta particles are moderately penetrating. They generally travel farther through air than alpha particles (*~1 to 20 feet from their source*) and can penetrate the outer layers of skin.
+
+Beta radiation can be shielded using suitable materials, including plastic or thin sheets of metal. The choice of shielding material depends on the energy of the beta particles.
+
+*Source: Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.). Jones & Bartlett Learning, Chapter 3, "Beta Particles."*
+
+#### Gamma Radiation ($\gamma$)
+
+**Gamma-ray radiation:** The third common type of radiation that Rutherford identified was gamma radiation, represented by the Greek letter $\gamma$.
+
+Like visible light, $\gamma$ radiation is electromagnetic radiation but of much higher frequency and is regarded as a stream of very-high-energy photons.
+
+
+Gamma rays are emitted when a nucleus moves from a higher-energy state to a lower-energy state. Unlike alpha or beta decay, **gamma emission does not change the atomic number or mass number of the nucleus.**
+
+We can represent this transformation using a **nuclear equation**, which shows how an excited nucleus releases energy in the form of a gamma-ray photon.
+
+For example, when technetium-99m undergoes gamma emission:
+
+$$
+{}^{99m}_{43}\mathrm{Tc}
+\;\longrightarrow\;
+{}^{99}_{43}\mathrm{Tc}
+\;+\;
+{}^{0}_{0}\gamma
+$$
+
+In this nuclear equation:
+
+- **Parent nucleus:** Technetium-99m (${}^{99m}_{43}\mathrm{Tc}$)
+- **Emitted radiation:** Gamma-ray photon (${}^{0}_{0}\gamma$)
+- **Daughter nucleus:** Technetium-99 (${}^{99}_{43}\mathrm{Tc}$)
+
+The atomic number remains 43, and the mass number remains 99. **Only the energy state of the nucleus changes.**
+
+
+
+**Degree of penetration:** Very penetrating; often accompanies $\alpha$ and $\beta$ radiation.
+
+Gamma radiation can penetrate deeply into materials and biological tissue. Dense shielding materials, such as lead or concrete, can reduce gamma radiation exposure.
+
+Gamma radiation may also accompany other nuclear transformations. For example, iodine-125 can undergo **electron capture**, followed by the emission of gamma radiation as the resulting nucleus releases excess energy.
+
+The following simplified nuclear equation illustrates this process:
+
+$$
+{}^{125}_{53}\mathrm{I}
+\;+\;
+{}^{0}_{-1}\beta
+\;\longrightarrow\;
+{}^{125}_{52}\mathrm{Te}
+\;+\;
+\gamma
+$$
+
+In this nuclear equation:
+
+- **Parent nucleus:** Iodine-125 (${}^{125}_{53}\mathrm{I}$)
+- **Captured particle:** Beta particle ${}^{0}_{-1}\beta$)
+- **Daughter nucleus:** Tellurium-125 (${}^{125}_{52}\mathrm{Te}$)
+- **Emitted radiation:** Gamma-ray photon ($\gamma$)
+
+Notice that the **atomic number decreases from 53 to 52**, while the **mass number remains 125**. This change occurs because of electron capture, not gamma emission. The gamma ray carries away energy without changing either number.
+
+
+Gamma radiation can penetrate deeply into materials and biological tissue. Dense shielding materials, such as lead or concrete, can reduce gamma radiation exposure.
+
+*Source: Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.). Jones & Bartlett Learning, Chapter 3, "Gamma Radiation."*
+
+#### Other Nuclear Particles and Processes
+
+Since Rutherford's work, scientists have identified other types of nuclear radiation. Some consist of rapidly moving particles, such as neutrons or protons. A proton can also be referred to as a hydrogen-1 nucleus, represented by ${}^{1}_{1}\mathrm{H}$ or ${}^{1}_{1}\mathrm{p}$.
+
+Others consist of rapidly moving **antiparticles**, particles with a mass equal to that of one of the subatomic particles but with an opposite charge.
+
+For example, the **positron** has the same mass as an electron but a positive charge. It is denoted by $\beta^{+}$ or ${}^{0}_{+1}\mathrm{e}$.
+
+When an antiparticle encounters its corresponding particle, both particles are annihilated and completely converted into energy.
+
+In **electron capture**, an electron in an atomic orbital is captured by the nucleus, and a proton is converted into a neutron.
+
+
+
+
+#### Comparison of Nuclear Radiation
+
+The following table summarizes the properties of particles commonly found in nuclear radiation.
+
+| Type | Particle | Mass Number | Charge | Degree of Penetration |
+|:-----|:---------|:-----------:|:------:|:----------------------|
+| Alpha ($\alpha$) | Helium-4 nucleus, ${}^{4}_{2}\alpha$ | 4 | +2 | Low; stopped by paper or outer skin |
+| Beta ($\beta^{-}$) | Electron, ${}^{0}_{-1}\mathrm{e}$ | 0 | −1 | Moderate; can penetrate skin |
+| **Gamma ($\gamma$)** | **Photon, $\gamma$** | **0** | **0** | **Very penetrating** |
+| Positron ($\beta^{+}$) | Antielectron, ${}^{0}_{+1}\mathrm{e}$ | 0 | +1 | Moderately penetrating |
+| Proton ($\mathrm{p}$) | Hydrogen-1 nucleus, ${}^{1}_{1}\mathrm{H}$ or ${}^{1}_{1}\mathrm{p}$ | 1 | +1 | Moderate or low penetration |
+| **Neutron ($\mathrm{n}$)** | **Neutron, ${}^{1}_{0}\mathrm{n}$** | **1** | **0** | **Very penetrating** |
+
+: Comparison of Common Types of Nuclear Radiation {#tbl-nuclear-radiation tbl-colwidths="[20,28,13,9,30]"}
+
+*Source: Adapted from Atkins, Jones, Laverman, Patterson, and Young, Chemical Principles (8th ed.), Focus 9: Nuclear Chemistry, Table 9A.1, "Nuclear Radiation."*
+
+
+
+
+![Penetrating potential of different types of nuclear radiation.](penetrating-potential-of-radiation.jpg){#fig-radiation-penetration fig-alt="Illustration comparing the penetrating ability of different types of nuclear radiation through shielding materials" width="100%"}
+
+
+
+
+##### Why Are Gamma Rays and Neutrons So Penetrating?
+
+Both gamma rays and neutrons carry **no electric charge**. Unlike charged particles, they are not directly attracted or repelled by the electric fields of atoms.
+
+However, gamma rays and neutrons interact with matter in different ways:
+
+- **Gamma rays ($\gamma$):** Gamma rays are high-energy electromagnetic photons that interact with electrons and under certain conditions, atomic nuclei. Their lack of electric charge allows them to travel considerable distances through matter before an interaction occurs.
+
+- **Neutrons ($\mathrm{n}$):** Neutrons are electrically neutral particles that interact primarily with atomic nuclei. Without an electric charge, neutrons are not subject to electrostatic attraction or repulsion and may travel considerable distances through matter before undergoing a nuclear interaction.
+
+These differences are important when selecting materials to shield workers and the public from radiation exposure.
+
+- **Gamma radiation:** Dense materials, such as lead and concrete, are commonly used to reduce exposure to gamma radiation.
+
+- **Neutron radiation:** Hydrogen-rich materials, such as water and polyethylene, are particularly effective at slowing down fast neutrons. Additional shielding materials may be necessary to absorb neutrons and reduce secondary radiation produced during nuclear interactions.
+
+**Important:** No shielding material completely stops all radiation under every condition. The effectiveness of shielding depends on the type and energy of the radiation, as well as the thickness and composition of the shielding material.
+
+#### Ionization and Ionizing Radiation
+
+In our earlier discussion of atomic structure, we established that electrons occupy the region surrounding the atomic nucleus.
+
+When radiation interacts with matter, energy can be transferred to the electrons within an atom. If sufficient energy is transferred, an electron may be removed from the atom entirely.
+
+This process is called **ionization**.
+
+The atom that loses an electron becomes a positively charged **ion**, while the electron that was removed carries a negative charge.
+
+Radiation that has sufficient energy to remove electrons from atoms or molecules is called **ionizing radiation**.
+
+The process of ionization depends on how radiation interacts with matter. Charged particles, such as alpha and beta particles, can produce ionization directly through their interactions with electrons. Gamma rays can produce ionization through interactions that transfer energy to electrons, while neutrons produce ionization indirectly through the charged particles and other radiation generated during nuclear interactions.
+
+#### Why Is Ionization Important in Health Physics?
+
+We have established that ionizing radiation can transfer energy to atoms and molecules. The same process can occur when radiation interacts with biological tissue.
+
+When ionizing radiation passes through the human body, it can remove electrons from atoms and molecules within cells. These interactions may damage cellular structures, including DNA, and interfere with normal biological functions.
+
+Understanding how radiation transfers energy to matter provides the foundation for evaluating radiation exposure and its potential effects on human health.
+
+*Source: Cember, H., & Johnson, T. E., Introduction to Health Physics (4th ed.), Chapter 3, "Atomic and Nuclear Structure."*
+
+
+
+--------------------------------------------------------------------------- YOU ARE HERE 
+
+
+
+## 4.5 Nuclear Stability
 
 Nuclei outside the belt of stability undergo processes that move their proton-neutron composition toward a more stable arrangement.
+
+![Band of nuclear stability showing the relationship between atomic number and mass number, including the 1:1 neutron-to-proton ratio and regions of nuclear instability.](nuclear-stability.jpg){#fig-nuclear-stability fig-alt="Graph illustrating the band of nuclear stability, the 1:1 neutron-to-proton ratio, and regions of nuclear instability, with an enlarged view of stable and unstable nuclides" width="100%"}
 
 ### Types of Nuclear Decay
 
@@ -604,6 +942,30 @@ Binding energy measures the energy associated with separating a nucleus into con
 $$ E = mc^2 $$
 
 Binding energy per nucleon permits comparisons among nuclei of different sizes. Figure 20.1 graphs binding energy per nucleon against mass number. The chapter develops a fluorine-19 example and Worked Example 20.2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 20.3 Natural Radioactivity
 

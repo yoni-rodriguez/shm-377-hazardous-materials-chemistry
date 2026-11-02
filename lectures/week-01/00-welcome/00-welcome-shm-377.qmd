@@ -1,5 +1,5 @@
 ---
-title: "SHM 377: Hazardous Materials Management"
+title: "SHM 377: Hazardous Materials Chemistry"
 subtitle: "Lecture 00: Welcome to SHM 377"
 author: "Yoni Rodriguez"
 format:

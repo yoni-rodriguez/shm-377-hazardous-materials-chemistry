@@ -118,7 +118,7 @@ blockquote strong {
 :::
 
 ::: {.column width="50%"}
-## SHM 377: Hazardous Materials Management
+## SHM 377: Hazardous Materials Chemistry
 
 ### Chemistry of Hazardous Materials: Matter
 

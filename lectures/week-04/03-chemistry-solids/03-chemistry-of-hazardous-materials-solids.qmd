@@ -187,7 +187,7 @@ blockquote strong {
 :::
 
 ::: {.column width="50%"}
-## SHM 377: Hazardous Materials Management
+## SHM 377: Hazardous Materials Chemistry
 
 ### Chemistry of Hazardous Materials: Solids
 
@@ -196,7 +196,7 @@ blockquote strong {
 Yoni Rodriguez\
 Engineering Technologies, Safety, and Construction\
 Central Washington University\
-[Yoni.Rodriguez\@cwu.edu](mailto:Yoni.Rodriguez@cwu.edu)
+[Yoni.Rodriguez@cwu.edu](mailto:Yoni.Rodriguez@cwu.edu)
 :::
 :::::::
 
@@ -237,7 +237,7 @@ The word *solid* describes a **physical state of matter**. It does not tell us a
 Examples encountered in hazardous materials management include metal ingots, crystalline chemicals, fertilizer granules, contaminated soil, asbestos-containing materials, and powdered metals.
 
 | Form | What we can observe | Why it matters |
-|------------------------|------------------------|------------------------|
+|-----------------------|-----------------------|-----------------------|
 | Bulk solid | Large piece or consolidated mass | Contact, handling, heat transfer, and mechanical damage |
 | Pellets | Relatively large, often uniformly shaped pieces of compressed or manufactured material | Spillage, handling, and possible fragmentation |
 | Granules | Smaller, discrete grains or particles, often irregular in shape | Spreading, spillage, and potential dust generation |
@@ -396,7 +396,7 @@ The event demonstrated that smoke can affect communities located far from the or
 ### Comparing the Two Events
 
 | Characteristic | Donora (1948) | Spokane (2017) |
-|------------------------|------------------------|------------------------|
+|-----------------------|-----------------------|-----------------------|
 | **Pollution source** | Zinc and steel facilities | Regional wildfires |
 | **Environmental conditions** | Temperature inversion limited dispersion | Atmospheric winds transported smoke |
 | **Geographic impact** | Donora and the surrounding valley | Spokane and Eastern Washington |
@@ -961,7 +961,7 @@ Although individual reactions may appear complicated, many can be organized into
 #### Four Common Reaction Classes
 
 | Reaction class | General pattern | What happens? |
-|:---------------------|:--------------------------:|:---------------------|
+|:--------------------|:-------------------------:|:--------------------|
 | **Decomposition** | $AB \rightarrow A + B$ | One compound breaks down into simpler substances. |
 | **Combination (Synthesis)** | $A + B \rightarrow AB$ | Two substances combine to form one compound. |
 | **Single Displacement** | $A + BC \rightarrow AC + B$ | One element replaces another element in a compound. |
@@ -1840,7 +1840,7 @@ Recall Lecture 02:
 When temperature changes, several different processes may become relevant:
 
 | Process | Type | Hazard management question |
-|------------------------|------------------------|------------------------|
+|-----------------------|-----------------------|-----------------------|
 | Thermal expansion | Physical | Could expansion damage equipment, seals, or packaging? |
 | Melting | Physical | Could a previously contained solid begin to flow or spread? |
 | Sublimation (for some solids) | Physical | Could a solid produce vapor without first becoming a liquid? |

@@ -1,6 +1,6 @@
 ---
 title: "Introduction to R & Environmental Data"
-subtitle: "SHM 377 Hazardous Materials Management"
+subtitle: "SHM 377 Hazardous Materials Chemistry"
 author: "Yoni Rodriguez"
 
 format:
@@ -419,42 +419,22 @@ You should see your CSV and R script.
 The Console and R script both allow us to work with R, but they serve different purposes.
 
 ::: {.content-visible when-format="html"}
-
-<table style="width:100%; border-collapse:collapse;">
-  <thead>
-    <tr>
-      <th style="width:50%; text-align:left; padding:10px; border-bottom:1px solid #999; border-right:2px solid #777;">Console</th>
-      <th style="width:50%; text-align:left; padding:10px; border-bottom:1px solid #999;">R Script</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding:10px; border-bottom:1px solid #ddd; border-right:2px solid #777;">Try something</td>
-      <td style="padding:10px; border-bottom:1px solid #ddd;">Save your work</td>
-    </tr>
-    <tr>
-      <td style="padding:10px; border-bottom:1px solid #ddd; border-right:2px solid #777;">Explore</td>
-      <td style="padding:10px; border-bottom:1px solid #ddd;">Build an analysis</td>
-    </tr>
-    <tr>
-      <td style="padding:10px; border-bottom:1px solid #ddd; border-right:2px solid #777;">Check something</td>
-      <td style="padding:10px; border-bottom:1px solid #ddd;">Keep important commands</td>
-    </tr>
-    <tr>
-      <td style="padding:10px; border-bottom:1px solid #ddd; border-right:2px solid #777;">Immediate</td>
-      <td style="padding:10px; border-bottom:1px solid #ddd;">Reusable</td>
-    </tr>
-    <tr>
-      <td style="padding:10px; border-bottom:1px solid #ddd; border-right:2px solid #777;">Not automatically saved as your analysis</td>
-      <td style="padding:10px; border-bottom:1px solid #ddd;">Saved as an <code>.R</code> file</td>
-    </tr>
-  </tbody>
-</table>
-
++------------------------------------------+-------------------------+
+| Console                                  | R Script                |
++:=========================================+:========================+
+| Try something                            | Save your work          |
++------------------------------------------+-------------------------+
+| Explore                                  | Build an analysis       |
++------------------------------------------+-------------------------+
+| Check something                          | Keep important commands |
++------------------------------------------+-------------------------+
+| Immediate                                | Reusable                |
++------------------------------------------+-------------------------+
+| Not automatically saved as your analysis | Saved as an `.R` file   |
++------------------------------------------+-------------------------+
 :::
 
 ::: {.content-visible when-format="pdf"}
-
 ```{=latex}
 \begin{center}
 \begin{tabular}{p{0.45\linewidth}|p{0.45\linewidth}}
@@ -468,10 +448,10 @@ Not automatically saved as your analysis & Saved as an \texttt{.R} file \\
 \end{tabular}
 \end{center}
 ```
-
 :::
 
 ## Try a Command in the Console
+
 Enter:
 
 ``` r
