@@ -559,7 +559,7 @@ Most elements have two or more isotopes, atoms that have the same atomic number 
 
 How do we identify an isotope from an element?
 
-- We write the mass number after the name of the element. Take Uranium of example:
+- We write the mass number after the name of the element. Take Uranium for example:
 
 ![Comparison of uranium-238 and uranium-235, illustrating two isotopes of uranium with the same atomic number but different mass numbers.](uranium-isotope.jpg){#fig-uranium-isotopes fig-alt="Side-by-side comparison of uranium-238 and uranium-235 showing the same atomic number of 92 and different mass numbers of 238 and 235." width="100%"}
 
@@ -573,7 +573,7 @@ NOTE: the chemical properties of an element are determined primarily by the numb
 
 The nuclei of some elements are stable, but others decay seconds after they are formed. Therefore, patterns of stability and instability of nuclei are useful to make predictions regarding nuclear decay.
 
-The principal factor that determines whether a nucleus is stable is the *neutron-to-proton ratio (n/p)*. For atoms of elements having low atomic numbers (less than or equal to 20; calcium), the *n/p* value is close to 1. The increase in the ratio of neutrons-to-protons with increasing atomic number can be explained by considering the role of the neutrons in helping to overcome the electrical repulsion between protons. The strong force holds that protons and neutrons together in a nucleus is powerful enough to overcome the electrostatic repulsion between the protons, but it can act over only a very short distance, about the diameter of a nucleus.
+The principal factor that determines whether a nucleus is stable is the *neutron-to-proton ratio (n/p)*. For atoms of elements having low atomic numbers (less than or equal to 20; calcium), the *n/p* value is close to 1. The increase in the ratio of neutrons-to-protons with increasing atomic number can be explained by considering the role of the neutrons in helping to overcome the electrical repulsion between protons. The strong force that holds protons and neutrons together in a nucleus is powerful enough to overcome the electrostatic repulsion between the protons, but it can act over only a very short distance, about the diameter of a nucleus.
 
 Given that neutrons are uncharged, they can contribute to the strong force without adding to the electrostatic repulsion. Therefore, a lot of neutrons are needed to overcome the mutal repulsion of the protons in a nucleus of high atomic number, which explains why the band of stability curves upward.
 
@@ -688,7 +688,6 @@ Rutherford identified three common types of nuclear radiation: alpha ($\alpha$) 
 
 When a nucleus emits an alpha particle, its **atomic number decreases by two** and its **mass number decreases by four.**
 
-When a nucleus emits an alpha particle, its **atomic number decreases by two** and its **mass number decreases by four**.
 
 We can represent this transformation using a **nuclear equation**, which shows how an unstable nucleus changes into a different nucleus while emitting radiation.
 
@@ -733,8 +732,6 @@ $$
 \;+\;
 {}^{0}_{-1}\mathrm{e}
 $$
-
-When a nucleus emits a beta particle ($\beta^{-}$), its **atomic number increases by one** while its **mass number remains unchanged**.
 
 We can represent this transformation using a **nuclear equation**, which shows how an unstable nucleus changes into a different nucleus while emitting radiation.
 
@@ -1279,7 +1276,7 @@ Earlier in this lecture, we examined several examples of nuclear decay and radia
 
 - **Neutron radiation (**$\mathrm{n}$): Neutrons (${}^{1}_{0}\mathrm{n}$) carry no electric charge and therefore do not directly ionize atoms through electrostatic interactions. Instead, neutrons interact primarily with atomic nuclei. These interactions can produce energetic charged particles or secondary radiation that subsequently cause ionization.
 
-## 4.6 How Do We Measure Ionizing Radiation?
+## 4.5 How Do We Measure Ionizing Radiation?
 
 We have learned that unstable atomic nuclei can release energy through radioactive decay and that ionizing radiation can remove electrons from atoms.
 
