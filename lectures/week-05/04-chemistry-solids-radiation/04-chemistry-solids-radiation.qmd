@@ -230,7 +230,7 @@ In this lecture, we will return to the atom and examine how scientists discovere
 
 We will then examine the structure of the atomic nucleus, the differences between isotopes, and the forces that determine nuclear stability. These principles will help us understand why certain nuclei are unstable, how radioactive decay occurs, and why different forms of ionizing radiation are emitted.
 
-Finally, we will apply these chemical principles to hazardous materials management by examining how ionizing radiation interacts with matter, how radiation exposure can affect human health, and how the principles of health physics guide radiation protection and emergency response.
+Finally, we will apply these chemical principles to hazardous materials management by examining biological effects, radiation protection, absorbed dose, and the electromagnetic spectrum, including everyday sources of non-ionizing radiation and the organizations responsible for safety standards and oversight.
 
 As in our previous chemistry lectures, **our objective is not simply to memorize scientific terminology or equations, but to use scientific evidence to understand hazardous materials, predict their behavior, and make informed decisions that protect workers, the public, and the environment.**
 
@@ -248,11 +248,13 @@ By the end of this lecture, students should be able to:
 
 5.  **Distinguish between the major types of ionizing radiation**, including alpha particles, beta particles, gamma rays, and neutron radiation, based on their origins, physical properties, and interactions with matter.
 
-6.  **Interpret fundamental concepts of radioactivity**, including nuclear equations, radioactive decay series, half-life, and activity.
+6.  **Interpret fundamental concepts of radioactivity**, including nuclear equations, half-life, activity, and absorbed dose.
 
 7.  **Explain the biological effects of ionizing radiation**, including how energy deposited in biological tissues can cause cellular damage and influence health outcomes.
 
-8.  **Apply fundamental radiation protection principles**, including time, distance, shielding, and contamination control, to evaluate radiation hazards and identify appropriate protective measures during hazardous materials incidents.
+8.  **Apply radiation protection principles**, including time, distance, shielding, and contamination control, and distinguish ionizing from non-ionizing radiation across the electromagnetic spectrum.
+
+9.  **Identify common non-ionizing radiation sources**, including ultraviolet, infrared, visible light, microwaves, Wi-Fi, Bluetooth, and cellular communications, and describe the roles of relevant regulatory and guidance organizations.
 
 # Part I. Atoms and the Periodic Table
 
@@ -297,7 +299,7 @@ In Lecture 02, we discussed how John Dalton proposed that atoms were tiny, indiv
 
 In 1897, the British physicist **J. J. Thomson** investigated the behavior of cathode rays produced when a high voltage was applied between two electrodes inside a vacuum tube.
 
-![J. J. Thomson and his experimental apparatus.](j-j-thomson.jpg){#fig-jj-thomson fig-alt="J. J. Thomson and his experimental apparatus used to investigate cathode rays" width="45%"}
+![J. J. Thomson and his experimental apparatus.](j-j-thomson.jpg){#fig-jj-thomson fig-alt="J. J. Thomson and his experimental apparatus used to investigate cathode rays" width="85%"}
 
 The rays traveled from the negatively charged electrode, known as the **cathode**, toward the opposite end of the tube, where they could produce a visible glow on a fluorescent screen.
 
@@ -305,7 +307,7 @@ Thomson observed that the rays could be deflected by an electric field. From the
 
 Importantly, Thomson found that these particles behaved the same way regardless of the metal used to produce them. This observation led him to conclude that electrons are part of the makeup of all atoms.
 
-![Cathode-ray tube illustrating the deflection of an electron beam by an electric field.](cathode-ray-tube.jpg){#fig-cathode-ray-tube fig-alt="Side-view schematic of an evacuated cathode-ray tube showing the cathode, anode, magnet, positively and negatively charged deflection plates, and electron beam bending toward the positive plate" width="45%"}
+![Cathode-ray tube illustrating the deflection of an electron beam by an electric field.](cathode-ray-tube.jpg){#fig-cathode-ray-tube fig-alt="Side-view schematic of an evacuated cathode-ray tube showing the cathode, anode, magnet, positively and negatively charged deflection plates, and electron beam bending toward the positive plate" width="100%"}
 
 #### Determining the Electron's Charge and Mass
 
@@ -344,13 +346,11 @@ For some droplets, they could adjust the electric field until the upward electri
 
 When these forces were balanced, the droplet remained suspended rather than rising or falling.
 
-![Millikan's oil-drop experiment, illustrating the apparatus and the opposing electrical and gravitational forces acting on a charged oil droplet.](robert-millikan-oil-experiment.jpg){#fig-millikan-oil-drop fig-alt="Millikan oil-drop apparatus showing oil droplets released from a sprayer between two electrically charged plates, a microscope used to observe the droplets, and opposing upward electric and downward gravitational forces acting on a selected droplet" width="45%"}
+![Millikan's oil-drop experiment, illustrating the apparatus and the opposing electrical and gravitational forces acting on a charged oil droplet.](robert-millikan-oil-experiment.jpg){#fig-millikan-oil-drop fig-alt="Millikan oil-drop apparatus showing oil droplets released from a sprayer between two electrically charged plates, a microscope used to observe the droplets, and opposing upward electric and downward gravitational forces acting on a selected droplet" width="85%"}
 
 #### What Did the Researchers Discover?
 
 Millikan and Fletcher found that the charge on any particular drop was always a multiple of $-1.6022 \times 10^{-19}\ \mathrm{C}$, which they deduced was the charge on a single electron.
-
-The notation $10^{-19}$ means **one ten-quintillionth**, or one divided by ten quintillion. The negative sign indicates the electron’s negative electrical charge; the negative exponent indicates how small that charge is. We will define the **coulomb (C)**, the SI unit of electrical charge, in Section 4.6A.
 
 #### Why Was This Discovery Important?
 
@@ -360,21 +360,17 @@ $$
 m_e = \frac{\text{Charge}}{\text{Charge/Mass}} = \frac{-1.6022 \times 10^{-19}\ \cancel{\mathrm{C}}}{-1.76 \times 10^{8}\ \cancel{\mathrm{C}}/\mathrm{g}} = 9.10 \times 10^{-28}\ \mathrm{g}
 $$
 
-In this calculation, $10^{8}$ represents **one hundred million**, while $10^{-28}$ represents **one ten-octillionth**. The calculated electron mass, $9.10 \times 10^{-28}\ \mathrm{g}$, is approximately **9.10 ten-octillionths of a gram**. These extremely small quantities help explain why scientists use scientific notation when describing subatomic particles.
-
 ### Radioactivity
 
 While scientists were investigating the electron, other experiments revealed that certain materials could spontaneously emit radiation.
 
-In 1896, French physicist **Henri Becquerel** observed that uranium oxide left in a drawer with photographic plates darkened areas of the plates. From his observations, he realized that uranium must give off some kind of "radiation." This observation provided evidence that radiation could originate from within matter itself.
+In 1896, French physicist **Henri Becquerel** observed that uranium oxide left in a drawer with photographic plates darkened areas of the plates. From his observations he realized that uranium must give off some kind of "radiation." Also, this observation gave evidence that radiation could originate from within matter itself.
 
-![Henri Becquerel and the discovery of radioactivity. Source: University of Washington Environmental Health & Safety, Ionizing Radiation Safety: External Radiation, Philip Campbell, CHP, Radiation Safety Officer, Spring 2022.](uw-henri-becquerel.jpg){#fig-uw-henri-becquerel fig-alt="Educational image illustrating Henri Becquerel and his contributions to the discovery of radioactivity" width="45%"}
-
-![Photographic plates darkened by radiation emitted from uranium compounds during Henri Becquerel's experiments.](becquerel-photographic-plates.jpg){#fig-becquerel-photographic-plates fig-alt="Photographic plates showing darkened regions caused by radiation from uranium compounds during Becquerel's experiments" width="45%"}
+![Photographic plates darkened by radiation emitted from uranium compounds during Henri Becquerel's experiments.](becquerel-photographic-plates.jpg){#fig-becquerel-photographic-plates fig-alt="Photographic plates showing darkened regions caused by radiation from uranium compounds during Becquerel's experiments" width="85%"}
 
 **Marie Curie** demonstrated that the radiation emitted by uranium, which she called **radioactivity**, was independent of the chemical compound in which the uranium was found. She concluded that the source of this radiation must be the uranium atoms themselves.
 
-![Marie Curie, whose research contributed to the understanding of radioactivity and the discovery of radium and polonium.](marie-curie.jpg){#fig-marie-curie fig-alt="Historical photograph of physicist and chemist Marie Curie" width="45%"}
+![Marie Curie, whose research contributed to the understanding of radioactivity and the discovery of radium and polonium.](marie-curie.jpg){#fig-marie-curie fig-alt="Historical photograph of physicist and chemist Marie Curie" width="65%"}
 
 Together with her husband, **Pierre Curie**, she received the Nobel Prize in Physics for their research on radiation phenomena. Their investigations also contributed to the discovery of the radioactive elements **polonium** and **radium**, while thorium was also identified as radioactive.
 
@@ -397,7 +393,7 @@ These emissions include:
 - **Beta particles (**$\beta$): Charged particles, including electrons emitted from the nucleus during radioactive decay.
 - **Gamma rays (**$\gamma$): High-energy electromagnetic radiation that carries no electric charge, emitted by the nuclei.
 
-![Separation of alpha particles, beta particles, and gamma rays in an electric field.](radiation-emission-types.jpg){#fig-radiation-emission-types fig-alt="Beta particles (red) deflect toward the positive plate, alpha particles (blue) deflect toward the negative plate, and gamma rays (green) continue straight without deflection." width="45%"}
+![Separation of alpha particles, beta particles, and gamma rays in an electric field.](radiation-emission-types.jpg){#fig-radiation-emission-types fig-alt="Beta particles (red) deflect toward the positive plate, alpha particles (blue) deflect toward the negative plate, and gamma rays (green) continue straight without deflection." width="100%"}
 
 Because alpha and beta particles carry electric charge, their paths can be deflected by electric or magnetic fields. Gamma rays do not undergo this type of deflection because they have no electric charge.
 
@@ -415,7 +411,7 @@ Scientists reasoned that atoms must also contain positive charge to balance the 
 
 Thomson proposed a plum-pudding model in which negatively charged electrons were embedded within a region of distributed positive charge.
 
-![J. J. Thomson's plum-pudding model of the atom, showing negatively charged electrons embedded within a region of distributed positive charge.](thomson-plum-pudding-model.jpg){#fig-thomson-plum-pudding fig-alt="Schematic illustration of Thomson's plum-pudding atomic model, showing negatively charged electrons embedded in a uniformly distributed positive charge" width="45%"}
+![J. J. Thomson's plum-pudding model of the atom, showing negatively charged electrons embedded within a region of distributed positive charge.](thomson-plum-pudding-model.jpg){#fig-thomson-plum-pudding fig-alt="Schematic illustration of Thomson's plum-pudding atomic model, showing negatively charged electrons embedded in a uniformly distributed positive charge" width="75%"}
 
 *Image source: [Khan Academy, Discovery of the Electron and Nucleus](https://www.khanacademy.org/science/cambridge-o-level-physics-cie/x0e04e0cb682fb793:nuclear-physics/x0e04e0cb682fb793:the-atom/a/discovery-of-the-electron-and-nucleus).*
 
@@ -427,7 +423,7 @@ However, subsequent experiments challenged this explanation.
 
 The researchers directed alpha particles toward the foil and observed their scattering using a fluorescent screen.
 
-![Rutherford's gold foil experiment illustrating the predicted and observed scattering of alpha particles, including particles passing through the foil, particles experiencing deflection, and particles reversing direction.](gold-foil-experiment.jpg){#fig-gold-foil-experiment fig-alt="Diagram of Rutherford's gold foil experiment showing an alpha particle emitter, thin gold foil, zinc-sulfide detection screen, and alpha-particle trajectories. Most particles pass through with little or no deflection, some scatter at an angle, and a small number reverse direction toward the source." width="45%"}
+![Rutherford's gold foil experiment illustrating the predicted and observed scattering of alpha particles, including particles passing through the foil, particles experiencing deflection, and particles reversing direction.](gold-foil-experiment.jpg){#fig-gold-foil-experiment fig-alt="Diagram of Rutherford's gold foil experiment showing an alpha particle emitter, thin gold foil, zinc-sulfide detection screen, and alpha-particle trajectories. Most particles pass through with little or no deflection, some scatter at an angle, and a small number reverse direction toward the source." width="100%"}
 
 They made three important observations:
 
@@ -464,7 +460,7 @@ This led Rutherford and others to think that there must be another type of subat
 
 In 1932, British physicist **James Chadwick** bombarded a thin sheet of beryllium with alpha particles. A very high-energy radiation was emitted by the metal that was not deflected by either electric or magnetic fields, similar to gamma rays. Later experiments showed that the radiation consisted of a third type of subatomic particle, which Chadwick named **neutrons**.
 
-![James Chadwick, the British physicist whose experiments in 1932 provided evidence for the existence of the neutron.](james-chadwick.jpg){#fig-james-chadwick fig-alt="Historical portrait of British physicist James Chadwick, who discovered the neutron in 1932" width="45%"}
+![James Chadwick, the British physicist whose experiments in 1932 provided evidence for the existence of the neutron.](james-chadwick.jpg){#fig-james-chadwick fig-alt="Historical portrait of British physicist James Chadwick, who discovered the neutron in 1932" width="55%"}
 
 *Photograph source: [Wikipedia, James Chadwick](https://en.wikipedia.org/wiki/James_Chadwick).*
 
@@ -475,8 +471,6 @@ We now understand that atoms contain three fundamental subatomic particles:
 - **Protons:** Positively charged particles that determine the identity of an element.
 - **Neutrons:** Electrically neutral particles that contribute to nuclear mass and influence nuclear stability.
 - **Electrons:** Negatively charged particles that occupy the region surrounding the nucleus.
-
-The approximate scale of an atom is often expressed as $10^{-10}\ \mathrm{m}$, or **one ten-billionth of a meter**. A nuclear scale of $10^{-14}\ \mathrm{m}$ corresponds to **one hundred-trillionth of a meter**. These values illustrate why the nucleus occupies only a tiny fraction of the atom’s overall size.
 
 ![Comparison of atomic and nuclear scales, illustrating the region occupied by electrons and an enlarged nucleus containing protons and neutrons.](atom-nucleus-model.jpg){#fig-atom-nucleus-model fig-alt="Diagram comparing the approximate size of an atom, 10^-10 meters, with its nucleus, 10^-14 meters. The atom is represented by a large electron-containing region, while the enlarged nucleus shows positively charged protons and electrically neutral neutrons." width="100%"}
 
@@ -559,7 +553,7 @@ Most elements have two or more isotopes, atoms that have the same atomic number 
 
 How do we identify an isotope from an element?
 
-- We write the mass number after the name of the element. Take Uranium for example:
+- We write the mass number after the name of the element. Take Uranium of example:
 
 ![Comparison of uranium-238 and uranium-235, illustrating two isotopes of uranium with the same atomic number but different mass numbers.](uranium-isotope.jpg){#fig-uranium-isotopes fig-alt="Side-by-side comparison of uranium-238 and uranium-235 showing the same atomic number of 92 and different mass numbers of 238 and 235." width="100%"}
 
@@ -567,13 +561,13 @@ The isotope Uranium-235 (U-235) has 143 neutrons in its nucleus (235-92 = 143) a
 
 NOTE: the chemical properties of an element are determined primarily by the number of protons and electrons in its atoms; not by the number of neutrons. Therefore, isotopes of the same element usually, not always, exhibit very similar chemical properties.
 
-## 4.4 Nuclear Stability
+## 4.4 Introduction to Nuclear Stability
 
 ![Periodic Table of the Elements.](periodic-table.jpg){fig-alt="Periodic table showing the chemical elements organized by increasing atomic number, with elements arranged into periods and groups" width="100%"}
 
 The nuclei of some elements are stable, but others decay seconds after they are formed. Therefore, patterns of stability and instability of nuclei are useful to make predictions regarding nuclear decay.
 
-The principal factor that determines whether a nucleus is stable is the *neutron-to-proton ratio (n/p)*. For atoms of elements having low atomic numbers (less than or equal to 20; calcium), the *n/p* value is close to 1. The increase in the ratio of neutrons-to-protons with increasing atomic number can be explained by considering the role of the neutrons in helping to overcome the electrical repulsion between protons. The strong force that holds protons and neutrons together in a nucleus is powerful enough to overcome the electrostatic repulsion between the protons, but it can act over only a very short distance, about the diameter of a nucleus.
+The principal factor that determines whether a nucleus is stable is the *neutron-to-proton ratio (n/p)*. For atoms of elements having low atomic numbers (less than or equal to 20; calcium), the *n/p* value is close to 1. The increase in the ratio of neutrons-to-protons with increasing atomic number can be explained by considering the role of the neutrons in helping to overcome the electrical repulsion between protons. The strong force holds that protons and neutrons together in a nucleus is powerful enough to overcome the electrostatic repulsion between the protons, but it can act over only a very short distance, about the diameter of a nucleus.
 
 Given that neutrons are uncharged, they can contribute to the strong force without adding to the electrostatic repulsion. Therefore, a lot of neutrons are needed to overcome the mutal repulsion of the protons in a nucleus of high atomic number, which explains why the band of stability curves upward.
 
@@ -604,7 +598,7 @@ General patterns:
 
 *Primary source: Chemistry: Atoms First, 2nd ed., Chemical Principles Focus 9: Nuclear Chemistry.*
 
-## 4.4 Nuclei and Nuclear Reactions
+## 4.5 Nuclei and Nuclear Reactions
 
 ### Nuclei
 
@@ -643,21 +637,17 @@ Nuclear reactions differ in some important ways from chemical reactions.
 
     For example, when atmospheric ${}^{14}_{7}\mathrm{N}$, is convereted to ${}^{14}_{6}\mathrm{C}$ and ${}^{1}_{1}\mathrm{H}$, which results when the nitrogen isotpoe is bombarded by neutrons (from the sun), **nuclear transmuation** has taken place. This type of transmuation occurs naturally in outer space, but it can also be achieved artificially.
 
-
 3.  Another important difference between nuclear and chemical reactions is that energy changes are very much greater for nuclear reactions than for chemical reactions.
 
     For example, the combustion of $1.0\ \mathrm{g}$ of methane produces about $52\ \mathrm{kJ}$ of energy as heat. In contrast, a nuclear reaction of $1.0\ \mathrm{g}$ of uranium-235 produces about $8.2 \times 10^{7}\ \mathrm{kJ}$ of energy, more than a million times as much.
 
-    The notation $10^{7}$ represents **ten million**. Therefore, $8.2 \times 10^{7}\ \mathrm{kJ}$ is equivalent to approximately **82 million kilojoules**. A kilojoule (kJ) is one thousand joules (J), a unit of energy.
-
     To put that energy into perspective:
 
-    - **A moving baseball:** A 250-gram baseball thrown or hit at roughly 20 meters per second (45 mph) carries about 50 joules of kinetic energy.
-    - **Walking/Climbing:** Walking up a flight of stairs (roughly 10 to 12 steps) uses around 2 to 4 kilojoules depending on your body weight.
-
+    - A moving baseball: A 250-gram baseball thrown or hit at roughly 20 meters per second (45 mph) carries about 50 joules of kinetic energy.
+    - Walking/Climbing: Walking up a flight of stairs (roughly 10 to 12 steps) uses around 2 to 4 kilojoules depending on your body weight.
 
 | Chemical Reactions | Nuclear Reactions |
-|:-----------------------------------|:---------------------------------|
+|:-----------------------------------|:----------------------------------|
 | 1\. Atoms are rearranged by the breaking and forming of chemical bonds. | 1\. Elements are converted to other elements (or isotopes). |
 | 2\. Only electrons in atomic or molecular orbitals are involved in the reaction. | 2\. Protons, neutrons, electrons, and other subatomic particles such as $\alpha$ particles may be involved. |
 | 3\. Reactions are accompanied by the absorption or release of relatively small amounts of energy. | 3\. Reactions are accompanied by the absorption or release of tremendous amounts of energy. |
@@ -688,6 +678,7 @@ Rutherford identified three common types of nuclear radiation: alpha ($\alpha$) 
 
 When a nucleus emits an alpha particle, its **atomic number decreases by two** and its **mass number decreases by four.**
 
+When a nucleus emits an alpha particle, its **atomic number decreases by two** and its **mass number decreases by four**.
 
 We can represent this transformation using a **nuclear equation**, which shows how an unstable nucleus changes into a different nucleus while emitting radiation.
 
@@ -733,6 +724,8 @@ $$
 {}^{0}_{-1}\mathrm{e}
 $$
 
+When a nucleus emits a beta particle ($\beta^{-}$), its **atomic number increases by one** while its **mass number remains unchanged**.
+
 We can represent this transformation using a **nuclear equation**, which shows how an unstable nucleus changes into a different nucleus while emitting radiation.
 
 For example, when strontium-90 undergoes beta-minus decay:
@@ -761,441 +754,35 @@ Beta radiation can be shielded using suitable materials, including plastic or th
 
 #### Gamma Radiation ($\gamma$)
 
-**Gamma-ray radiation:** The third common type of radiation that Rutherford identified was gamma radiation, represented by the Greek letter $\gamma$.
+**Gamma radiation:** Gamma rays ($\gamma$) are high-energy photons of electromagnetic radiation emitted when an excited atomic nucleus moves to a lower-energy state.
 
-Like visible light, $\gamma$ radiation is electromagnetic radiation but of much higher frequency and is regarded as a stream of very-high-energy photons.
+Unlike alpha and beta-minus decay, **gamma emission does not change the atomic number or mass number**. The nucleus loses energy, but its number of protons and neutrons remains unchanged.
 
-Gamma rays are emitted when a nucleus moves from a higher-energy state to a lower-energy state. Unlike alpha or beta decay, **gamma emission does not change the atomic number or mass number of the nucleus.**
+We can represent this transformation using a **nuclear equation**, which shows how an excited nucleus releases excess energy.
 
-We can represent this transformation using a **nuclear equation**, which shows how an excited nucleus releases energy in the form of a gamma-ray photon.
-
-
-##### Example: Technetium-99m in Nuclear Medicine
-
-Technetium-99m is a radioactive isotope of technetium commonly used in nuclear medicine for diagnostic imaging.
-
-The superscript **m** in technetium-99m (${}^{99m}_{43}\mathrm{Tc}$) stands for **metastable**, indicating that the nucleus is in an **excited nuclear state**. This means that the nucleus contains more energy than the same nucleus in its **ground state**, or lowest-energy state.
-
-In this example:
-
-- **Technetium (Tc):** The chemical element.
-- **Atomic number (43):** The nucleus contains 43 protons.
-- **Mass number (99):** The nucleus contains 99 protons and neutrons combined.
-- **Metastable (m):** The nucleus is in an excited nuclear state.
-
-###### Understanding Radioactive Half-Life
-
-**Half-life:** The time required for half of the original number of radioactive nuclei in a sample to undergo radioactive decay.
-
-Radioactive decay follows an **exponential relationship**, meaning that the same fraction of radioactive nuclei decays during each successive half-life, rather than the same number of nuclei.
-
-For example, imagine a sample containing 100 radioactive nuclei:
-
-- After one half-life, approximately 50 nuclei remain.
-- After two half-lives, approximately 25 nuclei remain.
-- After three half-lives, approximately 12 or 13 nuclei remain.
-- After four half-lives, approximately 6 nuclei remain.
-
-These values represent the expected behavior of a large population of radioactive nuclei, expressed here using a simplified example of 100 nuclei. Individual nuclear transformations occur randomly, so an actual sample containing only 100 nuclei may not follow these numbers exactly.
-
-Technetium-99m has a **physical half-life of approximately 6 hours**. This means that after 6 hours, approximately half of the original technetium-99m nuclei will have undergone radioactive decay, while the other half remain undecayed.
-
-After another 6 hours (12 hours total), approximately half of the remaining technetium-99m nuclei will have decayed, leaving one-quarter of the original radioactive nuclei.
-
-![Half-life of technetium-99m, illustrating its approximately six-hour half-life, the percentage of radioactive nuclei remaining over 24 hours, its nuclear transformation, and applications in nuclear medicine.](half-life-tc-99m.jpg){#fig-half-life-tc-99m fig-alt="Educational infographic showing technetium-99m radioactive decay. At 0 hours, 100 percent remains; after 6 hours, 50 percent remains; after 12 hours, 25 percent remains; after 18 hours, 12.5 percent remains; and after 24 hours, 6.25 percent remains. Additional panels illustrate gamma emission and nuclear medicine applications." width="85%"}
-
-###### Understanding Exponential Decay
-
-An important characteristic of radioactive decay is that the number of radioactive nuclei decreases exponentially rather than linearly.
-
-In a **linear relationship**, the same amount decreases during each equal interval of time.
-
-In an **exponential relationship**, the same fraction decreases during each equal interval of time.
-
-For radioactive decay, the number of nuclei remaining after a given time can be expressed as:
-
-$$
-N(t)=N_0\left(\frac{1}{2}\right)^{t/T_{1/2}}
-$$
-
-Where:
-
-- **$N(t)$:** Number of radioactive nuclei remaining after time $t$.
-- **$N_0$:** Initial number of radioactive nuclei.
-- **$t$:** Time elapsed.
-- **$T_{1/2}$:** Physical half-life of the radioactive isotope.
-- **$\frac{1}{2}$:** Fraction of radioactive nuclei remaining after one half-life.
-
-The exponent $t/T_{1/2}$ represents the **number of half-lives that have elapsed**.
-
-For example, if 12 hours have elapsed and the physical half-life is 6 hours:
-
-$$
-\frac{t}{T_{1/2}}
-=
-\frac{12\ \mathrm{h}}{6\ \mathrm{h}}
-=
-2
-$$
-
-This tells us that two half-lives have elapsed.
-
-Substituting into the formula:
-
-$$
-N(12)=N_0\left(\frac{1}{2}\right)^2
-$$
-
-$$
-N(12)=N_0\left(\frac{1}{4}\right)
-$$
-
-Therefore, **25% of the original technetium-99m nuclei remain after 12 hours**.
-
-###### Introducing the Radioactive Decay Constant
-
-The rate at which a radioactive isotope undergoes nuclear transformations is described by its **radioactive decay constant**.
-
-**Radioactive decay constant ($\lambda$):** A measure of the probability per unit time that an individual radioactive nucleus will undergo radioactive decay.
-
-The Greek letter **lambda ($\lambda$)** is commonly used to represent the radioactive decay constant.
-
-The relationship between the physical half-life and the radioactive decay constant is:
-
-$$
-T_{1/2}=\frac{\ln(2)}{\lambda}
-$$
-
-Where:
-
-- **$T_{1/2}$:** Physical half-life of the radioactive isotope.
-- **$\lambda$:** Radioactive decay constant, expressed in inverse time units such as $\mathrm{h^{-1}}$ or $\mathrm{s^{-1}}$.
-- **$\ln(2)$:** Natural logarithm of 2, approximately equal to 0.693.
-
-The **natural logarithm**, written as $\ln$, is a mathematical function based on the number $e$, approximately equal to 2.718.
-
-For this relationship:
-
-$$
-\ln(2)\approx0.693
-$$
-
-Rearranging the half-life equation allows us to calculate the radioactive decay constant:
-
-$$
-\lambda=\frac{\ln(2)}{T_{1/2}}
-$$
-
-A **larger decay constant** corresponds to a **shorter physical half-life**, meaning that the radioactive nuclei undergo transformations more rapidly.
-
-A **smaller decay constant** corresponds to a **longer physical half-life**, meaning that radioactive nuclei undergo transformations more slowly.
-
-This is the same mathematical relationship used to describe first-order chemical reactions. However, radioactive decay involves transformations of atomic nuclei, whereas chemical reactions involve changes in chemical bonding and electron arrangements.
-
-
-###### Calculating the Decay Constant of Technetium-99m
-
-Technetium-99m has a physical half-life of approximately 6 hours.
-
-Using the formula:
-
-$$
-\lambda=\frac{\ln(2)}{T_{1/2}}
-$$
-
-Where:
-
-- **$\lambda$:** Radioactive decay constant, expressed in inverse time units.
-- **$T_{1/2}$:** Physical half-life of the radioactive isotope.
-- **$\ln(2)$:** Natural logarithm of 2, approximately equal to 0.693.
-
-The **natural logarithm**, written as $\ln$, is a logarithm with Euler's number ($e \approx 2.71828$) as its base.
-
-A logarithm answers the question: **To what power must a base be raised to obtain a particular number?**
-
-For example:
-
-$$
-\ln(2)\approx0.693
-$$
-
-This means:
-
-$$
-e^{0.693}\approx2
-$$
-
-The natural logarithm and the natural exponential function are **inverse operations**, meaning that one can undo the other.
-
-To calculate the decay constant of technetium-99m, substitute the known values:
-
-$$
-\lambda=\frac{0.693}{6\ \mathrm{h}}
-$$
-
-$$
-\lambda\approx0.1155\ \mathrm{h^{-1}}
-$$
-
-Therefore, the radioactive decay constant of technetium-99m is approximately **0.1155 per hour**.
-
-The unit $\mathrm{h^{-1}}$ means **inverse hours**, or per hour.
-
-The decay constant describes the probability rate of radioactive transformation for an individual nucleus. It does not mean that exactly 11.55% of the remaining nuclei disappear during each one-hour interval.
-
-###### Applying the Exponential Decay Equation
-
-Radioactive decay can also be expressed using an **exponential function**, a mathematical relationship in which a constant number, called the **base**, is raised to a variable exponent.
-
-For radioactive decay, we use:
-
-$$
-N(t)=N_0e^{-\lambda t}
-$$
-
-Where:
-
-- **$N(t)$:** Number of radioactive nuclei remaining after time $t$.
-- **$N_0$:** Initial number of radioactive nuclei.
-- **$e$:** Euler's number, a mathematical constant approximately equal to 2.71828. It is the **base of the natural exponential function**.
-- **$-\lambda t$:** The **exponent**, or power, to which Euler's number is raised.
-- **$\lambda$:** Radioactive decay constant, expressed in inverse time units.
-- **$t$:** Time elapsed.
-
-**Understanding the Base and Exponent**
-
-Consider the expression:
-
-$$
-e^x
-$$
-
-In this expression:
-
-- **$e$ is the base:** A constant number approximately equal to 2.71828.
-- **$x$ is the exponent:** The power to which the base is raised.
-
-For example:
-
-$$
-e^2\approx7.389
-$$
-
-This means Euler's number is multiplied by itself twice:
-
-$$
-e^2=e\times e
-$$
-
-In radioactive decay, the exponent is negative:
-
-$$
-e^{-\lambda t}
-$$
-
-Because the radioactive decay constant ($\lambda$) is positive and elapsed time ($t$) is nonnegative, the exponent becomes more negative as time increases.
-
-Consequently, the exponential factor decreases toward zero, representing the decreasing fraction of radioactive nuclei remaining.
-
-**Why Do We Use Euler's Number?**
-
-Euler's number is particularly useful for describing processes in which the rate of change depends on the amount currently present.
-
-For radioactive decay, the rate at which nuclei undergo transformations is proportional to the number of radioactive nuclei remaining.
-
-As the number of radioactive nuclei decreases, the number of transformations occurring per unit time also decreases.
-
-This produces an **exponential decay curve** rather than a straight line.
-
-The exponential equation:
-
-$$
-N(t)=N_0e^{-\lambda t}
-$$
-
-and the half-life equation:
-
-$$
-N(t)=N_0\left(\frac{1}{2}\right)^{t/T_{1/2}}
-$$
-
-describe the same radioactive decay process.
-
-They are connected through the relationship:
-
-$$
-T_{1/2}=\frac{\ln(2)}{\lambda}
-$$
-
-**Example: How Much Technetium-99m Remains After 12 Hours?**
-
-We know:
-
-- **Physical half-life:** $6\ \mathrm{h}$.
-- **Decay constant:** $\lambda\approx0.1155\ \mathrm{h^{-1}}$.
-- **Elapsed time:** $12\ \mathrm{h}$.
-
-Starting with:
-
-$$
-N(t)=N_0e^{-\lambda t}
-$$
-
-Divide both sides by $N_0$ to calculate the fraction remaining:
-
-$$
-\frac{N(t)}{N_0}=e^{-\lambda t}
-$$
-
-Substitute the known values:
-
-$$
-\frac{N(12)}{N_0}
-=
-e^{-(0.1155\ \mathrm{h^{-1}})(12\ \mathrm{h})}
-$$
-
-The units of hours cancel, leaving a **dimensionless exponent**, meaning the exponent has no units:
-
-$$
-(0.1155\ \mathrm{h^{-1}})(12\ \mathrm{h})=1.386
-$$
-
-Therefore:
-
-$$
-\frac{N(12)}{N_0}=e^{-1.386}
-$$
-
-$$
-\frac{N(12)}{N_0}\approx0.25
-$$
-
-Convert the fraction into a percentage:
-
-$$
-0.25\times100=25\%
-$$
-
-Therefore, **approximately 25% of the original technetium-99m nuclei remain after 12 hours**.
-
-This is the same result obtained using the half-life equation.
-
-###### Comparing Radioactive Decay Over Time
-
-The following table summarizes the expected percentage of technetium-99m nuclei remaining over four physical half-lives.
-
-| Time elapsed | Half-lives elapsed | Percentage remaining |
-|---|---:|---:|
-| 0 hours | 0 | 100% |
-| 6 hours | 1 | 50% |
-| 12 hours | 2 | 25% |
-| 18 hours | 3 | 12.5% |
-| 24 hours | 4 | 6.25% |
-
-: Expected Percentage of Technetium-99m Remaining Over Four Physical Half-Lives
-
-Notice that the percentage remaining decreases by half during each successive six-hour interval.
-
-However, the number of nuclei that decay during each interval becomes progressively smaller because fewer radioactive nuclei remain.
-
-This is the defining characteristic of exponential radioactive decay.
-
-###### Connecting Radioactive Decay to Nuclear Medicine
-
-As technetium-99m undergoes an isomeric transition, the nucleus releases excess energy and transitions to technetium-99 in its nuclear ground state. This transition commonly involves gamma-ray emission.
-
-Technetium-99m is useful in diagnostic nuclear medicine because its approximately six-hour physical half-life allows sufficient time for many imaging procedures while its activity decreases substantially over the following hours.
-
-However, the physical half-life describes radioactive decay only. The amount of technetium-containing material retained in a patient's body may also decrease through biological elimination.
-
-We will examine the distinction between **physical half-life, biological half-life, and effective half-life** when discussing internal radiation exposure.
-
-###### Hazardous Materials Application
-
-Understanding radioactive half-life helps hazardous materials professionals estimate how radioactive activity changes over time.
-
-For example:
-
-- **Short physical half-life:** Radioactive activity decreases relatively quickly, although the initial activity and dose rate may still present significant hazards.
-- **Long physical half-life:** Radioactive material may remain active for extended periods, requiring appropriate storage, containment, monitoring, or disposal procedures.
-- **Decay constant:** Provides a mathematical relationship for estimating how rapidly the number of radioactive nuclei and their activity decrease over time.
-
-However, **physical half-life alone does not determine the radiation hazard**.
-
-Radiation type, activity, exposure pathways, distance, shielding, and whether radioactive material enters the body must also be considered.
-
-*Sources: Atkins, P., Jones, L., & Laverman, L., Chemical Principles: The Quest for Insight, Section 7B.2, "Half-Lives for First-Order Reactions"; Cember, H., & Johnson, T. E., Introduction to Health Physics (4th ed.), radioactive decay and physical half-life.*
-
+For example, when technetium-99m undergoes an isomeric transition:
 
 $$
 {}^{99m}_{43}\mathrm{Tc}
 \;\longrightarrow\;
-{}^{99}_{43}\mathrm{Tc}
-\;+\;
 {}^{0}_{0}\gamma
+\;+\;
+{}^{99}_{43}\mathrm{Tc}
 $$
 
 In this nuclear equation:
 
-- **Parent nucleus:** Technetium-99m (${}^{99m}_{43}\mathrm{Tc}$), in an excited nuclear state.
-- **Emitted radiation:** Gamma-ray photon (${}^{0}_{0}\gamma$), which carries away energy.
-- **Resulting nucleus:** Technetium-99 (${}^{99}_{43}\mathrm{Tc}$), in its nuclear ground state.
+- **Parent nucleus:** Technetium-99m (${}^{99m}_{43}\mathrm{Tc}$)
+- **Emitted radiation:** Gamma-ray photon (${}^{0}_{0}\gamma$)
+- **Daughter nucleus:** Technetium-99 (${}^{99}_{43}\mathrm{Tc}$)
 
-Notice that the **atomic number remains 43** and the **mass number remains 99**. Only the energy state of the nucleus changes.
+The superscript **m** means *metastable*: technetium-99m is in an excited nuclear state. Gamma emission moves the nucleus to a lower-energy state. The atomic number remains **43**, and the mass number remains **99**. Technetium-99 is itself radioactive, so gamma emission does not necessarily produce a stable nucleus.
 
-**Application in nuclear medicine:** Technetium-99m is a valuable diagnostic tool because gamma radiation emitted from radioactive material inside the body can be detected using specialized imaging equipment.
+**Degree of penetration:** Gamma radiation is highly penetrating compared with alpha and beta particles. Its penetration depends on photon energy and the shielding material. Lead or concrete can reduce gamma radiation intensity, but shielding does not necessarily stop every photon.
 
-Patients may receive a radiopharmaceutical containing technetium-99m by injection or, for certain examinations, by ingestion. By detecting the emitted gamma radiation, medical professionals can obtain diagnostic images of organs such as the **heart, liver, and lungs**.
+Because gamma photons can penetrate tissue, gamma-emitting sources may present an **external radiation exposure hazard**. Technetium-99m is also used in diagnostic nuclear medicine because its emitted photons can be detected by specialized imaging equipment.
 
-*Source: Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, Nuclear Chemistry.*
-
-------------------------------------------------------------------------
-
-##### Degree of Penetration
-
-**Degree of penetration:** Very penetrating; gamma radiation often accompanies $\alpha$ and $\beta$ radiation.
-
-Gamma radiation can penetrate deeply into materials and biological tissue. Dense shielding materials, such as lead or concrete, can reduce gamma radiation exposure.
-
-Gamma radiation may also accompany other nuclear transformations. For example, iodine-125 can undergo **electron capture**, followed by the emission of gamma radiation as the resulting nucleus releases excess energy.
-
-During **electron capture**, an electron from an atomic orbital is captured by the nucleus and combines with **a proton to form a neutron**. As a result, **the atomic number decreases by one**, while **the mass number remains unchanged**.
-
-We can represent this transformation using the following simplified nuclear equation:
-
-$$
-{}^{1}_{1}\mathrm{p}
-\;+\;
-{}^{0}_{-1}\mathrm{e}
-\;\longrightarrow\;
-{}^{1}_{0}\mathrm{n}
-$$
-
-The following simplified nuclear equation illustrates this process:
-
-$$
-{}^{125}_{53}\mathrm{I}
-\;+\;
-{}^{0}_{-1}\mathrm{e}
-\;\longrightarrow\;
-{}^{125}_{52}\mathrm{Te}
-\;+\;
-\gamma
-$$
-
-In this nuclear equation:
-
-- **Parent nucleus:** Iodine-125 (${}^{125}_{53}\mathrm{I}$)
-- **Captured particle:** Electron (${}^{0}_{-1}\mathrm{e}$)
-- **Daughter nucleus:** Tellurium-125 (${}^{125}_{52}\mathrm{Te}$)
-- **Emitted radiation:** Gamma-ray photon ($\gamma$)
-
-Notice that the **atomic number decreases from 53 to 52**, while the **mass number remains 125**.
-
-This change occurs because of **electron capture**, not gamma emission. The gamma ray carries away energy without changing either number.
-
-*Source: Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.). Jones & Bartlett Learning, Chapter 3, "Gamma Radiation."*
+*Sources: Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.), Chapter 3, "Gamma Radiation"; Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20.*
 
 #### Other Nuclear Particles and Processes
 
@@ -1214,7 +801,7 @@ In **electron capture**, an electron in an atomic orbital is captured by the nuc
 The following table summarizes the properties of particles commonly found in nuclear radiation.
 
 | Type | Particle | Mass Number | Charge | Degree of Penetration |
-|:------------|:------------|:-----------:|:-----------:|:---------------------|
+|:------------|:------------|:-----------:|:-----------:|:--------------------|
 | Alpha ($\alpha$) | Helium-4 nucleus, ${}^{4}_{2}\alpha$ | 4 | +2 | Low; stopped by paper or outer skin |
 | Beta ($\beta^{-}$) | Electron, ${}^{0}_{-1}\mathrm{e}$ | 0 | −1 | Moderate; can penetrate skin |
 | **Gamma (**$\gamma$) | **Photon,** $\gamma$ | **0** | **0** | **Very penetrating** |
@@ -1258,15 +845,11 @@ The atom that loses an electron becomes a positively charged **ion**, while the 
 
 Radiation that has sufficient energy to remove electrons from atoms or molecules is called **ionizing radiation**.
 
-![Comparison of nuclear decay processes, including alpha decay, beta decay, gamma emission, positron emission, and electron capture. Source: NASA Armstrong Flight Research Center (AFRC), Radiation Safety Office.](nasa-afrc-ionizing-radiation.jpg){#fig-nasa-afrc-ionizing-radiation fig-alt="NASA radiation safety diagram comparing five nuclear transformations, showing emitted particles or radiation and changes in atomic number and mass number" width="100%"}
-
 The process of ionization depends on how radiation interacts with matter. Charged particles, such as alpha and beta particles, can produce ionization directly through their interactions with electrons. Gamma rays can produce ionization through interactions that transfer energy to electrons, while neutrons produce ionization indirectly through the charged particles and other radiation generated during nuclear interactions.
 
 ##### Connecting Ionization to Our Nuclear Radiation Examples
 
 Earlier in this lecture, we examined several examples of nuclear decay and radiation emission. We can now use those examples to understand how radiation may produce ionization when it encounters matter.
-
-![Summary of nuclear transformations, including alpha decay, beta decay, gamma emission, positron emission, and electron capture. Source: NASA Armstrong Flight Research Center (AFRC), Radiation Safety Office.](nasa-afrc-ionizing-radiation-summary.jpg){#fig-nasa-afrc-ionizing-radiation-summary fig-alt="Comparison table illustrating alpha decay, beta-minus decay, gamma emission, positron emission, and electron capture, including nuclear equations, particle representations, and changes in atomic and mass numbers" width="100%"}
 
 - **Alpha radiation (**$\alpha$): When polonium-212 (${}^{212}_{84}\mathrm{Po}$) undergoes alpha decay, it emits an alpha particle (${}^{4}_{2}\alpha$). Because alpha particles carry a positive charge of +2, they can interact strongly with electrons in surrounding atoms and produce ionization. Although alpha particles have limited penetration, they can cause substantial ionization over a short distance.
 
@@ -1275,757 +858,6 @@ Earlier in this lecture, we examined several examples of nuclear decay and radia
 - **Gamma radiation (**$\gamma$): When technetium-99m (${}^{99m}_{43}\mathrm{Tc}$) transitions to a lower-energy nuclear state, it releases energy in the form of gamma radiation. Gamma rays carry no electric charge, but they can transfer energy to electrons through interactions with matter, producing ionization. Their penetrating ability allows them to affect tissues deeper within the body.
 
 - **Neutron radiation (**$\mathrm{n}$): Neutrons (${}^{1}_{0}\mathrm{n}$) carry no electric charge and therefore do not directly ionize atoms through electrostatic interactions. Instead, neutrons interact primarily with atomic nuclei. These interactions can produce energetic charged particles or secondary radiation that subsequently cause ionization.
-
-## 4.5 How Do We Measure Ionizing Radiation?
-
-We have learned that unstable atomic nuclei can release energy through radioactive decay and that ionizing radiation can remove electrons from atoms.
-
-But how do scientists measure something they cannot see?
-
-The answer depends on **what we want to measure**.
-
-Are we measuring how quickly radioactive atoms decay? Are we measuring radiation passing through the air? Or are we interested in the energy deposited in a person's body?
-
-These questions led scientists to develop different radiation measurements and units.
-
-### The Historical Development of Radiation Measurement
-
-In 1895, **Wilhelm Conrad Röntgen** discovered X-rays while experimenting with electrical discharge tubes. He observed that invisible radiation could penetrate certain materials and produce images on photographic plates.
-
-::: {layout-ncol="2"}
-![Wilhelm Conrad Röntgen (1845–1923), the German physicist who discovered X-rays in 1895, alongside the famous early X-ray image of his wife Anna Bertha Ludwig's hand. Source: [Wikipedia](https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen).](wilhelm-conrad-rontgen.jpg){#fig-wilhelm-conrad-rontgen fig-alt="Historical portrait of Wilhelm Conrad Röntgen alongside an early radiograph of Anna Bertha Ludwig's hand, showing the bones of her fingers and her wedding ring" height="300px"}
-
-![Historical illustration of Wilhelm Conrad Röntgen experimenting with an electrical discharge tube to investigate X-rays. Source: [Alamy](https://www.alamy.com/stock-photo-wilhelm-conrad-roentgen-1845-1923-german-experimental-physicist-and-104020180.html).](electrical-discharge-tube.jpg){#fig-electrical-discharge-tube fig-alt="Historical illustration depicting Wilhelm Conrad Röntgen and electrical discharge tube apparatus used during early X-ray experiments" height="300px"}
-:::
-
-Remember that in 1896, **Henri Becquerel** discovered that uranium compounds emitted radiation capable of darkening photographic plates without an external energy source.
-
-**Marie and Pierre Curie** subsequently investigated radioactive substances and helped establish radioactivity as an important area of scientific research.
-
-Early investigators used different experiments and ways to use and measure radiation. This history helps explain why radiation science uses several different units rather than one universal measurement.
-
-Before World War II, radiation measurement developed around several related but distinct questions:
-
-- **Radioactivity:** How rapidly is a radioactive substance undergoing nuclear decay?
-- **Exposure:** How much electrical ionization is produced by X-rays or gamma rays in air?
-- **Absorbed dose:** How much radiation energy is deposited in a material?
-
-As health physics developed, scientists also needed methods to evaluate the potential biological consequences of radiation exposure.
-
-*Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), historical development of radiation measurement; Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, Nuclear Chemistry; Atkins, P., Jones, L., & Laverman, L. Chemical Principles: The Quest for Insight (8th ed.), Focus 9, Nuclear Chemistry.*
-
-### Activity: Measuring Radioactive Decay
-
-**Activity:** The number of nuclear transformations occurring in a radioactive source per unit time.
-
-Activity tells us how rapidly radioactive nuclei are decaying.
-
-The SI unit is the **becquerel (Bq)**, named after Henri Becquerel.
-
-$$
-1\ \mathrm{Bq}=1\ \mathrm{decay/s}
-$$
-
-One becquerel represents one nuclear transformation per second.
-
-Because one becquerel is a relatively small amount of activity, larger quantities are often expressed as:
-
-- **Kilobecquerel (kBq):** $10^3$ Bq, or one thousand becquerels.
-- **Megabecquerel (MBq):** $10^6$ Bq, or one million becquerels.
-- **Gigabecquerel (GBq):** $10^9$ Bq, or one billion becquerels.
-- **Terabecquerel (TBq):** $10^{12}$ Bq, or one trillion becquerels.
-
-An older unit, still used in some radiation applications, is the **curie (Ci)**, named in honor of Pierre and Marie Curie.
-
-$$
-1\ \mathrm{Ci}=3.7\times10^{10}\ \mathrm{Bq}
-$$
-
-This means that **one curie is equivalent to 37 billion nuclear transformations per second**, or 37 billion becquerels.
-
-Smaller quantities are commonly expressed in millicuries (mCi), microcuries ($\mu$Ci), or nanocuries (nCi).
-
-- **Millicurie (mCi):** $10^{-3}$ Ci, or one thousandth of a curie.
-- **Microcurie (**$\mu$Ci): $10^{-6}$ Ci, or one millionth of a curie.
-- **Nanocurie (nCi):** $10^{-9}$ Ci, or one billionth of a curie.
-
-**Important distinction:** A radioactive source with high activity undergoes many nuclear transformations per second. However, activity alone does not tell us how much radiation energy reaches or is absorbed by a person.
-
-*Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), radioactivity and activity measurements; University of Washington Environmental Health and Safety, Ionizing Radiation Safety: External Radiation, Philip Campbell, CHP, Radiation Safety Officer (2022), "Activity"; Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, Nuclear Chemistry.*
-
-### 4.6A Measuring Radiation Outside the Body
-
-**External radiation exposure** occurs when radiation reaches a person from a source located outside the body.
-
-For external radiation, we may want to measure ionization in air, energy deposited in tissue, or the biologically weighted dose received by a worker.
-
-
-### 4.6B Measuring Radiation Inside the Body
-
-So far, we have focused on radiation emitted from sources outside the body. But what happens if the **radioactive material itself enters the body**?
-
-![Radiation exposure and the distinction between external and internal radiation hazards.](public-exposure.jpg){#fig-public-exposure fig-alt="Educational illustration introducing radiation exposure and the distinction between radioactive sources outside the body and radioactive material entering the body." width="85%"}
-
-*Source: University of Washington, Internal Radiation Exposure, Spring 2022.*
-
-
-
-#### Exposure: Ionization Produced in Air
-
-Historically, scientists measured X-rays and gamma rays by examining the electrical charge produced when radiation ionized air.
-
-**Exposure (**$X$): A radiation quantity describing the electrical charge produced by X-rays or gamma rays through ionization in air, per unit mass of air.
-
-The traditional unit is the **roentgen (R)**, named after Wilhelm Röntgen.
-
-The SI unit is the **coulomb per kilogram (C/kg)**.
-
-##### What Is a Coulomb?
-
-**Coulomb (C):** The SI unit used to measure electrical charge, named after the French physicist **Charles-Augustin de Coulomb (1736–1806)**, whose research contributed to our understanding of the electrical forces between charged particles.
-
-In our earlier discussion of atomic structure, we established that **protons carry a positive electrical charge**, while **electrons carry a negative electrical charge**.
-
-The electrical charge of a single proton is approximately $+1.602\times10^{-19}\ \mathrm{C}$, while the electrical charge of a single electron is approximately $-1.602\times10^{-19}\ \mathrm{C}$.
-
-The notation $10^{-19}$ represents **one ten-quintillionth**, or one divided by ten quintillion. Therefore, the magnitude of the electrical charge carried by an individual proton or electron is approximately 1.602 ten-quintillionths of a coulomb.
-
-Because the electrical charge of an individual electron is extremely small, one coulomb represents a very large amount of charge.
-
-For example, the magnitude of the combined electrical charge of approximately $6.24\times10^{18}$ electrons is equal to one coulomb.
-
-The notation $10^{18}$ represents **one quintillion**. Therefore, approximately **6.24 quintillion electrons** have a combined charge magnitude of one coulomb.
-
-##### What Is an Ampere?
-
-**Ampere (A):** The SI unit of electrical current, commonly called an **amp**, named after the French physicist and mathematician **André-Marie Ampère (1775–1836)**, whose research contributed to our understanding of electricity and magnetism.
-
-**Electrical current:** The rate at which electrical charge passes through a particular point.
-
-While a coulomb tells us **how much electrical charge** is present or transferred, an ampere tells us **how quickly electrical charge is flowing**.
-
-One ampere represents the transfer of one coulomb of electrical charge per second.
-
-$$
-1\ \mathrm{A}=1\ \mathrm{C/s}
-$$
-
-Where:
-
-- **A:** Ampere, the SI unit of electrical current.
-- **C:** Coulomb, the SI unit of electrical charge.
-- **s:** Second, the SI unit of time.
-
-For example, if one coulomb of electrical charge passes through a point in a circuit every second, the electrical current is one ampere.
-
-We can express this relationship mathematically:
-
-$$
-I=\frac{Q}{t}
-$$
-
-Where:
-
-- $I$ is the electrical current, measured in amperes (A).
-- $Q$ is the electrical charge transferred, measured in coulombs (C).
-- $t$ is the elapsed time, measured in seconds (s).
-
-For a steady current of one ampere flowing for one second:
-
-$$
-1\ \mathrm{C}=1\ \mathrm{A}\times1\ \mathrm{s}
-$$
-
-This means that one coulomb is the amount of electrical charge transferred by a steady current of one ampere flowing for one second.
-
-##### Connecting Electrical Current to Ionization
-
-When ionizing radiation interacts with air, it can remove electrons from atoms or molecules, producing positively charged ions and negatively charged electrons.
-
-
-Inside an **ionization chamber**, an electric field causes these charged particles to move toward collecting electrodes, commonly referred to as the **anode** and **cathode**.
-
-- **Anode (positive electrode):** Attracts negatively charged electrons and negative ions.
-- **Cathode (negative electrode):** Attracts positively charged ions.
-
-Remember that **opposite electrical charges attract, while like charges repel**.
-
-As these charged particles move through the chamber and are collected by the electrodes, they produce a measurable electrical current.
-
-
-As electrical charge is collected over time, the instrument produces a measurable electrical current.
-
-This current is often extremely small and may be measured in **picoamperes (pA)**, where:
-
-$$
-1\ \mathrm{pA}=10^{-12}\ \mathrm{A}
-$$
-
-The notation $10^{-12}$ represents **one trillionth**. Therefore, one picoampere is equivalent to one trillionth of an ampere.
-
-By measuring the electrical current and accounting for the instrument's calibration, scientists can determine quantities related to radiation exposure.
-
-**Important distinction:** A coulomb measures the amount of electrical charge, while an ampere measures the rate at which electrical charge flows. Both concepts help explain how radiation-induced ionization can be detected and measured.
-
-*Additional sources: [National Institute of Standards and Technology (NIST), Ampere Introduction](https://www.nist.gov/si-redefinition/ampere-introduction); [Encyclopaedia Britannica, Coulomb](https://www.britannica.com/science/coulomb); [Adafruit, What Is an Ampere?](https://learn.adafruit.com/circuit-playground-a-is-for-ampere/what-is-an-ampere).*
-
-##### Connecting Coulombs to Radiation Exposure
-
-
-When X-rays or gamma rays interact with air, they can transfer sufficient energy to remove electrons from atoms or molecules.
-
-But what atoms and molecules make up the air around us?
-
-**Earth's atmosphere** is a mixture of gases composed primarily of nitrogen, oxygen, argon, and smaller quantities of other gases.
-
-The approximate composition of **dry air by volume** is:
-
-| Gas | Chemical Formula | Approximate Percentage |
-|:----|:----------------:|-----------------------:|
-| **Nitrogen** | $\mathrm{N_2}$ | 78.08% |
-| **Oxygen** | $\mathrm{O_2}$ | 20.95% |
-| **Argon** | $\mathrm{Ar}$ | 0.93% |
-| **Carbon dioxide** | $\mathrm{CO_2}$ | 0.04% |
-| **Other trace gases** | Ne, He, Kr, Xe, etc. | Less than 0.01% |
-
-**Important:** These percentages describe the composition of dry air by volume, not the percentage of individual atoms.
-
-Water vapor ($\mathrm{H_2O}$) is also present in the atmosphere, but its concentration varies with temperature, humidity, and location.
-
-When ionizing radiation interacts with these gases, it can remove electrons from their atoms or molecules, producing positively charged ions and negatively charged electrons.
-
-For example, a nitrogen molecule can undergo ionization:
-
-$$
-\mathrm{N_2} + \text{energy}
-\;\longrightarrow\;
-\mathrm{N_2^+} + \mathrm{e^-}
-$$
-
-In this example:
-
-- **$\mathrm{N_2}$:** A neutral nitrogen molecule.
-- **Energy:** Energy transferred from ionizing radiation.
-- **$\mathrm{N_2^+}$:** A positively charged nitrogen molecular ion.
-- **$\mathrm{e^-}$:** An electron removed from the nitrogen molecule.
-
-This illustrates how radiation can produce electrical charges in air that can subsequently be collected and measured by an ionization chamber.
-
-
-![Schematic of an ionization chamber showing how ionizing radiation produces charged particles in a gas-filled chamber. Negatively charged electrons move toward the positive anode, while positively charged ions move toward the negative cathode. The resulting electrical current is measured by an ammeter.](ionization-chamber.jpg){#fig-ionization-chamber fig-alt="Diagram of a gas-filled ionization chamber with an external radiation source, positive anode, negative cathode, electrons moving toward the anode, positive ions moving toward the cathode, a DC voltage source, and an ammeter measuring the resulting ionization current" width="100%"}
-
-*Figure: Principle of operation of an ionization chamber. Adapted from [Aubase, Ionization Chamber Principle](https://aubase.com/ionization-chamber-principle/).*
-
-
-*Sources: [NASA Glenn Research Center, Earth's Atmosphere](https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earths-atmosphere/); [NOAA National Weather Service, The Atmosphere](https://www.weather.gov/jetstream/atmosphere).*
-
-
-
-#### Radiation Detection Instruments: Ionization Chambers and Survey Probes
-
-Radiation detection instruments allow radiation safety professionals to identify ionizing radiation, evaluate potential exposure hazards, and make informed decisions about worker protection.
-
-Different instruments are designed for different purposes. Some measure radiation exposure or dose rate, while others detect radioactive contamination on surfaces, equipment, or clothing.
-
-##### Ionization Chambers
-
-An **ionization chamber** is a radiation detection instrument that measures the electrical charge produced when ionizing radiation interacts with gas inside a detector.
-
-When radiation enters the chamber, it can remove electrons from gas atoms, producing positively charged ions and free electrons. An applied electric field collects these charges, producing an electrical signal that can be measured.
-
-![Ionization chamber used for radiation detection and measurement.](ion-chamber.jpg){#fig-ion-chamber fig-alt="Ionization chamber instrument presented in NASA Armstrong ionizing radiation safety training." width="85%"}
-
-*Source: NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training.*
-
-Ionization chambers are commonly used to measure radiation exposure rates or dose rates when appropriately calibrated.
-
-##### Radiation Survey Probes
-
-Radiation survey instruments may use different types of **probes**, or detectors, depending on the radiation being measured.
-
-For example, some probes are designed to detect beta particles or gamma rays, while others are designed to identify alpha contamination.
-
-![Examples of radiation detection probes used in radiation safety surveys.](probes.jpg){#fig-radiation-probes fig-alt="Radiation survey probes presented in NASA Armstrong ionizing radiation safety training." width="85%"}
-
-*Source: NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training.*
-
-Selecting the appropriate probe is important because **not every radiation detector can measure every type of ionizing radiation**.
-
-##### How Does a Geiger Counter Work?
-
-A **Geiger-Müller counter**, commonly called a **Geiger counter**, is an instrument used to detect ionizing radiation, including beta particles and gamma rays when the detector is appropriately designed.
-
-The detector contains a gas-filled tube with electrodes connected to a high-voltage electrical supply.
-
-When ionizing radiation enters the tube, it interacts with the gas and produces charged particles.
-
-The process can be summarized in five steps:
-
-1. **Radiation enters the detector.** Ionizing radiation interacts with gas atoms inside the tube.
-
-2. **Ionization occurs.** Electrons are removed from gas atoms, producing positively charged ions and free electrons.
-
-3. **Electrons accelerate.** The electric field attracts electrons toward the positively charged central wire. Accelerating electrons produce additional ionization through collisions with gas atoms.
-
-4. **An electrical pulse forms.** The resulting avalanche of charged particles produces a measurable electrical pulse.
-
-5. **The instrument registers a count.** The electrical pulse is recorded electronically and may be displayed as a numerical count, a meter response, or an audible click.
-
-![Gas-filled radiation detector illustrating the operating principles of a Geiger-Müller counter.](gas-probes.jpg){#fig-gas-filled-radiation-detector fig-alt="Educational illustration of a gas-filled radiation detector showing how ionizing radiation produces charged particles that generate an electrical pulse." width="85%"}
-
-*Source: Linda Hall Library, [The Atomic Age: What Is a Geiger Counter and What Makes It Tick?](https://www.lindahall.org/experience/digital-exhibitions/the-atomic-age/02-it-s-a-question-of-physics/e-what-is-a-geiger-counter-and-what-makes-it-tick/).*
-
-The number of pulses detected over a specified period is reported as a **count rate**, commonly expressed in counts per minute (CPM) or counts per second (CPS).
-
-A higher count rate generally indicates that more radiation interactions are being detected under the same measurement conditions.
-
-However, **a higher count rate does not automatically indicate a proportional increase in absorbed dose or equivalent dose**. The relationship depends on the radiation type, energy, detector response, geometry, and instrument calibration.
-
-##### Application to Hazardous Materials Response
-
-Radiation detection instruments serve different purposes during a hazardous materials incident:
-
-- **Ionization chambers:** Measure radiation fields and help evaluate external exposure or dose rates.
-- **Survey probes:** Detect radiation and may help identify contamination on surfaces, equipment, or personnel.
-- **Geiger-Müller counters:** Register individual radiation detection events and provide count-rate information.
-
-Understanding how these instruments operate helps responders select appropriate equipment, interpret measurements, and recognize the limitations of the data collected.
-
-
-
-This process produces **positively charged ions and negatively charged electrons**.
-
-By measuring the electrical charge produced through ionization in a known mass of air, scientists can quantify radiation exposure.
-
-The traditional unit of exposure, the roentgen (R), is related to the SI unit as follows:
-
-$$
-1\ \mathrm{R}=2.58\times10^{-4}\ \mathrm{C/kg}
-$$
-
-Where:
-
-- **R:** Roentgen, the traditional unit of radiation exposure.
-- **C:** Coulomb, the SI unit of electrical charge.
-- **kg:** Kilogram of air.
-
-The notation $10^{-4}$ represents **one ten-thousandth**. Therefore, $2.58\times10^{-4}$ is equivalent to 0.000258, or 2.58 ten-thousandths.
-
-This relationship means that one roentgen corresponds to the production of **0.000258 coulombs of electrical charge of either sign per kilogram of air**, under the conditions specified in the definition of exposure.
-
-Exposure is often expressed as an **exposure rate**, such as roentgens per hour (R/h) or milliroentgens per hour (mR/h).
-
-A **milliroentgen (mR)** is one thousandth ($10^{-3}$) of a roentgen.
-
-**Important:** Exposure in roentgens is defined for X-rays and gamma rays in air. It is not a universal measurement for every type of radiation or every material.
-
-*Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), radiation exposure and ionization measurements; University of Washington Environmental Health and Safety, Ionizing Radiation Safety: External Radiation (2022), "Exposure Units: Roentgen (R), C/kg"; [Encyclopaedia Britannica, Coulomb](https://www.britannica.com/science/coulomb); [Wikipedia, Coulomb](https://en.wikipedia.org/wiki/Coulomb).*
-
-
-
-
-#### Absorbed Dose: Energy Deposited in Matter
-
-In the previous section, we learned that **exposure** describes ionization produced by X-rays and gamma rays in air. However, measuring ionization in air does not tell us directly how much radiation energy is deposited in a worker’s body.
-
-![Cancer incidence among 86,572 atomic-bomb survivors with known radiation doses, illustrating epidemiological evidence used to evaluate the relationship between ionizing radiation exposure and cancer risk.](cancer-incidence-among-atomic-bomb-survivors.jpg){#fig-cancer-incidence-atomic-bomb-survivors fig-alt="Table 7-9 presenting cancer incidence among 86,572 atomic-bomb survivors with known radiation doses. Excess relative risk per sievert is reported for exposure at age 30 and attained age 60, with 95 percent confidence intervals. The source also references Table 7-10, which presents BEIR VII estimates of increased cancer cases and deaths." width="95%"}
-
-*Source: National Research Council, Committee to Assess Health Risks from Exposure to Low Levels of Ionizing Radiation. BEIR VII: Health Risks from Exposure to Low Levels of Ionizing Radiation. Washington, DC: National Academies Press, 2005. Table 7-9, "Cancer Incidence Among 86,572 Atomic-Bomb Survivors with Known Radiation Dose," and Table 7-10, "BEIR VII's Estimated Number of Increased Cases and Deaths for All Solid Tumors and for Leukemia." Reproduced with permission from the National Academies Press. Copyright © 2005, National Academy of Sciences.*
-
-The atomic-bomb survivor studies provide important epidemiological evidence for understanding the relationship between ionizing radiation dose and cancer risk.
-
-However, **absorbed dose and radiation protection dose quantities are not interchangeable**. Absorbed dose measures energy deposited per unit mass and is expressed in gray (Gy), whereas equivalent and effective dose account for additional radiation protection considerations and are expressed in sieverts (Sv).
-
-We will distinguish these quantities in the following sections.
-
-
-
-When radiation passes through a material, some of its energy may be transferred to that material. This leads us to a different measurement: **absorbed dose**.
-
-**Absorbed dose ($D$):** The amount of energy deposited by ionizing radiation per unit mass of matter.
-
-For a specified mass of material, the basic relationship is:
-
-$$
-D=\frac{E_{\mathrm{absorbed}}}{m}
-$$
-
-Where:
-
-- **$D$:** Absorbed dose, measured in grays (Gy).
-- **$E_{\mathrm{absorbed}}$:** Energy deposited by radiation, measured in joules (J).
-- **$m$:** Mass of the material receiving that energy, measured in kilograms (kg).
-
-The SI unit is the **gray (Gy)**, named after Louis Harold Gray.
-
-$$
-1\ \mathrm{Gy}=1\ \mathrm{J/kg}
-$$
-
-The older unit is the **rad**, meaning *radiation absorbed dose*. One gray is equivalent to 100 rad:
-
-$$
-1\ \mathrm{Gy}=100\ \mathrm{rad}
-$$
-
-**Example:** If radiation deposits $0.002\ \mathrm{J}$ of energy uniformly in $1\ \mathrm{kg}$ of tissue, the absorbed dose is:
-
-$$
-D=\frac{0.002\ \mathrm{J}}{1\ \mathrm{kg}}=0.002\ \mathrm{Gy}=2\ \mathrm{mGy}
-$$
-
-A **milligray (mGy)** is one thousandth ($10^{-3}$) of a gray. Therefore, $2\ \mathrm{mGy}$ is equivalent to two thousandths of a gray.
-
-Unlike exposure measured in roentgens, absorbed dose can describe energy deposited by different types of ionizing radiation in different materials, including air, water, and human tissue.
-
-However, the same absorbed dose from different types of radiation does not necessarily produce the same biological effects.
-
-#### Equivalent Dose: Accounting for Radiation Type
-
-Alpha particles, beta particles, gamma rays, and neutrons interact differently with matter.
-
-For radiation protection, scientists use **radiation weighting factors** to account for differences in the potential biological effects associated with different types of radiation. These factors are used for radiation protection calculations; they do not predict the precise biological response of an individual.
-
-**Equivalent dose ($H_T$):** The absorbed dose in a tissue or organ, adjusted using radiation weighting factors.
-
-For a single radiation type, the relationship is:
-
-$$
-H_T=D_{T,R}\times w_R
-$$
-
-Where:
-
-- **$H_T$:** Equivalent dose to tissue or organ $T$, measured in sieverts (Sv).
-- **$D_{T,R}$:** Absorbed dose in tissue $T$ from radiation type $R$, measured in grays (Gy).
-- **$w_R$:** Radiation weighting factor for radiation type $R$, a dimensionless factor used in radiation protection.
-
-The SI unit of equivalent dose is the **sievert (Sv)**, named after the Swedish medical physicist **Rolf Maximilian Sievert (1896–1966)**, whose research contributed to the development of radiation dosimetry, dose, and modern radiation protection.
-
-The sievert was officially adopted as an SI unit in 1979 to express radiation protection quantities that account for the potential biological effects of ionizing radiation.
-
-The older unit is the **rem**, which stands for *roentgen equivalent man*. One sievert is equivalent to 100 rem:
-
-$$
-1\ \mathrm{Sv}=100\ \mathrm{rem}
-$$
-
-
-The older unit is the **rem**, which stands for *roentgen equivalent man*. One sievert is equivalent to 100 rem:
-
-$$
-1\ \mathrm{Sv}=100\ \mathrm{rem}
-$$
-
-For gamma radiation, the radiation weighting factor is **1**. For alpha particles, the radiation weighting factor used in radiation protection is **20**.
-
-**Example:** If a tissue receives an absorbed dose of $0.001\ \mathrm{Gy}$ from gamma radiation, its equivalent dose is:
-
-$$
-H_T=0.001\ \mathrm{Gy}\times1=0.001\ \mathrm{Sv}=1\ \mathrm{mSv}
-$$
-
-For the same absorbed dose from alpha radiation, the radiation-weighted equivalent dose would be:
-
-$$
-H_T=0.001\ \mathrm{Gy}\times20=0.020\ \mathrm{Sv}=20\ \mathrm{mSv}
-$$
-
-A **millisievert (mSv)** is one thousandth ($10^{-3}$) of a sievert. This comparison illustrates why equal absorbed doses do not necessarily represent equal radiation protection concerns.
-
-
-**Important:** Gray and sievert are not interchangeable units. The gray measures energy deposited per unit mass, whereas the sievert expresses radiation protection quantities that incorporate biological weighting.
-
-Equivalent dose and effective dose are used primarily in **stochastic risk assessment**, which involves evaluating the probability that exposure to ionizing radiation may contribute to a health effect, such as cancer, rather than predicting that a particular injury will occur.
-
-A **stochastic effect** is a health effect that occurs by chance. In radiation protection, the probability of a stochastic effect is generally assumed to increase with increasing radiation dose, although the effect is not certain to occur.
-
-This differs from **tissue reactions (deterministic effects)**, such as radiation-induced skin injury, which generally occur only after a sufficient dose has been received. Above the relevant threshold, the severity of these injuries tends to increase with dose.
-
-Therefore, equivalent dose and effective dose should not be interpreted as direct predictions of tissue injury or as precise estimates of an individual person's cancer risk.
-
-
-#### Effective Dose: Accounting for Tissue Sensitivity
-
-Different organs and tissues have different sensitivities to the long-term effects of ionizing radiation. For example, the radiation protection implications of a dose to the lungs are not necessarily the same as those of an equal dose to another organ.
-
-**Effective dose ($E$):** A radiation protection quantity that combines equivalent doses to organs and tissues using tissue weighting factors.
-
-$$
-E=\sum_T w_T H_T
-$$
-
-Where:
-
-- **$E$:** Effective dose, measured in sieverts (Sv).
-- **$H_T$:** Equivalent dose to tissue or organ $T$, measured in sieverts (Sv).
-- **$w_T$:** Tissue weighting factor, a dimensionless factor representing the relative contribution of tissue $T$ to overall stochastic radiation detriment.
-- **$\sum_T$:** The mathematical symbol for summation, meaning that the weighted contributions from the specified tissues are added together.
-
-Effective dose is expressed in sieverts (Sv).
-
-It is used to support radiation protection planning and comparisons of exposure, rather than to predict the exact health outcome of an individual.
-
-
-**Connecting the Measurements:**
-
-
-- **Absorbed dose (Gy):** Describes the amount of radiation energy deposited per unit mass of matter, such as human tissue, air, water, or other materials.
-
-
-- **Equivalent dose (Sv):** Accounts for the type of radiation by applying a radiation weighting factor to the absorbed dose in a particular organ or tissue.
-
-- **Effective dose (Sv):** Combines the equivalent doses received by different organs and tissues, accounting for their relative sensitivity to radiation-induced health effects. This provides a single value used to evaluate and compare the overall radiation protection implications of an exposure.
-
-
-Although these measurements are related, **they answer different questions and should not be used interchangeably**.
-
-
-#### Dose Rate and Exposure Time
-
-**Dose rate:** The amount of radiation dose accumulated per unit time. Just as an ampere describes electrical charge flowing per second, a dose rate describes how quickly radiation dose accumulates.
-
-Common units include:
-
-- **mGy/h:** Milligray per hour, for absorbed dose rate.
-- **mSv/h:** Millisievert per hour, for an appropriately defined equivalent or effective dose rate.
-
-The prefix **milli-** means one thousandth ($10^{-3}$). Thus, one millisievert is one thousandth of a sievert, and one milligray is one thousandth of a gray.
-
-For an approximately constant dose rate:
-
-$$
-\text{Dose}=\text{Dose rate}\times\text{Time}
-$$
-
-Rearranging:
-
-$$
-\text{Time}=\frac{\text{Dose}}{\text{Dose rate}}
-$$
-
-**Example:** If a worker is in an area with an approximately constant, appropriately measured dose rate of $0.2\ \mathrm{mSv/h}$ for 30 minutes ($0.5\ \mathrm{h}$), the estimated accumulated dose is:
-
-$$
-\text{Dose}=0.2\ \mathrm{mSv/h}\times0.5\ \mathrm{h}=0.1\ \mathrm{mSv}
-$$
-
-This relationship illustrates why **time** is an important consideration in radiation protection. It assumes the dose rate is constant and that the instrument reading represents the dose quantity being calculated.
-
-However, a calculated time is not permission to enter or remain in a radiation hazard area. Actual decisions require appropriate instruments, procedures, and qualified radiation safety oversight.
-
-*Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), external radiation dosimetry, exposure, absorbed dose, equivalent dose, and effective dose; University of Washington Environmental Health and Safety, Ionizing Radiation Safety: External Radiation, Philip Campbell, CHP, Radiation Safety Officer (2022), "Exposure Units: Roentgen (R), C/kg," "Dose Units: RAD, Gray," and "DE/EDE Units: REM, Sievert"; NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training Materials (2023), occupational radiation monitoring and protection.*
-
-### 4.6B Measuring Radiation Inside the Body
-
-So far, we have focused on radiation emitted from sources outside the body. But what happens if the **radioactive material itself enters the body**?
-
-
-![Radiological contamination and its relationship to radiation exposure.](contamination.jpg){#fig-radiological-contamination fig-alt="University of Washington radiation safety educational illustration addressing radioactive contamination." width="85%"}
-
-*Source: University of Washington, Environmental Health & Safety, Ionizing Radiation Safety – Internal Radiation, Philip Campbell, CHP, Spring 2022.*
-
-
-
-**Internal contamination** occurs when radioactive material enters the body. This is different from external irradiation: a person can be exposed to radiation without becoming contaminated with radioactive material.
-
-Radioactive substances may enter through:
-
-- **Inhalation:** Breathing contaminated air, dust, smoke, or aerosols.
-- **Ingestion:** Swallowing contaminated food, water, or other materials.
-- **Wounds:** Radioactive material entering through damaged skin.
-- **Injection:** Intentional medical administration or accidental introduction.
-
-Once radioactive material enters the body, it may remain temporarily, circulate through the bloodstream, or accumulate in particular organs.
-
-The location and behavior of the radioactive material influence the radiation dose received by tissues. This is particularly important for alpha-emitting radionuclides: alpha particles have limited external penetration, but can deposit substantial energy in nearby tissues when emitted inside the body.
-
-![Occupational radiation exposure and potential hazards to workers.](worker-exposure.jpg){#fig-worker-exposure fig-alt="University of Washington radiation safety educational illustration addressing occupational radiation exposure." width="85%"}
-
-*Source: University of Washington, Environmental Health & Safety, Ionizing Radiation Safety – Internal Radiation, Philip Campbell, CHP, Spring 2022.*
-
-#### Internal Activity and Biological Distribution
-
-For internal contamination, scientists may estimate the **activity of radioactive material present in the body**.
-
-However, activity alone does not determine internal dose.
-
-We must also consider:
-
-- The radioactive isotope and its type of radiation.
-- The amount of radioactive material taken into the body.
-- The organs or tissues where the material accumulates.
-- The physical half-life of the radionuclide.
-- The rate at which the body eliminates the material.
-
-**Physical half-life:** The time required for half of the radioactive nuclei in a sample to undergo radioactive decay. This depends on the radionuclide, not on how quickly the body removes it.
-
-**Biological half-life:** The time required for a biological system to eliminate half of a substance through biological processes, without considering radioactive decay.
-
-These two processes can occur simultaneously. For internal contamination, both radioactive decay and biological elimination can reduce the amount of radioactive material remaining in a particular part of the body.
-
-For a simplified single-compartment model with exponential radioactive decay and biological elimination, the **effective half-life** is:
-
-$$
-\frac{1}{T_{\mathrm{eff}}}
-=
-\frac{1}{T_{\mathrm{physical}}}
-+
-\frac{1}{T_{\mathrm{biological}}}
-$$
-
-Where:
-
-- **$T_{\mathrm{eff}}$:** Effective half-life, accounting for both radioactive decay and biological elimination.
-- **$T_{\mathrm{physical}}$:** Physical half-life of the radionuclide.
-- **$T_{\mathrm{biological}}$:** Biological half-life in the compartment being considered.
-
-**Example:** If a radionuclide has a physical half-life of 8 days and a biological half-life of 8 days in a simplified model:
-
-$$
-\frac{1}{T_{\mathrm{eff}}}=\frac{1}{8\ \mathrm{days}}+\frac{1}{8\ \mathrm{days}}=\frac{1}{4\ \mathrm{days}}
-$$
-
-Therefore, its **effective half-life is 4 days** in that model. The effective half-life is shorter than either half-life considered separately because both processes reduce the amount remaining.
-
-The effective half-life describes how quickly the amount or activity of a radionuclide in that biological compartment decreases through the combined processes. Actual behavior in the body can be more complex than this single-compartment model.
-
-#### Measuring Internal Contamination
-
-Radiation protection professionals may use several approaches to evaluate internal contamination. Unlike an external survey of radiation levels in an area, these methods aim to identify or estimate radioactive material **inside the body**.
-
-**Direct measurements:** Instruments detect radiation emitted from radioactive material within the body. Examples include whole-body counting and measurements of particular organs, such as the thyroid.
-
-**Indirect measurements:** Biological samples, such as urine, may be analyzed to estimate radioactive material taken into or retained in the body.
-
-These measurements can be used with biokinetic and dosimetric models to estimate radiation dose to organs and tissues.
-
-#### Committed Dose
-
-Internal radioactive material may continue delivering radiation dose after the initial intake.
-
-**Committed equivalent dose:** The equivalent dose expected to accumulate in an organ or tissue over a specified integration period following an intake of radioactive material.
-
-**Committed effective dose:** The corresponding tissue-weighted effective dose integrated over that period.
-
-For occupational radiation protection, a **50-year integration period** is commonly used for adult intakes. This means the calculated committed dose accounts for dose expected to be delivered over the following 50 years, not that the person necessarily remains contaminated for 50 years.
-
-This is different from simply measuring the radiation dose received at one moment.
-
-**Example:** A worker who inhales radioactive material may continue receiving internal radiation dose after leaving the contaminated area, until the material decays or is eliminated from the body.
-
-*Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), internal radiation dosimetry, radionuclide intake, biological elimination, and committed dose; Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.), radioactive materials and occupational exposure hazards; NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training Materials (2023), internal contamination and radiation protection.*
-
-### 4.6C Why the Medium Matters
-
-We have now distinguished radiation emitted from sources outside the body from radioactive material taken into the body. Another question remains: **Does radiation deposit the same amount of energy in air, water, and human tissue?**
-
-Radiation does not interact identically with every material.
-
-**Medium:** The substance or material through which radiation travels or in which radiation deposits energy.
-
-Examples include:
-
-- Air
-- Water
-- Plastic
-- Concrete
-- Lead
-- Human tissue
-
-The interaction depends on the radiation type, its energy, and the physical and chemical properties of the material. This is why the **medium** matters when interpreting measurements and selecting protective shielding.
-
-#### Air Versus Human Tissue
-
-Exposure measured in roentgens describes ionization produced by X-rays or gamma rays in air.
-
-Absorbed dose, however, describes energy deposited in a specified material.
-
-Therefore, a measurement of exposure in air cannot automatically be treated as the same numerical absorbed dose in human tissue.
-
-Converting between these quantities requires consideration of radiation energy and the properties of the absorbing material. **One roentgen is not universally equivalent to one gray or one sievert.**
-
-#### Water and Tissue
-
-Water is often used as a reference material in radiation dosimetry because it provides a useful approximation for many interactions occurring in soft biological tissue.
-
-However, water and human tissues are not identical, and specialized calculations may be necessary when evaluating particular organs or radiation types.
-
-#### Plastic, Concrete, and Lead
-
-Different materials are useful for different radiation protection purposes.
-
-- **Plastic:** Low-atomic-number materials can be useful for shielding beta radiation.
-- **Concrete:** Commonly used for attenuation of penetrating photon radiation and, depending on its composition and thickness, neutron radiation.
-- **Lead:** A dense, high-atomic-number material commonly used to attenuate X-rays and gamma rays.
-
-Shielding effectiveness depends on radiation energy, material composition, and thickness. For example, lead is useful for many X-ray and gamma-ray applications, but hydrogen-rich materials are often important for slowing fast neutrons. Shielding must therefore be selected for the specific radiation hazard.
-
-We will examine these interactions in greater detail in the next section on radiation penetration and shielding.
-
-*Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), radiation interactions with matter and radiation dosimetry; Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.), radiation interactions and shielding materials; University of Washington Environmental Health and Safety, Ionizing Radiation Safety: External Radiation (2022), exposure and absorbed-dose measurements.*
-
-### Summary: What Are We Measuring?
-
-| Quantity | What it measures | SI unit |
-|:---|:---|:---|
-| Activity | Rate of radioactive nuclear transformations | Becquerel (Bq) |
-| Exposure | Ionization produced by X-rays or gamma rays in air | Coulomb per kilogram (C/kg) |
-| Absorbed dose | Energy deposited per unit mass of material | Gray (Gy) |
-| Equivalent dose | Absorbed dose adjusted for radiation type | Sievert (Sv) |
-| Effective dose | Tissue-weighted radiation protection quantity | Sievert (Sv) |
-| Dose rate | Dose accumulated per unit time | Gy/h or Sv/h, with appropriate prefixes |
-| Internal activity | Radioactive transformations from material present in the body | Becquerel (Bq) |
-| Committed dose | Dose projected to accumulate after an intake of radioactive material | Sievert (Sv) |
-
-: Summary of Radiation Measurement Quantities
-
-The important distinction is that **radioactivity, radiation exposure, and radiation dose are not interchangeable measurements**.
-
-A radioactive source can have high activity without necessarily producing a high dose to a nearby worker.
-
-Likewise, the same radioactive material may present different hazards depending on whether it remains outside the body or enters the body through inhalation, ingestion, or a wound.
-
-The radiation type, energy, distance, exposure time, shielding, and absorbing medium all influence the dose that may be received.
-
-**Central Question:** When evaluating a radiation hazard, are we measuring the radioactive source, ionization in the surrounding air, energy deposited in a person’s tissues, or radioactive material that has entered the body?
-
-For hazardous materials management, answering this question helps determine **which instrument to use, which units to interpret, and which protective measures are appropriate**.
-
-
-
-
-
-
-
-
----- YOU ARE HERE ---- YOU SHOULD TRY AND UPDATE THE 4.6 section with images from the UW or NASA powerpoints 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 4.7 Ionization and Biological Effects of Radiation
 
 ##### Ionization and Biological Injury
 
@@ -2052,8 +884,104 @@ These distinctions explain why **alpha-emitting materials**, despite having low 
 
 *Source guidance: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.); Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, “Biological Effects of Radiation.” Specific dose-response thresholds are intentionally not assigned here.*
 
+## Radioactive Half-Life: How Radiation Hazards Change Over Time
 
-## 4.8 Radiation Penetration and Shielding
+Alpha, beta, and gamma radiation describe **what is emitted** during nuclear transformations. Half-life answers a different question: **how does the amount of radioactive material change over time?**
+
+### What Is Physical Half-Life?
+
+**Physical half-life (**$H$): The time required for half of the radioactive nuclei in a large sample to undergo decay. Each radionuclide has a characteristic half-life. For technetium-99m, the physical half-life is approximately **6 hours**.
+
+![Half-life of technetium-99m showing the percentage of radioactive nuclei remaining at successive six-hour intervals.](half-life-tc-99m.jpg){#fig-half-life-tc-99m fig-alt="Technetium-99m decay infographic showing 100 percent initially, 50 percent after six hours, 25 percent after twelve hours, 12.5 percent after eighteen hours, and 6.25 percent after twenty-four hours." width="85%"}
+
+After one half-life, **50%** remains; after two, **25%** remains; after three, **12.5%** remains. The **fraction** decreases by half each interval, not the same absolute quantity.
+
+### Why Does Half-Life Matter for Safety and Health?
+
+Half-life helps us estimate **(1)** how much activity remains, **(2)** how much time has elapsed, **(3)** how long it may take to reach a specified activity level, and **(4)** which precautions and measurements are needed to make informed safety decisions.
+
+**Important distinction:** A sample does **not** become completely stable after a fixed number of half-lives. Some radioactive nuclei remain, and daughter products may also be radioactive. Reaching a calculated activity does not, by itself, establish that handling, entry, or disposal is safe.
+
+### Activity and Its Units
+
+**Activity (**$A$) is the rate of nuclear transformations. Its SI unit is the **becquerel (Bq)**:
+
+$$
+1\ \mathrm{Bq}=1\ \text{nuclear transformation per second}
+$$
+
+A megabecquerel (MBq) equals one million becquerels. For a single radionuclide, activity decreases in the same proportion as the number of undecayed nuclei.
+
+### Calculating Activity Remaining
+
+Suppose a technetium-99m sample begins with **800 MBq** of activity:
+
+| Time elapsed | Half-lives elapsed | Activity remaining |
+|:-------------|-------------------:|-------------------:|
+| 0 hours      |                  0 |            800 MBq |
+| 6 hours      |                  1 |            400 MBq |
+| 12 hours     |                  2 |            200 MBq |
+| 18 hours     |                  3 |            100 MBq |
+| 24 hours     |                  4 |             50 MBq |
+
+: Technetium-99m Activity Over Four Half-Lives
+
+The same pattern can be calculated using:
+
+$$
+\boxed{A=A_0\left(\frac{1}{2}\right)^{t/H}}
+$$
+
+Where:
+
+- $A$: Activity remaining, in Bq or MBq.
+- $A_0$: Initial activity, in the same units as $A$.
+- $t$: Elapsed time, in hours, days, or another time unit.
+- $H$: Physical half-life, in the **same time unit** as $t$.
+- $t/H$: Number of half-lives elapsed; the time units cancel.
+
+The exponent tells us how many times the activity is halved.
+
+### Worked Example: How Much Remains After 18 Hours?
+
+**Problem:** A sample initially contains 800 MBq of technetium-99m. Its half-life is 6 hours. How much activity remains after 18 hours?
+
+**Step 1. Identify known values:** $A_0=800\ \mathrm{MBq}$, $t=18\ \mathrm{h}$, and $H=6\ \mathrm{h}$.
+
+**Step 2. Calculate the number of half-lives:**
+
+$$
+\frac{t}{H}=\frac{18\ \mathrm{h}}{6\ \mathrm{h}}=3
+$$
+
+**Step 3. Substitute into the equation:**
+
+$$
+A=800\ \mathrm{MBq}\left(\frac12\right)^3
+=800\ \mathrm{MBq}\times\frac18
+$$
+
+$$
+\boxed{A=100\ \mathrm{MBq}}
+$$
+
+**Step 4. Check:** $800\rightarrow400\rightarrow200\rightarrow100\ \mathrm{MBq}$. Three half-lives have elapsed, so one-eighth of the initial activity remains.
+
+### Worked Example: How Much Time Must Pass?
+
+**Problem:** How long must the same sample decay to decrease from 800 MBq to **50 MBq**?
+
+Count the halvings: $800\rightarrow400\rightarrow200\rightarrow100\rightarrow50$. This takes **four half-lives**.
+
+$$
+t=4\times6\ \mathrm{h}=\boxed{24\ \mathrm{h}}
+$$
+
+**Safety interpretation:** We can predict that activity will be approximately 50 MBq after 24 hours, but **50 MBq is not automatically a safe level**. Radiation type and energy, distance, shielding, contamination pathways, dose rate, and applicable requirements all matter. Confirm conditions with appropriate measurements and radiation safety procedures.
+
+*Sources: Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20; Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.).*
+
+## 4.6 Radiation Penetration and Shielding
 
 We have already compared the penetrating ability of alpha, beta, gamma, and neutron radiation. **Penetration** describes how readily radiation passes through matter; **shielding** uses appropriately selected material to reduce the amount of radiation reaching a person or area.
 
@@ -2084,8 +1012,74 @@ For a point-like source under suitable conditions, radiation intensity decreases
 
 *Source guidance: Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.), radiation chapter; Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.).*
 
+## 4.7 Understanding Radioactivity and Radiation Absorbed Dose
 
-## 4.9 Returning to Nuclear Stability
+The terms **radioactivity**, **activity**, **exposure**, and **dose** are related, but they do not mean the same thing.
+
+### Activity: How Often Nuclei Decay
+
+**Activity** describes the number of nuclear transformations occurring in a radioactive source per unit time.
+
+- **Becquerel (Bq):** One nuclear decay per second ($1\ \mathrm{Bq}=1\ \mathrm{s}^{-1}$).
+- **Curie (Ci):** A historical unit of activity; $1\ \mathrm{Ci}=3.7\times10^{10}\ \mathrm{Bq}$.
+
+A source with greater activity undergoes more nuclear transformations per second, but **activity alone does not tell us the dose received by a person**.
+
+### Absorbed Dose: Energy Deposited in Matter
+
+**Absorbed dose** is the energy deposited by ionizing radiation per unit mass of material.
+
+$$
+D=\frac{E_{\mathrm{absorbed}}}{m}
+$$
+
+Where:
+
+- $D$ is the **absorbed dose**.
+- $E_{\mathrm{absorbed}}$ is the energy deposited in the material.
+- $m$ is the mass of the material receiving that energy.
+
+The SI unit of absorbed dose is the **gray (Gy)**:
+
+$$
+1\ \mathrm{Gy}=1\ \mathrm{J/kg}
+$$
+
+The **rad** is an older unit: $1\ \mathrm{Gy}=100\ \mathrm{rad}$.
+
+### Biological Weighting: Equivalent and Effective Dose
+
+Absorbed dose alone does not fully describe the potential biological impact of radiation. Different radiation types can produce different biological effects for the same absorbed dose.
+
+- **Equivalent dose** accounts for radiation type through a radiation weighting factor.
+- **Effective dose** additionally accounts for the differing sensitivities of organs and tissues; it is used in radiation protection to compare and manage overall risk, not to predict an individual person's outcome.
+
+Both quantities are expressed in **sieverts (Sv)** in the SI system. The **rem** is an older unit: $1\ \mathrm{Sv}=100\ \mathrm{rem}$.
+
+| Quantity | What it describes | SI unit |
+|:-----------------------|:-----------------------|:-----------------------|
+| Activity | Nuclear transformations per second | Becquerel (Bq) |
+| Absorbed dose | Energy deposited per unit mass | Gray (Gy) |
+| Equivalent dose | Absorbed dose weighted for radiation type | Sievert (Sv) |
+| Effective dose | Weighted estimate accounting for radiation type and tissue sensitivity | Sievert (Sv) |
+
+: Distinguishing Radioactivity and Radiation Dose
+
+**Example:** Two radioactive sources may have the same activity but produce different doses to a worker because they emit different radiation, are at different distances, or are separated from the worker by different shielding materials.
+
+### Dose Rate and Stay Time
+
+**Dose rate** describes how quickly dose accumulates, commonly expressed in units such as $\mathrm{mSv/h}$ or $\mathrm{mGy/h}$. For an approximately constant dose rate, a simple planning relationship is:
+
+$$
+\text{Time}=\frac{\text{Allowable dose}}{\text{Dose rate}}
+$$
+
+This relationship requires consistent units and assumes the dose rate remains constant. It is **not** an authorization to enter or remain in a hazardous area; response limits and decisions must follow applicable procedures and qualified direction.
+
+*Source guidance: Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20; Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.); Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.).*
+
+## 4.8 Returning to Nuclear Stability
 
 Earlier, we introduced the **neutron-to-proton ratio** and the **belt of nuclear stability**. We can now return to that model with a practical question: **Why do different unstable nuclei emit different types of radiation?**
 
@@ -2114,11 +1108,47 @@ Where $E$ is energy, $m$ is mass, and $c$ is the speed of light in a vacuum. We 
 
 *Source: Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, “Nuclear Stability” and “Nuclear Binding Energy.”*
 
+## Radiation Detection Instruments: Ionization Chambers and Survey Probes
+
+Knowing the radioactive half-life helps us **predict** how activity changes. Radiation instruments help us **measure** conditions at the scene. Instrument selection depends on radiation type, energy, measurement purpose, and calibration.
+
+### Ionization Chambers
+
+An **ionization chamber** contains a gas and electrodes. Ionizing radiation produces positive ions and electrons in the gas; an applied electric field collects these charges and generates a measurable signal. Ionization chambers are commonly used to measure exposure or dose rate when properly calibrated for the radiation field.
+
+![Ionization chamber used for radiation measurements.](ion-chamber.jpg){#fig-ion-chamber fig-alt="Training illustration of an ionization chamber radiation measurement instrument." width="85%"}
+
+*Source: NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training.*
+
+### Radiation Survey Probes
+
+A **survey probe** is a detector connected to an instrument that displays the response. Different probes are designed for different radiation types and measurement tasks. A probe appropriate for beta contamination may not be appropriate for measuring a gamma dose rate.
+
+![Examples of radiation survey probes.](probes.jpg){#fig-radiation-survey-probes fig-alt="Training illustration showing examples of radiation survey detector probes." width="85%"}
+
+*Source: NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training.*
+
+### How Does a Geiger-Müller Counter Work?
+
+A **Geiger-Müller (GM) detector** is a gas-filled tube with an applied voltage. Radiation that enters the sensitive volume creates ion pairs. Electrons accelerate toward the central wire, triggering a gas avalanche and an electrical pulse that the instrument counts.
+
+![Illustration of a gas-filled radiation detector and its operation.](gas-probes.jpg){#fig-gas-filled-detector fig-alt="Educational illustration of a gas-filled Geiger-Müller radiation detector." width="85%"}
+
+*Source: Linda Hall Library, [The Atomic Age: What Is a Geiger Counter and What Makes It Tick?](https://www.lindahall.org/experience/digital-exhibitions/the-atomic-age/02-it-s-a-question-of-physics/e-what-is-a-geiger-counter-and-what-makes-it-tick/).*
+
+A GM instrument may report **counts per minute (CPM)** or **counts per second (CPS)**. **Counts are not automatically equivalent to absorbed dose or dose rate**. Detector efficiency, geometry, energy response, and calibration must be considered. Some GM detectors are useful for beta and gamma surveys; detecting alpha particles requires a suitable thin-window detector and appropriate conditions.
+
+**HazMat application:** Identify the measurement objective before selecting an instrument. Contamination surveys, source location, and external dose-rate measurements may require different detectors and procedures.
+
 # Part III. The Electromagnetic Spectrum and Non-Ionizing Radiation
 
 We have examined gamma rays as high-energy **electromagnetic radiation**. However, electromagnetic radiation also includes many familiar forms of energy, such as visible light, infrared radiation, microwaves, and radio waves.
 
 ## 4.9 Understanding the Electromagnetic Spectrum
+
+**Non-ionizing radiation** is radiation that does not have sufficient energy per photon to directly ionize atoms or molecules through ordinary single-photon interactions. It includes radiofrequency waves, microwaves, infrared radiation, visible light, and much of the ultraviolet spectrum. **Non-ionizing does not mean harmless:** intense exposures can cause heating, eye injury, or photochemical damage, depending on wavelength and conditions.
+
+We will use the electromagnetic spectrum to compare frequency, wavelength, photon energy, and occupational exposure scenarios before discussing common sources and protective controls.
 
 **Electromagnetic radiation** consists of oscillating electric and magnetic fields that transport energy through space. Its energy can also be described in terms of **photons**.
 
