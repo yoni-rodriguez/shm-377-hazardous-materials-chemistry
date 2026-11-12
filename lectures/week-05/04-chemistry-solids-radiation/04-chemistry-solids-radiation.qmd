@@ -754,19 +754,20 @@ Beta radiation can be shielded using suitable materials, including plastic or th
 
 *Source: Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.). Jones & Bartlett Learning, Chapter 3, "Beta Particles."*
 
+
 #### Gamma Radiation ($\gamma$)
 
-**Gamma-ray radiation:** The third common type of radiation that Rutherford identified was gamma radiation, represented by the Greek letter $\gamma$.
+**Gamma radiation:** The third common type of nuclear radiation is gamma radiation, represented by the Greek letter $\gamma$. Gamma rays were first identified by Paul Villard in 1900 and were subsequently studied and named by Ernest Rutherford.
 
-Like visible light, $\gamma$ radiation is electromagnetic radiation but of much higher frequency and is regarded as a stream of very-high-energy photons.
+Like visible light, gamma radiation is a form of electromagnetic radiation, but gamma rays emitted during nuclear transitions generally have much higher frequencies and photon energies.
 
-Gamma rays are emitted when a nucleus moves from a higher-energy state to a lower-energy state. Unlike alpha or beta decay, **gamma emission does not change the atomic number or mass number of the nucleus.**
+Gamma rays can be emitted when an excited nucleus moves from a higher-energy state to a lower-energy state. Unlike alpha or beta decay, **gamma emission by itself does not change the atomic number or mass number of the nucleus.**
 
 We can represent this transformation using a **nuclear equation**, which shows how an excited nucleus releases energy in the form of a gamma-ray photon.
 
 ##### Example: Technetium-99m in Nuclear Medicine
 
-Technetium-99m is a radioactive isotope of technetium commonly used in nuclear medicine for diagnostic imaging.
+Technetium-99m is a radioactive nuclear isomer of technetium-99 commonly used in nuclear medicine for diagnostic imaging.
 
 The superscript **m** in technetium-99m (${}^{99m}_{43}\mathrm{Tc}$) stands for **metastable**, indicating that the nucleus is in an **excited nuclear state**. This means that the nucleus contains more energy than the same nucleus in its **ground state**, or lowest-energy state.
 
@@ -776,6 +777,36 @@ In this example:
 - **Atomic number (43):** The nucleus contains 43 protons.
 - **Mass number (99):** The nucleus contains 99 protons and neutrons combined.
 - **Metastable (m):** The nucleus is in an excited nuclear state.
+
+The gamma emission from technetium-99m can be represented by the following simplified nuclear equation:
+
+$$
+{}^{99m}_{43}\mathrm{Tc}
+\;\longrightarrow\;
+{}^{99}_{43}\mathrm{Tc}
+\;+\;
+{}^{0}_{0}\gamma
+$$
+
+In this nuclear equation:
+
+- **Parent nucleus:** Technetium-99m (${}^{99m}_{43}\mathrm{Tc}$), in an excited nuclear state.
+- **Emitted radiation:** Gamma-ray photon (${}^{0}_{0}\gamma$), which carries away energy.
+- **Resulting nucleus:** Technetium-99 (${}^{99}_{43}\mathrm{Tc}$), in its nuclear ground state.
+
+Notice that the **atomic number remains 43** and the **mass number remains 99**. Only the energy state of the nucleus changes.
+
+This process is called an **isomeric transition** because the nucleus releases energy without changing its number of protons or neutrons.
+
+Although technetium-99 is in its nuclear ground state, it is still radioactive and undergoes further radioactive decay over a much longer period.
+
+**Application in nuclear medicine:** Technetium-99m is a valuable diagnostic tool because gamma radiation emitted from radioactive material inside the body can be detected using specialized imaging equipment.
+
+Patients may receive a radiopharmaceutical containing technetium-99m by injection or, for certain examinations, by ingestion. By detecting the emitted gamma radiation, medical professionals can obtain diagnostic images that help evaluate organs such as the **heart, liver, and lungs**.
+
+*Source: Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, Nuclear Chemistry.*
+
+
 
 ### The Mathematics of Radioactive Decay
 
@@ -1684,6 +1715,7 @@ As the exponent becomes more negative, the exponential factor decreases.
 This represents the decreasing mass of radioactive parent material.
 
 
+
 ##### Connecting the Decay Constant to Half-Life
 
 We have introduced two mathematical equations that describe the exponential decay of radioactive parent material:
@@ -1730,7 +1762,7 @@ For example, suppose a radioactive isotope has a physical half-life of 140 days.
 After one half-life has elapsed:
 
 $$
-t=h=140\ \text{days}
+t=h=140\ \mathrm{days}
 $$
 
 We can now use this condition to evaluate both exponential decay equations at the same point in time.
@@ -1760,7 +1792,7 @@ $$
 For our example:
 
 $$
-\frac{140\ \text{days}}{140\ \text{days}}=1
+\frac{140\ \mathrm{days}}{140\ \mathrm{days}}=1
 $$
 
 Therefore:
@@ -1803,7 +1835,7 @@ This confirms the definition of half-life: after one physical half-life, half of
 For example, if the initial mass were 300 mg:
 
 $$
-m(h)=\frac{300\ \text{mg}}{2}=150\ \text{mg}
+m(h)=\frac{300\ \mathrm{mg}}{2}=150\ \mathrm{mg}
 $$
 
 **Step 3: Apply the same condition to the natural exponential decay equation.**
@@ -2015,6 +2047,10 @@ $$
 
 We have now derived the mathematical relationship between the radioactive decay constant and the physical half-life.
 
+This equation is called the **half-life–decay constant relationship**.
+
+It allows us to calculate the radioactive decay constant ($r$) when we know the physical half-life ($h$).
+
 Because:
 
 $$
@@ -2029,7 +2065,7 @@ $$
 
 The units of $r$ are the inverse of the time units used for $h$.
 
-For example, if $h$ is measured in days, then $r$ is expressed in $\text{day}^{-1}$.
+For example, if $h$ is measured in days, then $r$ is expressed in $\mathrm{days}^{-1}$.
 
 **Step 8: Interpret the positive decay constant and negative exponent.**
 
@@ -2053,15 +2089,9 @@ $$
 
 **Why does the equation use a negative sign if the decay constant is positive?**
 
-The negative sign gives the exponential function its decreasing direction as time increases.
+The negative sign in the exponent indicates that the amount of radioactive parent material decreases over time.
 
-Consider the exponential factor:
-
-$$
-e^{-rt}
-$$
-
-Because $r>0$ and elapsed time $t$ increases, the exponent $-rt$ becomes increasingly negative.
+As elapsed time ($t$) increases, the exponent $-rt$ becomes increasingly negative.
 
 For example:
 
@@ -2081,29 +2111,108 @@ As the exponent becomes more negative, the exponential factor decreases toward z
 
 ![Comparison of the increasing natural exponential function $e^x$ and the decreasing function $e^{-x}$. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed., Section 4.2.](natural-exponential-function-c.jpg){#fig-natural-exponential-decay width="85%" fig-align="center"}
 
-The graph illustrates the difference between exponential growth and exponential decay:
+The graph illustrates that:
 
 - **$r>0$:** The radioactive decay constant is positive.
-- **$-rt$:** The exponent becomes increasingly negative as time increases.
-- **$e^{-rt}$:** The fraction of radioactive parent material remaining decreases with time.
+- **$-rt$:** The negative sign gives the exponential function its decreasing direction.
+- **$e^{-rt}$:** The fraction of radioactive parent material remaining decreases as time increases.
 
-The negative sign does not mean that the decay constant or the remaining mass is negative.
+The negative sign does not mean that the decay constant or remaining mass is negative. It describes the direction of the exponential change.
 
-Instead, it produces a decreasing exponential function, consistent with the physical process of radioactive decay.
+#### First-Order Radioactive Decay
 
-Consequently, the natural exponential equation describes the gradual decrease in radioactive parent material over time:
+Radioactive decay follows a **first-order process**, meaning that the rate of decay is directly proportional to the number of radioactive parent nuclei remaining.
+
+In simpler terms, the more radioactive parent nuclei present, the more nuclear transformations we expect to occur per unit time. As the number of parent nuclei decreases, the activity of the parent isotope also decreases.
+
+An important characteristic of first-order radioactive decay is that **the physical half-life depends on the radioactive decay constant, not on the initial amount of radioactive material**.
+
+Recall the half-life–decay constant relationship:
 
 $$
-\boxed{m(t)=m_0e^{-rt}}
+r=\frac{\ln(2)}{h}
 $$
 
-And the decay constant can be calculated directly from the physical half-life:
+Therefore:
+
+- **A larger decay constant ($r$)** corresponds to a shorter physical half-life and more rapid radioactive decay.
+- **A smaller decay constant ($r$)** corresponds to a longer physical half-life and slower radioactive decay.
+
+The physical half-life of a particular radioactive isotope remains the same regardless of the initial mass of the sample.
+
+##### How Is Radioactive Decay Different From Ordinary Chemical Reactions?
+
+The rates of many ordinary chemical reactions can change with environmental conditions, including temperature, pressure, and reactant concentrations.
+
+Radioactive decay is different because it involves transformations of unstable atomic nuclei rather than the rearrangement of chemical bonds.
+
+For a particular radioactive isotope, the decay constant and physical half-life are generally unaffected by ordinary changes in temperature and pressure.
+
+This means that changing the storage conditions of radioactive material will not ordinarily accelerate its nuclear decay.
+
+
+::: {.callout-note}
+### Application to Hazardous Materials Management
+
+Understanding radioactive decay is important when planning the storage, handling, and long-term management of radioactive materials.
+
+The **physical half-life** helps us estimate how much radioactive parent material remains after a specified period.
+
+The **radioactive decay constant** characterizes how rapidly radioactive nuclei undergo decay and helps us understand how the activity of a radioactive source changes over time.
+
+These properties are particularly important when considering radioactive waste storage and decay-in-storage practices.
+
+However, **radioactive decay alone does not determine whether a material is safe to handle or dispose of**. Radiation type, energy, activity, radioactive daughter products, exposure pathways, shielding, and applicable regulatory requirements must also be considered.
+:::
+
+#### Why Do We Need Two Radioactive Decay Equations?
+
+We have learned two equations that describe the same radioactive decay process:
+
+**Half-life equation**
+
+$$
+m(t)=m_0\left(\frac{1}{2}\right)^{t/h}
+$$
+
+**Natural exponential decay equation**
+
+$$
+m(t)=m_0e^{-rt}
+$$
+
+If both equations calculate the same remaining mass, why do we need to learn both?
+
+The **half-life equation** is useful when we know the physical half-life of a radioactive isotope and want to calculate how much radioactive parent material remains after a given period.
+
+The **natural exponential decay equation** describes the same process using the radioactive decay constant ($r$), which characterizes how rapidly radioactive nuclei undergo decay.
+
+The decay constant also connects the number of radioactive parent nuclei remaining to the radioactive activity of a sample:
+
+$$
+A=rN
+$$
+
+where:
+
+- $A$ is radioactive activity, or the number of nuclear transformations occurring per unit time.
+- $r$ is the radioactive decay constant.
+- $N$ is the number of radioactive parent nuclei remaining.
+
+The two equations are mathematically equivalent, and the relationship:
 
 $$
 \boxed{r=\frac{\ln(2)}{h}}
 $$
 
-------------------------------------------------------------------------
+allows us to convert between physical half-life and the radioactive decay constant.
+
+**For hazardous materials management, half-life helps us understand how long radioactive parent material persists, while the decay constant characterizes how rapidly its nuclei undergo decay.**
+
+Neither quantity alone establishes the radiation dose or health risk associated with a radioactive material.
+
+---
+
 
 #### Worked Example: Radioactive Decay of Polonium-210
 
@@ -2115,21 +2224,25 @@ For this example, we will use a half-life of 140 days. This is a rounded instruc
 
 We want to answer three questions:
 
-1.  How much polonium-210 remains after 365 days?
-2.  What is the radioactive decay constant?
-3.  How much time must pass before only 200 mg remain?
+1. How much polonium-210 remains after 365 days?
+2. What is the radioactive decay constant?
+3. How much time must pass before only 200 mg remain?
 
 ##### Part I: How Much Radioactive Material Remains?
 
-**Step 1: Identify the known information.**
+**Step 1: Identify the known information, unknown variable, and relevant equations.**
 
-Initial mass:
+Before beginning a calculation, we need to identify the information provided in the problem and determine what we are trying to calculate.
+
+**Known information:**
+
+Initial mass of the radioactive parent isotope:
 
 $$
 m_0=300\ \mathrm{mg}
 $$
 
-Half-life:
+Physical half-life:
 
 $$
 h=140\ \mathrm{days}
@@ -2141,20 +2254,105 @@ $$
 t=365\ \mathrm{days}
 $$
 
-We want to calculate the remaining mass, $m(t)$.
+**Unknown variable:**
+
+We want to calculate the mass of radioactive parent material remaining after 365 days:
+
+$$
+m(t)=?
+$$
+
+
+**Relevant equations:**
+
+We have learned two equations that describe the remaining mass of radioactive parent material and a third equation that relates the physical half-life to the radioactive decay constant.
+
+**1. Half-life equation**
+
+$$
+m(t)=m_0\left(\frac{1}{2}\right)^{t/h}
+$$
+
+**2. Natural exponential decay equation**
+
+$$
+m(t)=m_0e^{-rt}
+$$
+
+**3. Half-life–decay constant relationship**
+
+$$
+r=\frac{\ln(2)}{h}
+$$
+
+where:
+
+- $m(t)$ is the mass of radioactive parent material remaining after elapsed time $t$.
+- $m_0$ is the initial mass of radioactive parent material.
+- $t$ is elapsed time.
+- $h$ is the physical half-life of the radioactive isotope.
+- $r$ is the radioactive decay constant, expressed in inverse units of time.
+- $e$ is Euler's number, approximately $2.71828$.
+- $\ln$ represents the natural logarithm.
+
+The **half-life equation** and **natural exponential decay equation** can both be used to calculate the remaining mass of radioactive parent material.
+
+The **half-life–decay constant relationship** allows us to calculate the radioactive decay constant ($r$) from the known physical half-life ($h$).
+
+The information provided in a problem helps us determine which equation, or combination of equations, to use.
+
 
 **Step 2: Select the appropriate equation.**
 
-Because the half-life and elapsed time are known, we can use:
+We know the initial mass ($m_0$), physical half-life ($h$), and elapsed time ($t$).
+
+Our unknown is the remaining mass, $m(t)$.
+
+Consider the three equations identified in Step 1.
+
+| Equation | Mathematical Expression | Required Information | Application to Our Problem |
+|:---|:---:|:---|:---|
+| **1. Half-life equation** | $m(t)=m_0\left(\frac{1}{2}\right)^{t/h}$ | Initial mass ($m_0$), elapsed time ($t$), and physical half-life ($h$) | **All three values are known.** We can calculate the remaining mass directly. |
+| **2. Natural exponential decay equation** | $m(t)=m_0e^{-rt}$ | Initial mass ($m_0$), elapsed time ($t$), and radioactive decay constant ($r$) | We know $m_0$ and $t$, but must first calculate $r$. |
+| **3. Half-life–decay constant relationship** | $r=\frac{\ln(2)}{h}$ | Physical half-life ($h$) | We can calculate $r$ and then use Equation 2 to determine the remaining mass. |
+
+**Which equation should we select?**
+
+Because the physical half-life is already provided, the most direct approach is to use the **half-life equation**:
 
 $$
-m(t)=m_0\left(\frac12\right)^{t/h}
+\boxed{m(t)=m_0\left(\frac{1}{2}\right)^{t/h}}
 $$
+
+This equation allows us to calculate the remaining mass directly without first calculating the radioactive decay constant.
+
+In Part II, we will use the half-life–decay constant relationship and the natural exponential decay equation to solve the same problem using a different approach.
+
+**Which equation should we select?**
+
+Because the physical half-life is already provided, the most direct approach is to use the **half-life equation**:
+
+$$
+\boxed{m(t)=m_0\left(\frac{1}{2}\right)^{t/h}}
+$$
+
+This equation allows us to calculate the remaining mass directly without first calculating the radioactive decay constant.
+
+In Part II, we will use the half-life–decay constant relationship and the natural exponential decay equation to solve the same problem using a different approach.
 
 **Step 3: Substitute the known values.**
 
+Begin with:
+
 $$
-m(365)=300\left(\frac12\right)^{365/140}
+m(t)=m_0\left(\frac{1}{2}\right)^{t/h}
+$$
+
+Substitute the initial mass, elapsed time, and physical half-life:
+
+$$
+m(365)=(300\ \mathrm{mg})
+\left(\frac{1}{2}\right)^{365/140}
 $$
 
 **Step 4: Calculate the exponent.**
@@ -2168,7 +2366,7 @@ This means approximately 2.61 half-lives have elapsed.
 **Step 5: Evaluate the exponential expression.**
 
 $$
-\left(\frac12\right)^{365/140}\approx0.164124
+\left(\frac{1}{2}\right)^{365/140}\approx0.164124
 $$
 
 This means approximately 16.41% of the original polonium-210 remains.
@@ -2176,194 +2374,330 @@ This means approximately 16.41% of the original polonium-210 remains.
 **Step 6: Calculate the remaining mass.**
 
 $$
-m(365)\approx300(0.164124)
+m(365)\approx(300\ \mathrm{mg})(0.164124)
 $$
+
+Therefore:
 
 $$
 \boxed{m(365)\approx49.24\ \mathrm{mg}}
 $$
 
-Approximately 49.24 mg of polonium-210 remains after 365 days using the textbook's assumed half-life.
+Approximately 49.24 mg of polonium-210 remains after 365 days using the assumed physical half-life of 140 days.
 
-##### Part II: Determine the Radioactive Decay Constant
 
-**Step 1: Identify what we know.**
 
-The half-life is:
+##### Part II: Calculate the Radioactive Decay Constant and Apply the Natural Exponential Decay Equation
 
-$$
-h=140\ \mathrm{days}
-$$
+In Part I, we used the half-life equation to calculate how much radioactive parent material remains after 365 days.
 
-We want to determine $r$.
+We will now solve the same problem using the **half-life–decay constant relationship** and the **natural exponential decay equation**.
 
-**Step 2: Select the equation.**
+Our known information is:
 
-$$
-r=\frac{\ln 2}{h}
-$$
+- Initial mass: $m_0=300\ \mathrm{mg}$
+- Physical half-life: $h=140\ \mathrm{days}$
+- Elapsed time: $t=365\ \mathrm{days}$
 
-**Step 3: Substitute the half-life.**
+Our objective is to calculate the radioactive decay constant ($r$) and use it to determine the remaining mass, $m(365)$.
 
-$$
-r=\frac{\ln 2}{140\ \mathrm{days}}
-$$
+**Step 1: Calculate the radioactive decay constant ($r$).**
 
-**Step 4: Evaluate the natural logarithm.**
+Recall the half-life–decay constant relationship:
 
 $$
-\ln 2\approx0.693147
+r=\frac{\ln(2)}{h}
+$$
+
+Substitute the physical half-life:
+
+$$
+r=\frac{\ln(2)}{140\ \mathrm{days}}
+$$
+
+Recall that:
+
+$$
+\ln(2)\approx0.693147
 $$
 
 Therefore:
 
 $$
-r=\frac{0.693147}{140\ \mathrm{days}}
+r\approx\frac{0.693147}{140\ \mathrm{days}}
 $$
 
+Divide:
+
 $$
-\boxed{r\approx0.00495105\ \mathrm{day}^{-1}}
+\boxed{r\approx0.00495105\ \mathrm{days}^{-1}}
 $$
 
-The radioactive decay constant $r$ is positive. The negative sign in the exponent of the decay model describes the decrease in mass over time.
+Because the half-life is expressed in days, the radioactive decay constant is expressed in inverse days ($\mathrm{days}^{-1}$).
 
-**Step 5: Construct the natural exponential model.**
+**Step 2: Identify the natural exponential decay equation.**
 
-Start with:
+Recall:
+
+$$
+\boxed{m(t)=m_0e^{-rt}}
+$$
+
+where:
+
+- $m(t)$ is the remaining mass of radioactive parent material.
+- $m_0$ is the initial mass of radioactive parent material.
+- $r$ is the radioactive decay constant.
+- $t$ is the elapsed time.
+- $e$ is Euler's number, approximately $2.71828$.
+
+We now have all the information needed to calculate the remaining mass.
+
+**Step 3: Substitute the known values and solve.**
+
+Substitute:
+
+$$
+m(365)=(300\ \mathrm{mg})
+e^{-(0.00495105\ \mathrm{days}^{-1})(365\ \mathrm{days})}
+$$
+
+Notice that the time units cancel:
+
+$$
+\mathrm{days}^{-1}\times\mathrm{days}=1
+$$
+
+The exponent is dimensionless, meaning it has no units.
+
+Calculate the exponent:
+
+$$
+-(0.00495105)(365)\approx-1.80713
+$$
+
+Therefore:
+
+$$
+m(365)\approx(300\ \mathrm{mg})e^{-1.80713}
+$$
+
+Evaluate the exponential factor:
+
+$$
+e^{-1.80713}\approx0.1641
+$$
+
+Multiply by the initial mass:
+
+$$
+m(365)\approx(300\ \mathrm{mg})(0.1641)
+$$
+
+Using the unrounded values in the calculation:
+
+$$
+\boxed{m(365)\approx49.23\ \mathrm{mg}}
+$$
+
+After 365 days, approximately **49.23 mg of the original 300 mg of polonium-210 remains**.
+
+**Compare the results from Parts I and II.**
+
+In Part I, we used the half-life equation:
+
+$$
+m(t)=m_0\left(\frac{1}{2}\right)^{t/h}
+$$
+
+In Part II, we used the natural exponential decay equation:
 
 $$
 m(t)=m_0e^{-rt}
 $$
 
-Substitute the initial mass and decay constant:
+Both approaches give approximately:
 
 $$
-\boxed{m(t)=300e^{-0.00495105t}}
+\boxed{m(365)\approx49.23\ \mathrm{mg}}
 $$
 
-where $t$ is measured in days and $m(t)$ is measured in milligrams.
+The two equations are mathematically equivalent and describe the same radioactive decay process.
 
-This equation describes the same decay process as the half-life model. The constant $r$ has units of inverse days, so $rt$ is dimensionless when $t$ is in days.
+::: {.callout-note}
+### Application to Hazardous Materials Management
+
+The physical half-life helps us estimate how much radioactive parent material remains after a specified period.
+
+The radioactive decay constant characterizes how rapidly radioactive parent nuclei undergo decay and helps us understand how the activity of a radioactive source changes over time.
+
+These relationships are useful when planning radioactive material storage and management.
+
+However, **radioactive activity is not the same as radiation dose or health risk**. A radiation hazard assessment must also consider radiation type, energy, exposure pathways, shielding, and other relevant factors.
+
+We will discuss radioactive activity and radiation measurement later in this lecture.
+:::
+
 
 ##### Part III: How Much Time Must Pass Until 200 mg Remain?
 
-We now know:
+In Parts I and II, we calculated how much polonium-210 remains after 365 days.
 
-- Initial mass: 300 mg.
-- Remaining mass: 200 mg.
-- Decay constant: approximately $0.00495105\ \mathrm{day}^{-1}$.
+Now, we will reverse the problem.
 
-We want to determine the elapsed time, $t$.
+**How much time must pass for an initial 300 mg sample of polonium-210 to decrease to 200 mg?**
 
-**Step 1: Start with the natural exponential model.**
+**Known information:**
+
+- Initial mass ($m_0$): $300\ \mathrm{mg}$
+- Remaining mass ($m(t)$): $200\ \mathrm{mg}$
+- Radioactive decay constant ($r$): $0.00495\ \mathrm{days}^{-1}$
+- Elapsed time ($t$): Unknown
+
+**Step 1: Select the appropriate equation.**
+
+We will use the **natural exponential decay equation**:
 
 $$
 m(t)=m_0e^{-rt}
 $$
 
+We know the initial mass, remaining mass, and radioactive decay constant. Our objective is to solve for elapsed time ($t$).
+
 **Step 2: Substitute the known values.**
 
-$$
-200=300e^{-0.00495105t}
-$$
-
-Notice that time appears in the exponent.
-
-We cannot isolate $t$ using division alone.
-
-**Step 3: Divide both sides by 300.**
+Substitute the known quantities into the equation:
 
 $$
-\frac{200}{300}=e^{-0.00495105t}
-$$
-
-Simplify:
-
-$$
-\frac23=e^{-0.00495105t}
-$$
-
-We divide by 300 because we want the exponential expression by itself.
-
-**Step 4: Take the natural logarithm of both sides.**
-
-$$
-\ln\left(\frac23\right)
+200\ \mathrm{mg}
 =
-\ln\left(e^{-0.00495105t}\right)
+(300\ \mathrm{mg})e^{-(0.00495\ \mathrm{days}^{-1})t}
 $$
 
-We use the natural logarithm because the unknown time is in an exponent with base $e$.
+Notice that the unknown time ($t$) appears in the exponent.
 
-**Step 5: Apply the inverse relationship.**
+To isolate $t$, we must first isolate the exponential expression.
+
+Divide both sides by the initial mass ($300\ \mathrm{mg}$):
+
+$$
+\frac{200\ \mathrm{mg}}{300\ \mathrm{mg}}
+=
+\frac{(300\ \mathrm{mg})e^{-(0.00495\ \mathrm{days}^{-1})t}}{300\ \mathrm{mg}}
+$$
+
+The mass units cancel, and the initial mass cancels on the right-hand side:
+
+$$
+\frac{2}{3}
+=
+e^{-(0.00495\ \mathrm{days}^{-1})t}
+$$
+
+**Step 3: Apply the natural logarithm to both sides.**
+
+Because the unknown time is in an exponent with base $e$, we can use the natural logarithm to isolate the exponent.
+
+Take the natural logarithm of both sides:
+
+$$
+\ln\left(\frac{2}{3}\right)
+=
+\ln\left(e^{-(0.00495\ \mathrm{days}^{-1})t}\right)
+$$
+
+Recall the inverse relationship:
 
 $$
 \ln(e^x)=x
 $$
 
-Therefore:
+The natural logarithm and natural exponential function cancel, leaving the exponent:
 
 $$
-\ln\left(\frac23\right)
+\ln\left(\frac{2}{3}\right)
 =
--0.00495105t
+-(0.00495\ \mathrm{days}^{-1})t
 $$
 
-The unknown time is no longer inside an exponent.
+The unknown time ($t$) is no longer inside an exponent.
 
-**Step 6: Divide by the negative decay constant.**
+**Step 4: Isolate elapsed time.**
 
-$$
-t=
--\frac{\ln(2/3)}{0.00495105}
-$$
-
-**Step 7: Calculate the natural logarithm.**
+To solve for $t$, divide both sides by the negative decay constant:
 
 $$
-\ln\left(\frac23\right)\approx-0.405465
+\frac{\ln(2/3)}{-0.00495\ \mathrm{days}^{-1}}
+=
+\frac{-(0.00495\ \mathrm{days}^{-1})t}{-0.00495\ \mathrm{days}^{-1}}
 $$
 
-Therefore:
+The negative decay constant cancels on the right-hand side:
+
+$$
+\boxed{
+t=\frac{\ln(2/3)}{-0.00495\ \mathrm{days}^{-1}}
+}
+$$
+
+**Step 5: Calculate elapsed time.**
+
+First, evaluate the natural logarithm:
+
+$$
+\ln\left(\frac{2}{3}\right)\approx-0.405465
+$$
+
+Substitute:
 
 $$
 t\approx
--\frac{-0.405465}{0.00495105}
+\frac{-0.405465}{-0.00495\ \mathrm{days}^{-1}}
 $$
 
-$$
-\boxed{t\approx81.9\ \mathrm{days}}
-$$
-
-Approximately 81.9 days must pass before the mass of polonium-210 decreases from 300 mg to 200 mg.
-
-**Step 8: Verify the answer.**
-
-Substitute the calculated time into the original equation:
+Divide:
 
 $$
-m(81.9)=300e^{-0.00495105(81.9)}
+t\approx81.91\ \mathrm{days}
 $$
 
+Therefore:
+
 $$
-m(81.9)\approx200\ \mathrm{mg}
+\boxed{t\approx82\ \mathrm{days}}
 $$
 
-The result agrees with the quantity specified in the problem. Small differences may arise because the decay constant and elapsed time were rounded during the calculation.
+Approximately **82 days** must pass for the original 300 mg sample of polonium-210 to decrease to 200 mg.
+
+**Step 6: Verify the answer.**
+
+We can check our result by substituting the calculated time into the original natural exponential decay equation:
+
+$$
+m(t)=m_0e^{-rt}
+$$
+
+Using the rounded elapsed time:
+
+$$
+m(82\ \mathrm{days})
+=
+(300\ \mathrm{mg})
+e^{-(0.00495\ \mathrm{days}^{-1})(82\ \mathrm{days})}
+$$
+
+Calculate:
+
+$$
+m(82\ \mathrm{days})\approx199.9\ \mathrm{mg}
+$$
+
+This is approximately 200 mg, confirming that our calculated elapsed time is reasonable.
+
+Small differences arise because we rounded the radioactive decay constant and elapsed time during the calculation.
 
 *Mathematical reference: Stewart, J., Redlin, L., & Watson, S. Precalculus: Mathematics for Calculus, 6th ed., Chapter 4, especially Section 4.6, Example 6. Mathematical explanations developed for SHM 377.*
 
-<!-- SHM 377 Lecture 04: reorganized continuation draft. The uploaded source begins mid-lecture; append this material to the preceding portion of the master .qmd. -->
-
-###### Connecting Radioactive Decay to Nuclear Medicine
-
-As technetium-99m undergoes an isomeric transition, the nucleus releases excess energy and transitions to technetium-99 in its nuclear ground state. This transition commonly involves gamma-ray emission.
-
-Technetium-99m is useful in diagnostic nuclear medicine because its approximately six-hour physical half-life allows sufficient time for many imaging procedures while its activity decreases substantially over the following hours.
-
-However, the physical half-life describes radioactive decay only. The amount of technetium-containing material retained in a patient's body may also decrease through biological elimination.
-
-We will examine the distinction between **physical half-life, biological half-life, and effective half-life** when discussing internal radiation exposure.
 
 ###### Hazardous Materials Application
 
@@ -2381,182 +2715,21 @@ Radiation type, activity, exposure pathways, distance, shielding, and whether ra
 
 *Sources: Atkins, P., Jones, L., & Laverman, L., Chemical Principles: The Quest for Insight, Section 7B.2, "Half-Lives for First-Order Reactions"; Cember, H., & Johnson, T. E., Introduction to Health Physics (4th ed.), radioactive decay and physical half-life.*
 
-$$
-{}^{99m}_{43}\mathrm{Tc}
-\;\longrightarrow\;
-{}^{99}_{43}\mathrm{Tc}
-\;+\;
-{}^{0}_{0}\gamma
-$$
 
-In this nuclear equation:
 
-- **Parent nucleus:** Technetium-99m (${}^{99m}_{43}\mathrm{Tc}$), in an excited nuclear state.
-- **Emitted radiation:** Gamma-ray photon (${}^{0}_{0}\gamma$), which carries away energy.
-- **Resulting nucleus:** Technetium-99 (${}^{99}_{43}\mathrm{Tc}$), in its nuclear ground state.
 
-Notice that the **atomic number remains 43** and the **mass number remains 99**. Only the energy state of the nucleus changes.
 
-**Application in nuclear medicine:** Technetium-99m is a valuable diagnostic tool because gamma radiation emitted from radioactive material inside the body can be detected using specialized imaging equipment.
 
-Patients may receive a radiopharmaceutical containing technetium-99m by injection or, for certain examinations, by ingestion. By detecting the emitted gamma radiation, medical professionals can obtain diagnostic images of organs such as the **heart, liver, and lungs**.
 
-*Source: Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, Nuclear Chemistry.*
 
-------------------------------------------------------------------------
 
-##### Degree of Penetration
 
-**Degree of penetration:** Very penetrating; gamma radiation often accompanies $\alpha$ and $\beta$ radiation.
 
-Gamma radiation can penetrate deeply into materials and biological tissue. Dense shielding materials, such as lead or concrete, can reduce gamma radiation exposure.
+----> YOU ARE HERE <----- 
 
-Gamma radiation may also accompany other nuclear transformations. For example, iodine-125 can undergo **electron capture**, followed by the emission of gamma radiation as the resulting nucleus releases excess energy.
 
-During **electron capture**, an electron from an atomic orbital is captured by the nucleus and combines with **a proton to form a neutron**. As a result, **the atomic number decreases by one**, while **the mass number remains unchanged**.
 
-We can represent this transformation using the following simplified nuclear equation:
 
-$$
-{}^{1}_{1}\mathrm{p}
-\;+\;
-{}^{0}_{-1}\mathrm{e}
-\;\longrightarrow\;
-{}^{1}_{0}\mathrm{n}
-$$
-
-The following simplified nuclear equation illustrates this process:
-
-$$
-{}^{125}_{53}\mathrm{I}
-\;+\;
-{}^{0}_{-1}\mathrm{e}
-\;\longrightarrow\;
-{}^{125}_{52}\mathrm{Te}
-\;+\;
-\gamma
-$$
-
-In this nuclear equation:
-
-- **Parent nucleus:** Iodine-125 (${}^{125}_{53}\mathrm{I}$)
-- **Captured particle:** Electron (${}^{0}_{-1}\mathrm{e}$)
-- **Daughter nucleus:** Tellurium-125 (${}^{125}_{52}\mathrm{Te}$)
-- **Emitted radiation:** Gamma-ray photon ($\gamma$)
-
-Notice that the **atomic number decreases from 53 to 52**, while the **mass number remains 125**.
-
-This change occurs because of **electron capture**, not gamma emission. The gamma ray carries away energy without changing either number.
-
-*Source: Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.). Jones & Bartlett Learning, Chapter 3, "Gamma Radiation."*
-
-#### Other Nuclear Particles and Processes
-
-Since Rutherford's work, scientists have identified other types of nuclear radiation. Some consist of rapidly moving particles, such as neutrons or protons. A proton can also be referred to as a hydrogen-1 nucleus, represented by ${}^{1}_{1}\mathrm{H}$ or ${}^{1}_{1}\mathrm{p}$.
-
-Others consist of rapidly moving **antiparticles**, particles with a mass equal to that of one of the subatomic particles but with an opposite charge.
-
-For example, the **positron** has the same mass as an electron but a positive charge. It is denoted by $\beta^{+}$ or ${}^{0}_{+1}\mathrm{e}$.
-
-When an antiparticle encounters its corresponding particle, both particles are annihilated and completely converted into energy.
-
-In **electron capture**, an electron in an atomic orbital is captured by the nucleus, and a proton is converted into a neutron.
-
-#### Comparison of Nuclear Radiation
-
-The following table summarizes the properties of particles commonly found in nuclear radiation.
-
-| Type | Particle | Mass Number | Charge | Degree of Penetration |
-|:--------------|:--------------|:-------------:|:-------------:|:--------------|
-| Alpha ($\alpha$) | Helium-4 nucleus, ${}^{4}_{2}\alpha$ | 4 | +2 | Low; stopped by paper or outer skin |
-| Beta ($\beta^{-}$) | Electron, ${}^{0}_{-1}\mathrm{e}$ | 0 | −1 | Moderate; can penetrate skin |
-| **Gamma (**$\gamma$) | **Photon,** $\gamma$ | **0** | **0** | **Very penetrating** |
-| Positron ($\beta^{+}$) | Antielectron, ${}^{0}_{+1}\mathrm{e}$ | 0 | +1 | Moderately penetrating |
-| Proton ($\mathrm{p}$) | Hydrogen-1 nucleus, ${}^{1}_{1}\mathrm{H}$ or ${}^{1}_{1}\mathrm{p}$ | 1 | +1 | Moderate or low penetration |
-| **Neutron (**$\mathrm{n}$) | **Neutron,** ${}^{1}_{0}\mathrm{n}$ | **1** | **0** | **Very penetrating** |
-
-: Comparison of Common Types of Nuclear Radiation
-
-*Source: Adapted from Atkins, Jones, Laverman, Patterson, and Young, Chemical Principles (8th ed.), Focus 9: Nuclear Chemistry, Table 9A.1, "Nuclear Radiation."*
-
-![Penetrating potential of different types of nuclear radiation.](penetrating-potential-of-radiation.jpg){#fig-radiation-penetration fig-alt="Illustration comparing the penetrating ability of different types of nuclear radiation through shielding materials" width="100%"}
-
-##### Why Are Gamma Rays and Neutrons So Penetrating?
-
-Both gamma rays and neutrons carry **no electric charge**. Unlike charged particles, they are not directly attracted or repelled by the electric fields of atoms.
-
-However, gamma rays and neutrons interact with matter in different ways:
-
-- **Gamma rays (**$\gamma$): Gamma rays are high-energy electromagnetic photons that interact with electrons and under certain conditions, atomic nuclei. Their lack of electric charge allows them to travel considerable distances through matter before an interaction occurs.
-
-- **Neutrons (**$\mathrm{n}$): Neutrons are electrically neutral particles that interact primarily with atomic nuclei. Without an electric charge, neutrons are not subject to electrostatic attraction or repulsion and may travel considerable distances through matter before undergoing a nuclear interaction.
-
-These differences are important when selecting materials to shield workers and the public from radiation exposure.
-
-- **Gamma radiation:** Dense materials, such as lead and concrete, are commonly used to reduce exposure to gamma radiation.
-
-- **Neutron radiation:** Hydrogen-rich materials, such as water and polyethylene, are particularly effective at slowing down fast neutrons. Additional shielding materials may be necessary to absorb neutrons and reduce secondary radiation produced during nuclear interactions.
-
-**Important:** No shielding material completely stops all radiation under every condition. The effectiveness of shielding depends on the type and energy of the radiation, as well as the thickness and composition of the shielding material.
-
-#### Ionization and Ionizing Radiation
-
-In our earlier discussion of atomic structure, we established that electrons occupy the region surrounding the atomic nucleus.
-
-When radiation interacts with matter, energy can be transferred to the electrons within an atom. If sufficient energy is transferred, an electron may be removed from the atom entirely.
-
-This process is called **ionization**.
-
-The atom that loses an electron becomes a positively charged **ion**, while the electron that was removed carries a negative charge.
-
-Radiation that has sufficient energy to remove electrons from atoms or molecules is called **ionizing radiation**.
-
-![Comparison of nuclear decay processes, including alpha decay, beta decay, gamma emission, positron emission, and electron capture. Source: NASA Armstrong Flight Research Center (AFRC), Radiation Safety Office.](nasa-afrc-ionizing-radiation.jpg){#fig-nasa-afrc-ionizing-radiation fig-alt="NASA radiation safety diagram comparing five nuclear transformations, showing emitted particles or radiation and changes in atomic number and mass number" width="100%"}
-
-The process of ionization depends on how radiation interacts with matter. Charged particles, such as alpha and beta particles, can produce ionization directly through their interactions with electrons. Gamma rays can produce ionization through interactions that transfer energy to electrons, while neutrons produce ionization indirectly through the charged particles and other radiation generated during nuclear interactions.
-
-##### Connecting Ionization to Our Nuclear Radiation Examples
-
-Earlier in this lecture, we examined several examples of nuclear decay and radiation emission. We can now use those examples to understand how radiation may produce ionization when it encounters matter.
-
-![Summary of nuclear transformations, including alpha decay, beta decay, gamma emission, positron emission, and electron capture. Source: NASA Armstrong Flight Research Center (AFRC), Radiation Safety Office.](nasa-afrc-ionizing-radiation-summary.jpg){#fig-nasa-afrc-ionizing-radiation-summary fig-alt="Comparison table illustrating alpha decay, beta-minus decay, gamma emission, positron emission, and electron capture, including nuclear equations, particle representations, and changes in atomic and mass numbers" width="100%"}
-
-- **Alpha radiation (**$\alpha$): When polonium-212 (${}^{212}_{84}\mathrm{Po}$) undergoes alpha decay, it emits an alpha particle (${}^{4}_{2}\alpha$). Because alpha particles carry a positive charge of +2, they can interact strongly with electrons in surrounding atoms and produce ionization. Although alpha particles have limited penetration, they can cause substantial ionization over a short distance.
-
-- **Beta radiation (**$\beta^{-}$): When strontium-90 (${}^{90}_{38}\mathrm{Sr}$) undergoes beta-minus decay, it emits a high-speed electron (${}^{0}_{-1}\mathrm{e}$). As this electron travels through matter, it can transfer energy to electrons in other atoms, producing ionization.
-
-- **Gamma radiation (**$\gamma$): When technetium-99m (${}^{99m}_{43}\mathrm{Tc}$) transitions to a lower-energy nuclear state, it releases energy in the form of gamma radiation. Gamma rays carry no electric charge, but they can transfer energy to electrons through interactions with matter, producing ionization. Their penetrating ability allows them to affect tissues deeper within the body.
-
-- **Neutron radiation (**$\mathrm{n}$): Neutrons (${}^{1}_{0}\mathrm{n}$) carry no electric charge and therefore do not directly ionize atoms through electrostatic interactions. Instead, neutrons interact primarily with atomic nuclei. These interactions can produce energetic charged particles or secondary radiation that subsequently cause ionization.
-
-## Returning to Nuclear Stability
-
-Earlier, we introduced the **neutron-to-proton ratio** and the **belt of nuclear stability**. We can now return to that model with a practical question: **Why do different unstable nuclei emit different types of radiation?**
-
-![Band of nuclear stability showing the relationship between atomic number and mass number, including the 1:1 neutron-to-proton ratio and regions of nuclear instability.](nuclear-stability.jpg){#fig-nuclear-stability fig-alt="Graph illustrating the band of nuclear stability and regions of nuclear instability" width="100%"}
-
-### Predicting Common Nuclear Transformations
-
-- **Neutron-rich nuclei** may undergo **beta-minus decay**, converting a neutron to a proton. We saw this with strontium-90 (${}^{90}_{38}\mathrm{Sr}$).
-- **Proton-rich nuclei** may undergo **positron emission** or **electron capture**, converting a proton to a neutron. We saw electron capture in the iodine-125 (${}^{125}_{53}\mathrm{I}$) example.
-- **Very heavy nuclei** may undergo **alpha decay**, reducing both their proton number and mass number. We saw this with polonium-212 (${}^{212}_{84}\mathrm{Po}$).
-- An **excited nucleus** may release energy by **gamma emission** without changing its proton or neutron count. We saw this with technetium-99m (${}^{99m}_{43}\mathrm{Tc}$).
-
-These are **general patterns**, not a rule that uniquely predicts the decay of every isotope. Nuclear energy levels and other factors determine which transformations are possible.
-
-### Nuclear Binding Energy
-
-The **strong nuclear interaction** helps hold protons and neutrons together in the nucleus despite the electrical repulsion between positively charged protons.
-
-**Nuclear binding energy** is the energy required to separate a nucleus into its individual protons and neutrons. A related concept, **mass defect**, is the difference between the mass of a bound nucleus and the combined masses of its separated nucleons. Mass and energy are related through Einstein's equation:
-
-$$
-E=mc^2
-$$
-
-Where $E$ is energy, $m$ is mass, and $c$ is the speed of light in a vacuum. We introduce this relationship conceptually here; detailed binding-energy calculations are beyond the scope of this lecture.
-
-*Source: Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, “Nuclear Stability” and “Nuclear Binding Energy.”*
 
 # Part III. Biological Effects of Ionizing Radiation
 
