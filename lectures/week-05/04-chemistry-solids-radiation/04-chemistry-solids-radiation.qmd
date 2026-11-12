@@ -18,6 +18,9 @@ format:
     geometry:
       - margin=0.75in
     fontsize: 11pt
+    include-in-header:
+      text: |
+        \usepackage{cancel}
 editor: visual
 execute:
   echo: false
@@ -160,9 +163,6 @@ blockquote strong {
   }
 }
 
-
-
-
 /* =========================================================
    Chemical vs. Nuclear Reactions Comparison Table
    ========================================================= */
@@ -188,8 +188,6 @@ table.reaction-comparison th:first-child,
 table.reaction-comparison td:first-child {
   border-right: 1px solid #adb5bd;
 }
-
-
 
 </style>
 ```
@@ -779,259 +777,717 @@ In this example:
 - **Mass number (99):** The nucleus contains 99 protons and neutrons combined.
 - **Metastable (m):** The nucleus is in an excited nuclear state.
 
-
 ### The Mathematics of Radioactive Decay
 
 #### Applying Exponential and Logarithmic Functions to Radioactive Decay
 
-Before we calculate how radioactive material changes over time, we need to understand the mathematical relationship that describes this process.
+Before calculating how the amount of radioactive material changes with time, we will review three related mathematical ideas: **linear functions**, **exponential functions**, and **logarithmic functions**. These are different mathematical relationships, and recognizing their differences will help us select an appropriate model for radioactive decay.
 
-Radioactive decay is an example of **exponential decay**. This means that the amount of radioactive material decreases by the same fraction during equal intervals of time, rather than decreasing by the same amount.
+Our mathematical review follows the progression in Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed., Chapter 4. We will begin with familiar graphs and equations before applying the mathematics to radioactive material.
 
-To understand this relationship, we will first review exponential functions, logarithms, and the mathematical operations needed to solve for an unknown quantity.
+##### Reviewing Linear Functions
 
-##### Understanding Exponential Functions
+A **function** describes a relationship between an input and an output. In a graph, we typically place the input, $x$, on the horizontal axis and the output, $y$, on the vertical axis.
 
-An exponential function is a function in which a variable appears in the exponent.
-
-The general form is:
+A linear function has the form:
 
 $$
-f(x)=a^x
+f(x)=mx+b
 $$
 
 where:
 
-- $f(x)$ is the output of the function.
-- $a$ is the base, a positive constant other than 1.
-- $x$ is the exponent, which is the input variable.
+- $f(x)$ is the output for a given input $x$.
+- $x$ is the input variable.
+- $m$ is the **slope**, which tells us how much the output changes for each one-unit increase in $x$.
+- $b$ is the **vertical intercept**, the value of the function when $x=0$.
 
-For example:
+A linear function produces a straight line. When $m=0$, the line is horizontal; when $m$ is positive, the line rises; and when $m$ is negative, the line falls as $x$ increases.
+
+![A constant function, $f(x)=b$, and a straight-line function, $f(x)=mx+b$, showing the slope and vertical intercept. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed.](linear-functions.jpg){#fig-linear-functions width="80%" fig-align="center"}
+
+**How do we calculate the slope of a line?** If we know two points, $P_1(x_1,y_1)$ and $P_2(x_2,y_2)$, then:
+
+$$
+m=\frac{y_2-y_1}{x_2-x_1}
+$$
+
+The numerator is the change in the output; the denominator is the change in the input. The point-slope and slope-intercept equations provide two ways to describe the same straight-line relationship.
+
+![The slope, point-slope, and slope-intercept formulas for straight lines. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed.](line-function-formulas.jpg){#fig-line-function-formulas width="80%" fig-align="center"}
+
+For example, consider:
+
+$$
+f(x)=300-10x
+$$
+
+Here, the initial output is 300 and the slope is $-10$. Each time $x$ increases by 1, the output decreases by **10 units**. This is a constant *amount* of decrease, not a constant fraction.
+
+##### Comparing Linear, Exponential, and Logarithmic Graphs
+
+The next figure compares exponential and logarithmic functions. For now, focus on the **top two graphs**: exponential growth curves upward when the base is greater than 1, while exponential decay curves downward when the base lies between 0 and 1. We will return to the bottom two logarithmic graphs after defining logarithms.
+
+![Four graphs comparing exponential growth, exponential decay, and their logarithmic counterparts. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed.](exponential-and-logarithmic-functions.jpg){#fig-exponential-and-logarithmic-functions width="85%" fig-align="center"}
+
+A straight line changes by the same **amount** over equal input intervals. An exponential function changes by the same **multiplicative factor** over equal input intervals. Radioactive decay follows the second pattern: the fraction remaining after each half-life is constant, even though the amount that decays becomes smaller.
+
+##### Defining Exponential Functions
+
+Stewart defines an exponential function as:
+
+$$
+\boxed{f(x)=a^x}
+$$
+
+where:
+
+- $f(x)$ is the output.
+- $a$ is the **base**, a fixed positive number other than 1.
+- $x$ is the **exponent**, the input variable.
+
+![Stewart's definition of an exponential function, including examples with bases 2, 3, and 10. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed.](exponential-functions.jpg){#fig-exponential-functions width="85%" fig-align="center"}
+
+For example, $f(x)=2^x$. If $x=3$, then:
+
+$$
+f(3)=2^3=2\times2\times2=8
+$$
+
+When the exponent is a positive whole number, it tells us how many times the base is multiplied by itself. Exponents can also be zero, negative, or fractional:
+
+$$
+2^0=1,\qquad 2^{-1}=\frac12,\qquad 2^{-2}=\frac14
+$$
+
+A **negative exponent** means taking a reciprocal: $2^{-2}=1/2^2=1/4$. This is not the same as placing a negative sign in front of the entire function.
+
+##### Graphing Exponential Functions
+
+Consider the two functions shown in Stewart's worked graphing example:
+
+$$
+f(x)=3^x
+$$
+
+$$
+g(x)=\left(\frac13\right)^x
+$$
+
+The first function has a base greater than 1 and increases as $x$ increases. The second has a base between 0 and 1 and decreases as $x$ increases.
+
+![Table of values and graphs comparing $f(x)=3^x$ with $g(x)=(1/3)^x$. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed., Section 4.1.](graphing-exponential-functions.jpg){#fig-graphing-exponential-functions width="90%" fig-align="center"}
+
+Notice that both functions equal 1 when $x=0$. However, when $x=1$, the first function equals 3 and the second equals $1/3$. **A base between 0 and 1 produces exponential decay.**
+
+##### Comparing a Family of Exponential Functions
+
+The next figure shows several exponential functions together. Every curve passes through $(0,1)$ because $a^0=1$ for any allowed base $a$.
+
+![Family of exponential functions with bases greater than 1 and between 0 and 1, including $(1/2)^x$. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed.](a-family-of-exponential-functions.jpg){#fig-family-of-exponential-functions width="85%" fig-align="center"}
+
+The curve $y=(1/2)^x$ is particularly relevant to our later discussion of radioactive half-life. For each increase of 1 in $x$, the output is multiplied by $1/2$:
+
+$$
+\begin{aligned}
+x=0 &: \quad (1/2)^0=1\\
+x=1 &: \quad (1/2)^1=1/2\\
+x=2 &: \quad (1/2)^2=1/4\\
+x=3 &: \quad (1/2)^3=1/8
+\end{aligned}
+$$
+
+We have not yet defined the time variable for radioactive decay. At this stage, $x$ is simply the input. Later, we will show how an exponent can represent the **number of elapsed half-lives**.
+
+##### Distinguishing a Negative Sign from a Negative Exponent
+
+Stewart also illustrates what happens when a negative sign is placed **outside** an exponential expression.
+
+![Reflection of $y=2^x$ across the horizontal axis to produce $y=-2^x$. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed.](reflecting-on-the-x-axis.jpg){#fig-reflecting-on-x-axis width="70%" fig-align="center"}
+
+Compare:
+
+$$
+2^{-x}=\frac{1}{2^x}
+$$
+
+with:
+
+$$
+-2^x=-(2^x)
+$$
+
+The first expression is **positive** and decreases toward zero as $x$ increases. The second is **negative** and reflects the graph of $2^x$ across the horizontal axis. These are not the same function. The graph $y=-2^x$ is **not** an appropriate model for the mass of radioactive material remaining because it produces negative outputs.
+
+##### Why Are Inverse Functions Important?
+
+So far, we have examined how mathematical functions describe relationships between inputs and outputs.
+
+A function takes an input, performs a mathematical operation, and produces an output:
+
+$$
+\boxed{\text{Input}\longrightarrow\text{Function}\longrightarrow\text{Output}}
+$$
+
+But what if we already know the output and want to determine the original input?
+
+This is where **inverse functions** become useful. An inverse function reverses the relationship described by the original function, allowing us to work backward from an output to its corresponding input:
+
+$$
+\boxed{\text{Output}\longrightarrow\text{Inverse Function}\longrightarrow\text{Input}}
+$$
+
+For example, consider the exponential function:
 
 $$
 f(x)=2^x
 $$
 
-If $x=3$, then:
+If the input is $x=3$, we calculate:
 
 $$
-f(3)=2^3
+f(3)=2^3=8
 $$
 
-$$
-f(3)=2\times2\times2=8
-$$
-
-The exponent tells us how many times the base is used as a factor when the exponent is a positive whole number.
-
-But exponents can also be zero, negative, or fractions.
-
-For example:
+Now suppose the output is 8, but the input is unknown:
 
 $$
-2^0=1
+2^x=8
 $$
 
-$$
-2^{-1}=\frac12
-$$
+We want to know: **What exponent produces an output of 8 when the base is 2?**
+
+The inverse of an exponential function is a logarithmic function. We can write:
 
 $$
-2^{-2}=\frac14
+\log_2(8)=x
 $$
 
-A negative exponent means that we take the reciprocal of the corresponding positive power.
-
-This is useful when studying radioactive decay because the amount of radioactive material decreases over time.
-
-##### Linear Versus Exponential Decay
-
-Consider two mathematical models describing how a quantity decreases.
-
-A linear model might be:
+Therefore:
 
 $$
-m(t)=300-10t
+\boxed{x=3}
 $$
 
-where:
+The exponential function calculates an **output from a known input**. Its logarithmic inverse determines the **input from a known output**.
 
-- $m(t)$ is the mass remaining after time $t$, measured in grams.
-- $300$ is the initial mass, measured in grams.
-- $10$ is the amount lost per hour, measured in grams per hour.
-- $t$ is elapsed time, measured in hours.
+::: callout-note
+## Why Is This Useful?
 
-In this model, the mass decreases by 10 grams every hour.
+In hazardous materials chemistry, we may know the result of a physical process but need to determine what happened before that result was observed.
 
-An exponential model might be:
+Consider radioactive decay:
 
-$$
-m(t)=300\left(\frac12\right)^{t/6}
-$$
+- If we know the initial mass of a radioactive isotope, its half-life, and the elapsed time, an exponential model allows us to calculate the **remaining mass**.
+- If we know the initial mass, its half-life, and the remaining mass, logarithms allow us to determine **how much time has elapsed**.
 
-where:
+The difference is **which quantity is unknown**. When elapsed time appears in an exponent, a logarithm allows us to reverse the exponential relationship and solve for time.
 
-- $m(t)$ is the mass remaining, measured in grams.
-- $300$ is the initial mass, measured in grams.
-- $\frac12$ is the fraction remaining after each six-hour interval.
-- $t$ is elapsed time, measured in hours.
-- $6$ is the time interval, measured in hours.
-
-In this model, the mass decreases by half every six hours.
-
-| Time (hours) | Linear model (g) | Exponential model (g) |
-|---|---:|---:|
-| 0 | 300 | 300 |
-| 6 | 240 | 150 |
-| 12 | 180 | 75 |
-| 18 | 120 | 37.5 |
-| 24 | 60 | 18.75 |
-
-The linear model produces a straight line because the amount lost is constant.
-
-The exponential model produces a decreasing curve because the fraction remaining after each equal time interval is constant. Radioactive decay follows the second pattern.
-
-A **logarithmic function** is different from an exponential decay function. It reverses an exponential relationship: given the base and result, it identifies the exponent. Its graph is not the radioactive decay curve. On ordinary linear axes, the radioactive decay model produces a curve. However, a graph of the natural logarithm of the *fraction remaining* versus elapsed time is a straight line. We will explain why after introducing logarithms.
-
-::: {.callout-note}
-## Important Graphing Distinction
-
-- **Linear:** Equal changes in time produce equal changes in the amount.
-- **Exponential decay:** Equal changes in time produce equal fractional changes in the amount.
-- **Logarithmic:** The inverse of an exponential function, used to find an unknown exponent.
-
-A logarithmic function graph and a graph displayed on a logarithmic axis are not the same thing. We will use ordinary axes for the decay examples unless explicitly noted.
+**This is why we study inverse functions:** they allow us to work backward from a known result to the input that produced it.
 :::
 
-##### Euler's Number and the Natural Exponential Function
+##### Defining Logarithmic Functions: The Inverse of Exponentiation
 
-One particularly important exponential function uses Euler's number, represented by $e$.
+We now return to the logarithmic graphs in Figure @fig-exponential-and-logarithmic-functions.
 
-$$
-e\approx2.71828
-$$
-
-Euler's number is a mathematical constant.
-
-The natural exponential function is:
-
-$$
-f(x)=e^x
-$$
-
-Here:
-
-- $e$ is the base.
-- $x$ is the exponent.
-- $f(x)$ is the resulting value.
+An **exponential function** tells us the result when we know the base and exponent. A **logarithmic function** allows us to determine the exponent when we know the base and the result.
 
 For example:
-
-$$
-e^2=e\times e\approx7.389
-$$
-
-The natural exponential function is useful in modeling processes where the rate of change depends on the quantity currently present.
-
-For radioactive decay, the rate at which radioactive nuclei undergo transformations depends on how many undecayed radioactive nuclei remain.
-
-This relationship produces exponential decay.
-
-##### Understanding Logarithmic Functions
-
-A logarithm answers a question about an exponent.
-
-Consider:
 
 $$
 2^3=8
 $$
 
-We know the base is 2 and the exponent is 3.
+In this expression:
 
-But suppose we know the base and the answer, and want to determine the exponent.
+- $2$ is the **base**.
+- $3$ is the **exponent**.
+- $8$ is the **result**.
 
-We can write:
+But what if we know the base is 2 and the result is 8, and we want to determine the exponent?
+
+We can rewrite the expression using a logarithm:
 
 $$
 \log_2(8)=3
 $$
 
-This asks:
-
-**To what power must 2 be raised to obtain 8?**
+This asks: **To what power must we raise 2 to obtain 8?**
 
 The answer is 3.
 
-The general relationship is:
+Both expressions describe the same mathematical relationship.
+
+###### Figure 1: Definition of the Logarithmic Function
+
+The first illustration introduces the formal definition of a logarithmic function.
 
 $$
-a^x=y
-\quad\Longleftrightarrow\quad
-\log_a(y)=x
+\boxed{\log_a(x)=y\quad\Longleftrightarrow\quad a^y=x}
 $$
 
 where:
 
-- $a$ is the base.
-- $x$ is the exponent.
-- $y$ is the resulting value.
+- $a$ is the **base**, with $a>0$ and $a\ne1$.
+- $x$ is the **positive number** whose logarithm we want to determine.
+- $y$ is the **exponent** that produces $x$ when the base $a$ is raised to that power.
 
-The logarithm allows us to determine an unknown exponent.
+The symbol $\Longleftrightarrow$ means that the expressions on either side are equivalent statements.
 
-Two logarithms are especially important.
+Notice that the base $a$ does not change. We are simply expressing the same relationship in two different mathematical forms.
 
-**Common logarithm**
+![Definition of the logarithmic function, showing the equivalence between logarithmic and exponential notation. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed.](definition-of-the-logarithimic-function-a.jpg){#fig-logarithmic-definition width="85%" fig-align="center"}
+
+###### Figure 2: Identifying the Base and Exponent
+
+The second illustration shows how to identify the **base** and **exponent** when converting between logarithmic and exponential notation.
+
+Consider:
 
 $$
-\log(x)=\log_{10}(x)
+\log_2(8)=3
 $$
 
-The common logarithm uses base 10.
+The logarithmic expression tells us that the base is 2 and the exponent is 3.
+
+We can rewrite the same relationship in exponential form:
+
+$$
+2^3=8
+$$
+
+Notice what happens:
+
+- The **base remains 2** in both expressions.
+- The logarithm's **result, 3**, becomes the exponent in exponential form.
+- The number **8** is the value produced by raising 2 to the third power.
+
+This relationship is useful because we can move between logarithmic and exponential forms depending on which quantity we need to determine.
+
+![Comparison of logarithmic and exponential notation, identifying the base and exponent in each expression. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed.](definition-of-the-logarithimic-function-b.jpg){#fig-logarithmic-exponential-notation width="85%" fig-align="center"}
+
+###### Figure 3: Graphing Exponential and Logarithmic Inverse Functions
+
+The third illustration shows how exponential and logarithmic functions are related graphically.
+
+Consider the exponential function:
+
+$$
+y=2^x
+$$
+
+When $x=3$:
+
+$$
+y=2^3=8
+$$
+
+Therefore, the point $(3,8)$ lies on the exponential graph.
+
+Now consider its logarithmic inverse:
+
+$$
+y=\log_2(x)
+$$
+
+When $x=8$:
+
+$$
+y=\log_2(8)=3
+$$
+
+Therefore, the point $(8,3)$ lies on the logarithmic graph.
+
+Notice that the coordinates have exchanged positions:
+
+$$
+(3,8)\longleftrightarrow(8,3)
+$$
+
+This occurs because exponential and logarithmic functions are **inverse functions**.
+
+In the illustration, the two graphs are reflections of each other across the diagonal line:
+
+$$
+y=x
+$$
+
+This line represents all points where the horizontal and vertical coordinates are equal.
+
+The reflection illustrates that the input of one function becomes the output of its inverse.
+
+![Graphs illustrating the inverse relationship between exponential and logarithmic functions, including reflection across the line y equals x and transformations of logarithmic functions. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed.](definition-of-the-logarithimic-function-c.jpg){#fig-logarithmic-inverse-graphs width="85%" fig-align="center"}
+
+::: callout-note
+## Why Is This Useful?
+
+An exponential function allows us to calculate a result when the exponent is known.
+
+A logarithmic function allows us to determine the exponent when the result is known.
+
+This distinction becomes important when studying radioactive decay.
+
+For example, if we know the initial mass of a radioactive isotope, its half-life, and the elapsed time, we can calculate how much material remains using an exponential function.
+
+But what if we know the initial mass and the remaining mass, and want to determine **how much time has elapsed**?
+
+Because time appears in the exponent of the radioactive decay equation, logarithms allow us to isolate and calculate that unknown time.
+:::
+
+##### Euler's Number and the Natural Exponential Function
+
+So far, we have examined exponential functions with bases such as 2, 3, and $1/2$. Another important base is **Euler's number**, represented by the letter $e$:
+
+$$
+e\approx2.71828
+$$
+
+Euler's number is a mathematical constant, just like $\pi$. Its value does not change.
+
+But why is this particular number useful?
+
+Euler's number appears naturally in mathematics used to describe **continuous growth and decay**. Examples include population growth, continuously compounded interest, heat transfer, and radioactive decay.
+
+Although we can describe exponential changes using many different bases, using $e$ makes the mathematics of continuous rates of change particularly convenient.
+
+The **natural exponential function** is defined by:
+
+$$
+\boxed{f(x)=e^x}
+$$
+
+where:
+
+- $e$ is Euler's number, approximately 2.71828.
+- $x$ is the exponent, or independent variable.
+- $f(x)$ is the output of the function.
+
+###### Figure 1: Comparing Exponential Functions
+
+![Comparison of the natural exponential function $e^x$ with other exponential functions. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed., Section 4.2.](natural-exponential-function-a.jpg){#fig-natural-exponential-comparison width="85%" fig-align="center"}
+
+The natural exponential function belongs to the same family of exponential functions we examined earlier:
+
+$$
+f(x)=a^x
+$$
+
+The difference is that its base is $e$, rather than 2, 3, or another positive number.
 
 For example:
 
 $$
-\log(100)=2
+e^0=1
 $$
 
-because:
-
 $$
-10^2=100
+e^1\approx2.71828
 $$
 
-**Natural logarithm**
-
 $$
-\ln(x)=\log_e(x)
+e^2\approx7.38906
 $$
 
-The natural logarithm uses Euler's number as its base.
+Like other exponential functions with a base greater than 1, $e^x$ increases as $x$ increases.
+
+<p style="color: red; font-weight: bold;">
+
+The important distinction is not that (e\^x) grows while other exponential functions do not. It is that the base (e) is especially useful when modeling continuous changes.
+
+</p>
+
+###### Figure 2: Why Euler's Number Is Useful
+
+![Graph illustrating the behavior of the natural exponential function. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed., Section 4.2.](natural-exponential-function-b.jpg){#fig-natural-exponential-growth width="85%" fig-align="center"}
+
+Consider a process in which the rate of change depends on how much of a quantity is currently present.
+
+For example:
+
+- A growing population may increase faster when more individuals are present.
+- A radioactive sample with more unstable nuclei will generally experience more radioactive decays per unit time than a smaller sample of the same isotope.
+- A warmer object may cool faster when the temperature difference between the object and its surroundings is larger.
+
+These processes can be described using exponential models.
+
+Euler's number is particularly useful because the function $e^x$ has a special mathematical property: **its instantaneous rate of change is equal to its current value**.
+
+In calculus, this means that the derivative of $e^x$ is also $e^x$.
+
+We do not need to calculate derivatives in this course. What matters is recognizing why scientists frequently use Euler's number when describing quantities that change continuously.
+
+###### Figure 3: Exponential Growth Versus Exponential Decay
+
+![Comparison of the increasing natural exponential function $e^x$ and the decreasing function $e^{-x}$. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed., Section 4.2.](natural-exponential-function-c.jpg){#fig-natural-exponential-decay width="85%" fig-align="center"}
+
+The third illustration compares two functions:
+
+$$
+f(x)=e^x
+$$
+
+and
+
+$$
+f(x)=e^{-x}
+$$
+
+Although both functions use Euler's number as their base, their behavior differs.
+
+- $e^x$ represents exponential growth: the output increases as $x$ increases.
+- $e^{-x}$ represents exponential decay: the output decreases as $x$ increases.
+
+Recall that a negative exponent represents a reciprocal:
+
+$$
+e^{-x}=\frac{1}{e^x}
+$$
+
+For example, when $x=1$:
+
+$$
+e^{-1}=\frac{1}{e}\approx0.36788
+$$
+
+When $x=2$:
+
+$$
+e^{-2}=\frac{1}{e^2}\approx0.13534
+$$
+
+The output becomes progressively smaller as $x$ increases.
+
+Notice that the decreasing function remains positive and approaches zero without reaching it.
+
+This is the mathematical behavior we will use to describe radioactive decay.
+
+::: callout-note
+## Why Is This Useful?
+
+Radioactive decay is a continuous process in which unstable atomic nuclei undergo nuclear transformations.
+
+For a sufficiently large sample of a single radioactive isotope, the expected rate of decay is proportional to the number of radioactive nuclei remaining.
+
+As the number of radioactive nuclei decreases, the expected number of decays per unit time also decreases.
+
+Following Stewart, Redlin, and Watson, we can describe the remaining mass of a radioactive substance using the **radioactive decay model**:
+
+$$
+\boxed{m(t)=m_0e^{-rt}}
+$$
+
+where:
+
+- $m(t)$ is the mass of the radioactive substance remaining after elapsed time $t$.
+- $m_0$ is the initial mass of the radioactive substance.
+- $e$ is Euler's number, approximately 2.71828.
+- $r$ is the **positive radioactive decay constant**.
+- $t$ is the elapsed time.
+
+The decay constant is related to the radioactive substance's half-life by:
+
+$$
+\boxed{r=\frac{\ln 2}{h}}
+$$
+
+where:
+
+- $r$ is the positive radioactive decay constant.
+- $\ln 2$ is the natural logarithm of 2, approximately 0.69315.
+- $h$ is the half-life of the radioactive substance, expressed in the same time units used for $t$.
+
+Because $r$ is positive, the exponent $-rt$ becomes more negative as time increases, causing the remaining mass to decrease.
+
+**The practical advantage:** Once we know the initial mass and half-life of a radioactive substance, we can calculate its decay constant and estimate how much material remains after a specified period.
+
+Later, we will use this relationship to solve radioactive decay problems involving half-life, remaining mass, and elapsed time.
+:::
+
+##### Natural Logarithms: The Inverse of the Natural Exponential Function
+
+So far, we have learned that logarithmic functions allow us to reverse exponential relationships and determine an unknown exponent.
+
+When the base of an exponential function is Euler's number, $e$, its inverse is called the **natural logarithm**.
+
+The natural logarithm is written $\ln$:
+
+$$
+\boxed{\ln(x)=\log_e(x)}
+$$
+
+where:
+
+- $\ln(x)$ is the natural logarithm of $x$.
+- $e$ is Euler's number, approximately 2.71828.
+- $x$ is a positive number, with $x>0$.
+
+Unlike logarithms with bases such as 2 or 10, natural logarithms specifically use Euler's number as their base.
+
+###### Figure 1: Defining the Natural Logarithm
+
+![Definition of the natural logarithm. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed., Section 4.3.](natural-logarithms-a.jpg){#fig-natural-logarithms-definition width="85%" fig-align="center"}
+
+The natural logarithm and natural exponential function are **inverse functions**.
+
+In Stewart's notation:
+
+$$
+\boxed{\ln(x)=y\quad\Longleftrightarrow\quad e^y=x}
+$$
+
+where:
+
+- $x$ is the positive number whose natural logarithm we want to determine.
+- $y$ is the exponent.
+- $e$ is the base of the exponential function.
+
+This means that $\ln(x)$ asks:
+
+**To what power must we raise** $e$ to obtain $x$?
 
 For example:
 
 $$
-\ln(e^2)=2
+e^2\approx7.38906
 $$
-
-because raising $e$ to the second power produces $e^2$.
 
 Therefore:
+
+$$
+\boxed{\ln(e^2)=2}
+$$
+
+We recover the exponent 2 because the natural logarithm reverses exponentiation with base $e$.
+
+###### Figure 2: Properties of Natural Logarithms
+
+![Properties of the natural logarithm and its inverse relationship with the natural exponential function. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed., Section 4.3.](natural-logarithms-b.jpg){#fig-natural-logarithms-properties width="85%" fig-align="center"}
+
+Because the natural logarithm and natural exponential function are inverses, they can reverse one another's operations.
+
+Two important relationships are:
 
 $$
 \boxed{\ln(e^x)=x}
 $$
 
-The natural logarithm and the natural exponential function are **inverse functions**.
+and, for $x>0$:
 
-This means that applying the natural logarithm to an exponential expression with base $e$ allows us to recover its exponent.
+$$
+\boxed{e^{\ln(x)}=x}
+$$
+
+The first relationship tells us that taking the natural logarithm of an exponential expression with base $e$ returns the original exponent.
+
+The second relationship tells us that raising $e$ to the natural logarithm of a positive number returns the original number.
+
+For example:
+
+$$
+\ln(1)=0
+$$
+
+**Why does the natural logarithm equal zero?**
+
+Because raising Euler's number to the zeroth power produces 1:
+
+$$
+e^0=1
+$$
+
+Similarly:
+
+$$
+\ln(e)=1
+$$
+
+**Why does the natural logarithm equal one?**
+
+Because raising Euler's number to the first power produces $e$:
+
+$$
+e^1=e
+$$
+
+In both examples, the natural logarithm tells us the exponent needed to produce the number inside the parentheses.
+
+###### Figure 3: Graphing Natural Logarithms and Their Inverses
+
+![Graphs of the natural exponential function and natural logarithm, illustrating their inverse relationship. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed., Section 4.3.](natural-logarithms-c.jpg){#fig-natural-logarithms-inverse-graphs width="85%" fig-align="center"}
+
+The natural exponential function is:
+
+$$
+y=e^x
+$$
+
+Its inverse is:
+
+$$
+y=\ln(x)
+$$
+
+Just as we observed with other exponential and logarithmic functions, these graphs are reflections of one another across the diagonal line:
+
+$$
+y=x
+$$
+
+Consider the exponential function:
+
+$$
+e^0=1
+$$
+
+This tells us that the point $(0,1)$ lies on the graph of $y=e^x$.
+
+For the inverse function:
+
+$$
+\ln(1)=0
+$$
+
+The corresponding point is $(1,0)$ on the graph of $y=\ln(x)$.
+
+Notice how the coordinates exchange positions:
+
+$$
+(0,1)\longleftrightarrow(1,0)
+$$
+
+This illustrates how an inverse function reverses the roles of the input and output.
+
+::: callout-note
+## Why Is This Useful?
+
+Recall Stewart's radioactive decay model:
+
+$$
+\boxed{m(t)=m_0e^{-rt}}
+$$
+
+where:
+
+- $m(t)$ is the mass of the radioactive parent isotope remaining after elapsed time $t$.
+- $m_0$ is the initial mass of the radioactive parent isotope.
+- $e$ is Euler's number.
+- $r$ is the positive radioactive decay constant.
+- $t$ is elapsed time.
+
+If we know the initial mass, decay constant, and elapsed time, we can calculate the remaining mass.
+
+But what if we know the initial mass and remaining mass and want to determine **how much time has passed**?
+
+Because time appears in the exponent, we can use the natural logarithm to reverse the exponential relationship.
+
+This is why natural logarithms are particularly useful in radioactive decay calculations.
+
+Later, we will apply this inverse relationship to solve for elapsed time using Stewart's radioactive decay model.
+:::
 
 ##### Understanding the Laws of Logarithms
 
-Logarithms follow mathematical rules that allow us to simplify expressions and solve equations.
-
-For positive numbers $a$ and $b$, and any real exponent $x$:
+Logarithms follow rules that allow us to simplify expressions and solve equations. For positive numbers $a$ and $b$, and any real exponent $x$:
 
 **Product law**
 
@@ -1039,15 +1495,11 @@ $$
 \ln(ab)=\ln(a)+\ln(b)
 $$
 
-The logarithm of a product equals the sum of the logarithms.
-
 **Quotient law**
 
 $$
 \ln\left(\frac ab\right)=\ln(a)-\ln(b)
 $$
-
-The logarithm of a quotient equals the difference of the logarithms.
 
 **Power law**
 
@@ -1055,69 +1507,29 @@ $$
 \ln(a^x)=x\ln(a)
 $$
 
-The exponent can be moved in front of the logarithm as a multiplier.
-
-For example:
+The power law is especially important because it allows an exponent to be written as a multiplier. For example:
 
 $$
-\ln(2^3)=3\ln(2)
+\ln(2^3)=3\ln(2)=\ln(8)\approx2.07944
 $$
 
-Since:
+When the base is $e$, the expression simplifies further:
 
 $$
-\ln(2)\approx0.693147
+\ln(e^3)=3\ln(e)=3(1)=3
 $$
 
-we obtain:
+This is why the natural logarithm is useful for solving an equation with an unknown exponent. We will use the same operation later to determine elapsed time from the amount of radioactive material remaining.
 
-$$
-3(0.693147)\approx2.07944
-$$
-
-We can check this by calculating:
-
-$$
-\ln(8)\approx2.07944
-$$
-
-Both approaches produce the same answer because $2^3=8$.
-
-Now consider an expression involving Euler's number:
-
-$$
-\ln(e^3)=3\ln(e)
-$$
-
-Since:
-
-$$
-\ln(e)=1
-$$
-
-we obtain:
-
-$$
-\ln(e^3)=3
-$$
-
-**Why is this important?**
-
-If an unknown quantity appears in an exponent, the power law allows us to move that exponent outside the logarithm.
-
-This is how we will eventually solve radioactive decay equations for an unknown elapsed time.
-
-::: {.callout-note}
+::: callout-note
 ## Why Is This Useful?
 
-When an unknown quantity appears in an exponent, ordinary multiplication or division may not be enough to isolate it.
+A linear equation can often be solved using addition, subtraction, multiplication, and division. An exponential equation is different because the unknown may appear **in the exponent**.
 
-Logarithms allow us to rewrite exponential relationships so that the unknown exponent can be isolated using algebra.
-
-In radioactive decay problems, this is particularly useful when we know how much radioactive material remains and want to determine **how much time has elapsed**.
+Logarithms allow us to reverse exponentiation and isolate that unknown. For radioactive decay, this means we can use measurements of the amount remaining to determine **how much time has elapsed**, provided the decay model and its parameters are known.
 :::
 
----
+------------------------------------------------------------------------
 
 #### Understanding Radioactive Half-Life
 
@@ -1145,7 +1557,7 @@ $$
 
 Notice that we multiply by $\frac12$ each time.
 
-**Why do we use $\frac12$?**
+**Why do we use** $\frac12$?
 
 Because half-life means that half of the radioactive parent material remains after each half-life.
 
@@ -1217,7 +1629,7 @@ $$
 
 We have calculated the remaining mass using the physical meaning of half-life.
 
----
+------------------------------------------------------------------------
 
 #### Why Radioactive Decay Is Exponential
 
@@ -1230,7 +1642,7 @@ The half-life equation is one way to describe this process.
 Another way uses the natural exponential function:
 
 $$
-m(t)=m_0e^{kt}
+\boxed{m(t)=m_0e^{-rt}}
 $$
 
 where:
@@ -1238,22 +1650,20 @@ where:
 - $m(t)$ is the mass of the radioactive parent isotope remaining after time $t$.
 - $m_0$ is the initial mass of the radioactive parent isotope.
 - $e$ is Euler's number.
-- $k$ is the exponential decay constant, expressed in inverse time units.
+- $r$ is the positive radioactive decay constant, expressed in inverse time units.
 - $t$ is elapsed time.
 
-For radioactive decay, $k$ is negative.
-
-**Why is $k$ negative?**
+**Why is there a negative sign in the exponent?**
 
 Consider the exponential part of the equation:
 
 $$
-e^{kt}
+e^{-rt}
 $$
 
-If $k<0$ and time increases, the exponent becomes more negative.
+Because $r>0$, the exponent becomes more negative as time increases.
 
-For example:
+For example, consider the values of the natural exponential function:
 
 $$
 e^0=1
@@ -1269,103 +1679,431 @@ $$
 
 As the exponent becomes more negative, the exponential factor decreases.
 
+![Comparison of the increasing natural exponential function $e^x$ and the decreasing function $e^{-x}$. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed., Section 4.2.](natural-exponential-function-c.jpg){#fig-natural-exponential-decay width="85%" fig-align="center"}
+
 This represents the decreasing mass of radioactive parent material.
+
 
 ##### Connecting the Decay Constant to Half-Life
 
-We now have two mathematical models:
+We have introduced two mathematical equations that describe the exponential decay of radioactive parent material:
 
-**Half-life model**
-
-$$
-m(t)=m_0\left(\frac12\right)^{t/h}
-$$
-
-**Natural exponential model**
+**1. Half-life equation**
 
 $$
-m(t)=m_0e^{kt}
+m(t)=m_0\left(\frac{1}{2}\right)^{t/h}
 $$
 
-Both describe the same radioactive decay process.
+**2. Natural exponential decay equation**
 
-We can use the definition of half-life to determine the relationship between $k$ and $h$.
+$$
+m(t)=m_0e^{-rt}
+$$
 
-At one half-life:
+Both equations describe the mass of radioactive parent material remaining after an elapsed time $t$. However, they express the rate of decay differently.
+
+The first equation uses the **physical half-life ($h$)**, while the second uses the **radioactive decay constant ($r$)**.
+
+Our objective is to determine how these two quantities are mathematically related.
+
+For this derivation:
+
+- $m(t)$ is the mass of radioactive parent material remaining at elapsed time $t$.
+- $m_0$ is the initial mass of radioactive parent material.
+- $t$ is elapsed time.
+- $h$ is the physical half-life of the radioactive isotope.
+- $r$ is the radioactive decay constant, expressed in inverse units of time.
+- $e$ is Euler's number, approximately $2.71828$.
+
+**Step 1: Establish the condition of one half-life.**
+
+The physical half-life is the time required for half of the radioactive parent nuclei in a large sample to undergo radioactive decay.
+
+If the elapsed time is equal to one physical half-life, then:
 
 $$
 t=h
 $$
 
-and:
+For example, suppose a radioactive isotope has a physical half-life of 140 days.
+
+After one half-life has elapsed:
+
+$$
+t=h=140\ \text{days}
+$$
+
+We can now use this condition to evaluate both exponential decay equations at the same point in time.
+
+**Step 2: Substitute the half-life into the half-life equation.**
+
+Begin with the half-life equation:
+
+$$
+m(t)=m_0\left(\frac{1}{2}\right)^{t/h}
+$$
+
+Since we are evaluating the remaining mass after one half-life, substitute $t=h$:
+
+$$
+m(h)=m_0\left(\frac{1}{2}\right)^{h/h}
+$$
+
+Notice that the function notation changes from $m(t)$ to $m(h)$ because we are calculating the remaining mass when the elapsed time equals one half-life.
+
+The exponent is:
+
+$$
+\frac{h}{h}=1
+$$
+
+For our example:
+
+$$
+\frac{140\ \text{days}}{140\ \text{days}}=1
+$$
+
+Therefore:
+
+$$
+m(h)=m_0\left(\frac{1}{2}\right)^1
+$$
+
+Any number raised to the first power equals itself:
+
+$$
+\left(\frac{1}{2}\right)^1=\frac{1}{2}
+$$
+
+Thus:
+
+$$
+m(h)=m_0\left(\frac{1}{2}\right)
+$$
+
+Multiplying by one-half is equivalent to dividing by two:
+
+$$
+\begin{aligned}
+m(h)
+&=m_0\left(\frac{1}{2}\right)\\[6pt]
+&=\frac{m_0\times1}{2}\\[6pt]
+&=\frac{m_0}{2}
+\end{aligned}
+$$
+
+We have demonstrated mathematically that:
+
+$$
+\boxed{m(h)=\frac{m_0}{2}}
+$$
+
+This confirms the definition of half-life: after one physical half-life, half of the original radioactive parent material remains.
+
+For example, if the initial mass were 300 mg:
+
+$$
+m(h)=\frac{300\ \text{mg}}{2}=150\ \text{mg}
+$$
+
+**Step 3: Apply the same condition to the natural exponential decay equation.**
+
+We will now use the second equation to describe the same radioactive material at the same elapsed time.
+
+Begin with:
+
+$$
+m(t)=m_0e^{-rt}
+$$
+
+Recall that one half-life has elapsed when:
+
+$$
+t=h
+$$
+
+Substitute $h$ for $t$:
+
+$$
+m(h)=m_0e^{-rh}
+$$
+
+This equation describes the remaining mass after one half-life using the radioactive decay constant $r$.
+
+From Step 2, we already established that:
 
 $$
 m(h)=\frac{m_0}{2}
 $$
 
-Substitute these values into the natural exponential model:
+Both expressions represent the mass remaining after the same elapsed time.
+
+Therefore, we can set them equal:
 
 $$
-\frac{m_0}{2}=m_0e^{kh}
+\boxed{\frac{m_0}{2}=m_0e^{-rh}}
 $$
 
-Divide both sides by $m_0$:
+We now have an equation containing both the physical half-life $h$ and the radioactive decay constant $r$.
+
+Our next objective is to isolate $r$.
+
+**Step 4: Divide both sides by the initial mass.**
+
+Begin with:
 
 $$
-\frac12=e^{kh}
+\frac{m_0}{2}=m_0e^{-rh}
 $$
 
-**Why divide by $m_0$?**
-
-Because we want to isolate the exponential expression. The initial mass appears on both sides and can be canceled.
-
-Now take the natural logarithm of both sides:
+To isolate the exponential expression, divide both sides by $m_0$:
 
 $$
-\ln\left(\frac12\right)=\ln(e^{kh})
+\frac{\frac{m_0}{2}}{m_0}
+=
+\frac{m_0e^{-rh}}{m_0}
 $$
 
-**Why take the natural logarithm?**
-
-Because the unknown decay constant $k$ appears in an exponent.
-
-The natural logarithm allows us to remove the exponential operation and isolate the exponent.
-
-Using the power law:
+Because the initial mass $m_0$ is the same nonzero quantity on both sides, it cancels:
 
 $$
-\ln(e^{kh})=kh\ln(e)
+\frac{\frac{\cancel{m_0}}{2}}{\cancel{m_0}}
+=
+\frac{\cancel{m_0}e^{-rh}}{\cancel{m_0}}
 $$
 
-Since $\ln(e)=1$:
+We obtain:
 
 $$
-\ln\left(\frac12\right)=kh
+\boxed{\frac{1}{2}=e^{-rh}}
 $$
 
-Divide both sides by $h$:
+This equation tells us that after one half-life, the natural exponential factor must equal one-half.
+
+**Step 5: Apply the natural logarithm to both sides.**
+
+We need to solve for $r$, but it is currently located in the exponent:
 
 $$
-\boxed{k=\frac{\ln(1/2)}{h}}
+\frac{1}{2}=e^{-rh}
 $$
 
-Since:
+Recall that the natural logarithm is the inverse function of the natural exponential function.
+
+We can use this inverse relationship to remove the exponential function and isolate the exponent.
+
+Take the natural logarithm of both sides:
 
 $$
-\ln\left(\frac12\right)\approx-0.693147
+\ln\left(\frac{1}{2}\right)=\ln\left(e^{-rh}\right)
 $$
 
-we can write:
+Recall the inverse relationship:
 
 $$
-\boxed{k\approx\frac{-0.693147}{h}}
+\ln(e^x)=x
 $$
 
-This relationship allows us to calculate the exponential decay constant when the half-life is known.
+In our equation, the exponent $x$ is equal to $-rh$.
 
-The negative sign is important because the mass of radioactive parent material decreases with time.
+Therefore:
 
----
+$$
+\ln\left(e^{-rh}\right)=-rh
+$$
+
+Substituting this result gives:
+
+$$
+\boxed{\ln\left(\frac{1}{2}\right)=-rh}
+$$
+
+We have removed the exponential function and obtained an equation that we can solve algebraically for $r$.
+
+**Step 6: Isolate the radioactive decay constant.**
+
+Begin with:
+
+$$
+\ln\left(\frac{1}{2}\right)=-rh
+$$
+
+Because $r$ is multiplied by $-h$, divide both sides by $-h$:
+
+$$
+\frac{\ln(1/2)}{-h}
+=
+\frac{-rh}{-h}
+$$
+
+The factor $-h$ cancels on the right-hand side:
+
+$$
+\frac{\ln(1/2)}{-h}
+=
+\frac{r\cancel{(-h)}}{\cancel{(-h)}}
+$$
+
+Therefore:
+
+$$
+r=\frac{\ln(1/2)}{-h}
+$$
+
+We can also express this as:
+
+$$
+\boxed{r=-\frac{\ln(1/2)}{h}}
+$$
+
+However, we can simplify the logarithmic expression further.
+
+**Step 7: Simplify the logarithm using logarithmic identities.**
+
+Recall the quotient rule for logarithms:
+
+$$
+\ln\left(\frac{a}{b}\right)=\ln(a)-\ln(b)
+$$
+
+Apply this rule to the fraction $\frac{1}{2}$:
+
+$$
+\ln\left(\frac{1}{2}\right)=\ln(1)-\ln(2)
+$$
+
+Recall that:
+
+$$
+e^0=1
+$$
+
+Therefore:
+
+$$
+\ln(1)=0
+$$
+
+Substitute this value:
+
+$$
+\begin{aligned}
+\ln\left(\frac{1}{2}\right)
+&=\ln(1)-\ln(2)\\[6pt]
+&=0-\ln(2)\\[6pt]
+&=-\ln(2)
+\end{aligned}
+$$
+
+Return to our expression for the decay constant:
+
+$$
+r=-\frac{\ln(1/2)}{h}
+$$
+
+Substitute $\ln(1/2)=-\ln(2)$:
+
+$$
+r=-\frac{-\ln(2)}{h}
+$$
+
+The two negative signs produce a positive result:
+
+$$
+\boxed{r=\frac{\ln(2)}{h}}
+$$
+
+We have now derived the mathematical relationship between the radioactive decay constant and the physical half-life.
+
+Because:
+
+$$
+\ln(2)\approx0.693147
+$$
+
+We can also write:
+
+$$
+\boxed{r\approx\frac{0.693147}{h}}
+$$
+
+The units of $r$ are the inverse of the time units used for $h$.
+
+For example, if $h$ is measured in days, then $r$ is expressed in $\text{day}^{-1}$.
+
+**Step 8: Interpret the positive decay constant and negative exponent.**
+
+Our derivation gives:
+
+$$
+r=\frac{\ln(2)}{h}
+$$
+
+Since $\ln(2)>0$ and the physical half-life $h>0$, the radioactive decay constant is positive:
+
+$$
+r>0
+$$
+
+However, recall that the natural exponential decay equation contains a negative sign:
+
+$$
+m(t)=m_0e^{-rt}
+$$
+
+**Why does the equation use a negative sign if the decay constant is positive?**
+
+The negative sign gives the exponential function its decreasing direction as time increases.
+
+Consider the exponential factor:
+
+$$
+e^{-rt}
+$$
+
+Because $r>0$ and elapsed time $t$ increases, the exponent $-rt$ becomes increasingly negative.
+
+For example:
+
+$$
+e^0=1
+$$
+
+$$
+e^{-1}\approx0.368
+$$
+
+$$
+e^{-2}\approx0.135
+$$
+
+As the exponent becomes more negative, the exponential factor decreases toward zero.
+
+![Comparison of the increasing natural exponential function $e^x$ and the decreasing function $e^{-x}$. Source: Stewart, Redlin, and Watson, *Precalculus: Mathematics for Calculus*, 6th ed., Section 4.2.](natural-exponential-function-c.jpg){#fig-natural-exponential-decay width="85%" fig-align="center"}
+
+The graph illustrates the difference between exponential growth and exponential decay:
+
+- **$r>0$:** The radioactive decay constant is positive.
+- **$-rt$:** The exponent becomes increasingly negative as time increases.
+- **$e^{-rt}$:** The fraction of radioactive parent material remaining decreases with time.
+
+The negative sign does not mean that the decay constant or the remaining mass is negative.
+
+Instead, it produces a decreasing exponential function, consistent with the physical process of radioactive decay.
+
+Consequently, the natural exponential equation describes the gradual decrease in radioactive parent material over time:
+
+$$
+\boxed{m(t)=m_0e^{-rt}}
+$$
+
+And the decay constant can be calculated directly from the physical half-life:
+
+$$
+\boxed{r=\frac{\ln(2)}{h}}
+$$
+
+------------------------------------------------------------------------
 
 #### Worked Example: Radioactive Decay of Polonium-210
 
@@ -1373,12 +2111,13 @@ The negative sign is important because the mass of radioactive parent material d
 
 Suppose a sample initially contains 300 mg of polonium-210.
 
+For this example, we will use a half-life of 140 days. This is a rounded instructional value; the measured physical half-life of polonium-210 is approximately 138.4 days.
 
 We want to answer three questions:
 
-1. How much polonium-210 remains after 365 days?
-2. What is the exponential decay constant?
-3. How much time must pass before only 200 mg remain?
+1.  How much polonium-210 remains after 365 days?
+2.  What is the radioactive decay constant?
+3.  How much time must pass before only 200 mg remain?
 
 ##### Part I: How Much Radioactive Material Remains?
 
@@ -1429,7 +2168,7 @@ This means approximately 2.61 half-lives have elapsed.
 **Step 5: Evaluate the exponential expression.**
 
 $$
-\left(\frac12\right)^{2.60714}\approx0.164124
+\left(\frac12\right)^{365/140}\approx0.164124
 $$
 
 This means approximately 16.41% of the original polonium-210 remains.
@@ -1444,9 +2183,9 @@ $$
 \boxed{m(365)\approx49.24\ \mathrm{mg}}
 $$
 
-Approximately 49.24 mg of polonium-210 remains after 365 days.
+Approximately 49.24 mg of polonium-210 remains after 365 days using the textbook's assumed half-life.
 
-##### Part II: Determine the Exponential Decay Constant
+##### Part II: Determine the Radioactive Decay Constant
 
 **Step 1: Identify what we know.**
 
@@ -1456,44 +2195,44 @@ $$
 h=140\ \mathrm{days}
 $$
 
-We want to determine $k$.
+We want to determine $r$.
 
 **Step 2: Select the equation.**
 
 $$
-k=\frac{\ln(1/2)}{h}
+r=\frac{\ln 2}{h}
 $$
 
 **Step 3: Substitute the half-life.**
 
 $$
-k=\frac{\ln(1/2)}{140\ \mathrm{days}}
+r=\frac{\ln 2}{140\ \mathrm{days}}
 $$
 
 **Step 4: Evaluate the natural logarithm.**
 
 $$
-\ln(1/2)\approx-0.693147
+\ln 2\approx0.693147
 $$
 
 Therefore:
 
 $$
-k=\frac{-0.693147}{140\ \mathrm{days}}
+r=\frac{0.693147}{140\ \mathrm{days}}
 $$
 
 $$
-\boxed{k\approx-0.00495105\ \mathrm{day}^{-1}}
+\boxed{r\approx0.00495105\ \mathrm{day}^{-1}}
 $$
 
-The decay constant is negative because the mass decreases over time.
+The radioactive decay constant $r$ is positive. The negative sign in the exponent of the decay model describes the decrease in mass over time.
 
 **Step 5: Construct the natural exponential model.**
 
 Start with:
 
 $$
-m(t)=m_0e^{kt}
+m(t)=m_0e^{-rt}
 $$
 
 Substitute the initial mass and decay constant:
@@ -1504,7 +2243,7 @@ $$
 
 where $t$ is measured in days and $m(t)$ is measured in milligrams.
 
-This equation describes the same decay process as the half-life model. The constant $k$ has units of inverse days, so $kt$ is dimensionless when $t$ is in days.
+This equation describes the same decay process as the half-life model. The constant $r$ has units of inverse days, so $rt$ is dimensionless when $t$ is in days.
 
 ##### Part III: How Much Time Must Pass Until 200 mg Remain?
 
@@ -1512,14 +2251,14 @@ We now know:
 
 - Initial mass: 300 mg.
 - Remaining mass: 200 mg.
-- Decay constant: approximately $-0.00495105\ \mathrm{day}^{-1}$.
+- Decay constant: approximately $0.00495105\ \mathrm{day}^{-1}$.
 
 We want to determine the elapsed time, $t$.
 
 **Step 1: Start with the natural exponential model.**
 
 $$
-m(t)=m_0e^{kt}
+m(t)=m_0e^{-rt}
 $$
 
 **Step 2: Substitute the known values.**
@@ -1556,15 +2295,13 @@ $$
 
 We use the natural logarithm because the unknown time is in an exponent with base $e$.
 
-**Step 5: Apply the power law of logarithms.**
+**Step 5: Apply the inverse relationship.**
 
 $$
-\ln\left(\frac23\right)
-=
-(-0.00495105t)\ln(e)
+\ln(e^x)=x
 $$
 
-Since $\ln(e)=1$:
+Therefore:
 
 $$
 \ln\left(\frac23\right)
@@ -1574,11 +2311,11 @@ $$
 
 The unknown time is no longer inside an exponent.
 
-**Step 6: Divide by the decay constant.**
+**Step 6: Divide by the negative decay constant.**
 
 $$
 t=
-\frac{\ln(2/3)}{-0.00495105}
+-\frac{\ln(2/3)}{0.00495105}
 $$
 
 **Step 7: Calculate the natural logarithm.**
@@ -1591,7 +2328,7 @@ Therefore:
 
 $$
 t\approx
-\frac{-0.405465}{-0.00495105}
+-\frac{-0.405465}{0.00495105}
 $$
 
 $$
@@ -1614,70 +2351,9 @@ $$
 
 The result agrees with the quantity specified in the problem. Small differences may arise because the decay constant and elapsed time were rounded during the calculation.
 
-##### What Does a Logarithmic Transformation Do to the Graph?
-
-Our natural exponential model is:
-
-$$
-m(t)=m_0e^{kt}
-$$
-
-Divide by the initial mass $m_0$ to obtain the fraction remaining:
-
-$$
-\frac{m(t)}{m_0}=e^{kt}
-$$
-
-Take the natural logarithm of both sides:
-
-$$
-\ln\left(\frac{m(t)}{m_0}\right)=kt
-$$
-
-The expression on the left is the natural logarithm of the fraction remaining, and $t$ is elapsed time. Because $k$ is constant for a particular radionuclide, plotting $\ln[m(t)/m_0]$ on the vertical axis against $t$ on the horizontal axis produces a straight line through the origin with slope $k$. This is a **transformed graph**, not the original decay curve.
-
-This distinction can help us interpret radioactive decay data in R or Excel.
-
----
-
-::: {.callout-important}
-## Which Equation Should We Use?
-
-The appropriate equation depends on what information is known and what we need to calculate.
-
-**1. Calculate remaining mass when half-life and elapsed time are known:**
-
-$$
-m(t)=m_0\left(\frac12\right)^{t/h}
-$$
-
-**2. Calculate remaining mass when the exponential decay constant is known:**
-
-$$
-m(t)=m_0e^{kt}
-$$
-
-**3. Calculate the decay constant when the half-life is known:**
-
-$$
-k=\frac{\ln(1/2)}{h}
-$$
-
-**4. Calculate elapsed time when the initial mass, remaining mass, and decay constant are known:**
-
-$$
-t=\frac{\ln[m(t)/m_0]}{k}
-$$
-
-All four equations describe the same exponential decay relationship.
-
-The important skill is recognizing **which quantity is unknown**, identifying the information provided, and selecting the equation that allows us to solve for that unknown.
-
-Remember that these calculations estimate the remaining radioactive parent material. They do not, by themselves, establish whether a sample is safe to handle or dispose of.
-:::
-
 *Mathematical reference: Stewart, J., Redlin, L., & Watson, S. Precalculus: Mathematics for Calculus, 6th ed., Chapter 4, especially Section 4.6, Example 6. Mathematical explanations developed for SHM 377.*
 
+<!-- SHM 377 Lecture 04: reorganized continuation draft. The uploaded source begins mid-lecture; append this material to the preceding portion of the master .qmd. -->
 
 ###### Connecting Radioactive Decay to Nuclear Medicine
 
@@ -1853,7 +2529,152 @@ Earlier in this lecture, we examined several examples of nuclear decay and radia
 
 - **Neutron radiation (**$\mathrm{n}$): Neutrons (${}^{1}_{0}\mathrm{n}$) carry no electric charge and therefore do not directly ionize atoms through electrostatic interactions. Instead, neutrons interact primarily with atomic nuclei. These interactions can produce energetic charged particles or secondary radiation that subsequently cause ionization.
 
-## 4.5 How Do We Measure Ionizing Radiation?
+## Returning to Nuclear Stability
+
+Earlier, we introduced the **neutron-to-proton ratio** and the **belt of nuclear stability**. We can now return to that model with a practical question: **Why do different unstable nuclei emit different types of radiation?**
+
+![Band of nuclear stability showing the relationship between atomic number and mass number, including the 1:1 neutron-to-proton ratio and regions of nuclear instability.](nuclear-stability.jpg){#fig-nuclear-stability fig-alt="Graph illustrating the band of nuclear stability and regions of nuclear instability" width="100%"}
+
+### Predicting Common Nuclear Transformations
+
+- **Neutron-rich nuclei** may undergo **beta-minus decay**, converting a neutron to a proton. We saw this with strontium-90 (${}^{90}_{38}\mathrm{Sr}$).
+- **Proton-rich nuclei** may undergo **positron emission** or **electron capture**, converting a proton to a neutron. We saw electron capture in the iodine-125 (${}^{125}_{53}\mathrm{I}$) example.
+- **Very heavy nuclei** may undergo **alpha decay**, reducing both their proton number and mass number. We saw this with polonium-212 (${}^{212}_{84}\mathrm{Po}$).
+- An **excited nucleus** may release energy by **gamma emission** without changing its proton or neutron count. We saw this with technetium-99m (${}^{99m}_{43}\mathrm{Tc}$).
+
+These are **general patterns**, not a rule that uniquely predicts the decay of every isotope. Nuclear energy levels and other factors determine which transformations are possible.
+
+### Nuclear Binding Energy
+
+The **strong nuclear interaction** helps hold protons and neutrons together in the nucleus despite the electrical repulsion between positively charged protons.
+
+**Nuclear binding energy** is the energy required to separate a nucleus into its individual protons and neutrons. A related concept, **mass defect**, is the difference between the mass of a bound nucleus and the combined masses of its separated nucleons. Mass and energy are related through Einstein's equation:
+
+$$
+E=mc^2
+$$
+
+Where $E$ is energy, $m$ is mass, and $c$ is the speed of light in a vacuum. We introduce this relationship conceptually here; detailed binding-energy calculations are beyond the scope of this lecture.
+
+*Source: Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, “Nuclear Stability” and “Nuclear Binding Energy.”*
+
+# Part III. Biological Effects of Ionizing Radiation
+
+## Ionization and Biological Effects of Radiation
+
+### Ionization and Biological Injury
+
+**Ionization** can initiate chemical changes in living tissue. Radiation may damage a biological molecule **directly** by depositing energy in it, or **indirectly** by ionizing nearby molecules, including water, and producing reactive chemical species that subsequently interact with cellular structures.
+
+**Free radicals** are atoms or molecules with an unpaired electron; some are highly reactive. Radiation-induced chemical reactions may damage proteins, cell membranes, and **DNA**, the molecule that stores genetic information.
+
+Not every ionization event causes lasting injury. Cells have mechanisms that can repair some damage. However, injury may occur when damage is extensive, occurs in a sensitive location, or is not repaired correctly.
+
+**Connecting the chemistry to health:** Nuclear decay produces radiation; radiation transfers energy to matter; ionization can initiate chemical reactions; and some of those reactions can damage cells and tissues.
+
+### Biological Effects of Radiation
+
+The effects of ionizing radiation depend on **absorbed dose**, **dose rate**, radiation type, the tissues exposed, and whether exposure is external or results from radioactive material entering the body.
+
+Two broad categories help us interpret potential health effects:
+
+- **Tissue reactions (deterministic effects):** These generally occur only after a sufficient dose has been delivered to a tissue. Above that threshold, the severity of injury tends to increase with dose. Examples at sufficiently high doses include skin injury and radiation sickness.
+- **Stochastic effects:** These are effects for which the *probability* of occurrence, rather than severity, is modeled as increasing with dose. Radiation-induced cancer is the principal example considered in radiation protection. A particular exposure does **not** mean that cancer will necessarily occur.
+
+**External exposure** occurs when radiation reaches a person from a source outside the body. **Internal contamination** occurs when radioactive material enters the body, for example through inhalation, ingestion, or an open wound. A person can be exposed to radiation without becoming contaminated.
+
+These distinctions explain why **alpha-emitting materials**, despite having low external penetration, may pose a serious hazard when taken into the body, while **penetrating gamma radiation** can pose a significant external exposure hazard.
+
+*Source guidance: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.); Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, “Biological Effects of Radiation.” Specific dose-response thresholds are intentionally not assigned here.*
+
+![Cancer incidence among 86,572 atomic-bomb survivors with known radiation doses, illustrating epidemiological evidence used to evaluate the relationship between ionizing radiation exposure and cancer risk.](cancer-incidence-among-atomic-bomb-survivors.jpg){#fig-cancer-incidence-atomic-bomb-survivors fig-alt="Table 7-9 presenting cancer incidence among 86,572 atomic-bomb survivors with known radiation doses. Excess relative risk per sievert is reported for exposure at age 30 and attained age 60, with 95 percent confidence intervals. The source also references Table 7-10, which presents BEIR VII estimates of increased cancer cases and deaths." width="95%"}
+
+*Source: National Research Council, Committee to Assess Health Risks from Exposure to Low Levels of Ionizing Radiation. BEIR VII: Health Risks from Exposure to Low Levels of Ionizing Radiation. Washington, DC: National Academies Press, 2005. Table 7-9, "Cancer Incidence Among 86,572 Atomic-Bomb Survivors with Known Radiation Dose," and Table 7-10, "BEIR VII's Estimated Number of Increased Cases and Deaths for All Solid Tumors and for Leukemia." Reproduced with permission from the National Academies Press. Copyright © 2005, National Academy of Sciences.*
+
+The atomic-bomb survivor studies provide important epidemiological evidence for understanding the relationship between ionizing radiation dose and cancer risk.
+
+However, **absorbed dose and radiation protection dose quantities are not interchangeable**. Absorbed dose measures energy deposited per unit mass and is expressed in gray (Gy), whereas equivalent and effective dose account for additional radiation protection considerations and are expressed in sieverts (Sv).
+
+We will distinguish these quantities in the following sections.
+
+![Radiation exposure and the distinction between external and internal radiation hazards.](public-exposure.jpg){#fig-public-exposure fig-alt="Educational illustration introducing radiation exposure and the distinction between radioactive sources outside the body and radioactive material entering the body." width="85%"}
+
+*Source: University of Washington, Internal Radiation Exposure, Spring 2022.*
+
+### Internal Contamination and Biological Distribution
+
+So far, we have focused on radiation emitted from sources outside the body. But what happens if the **radioactive material itself enters the body**?
+
+![Radiological contamination and its relationship to radiation exposure.](contamination.jpg){#fig-radiological-contamination fig-alt="University of Washington radiation safety educational illustration addressing radioactive contamination." width="85%"}
+
+*Source: University of Washington, Environmental Health & Safety, Ionizing Radiation Safety – Internal Radiation, Philip Campbell, CHP, Spring 2022.*
+
+**Internal contamination** occurs when radioactive material enters the body. This is different from external irradiation: a person can be exposed to radiation without becoming contaminated with radioactive material.
+
+Radioactive substances may enter through:
+
+- **Inhalation:** Breathing contaminated air, dust, smoke, or aerosols.
+- **Ingestion:** Swallowing contaminated food, water, or other materials.
+- **Wounds:** Radioactive material entering through damaged skin.
+- **Injection:** Intentional medical administration or accidental introduction.
+
+Once radioactive material enters the body, it may remain temporarily, circulate through the bloodstream, or accumulate in particular organs.
+
+The location and behavior of the radioactive material influence the radiation dose received by tissues. This is particularly important for alpha-emitting radionuclides: alpha particles have limited external penetration, but can deposit substantial energy in nearby tissues when emitted inside the body.
+
+![Occupational radiation exposure and potential hazards to workers.](worker-exposure.jpg){#fig-worker-exposure fig-alt="University of Washington radiation safety educational illustration addressing occupational radiation exposure." width="85%"}
+
+*Source: University of Washington, Environmental Health & Safety, Ionizing Radiation Safety – Internal Radiation, Philip Campbell, CHP, Spring 2022.*
+
+#### Internal Activity and Biological Distribution
+
+For internal contamination, scientists may estimate the **activity of radioactive material present in the body**.
+
+However, activity alone does not determine internal dose.
+
+We must also consider:
+
+- The radioactive isotope and its type of radiation.
+- The amount of radioactive material taken into the body.
+- The organs or tissues where the material accumulates.
+- The physical half-life of the radionuclide.
+- The rate at which the body eliminates the material.
+
+**Physical half-life:** The time required for half of the radioactive nuclei in a sample to undergo radioactive decay. This depends on the radionuclide, not on how quickly the body removes it.
+
+**Biological half-life:** The time required for a biological system to eliminate half of a substance through biological processes, without considering radioactive decay.
+
+These two processes can occur simultaneously. For internal contamination, both radioactive decay and biological elimination can reduce the amount of radioactive material remaining in a particular part of the body.
+
+For a simplified single-compartment model with exponential radioactive decay and biological elimination, the **effective half-life** is:
+
+$$
+\frac{1}{T_{\mathrm{eff}}}
+=
+\frac{1}{T_{\mathrm{physical}}}
++
+\frac{1}{T_{\mathrm{biological}}}
+$$
+
+Where:
+
+- $T_{\mathrm{eff}}$: Effective half-life, accounting for both radioactive decay and biological elimination.
+- $T_{\mathrm{physical}}$: Physical half-life of the radionuclide.
+- $T_{\mathrm{biological}}$: Biological half-life in the compartment being considered.
+
+**Example:** If a radionuclide has a physical half-life of 8 days and a biological half-life of 8 days in a simplified model:
+
+$$
+\frac{1}{T_{\mathrm{eff}}}=\frac{1}{8\ \mathrm{days}}+\frac{1}{8\ \mathrm{days}}=\frac{1}{4\ \mathrm{days}}
+$$
+
+Therefore, its **effective half-life is 4 days** in that model. The effective half-life is shorter than either half-life considered separately because both processes reduce the amount remaining.
+
+The effective half-life describes how quickly the amount or activity of a radionuclide in that biological compartment decreases through the combined processes. Actual behavior in the body can be more complex than this single-compartment model.
+
+# Part IV. Radiation Measurement and Dosimetry
+
+## How Do We Measure Ionizing Radiation?
 
 We have learned that unstable atomic nuclei can release energy through radioactive decay and that ionizing radiation can remove electrons from atoms.
 
@@ -1930,19 +2751,7 @@ Smaller quantities are commonly expressed in millicuries (mCi), microcuries ($\m
 
 *Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), radioactivity and activity measurements; University of Washington Environmental Health and Safety, Ionizing Radiation Safety: External Radiation, Philip Campbell, CHP, Radiation Safety Officer (2022), "Activity"; Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, Nuclear Chemistry.*
 
-### 4.6A Measuring Radiation Outside the Body
-
-**External radiation exposure** occurs when radiation reaches a person from a source located outside the body.
-
-For external radiation, we may want to measure ionization in air, energy deposited in tissue, or the biologically weighted dose received by a worker.
-
-### 4.6B Measuring Radiation Inside the Body
-
-So far, we have focused on radiation emitted from sources outside the body. But what happens if the **radioactive material itself enters the body**?
-
-![Radiation exposure and the distinction between external and internal radiation hazards.](public-exposure.jpg){#fig-public-exposure fig-alt="Educational illustration introducing radiation exposure and the distinction between radioactive sources outside the body and radioactive material entering the body." width="85%"}
-
-*Source: University of Washington, Internal Radiation Exposure, Spring 2022.*
+## Measuring Exposure in Air
 
 #### Exposure: Ionization Produced in Air
 
@@ -2088,76 +2897,6 @@ This illustrates how radiation can produce electrical charges in air that can su
 
 *Sources: [NASA Glenn Research Center, Earth's Atmosphere](https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earths-atmosphere/); [NOAA National Weather Service, The Atmosphere](https://www.weather.gov/jetstream/atmosphere).*
 
-#### Radiation Detection Instruments: Ionization Chambers and Survey Probes
-
-Radiation detection instruments allow radiation safety professionals to identify ionizing radiation, evaluate potential exposure hazards, and make informed decisions about worker protection.
-
-Different instruments are designed for different purposes. Some measure radiation exposure or dose rate, while others detect radioactive contamination on surfaces, equipment, or clothing.
-
-##### Ionization Chambers
-
-An **ionization chamber** is a radiation detection instrument that measures the electrical charge produced when ionizing radiation interacts with gas inside a detector.
-
-When radiation enters the chamber, it can remove electrons from gas atoms, producing positively charged ions and free electrons. An applied electric field collects these charges, producing an electrical signal that can be measured.
-
-![Ionization chamber used for radiation detection and measurement.](ion-chamber.jpg){#fig-ion-chamber fig-alt="Ionization chamber instrument presented in NASA Armstrong ionizing radiation safety training." width="85%"}
-
-*Source: NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training.*
-
-Ionization chambers are commonly used to measure radiation exposure rates or dose rates when appropriately calibrated.
-
-##### Radiation Survey Probes
-
-Radiation survey instruments may use different types of **probes**, or detectors, depending on the radiation being measured.
-
-For example, some probes are designed to detect beta particles or gamma rays, while others are designed to identify alpha contamination.
-
-![Examples of radiation detection probes used in radiation safety surveys.](probes.jpg){#fig-radiation-probes fig-alt="Radiation survey probes presented in NASA Armstrong ionizing radiation safety training." width="85%"}
-
-*Source: NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training.*
-
-Selecting the appropriate probe is important because **not every radiation detector can measure every type of ionizing radiation**.
-
-##### How Does a Geiger Counter Work?
-
-A **Geiger-Müller counter**, commonly called a **Geiger counter**, is an instrument used to detect ionizing radiation, including beta particles and gamma rays when the detector is appropriately designed.
-
-The detector contains a gas-filled tube with electrodes connected to a high-voltage electrical supply.
-
-When ionizing radiation enters the tube, it interacts with the gas and produces charged particles.
-
-The process can be summarized in five steps:
-
-1.  **Radiation enters the detector.** Ionizing radiation interacts with gas atoms inside the tube.
-
-2.  **Ionization occurs.** Electrons are removed from gas atoms, producing positively charged ions and free electrons.
-
-3.  **Electrons accelerate.** The electric field attracts electrons toward the positively charged central wire. Accelerating electrons produce additional ionization through collisions with gas atoms.
-
-4.  **An electrical pulse forms.** The resulting avalanche of charged particles produces a measurable electrical pulse.
-
-5.  **The instrument registers a count.** The electrical pulse is recorded electronically and may be displayed as a numerical count, a meter response, or an audible click.
-
-![Gas-filled radiation detector illustrating the operating principles of a Geiger-Müller counter.](gas-probes.jpg){#fig-gas-filled-radiation-detector fig-alt="Educational illustration of a gas-filled radiation detector showing how ionizing radiation produces charged particles that generate an electrical pulse." width="85%"}
-
-*Source: Linda Hall Library, [The Atomic Age: What Is a Geiger Counter and What Makes It Tick?](https://www.lindahall.org/experience/digital-exhibitions/the-atomic-age/02-it-s-a-question-of-physics/e-what-is-a-geiger-counter-and-what-makes-it-tick/).*
-
-The number of pulses detected over a specified period is reported as a **count rate**, commonly expressed in counts per minute (CPM) or counts per second (CPS).
-
-A higher count rate generally indicates that more radiation interactions are being detected under the same measurement conditions.
-
-However, **a higher count rate does not automatically indicate a proportional increase in absorbed dose or equivalent dose**. The relationship depends on the radiation type, energy, detector response, geometry, and instrument calibration.
-
-##### Application to Hazardous Materials Response
-
-Radiation detection instruments serve different purposes during a hazardous materials incident:
-
-- **Ionization chambers:** Measure radiation fields and help evaluate external exposure or dose rates.
-- **Survey probes:** Detect radiation and may help identify contamination on surfaces, equipment, or personnel.
-- **Geiger-Müller counters:** Register individual radiation detection events and provide count-rate information.
-
-Understanding how these instruments operate helps responders select appropriate equipment, interpret measurements, and recognize the limitations of the data collected.
-
 This process produces **positively charged ions and negatively charged electrons**.
 
 By measuring the electrical charge produced through ionization in a known mass of air, scientists can quantify radiation exposure.
@@ -2189,16 +2928,6 @@ A **milliroentgen (mR)** is one thousandth ($10^{-3}$) of a roentgen.
 #### Absorbed Dose: Energy Deposited in Matter
 
 In the previous section, we learned that **exposure** describes ionization produced by X-rays and gamma rays in air. However, measuring ionization in air does not tell us directly how much radiation energy is deposited in a worker’s body.
-
-![Cancer incidence among 86,572 atomic-bomb survivors with known radiation doses, illustrating epidemiological evidence used to evaluate the relationship between ionizing radiation exposure and cancer risk.](cancer-incidence-among-atomic-bomb-survivors.jpg){#fig-cancer-incidence-atomic-bomb-survivors fig-alt="Table 7-9 presenting cancer incidence among 86,572 atomic-bomb survivors with known radiation doses. Excess relative risk per sievert is reported for exposure at age 30 and attained age 60, with 95 percent confidence intervals. The source also references Table 7-10, which presents BEIR VII estimates of increased cancer cases and deaths." width="95%"}
-
-*Source: National Research Council, Committee to Assess Health Risks from Exposure to Low Levels of Ionizing Radiation. BEIR VII: Health Risks from Exposure to Low Levels of Ionizing Radiation. Washington, DC: National Academies Press, 2005. Table 7-9, "Cancer Incidence Among 86,572 Atomic-Bomb Survivors with Known Radiation Dose," and Table 7-10, "BEIR VII's Estimated Number of Increased Cases and Deaths for All Solid Tumors and for Leukemia." Reproduced with permission from the National Academies Press. Copyright © 2005, National Academy of Sciences.*
-
-The atomic-bomb survivor studies provide important epidemiological evidence for understanding the relationship between ionizing radiation dose and cancer risk.
-
-However, **absorbed dose and radiation protection dose quantities are not interchangeable**. Absorbed dose measures energy deposited per unit mass and is expressed in gray (Gy), whereas equivalent and effective dose account for additional radiation protection considerations and are expressed in sieverts (Sv).
-
-We will distinguish these quantities in the following sections.
 
 When radiation passes through a material, some of its energy may be transferred to that material. This leads us to a different measurement: **absorbed dose**.
 
@@ -2270,12 +2999,6 @@ $$
 1\ \mathrm{Sv}=100\ \mathrm{rem}
 $$
 
-The older unit is the **rem**, which stands for *roentgen equivalent man*. One sievert is equivalent to 100 rem:
-
-$$
-1\ \mathrm{Sv}=100\ \mathrm{rem}
-$$
-
 For gamma radiation, the radiation weighting factor is **1**. For alpha particles, the radiation weighting factor used in radiation protection is **20**.
 
 **Example:** If a tissue receives an absorbed dose of $0.001\ \mathrm{Gy}$ from gamma radiation, its equivalent dose is:
@@ -2293,14 +3016,6 @@ $$
 A **millisievert (mSv)** is one thousandth ($10^{-3}$) of a sievert. This comparison illustrates why equal absorbed doses do not necessarily represent equal radiation protection concerns.
 
 **Important:** Gray and sievert are not interchangeable units. The gray measures energy deposited per unit mass, whereas the sievert expresses radiation protection quantities that incorporate biological weighting.
-
-Equivalent dose and effective dose are used primarily in **stochastic risk assessment**, which involves evaluating the probability that exposure to ionizing radiation may contribute to a health effect, such as cancer, rather than predicting that a particular injury will occur.
-
-A **stochastic effect** is a health effect that occurs by chance. In radiation protection, the probability of a stochastic effect is generally assumed to increase with increasing radiation dose, although the effect is not certain to occur.
-
-This differs from **tissue reactions (deterministic effects)**, such as radiation-induced skin injury, which generally occur only after a sufficient dose has been received. Above the relevant threshold, the severity of these injuries tends to increase with dose.
-
-Therefore, equivalent dose and effective dose should not be interpreted as direct predictions of tissue injury or as precise estimates of an individual person's cancer risk.
 
 #### Effective Dose: Accounting for Tissue Sensitivity
 
@@ -2368,76 +3083,7 @@ However, a calculated time is not permission to enter or remain in a radiation h
 
 *Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), external radiation dosimetry, exposure, absorbed dose, equivalent dose, and effective dose; University of Washington Environmental Health and Safety, Ionizing Radiation Safety: External Radiation, Philip Campbell, CHP, Radiation Safety Officer (2022), "Exposure Units: Roentgen (R), C/kg," "Dose Units: RAD, Gray," and "DE/EDE Units: REM, Sievert"; NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training Materials (2023), occupational radiation monitoring and protection.*
 
-### 4.6B Measuring Radiation Inside the Body
-
-So far, we have focused on radiation emitted from sources outside the body. But what happens if the **radioactive material itself enters the body**?
-
-![Radiological contamination and its relationship to radiation exposure.](contamination.jpg){#fig-radiological-contamination fig-alt="University of Washington radiation safety educational illustration addressing radioactive contamination." width="85%"}
-
-*Source: University of Washington, Environmental Health & Safety, Ionizing Radiation Safety – Internal Radiation, Philip Campbell, CHP, Spring 2022.*
-
-**Internal contamination** occurs when radioactive material enters the body. This is different from external irradiation: a person can be exposed to radiation without becoming contaminated with radioactive material.
-
-Radioactive substances may enter through:
-
-- **Inhalation:** Breathing contaminated air, dust, smoke, or aerosols.
-- **Ingestion:** Swallowing contaminated food, water, or other materials.
-- **Wounds:** Radioactive material entering through damaged skin.
-- **Injection:** Intentional medical administration or accidental introduction.
-
-Once radioactive material enters the body, it may remain temporarily, circulate through the bloodstream, or accumulate in particular organs.
-
-The location and behavior of the radioactive material influence the radiation dose received by tissues. This is particularly important for alpha-emitting radionuclides: alpha particles have limited external penetration, but can deposit substantial energy in nearby tissues when emitted inside the body.
-
-![Occupational radiation exposure and potential hazards to workers.](worker-exposure.jpg){#fig-worker-exposure fig-alt="University of Washington radiation safety educational illustration addressing occupational radiation exposure." width="85%"}
-
-*Source: University of Washington, Environmental Health & Safety, Ionizing Radiation Safety – Internal Radiation, Philip Campbell, CHP, Spring 2022.*
-
-#### Internal Activity and Biological Distribution
-
-For internal contamination, scientists may estimate the **activity of radioactive material present in the body**.
-
-However, activity alone does not determine internal dose.
-
-We must also consider:
-
-- The radioactive isotope and its type of radiation.
-- The amount of radioactive material taken into the body.
-- The organs or tissues where the material accumulates.
-- The physical half-life of the radionuclide.
-- The rate at which the body eliminates the material.
-
-**Physical half-life:** The time required for half of the radioactive nuclei in a sample to undergo radioactive decay. This depends on the radionuclide, not on how quickly the body removes it.
-
-**Biological half-life:** The time required for a biological system to eliminate half of a substance through biological processes, without considering radioactive decay.
-
-These two processes can occur simultaneously. For internal contamination, both radioactive decay and biological elimination can reduce the amount of radioactive material remaining in a particular part of the body.
-
-For a simplified single-compartment model with exponential radioactive decay and biological elimination, the **effective half-life** is:
-
-$$
-\frac{1}{T_{\mathrm{eff}}}
-=
-\frac{1}{T_{\mathrm{physical}}}
-+
-\frac{1}{T_{\mathrm{biological}}}
-$$
-
-Where:
-
-- $T_{\mathrm{eff}}$: Effective half-life, accounting for both radioactive decay and biological elimination.
-- $T_{\mathrm{physical}}$: Physical half-life of the radionuclide.
-- $T_{\mathrm{biological}}$: Biological half-life in the compartment being considered.
-
-**Example:** If a radionuclide has a physical half-life of 8 days and a biological half-life of 8 days in a simplified model:
-
-$$
-\frac{1}{T_{\mathrm{eff}}}=\frac{1}{8\ \mathrm{days}}+\frac{1}{8\ \mathrm{days}}=\frac{1}{4\ \mathrm{days}}
-$$
-
-Therefore, its **effective half-life is 4 days** in that model. The effective half-life is shorter than either half-life considered separately because both processes reduce the amount remaining.
-
-The effective half-life describes how quickly the amount or activity of a radionuclide in that biological compartment decreases through the combined processes. Actual behavior in the body can be more complex than this single-compartment model.
+## Measuring Internal Contamination and Committed Dose
 
 #### Measuring Internal Contamination
 
@@ -2465,7 +3111,7 @@ This is different from simply measuring the radiation dose received at one momen
 
 *Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), internal radiation dosimetry, radionuclide intake, biological elimination, and committed dose; Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.), radioactive materials and occupational exposure hazards; NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training Materials (2023), internal contamination and radiation protection.*
 
-### 4.6C Why the Medium Matters
+## Why the Medium Matters
 
 We have now distinguished radiation emitted from sources outside the body from radioactive material taken into the body. Another question remains: **Does radiation deposit the same amount of energy in air, water, and human tissue?**
 
@@ -2500,19 +3146,99 @@ Water is often used as a reference material in radiation dosimetry because it pr
 
 However, water and human tissues are not identical, and specialized calculations may be necessary when evaluating particular organs or radiation types.
 
-#### Plastic, Concrete, and Lead
+## Radioactive Material Versus Radiation-Generating Equipment
 
-Different materials are useful for different radiation protection purposes.
+::: {.callout-note title="Lecture Development Placeholder: Radioactive Material vs. Radiation-Generating Equipment" collapse="true"}
+**To develop:** Compare sources containing unstable radionuclides with energized X-ray generators and other radiation-producing devices. Distinguish the radiation field from the presence of radioactive material, including what happens when a device is switched off. Include one workplace example of each.
 
-- **Plastic:** Low-atomic-number materials can be useful for shielding beta radiation.
-- **Concrete:** Commonly used for attenuation of penetrating photon radiation and, depending on its composition and thickness, neutron radiation.
-- **Lead:** A dense, high-atomic-number material commonly used to attenuate X-rays and gamma rays.
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
 
-Shielding effectiveness depends on radiation energy, material composition, and thickness. For example, lead is useful for many X-ray and gamma-ray applications, but hydrogen-rich materials are often important for slowing fast neutrons. Shielding must therefore be selected for the specific radiation hazard.
+## Fixed and Removable Radioactive Contamination
 
-We will examine these interactions in greater detail in the next section on radiation penetration and shielding.
+::: {.callout-note title="Lecture Development Placeholder: Fixed vs. Removable Contamination" collapse="true"}
+**To develop:** Explain radioactive contamination as radioactive material where it is not intended to be. Contrast fixed contamination with removable/transferable contamination, including wipe testing, contamination surveys, exposure pathways, and why contamination is different from irradiation.
 
-*Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), radiation interactions with matter and radiation dosimetry; Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.), radiation interactions and shielding materials; University of Washington Environmental Health and Safety, Ionizing Radiation Safety: External Radiation (2022), exposure and absorbed-dose measurements.*
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
+
+## Radiation Detection Instruments
+
+::: {.callout-note title="Lecture Development Placeholder: Radiation Survey Instruments" collapse="true"}
+**To develop:** Introduce Geiger–Müller detectors, ionization chambers, scintillation detectors, personal dosimeters, and contamination survey instruments. Distinguish activity, count rate, dose, and dose rate, with their appropriate units and limitations. Retain the detailed instrument descriptions already below.
+
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
+
+### Ionization Chambers and Survey Probes
+
+Radiation detection instruments allow radiation safety professionals to identify ionizing radiation, evaluate potential exposure hazards, and make informed decisions about worker protection.
+
+Different instruments are designed for different purposes. Some measure radiation exposure or dose rate, while others detect radioactive contamination on surfaces, equipment, or clothing.
+
+##### Ionization Chambers
+
+An **ionization chamber** is a radiation detection instrument that measures the electrical charge produced when ionizing radiation interacts with gas inside a detector.
+
+When radiation enters the chamber, it can remove electrons from gas atoms, producing positively charged ions and free electrons. An applied electric field collects these charges, producing an electrical signal that can be measured.
+
+![Ionization chamber used for radiation detection and measurement.](ion-chamber.jpg){#fig-ion-chamber fig-alt="Ionization chamber instrument presented in NASA Armstrong ionizing radiation safety training." width="85%"}
+
+*Source: NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training.*
+
+Ionization chambers are commonly used to measure radiation exposure rates or dose rates when appropriately calibrated.
+
+##### Radiation Survey Probes
+
+Radiation survey instruments may use different types of **probes**, or detectors, depending on the radiation being measured.
+
+For example, some probes are designed to detect beta particles or gamma rays, while others are designed to identify alpha contamination.
+
+![Examples of radiation detection probes used in radiation safety surveys.](probes.jpg){#fig-radiation-probes fig-alt="Radiation survey probes presented in NASA Armstrong ionizing radiation safety training." width="85%"}
+
+*Source: NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training.*
+
+Selecting the appropriate probe is important because **not every radiation detector can measure every type of ionizing radiation**.
+
+##### How Does a Geiger Counter Work?
+
+A **Geiger-Müller counter**, commonly called a **Geiger counter**, is an instrument used to detect ionizing radiation, including beta particles and gamma rays when the detector is appropriately designed.
+
+The detector contains a gas-filled tube with electrodes connected to a high-voltage electrical supply.
+
+When ionizing radiation enters the tube, it interacts with the gas and produces charged particles.
+
+The process can be summarized in five steps:
+
+1.  **Radiation enters the detector.** Ionizing radiation interacts with gas atoms inside the tube.
+
+2.  **Ionization occurs.** Electrons are removed from gas atoms, producing positively charged ions and free electrons.
+
+3.  **Electrons accelerate.** The electric field attracts electrons toward the positively charged central wire. Accelerating electrons produce additional ionization through collisions with gas atoms.
+
+4.  **An electrical pulse forms.** The resulting avalanche of charged particles produces a measurable electrical pulse.
+
+5.  **The instrument registers a count.** The electrical pulse is recorded electronically and may be displayed as a numerical count, a meter response, or an audible click.
+
+![Gas-filled radiation detector illustrating the operating principles of a Geiger-Müller counter.](gas-probes.jpg){#fig-gas-filled-radiation-detector fig-alt="Educational illustration of a gas-filled radiation detector showing how ionizing radiation produces charged particles that generate an electrical pulse." width="85%"}
+
+*Source: Linda Hall Library, [The Atomic Age: What Is a Geiger Counter and What Makes It Tick?](https://www.lindahall.org/experience/digital-exhibitions/the-atomic-age/02-it-s-a-question-of-physics/e-what-is-a-geiger-counter-and-what-makes-it-tick/).*
+
+The number of pulses detected over a specified period is reported as a **count rate**, commonly expressed in counts per minute (CPM) or counts per second (CPS).
+
+A higher count rate generally indicates that more radiation interactions are being detected under the same measurement conditions.
+
+However, **a higher count rate does not automatically indicate a proportional increase in absorbed dose or equivalent dose**. The relationship depends on the radiation type, energy, detector response, geometry, and instrument calibration.
+
+##### Application to Hazardous Materials Response
+
+Radiation detection instruments serve different purposes during a hazardous materials incident:
+
+- **Ionization chambers:** Measure radiation fields and help evaluate external exposure or dose rates.
+- **Survey probes:** Detect radiation and may help identify contamination on surfaces, equipment, or personnel.
+- **Geiger-Müller counters:** Register individual radiation detection events and provide count-rate information.
+
+Understanding how these instruments operate helps responders select appropriate equipment, interpret measurements, and recognize the limitations of the data collected.
 
 ### Summary: What Are We Measuring?
 
@@ -2541,36 +3267,41 @@ The radiation type, energy, distance, exposure time, shielding, and absorbing me
 
 For hazardous materials management, answering this question helps determine **which instrument to use, which units to interpret, and which protective measures are appropriate**.
 
----- YOU ARE HERE ---- YOU SHOULD TRY AND UPDATE THE 4.6 section with images from the UW or NASA powerpoints
+## Interaction of Ionizing Radiation with the Body
 
-## 4.7 Ionization and Biological Effects of Radiation
+::: {.callout-note title="Lecture Development Placeholder: Interaction of Radiation and the Body" collapse="true"}
+**To develop:** Explain ionization and molecular damage, direct and indirect effects, DNA damage and repair, and differences between external exposure and internal contamination. Connect radiation type, absorbed dose, and tissue sensitivity to possible outcomes.
 
-##### Ionization and Biological Injury
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
 
-**Ionization** can initiate chemical changes in living tissue. Radiation may damage a biological molecule **directly** by depositing energy in it, or **indirectly** by ionizing nearby molecules, including water, and producing reactive chemical species that subsequently interact with cellular structures.
+## Biological Effects: Stochastic and Tissue Reactions
 
-**Free radicals** are atoms or molecules with an unpaired electron; some are highly reactive. Radiation-induced chemical reactions may damage proteins, cell membranes, and **DNA**, the molecule that stores genetic information.
+::: {.callout-note title="Lecture Development Placeholder: Stochastic vs. Non-Stochastic Effects" collapse="true"}
+**To develop:** Contrast stochastic effects such as radiation-induced cancer with tissue reactions (formerly called deterministic or non-stochastic effects), which have threshold-like behavior and increase in severity with dose. Include an introductory analytical X-ray device incident and a documented acute radiation accident as case studies; verify details and avoid equating every exposure with acute radiation syndrome.
 
-Not every ionization event causes lasting injury. Cells have mechanisms that can repair some damage. However, injury may occur when damage is extensive, occurs in a sensitive location, or is not repaired correctly.
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
 
-**Connecting the chemistry to health:** Nuclear decay produces radiation; radiation transfers energy to matter; ionization can initiate chemical reactions; and some of those reactions can damage cells and tissues.
+# Part V. Radiation Protection and Hazardous Materials Response
 
-##### Biological Effects of Radiation
+## Annual Sources of Radiation Exposure
 
-The effects of ionizing radiation depend on **absorbed dose**, **dose rate**, radiation type, the tissues exposed, and whether exposure is external or results from radioactive material entering the body.
+::: {.callout-note title="Lecture Development Placeholder: Annual Radiation Exposure Sources" collapse="true"}
+**To develop:** Add an authoritative U.S. annual average exposure chart distinguishing natural background (e.g., radon, cosmic, terrestrial, internal) and human-made sources (especially medical imaging). Clearly identify the population, year, units (mSv/year), and source; distinguish average population exposure from an individual dose.
 
-Two broad categories help us interpret potential health effects:
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
 
-- **Tissue reactions (deterministic effects):** These generally occur only after a sufficient dose has been delivered to a tissue. Above that threshold, the severity of injury tends to increase with dose. Examples at sufficiently high doses include skin injury and radiation sickness.
-- **Stochastic effects:** These are effects for which the *probability* of occurrence, rather than severity, is modeled as increasing with dose. Radiation-induced cancer is the principal example considered in radiation protection. A particular exposure does **not** mean that cancer will necessarily occur.
+## Radiography and Industrial Applications
 
-**External exposure** occurs when radiation reaches a person from a source outside the body. **Internal contamination** occurs when radioactive material enters the body, for example through inhalation, ingestion, or an open wound. A person can be exposed to radiation without becoming contaminated.
+::: {.callout-note title="Lecture Development Placeholder: Radiography" collapse="true"}
+**To develop:** Introduce medical and industrial radiography, X-ray tubes versus sealed gamma-ray sources, common uses, exposure hazards, controlled areas, and the importance of source security and radiation surveys.
 
-These distinctions explain why **alpha-emitting materials**, despite having low external penetration, may pose a serious hazard when taken into the body, while **penetrating gamma radiation** can pose a significant external exposure hazard.
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
 
-*Source guidance: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.); Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, “Biological Effects of Radiation.” Specific dose-response thresholds are intentionally not assigned here.*
-
-## 4.8 Radiation Penetration and Shielding
+## Radiation Penetration and Shielding
 
 We have already compared the penetrating ability of alpha, beta, gamma, and neutron radiation. **Penetration** describes how readily radiation passes through matter; **shielding** uses appropriately selected material to reduce the amount of radiation reaching a person or area.
 
@@ -2587,6 +3318,12 @@ We have already compared the penetrating ability of alpha, beta, gamma, and neut
 
 ### Principles of Radiation Protection
 
+::: {.callout-note title="Lecture Development Placeholder: ALARA" collapse="true"}
+**To develop:** Define As Low As Reasonably Achievable as an optimization principle, not a replacement for regulatory dose limits. Connect ALARA to time, distance, shielding, work planning, and contamination controls.
+
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
+
 Three foundational controls for **external radiation exposure** are:
 
 1.  **Time:** Reduce the time spent in an area with an elevated radiation field.
@@ -2601,40 +3338,76 @@ For a point-like source under suitable conditions, radiation intensity decreases
 
 *Source guidance: Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.), radiation chapter; Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.).*
 
-## 4.9 Returning to Nuclear Stability
+### How Shielding Materials Differ
 
-Earlier, we introduced the **neutron-to-proton ratio** and the **belt of nuclear stability**. We can now return to that model with a practical question: **Why do different unstable nuclei emit different types of radiation?**
+::: {.callout-note title="Lecture Development Placeholder: Shielding" collapse="true"}
+**To develop:** Add an introductory comparison of alpha, beta, gamma/X-ray, and neutron shielding, with attention to energy, thickness, geometry, bremsstrahlung, and secondary radiation. Reinforce the existing shielding table rather than repeat it.
 
-![Band of nuclear stability showing the relationship between atomic number and mass number, including the 1:1 neutron-to-proton ratio and regions of nuclear instability.](nuclear-stability.jpg){#fig-nuclear-stability fig-alt="Graph illustrating the band of nuclear stability and regions of nuclear instability" width="100%"}
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
 
-### Predicting Common Nuclear Transformations
+#### Plastic, Concrete, and Lead
 
-- **Neutron-rich nuclei** may undergo **beta-minus decay**, converting a neutron to a proton. We saw this with strontium-90 (${}^{90}_{38}\mathrm{Sr}$).
-- **Proton-rich nuclei** may undergo **positron emission** or **electron capture**, converting a proton to a neutron. We saw electron capture in the iodine-125 (${}^{125}_{53}\mathrm{I}$) example.
-- **Very heavy nuclei** may undergo **alpha decay**, reducing both their proton number and mass number. We saw this with polonium-212 (${}^{212}_{84}\mathrm{Po}$).
-- An **excited nucleus** may release energy by **gamma emission** without changing its proton or neutron count. We saw this with technetium-99m (${}^{99m}_{43}\mathrm{Tc}$).
+Different materials are useful for different radiation protection purposes.
 
-These are **general patterns**, not a rule that uniquely predicts the decay of every isotope. Nuclear energy levels and other factors determine which transformations are possible.
+- **Plastic:** Low-atomic-number materials can be useful for shielding beta radiation.
+- **Concrete:** Commonly used for attenuation of penetrating photon radiation and, depending on its composition and thickness, neutron radiation.
+- **Lead:** A dense, high-atomic-number material commonly used to attenuate X-rays and gamma rays.
 
-### Nuclear Binding Energy
+Shielding effectiveness depends on radiation energy, material composition, and thickness. For example, lead is useful for many X-ray and gamma-ray applications, but hydrogen-rich materials are often important for slowing fast neutrons. Shielding must therefore be selected for the specific radiation hazard.
 
-The **strong nuclear interaction** helps hold protons and neutrons together in the nucleus despite the electrical repulsion between positively charged protons.
+We will examine these interactions in greater detail in the next section on radiation penetration and shielding.
 
-**Nuclear binding energy** is the energy required to separate a nucleus into its individual protons and neutrons. A related concept, **mass defect**, is the difference between the mass of a bound nucleus and the combined masses of its separated nucleons. Mass and energy are related through Einstein's equation:
+*Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), radiation interactions with matter and radiation dosimetry; Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.), radiation interactions and shielding materials; University of Washington Environmental Health and Safety, Ionizing Radiation Safety: External Radiation (2022), exposure and absorbed-dose measurements.*
 
-$$
-E=mc^2
-$$
+## ALARA Goals and Radiation Protection Planning
 
-Where $E$ is energy, $m$ is mass, and $c$ is the speed of light in a vacuum. We introduce this relationship conceptually here; detailed binding-energy calculations are beyond the scope of this lecture.
+::: {.callout-note title="Lecture Development Placeholder: ALARA Goals" collapse="true"}
+**To develop:** Explain how a radiation safety program establishes dose constraints, reviews exposure trends, and uses investigation levels to keep occupational exposures reasonably low. Clearly distinguish institutional ALARA goals from enforceable limits.
 
-*Source: Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, “Nuclear Stability” and “Nuclear Binding Energy.”*
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
 
-# Part III. The Electromagnetic Spectrum and Non-Ionizing Radiation
+## Radiation Warning Signs and Controlled Areas
+
+::: {.callout-note title="Lecture Development Placeholder: Warning Signs" collapse="true"}
+**To develop:** Introduce the ionizing radiation trefoil, radioactive material labels, radiation area and high radiation area postings, and basic access-control principles. Include images only after verifying official source and reuse permissions.
+
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
+
+## Ionizing Radiation Regulation
+
+### NRC Occupational Dose Limits
+
+::: {.callout-note title="Lecture Development Placeholder: NRC Occupational Limits and Dose Limits" collapse="true"}
+**To develop:** Verify current 10 CFR Part 20 requirements using the official NRC text before inserting numerical limits. Distinguish occupational whole-body effective dose, organ/tissue limits, declared pregnant worker embryo/fetus dose, public dose limits, and special conditions. Clarify NRC jurisdiction versus OSHA and Agreement State requirements.
+
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
+
+### Relevant U.S. Agencies
+
+In the United States, relevant organizations may include:
+
+- **Nuclear Regulatory Commission (NRC):** Regulates certain uses of radioactive materials and nuclear facilities, alongside authorized state programs.
+- **Occupational Safety and Health Administration (OSHA):** Enforces applicable workplace safety and health requirements, including ionizing-radiation provisions in covered workplaces.
+- **Environmental Protection Agency (EPA):** Establishes certain environmental radiation standards and provides radiological emergency guidance.
+- **Food and Drug Administration (FDA):** Regulates medical radiation-emitting electronic products and radiopharmaceuticals within its statutory responsibilities.
+
+# Part VI. Non-Ionizing Radiation
+
+## The Electromagnetic Spectrum
+
+::: {.callout-note title="Lecture Development Placeholder: Electromagnetic Spectrum" collapse="true"}
+**To develop:** Add a properly sourced electromagnetic spectrum figure with frequency, wavelength, and photon-energy direction. Highlight that the boundary between ionizing and non-ionizing radiation depends on photon energy and material; retain the existing wavelength/frequency explanation below.
+
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
 
 We have examined gamma rays as high-energy **electromagnetic radiation**. However, electromagnetic radiation also includes many familiar forms of energy, such as visible light, infrared radiation, microwaves, and radio waves.
 
-## 4.9 Understanding the Electromagnetic Spectrum
+### Understanding the Electromagnetic Spectrum
 
 **Electromagnetic radiation** consists of oscillating electric and magnetic fields that transport energy through space. Its energy can also be described in terms of **photons**.
 
@@ -2660,7 +3433,7 @@ Where $h$ is Planck's constant.
 
 **Key relationship:** As wavelength decreases, frequency and photon energy increase.
 
-### From Radio Waves to Gamma Rays
+#### From Radio Waves to Gamma Rays
 
 In order of **increasing frequency and photon energy**, the major regions of the electromagnetic spectrum are:
 
@@ -2668,7 +3441,7 @@ In order of **increasing frequency and photon energy**, the major regions of the
 
 These regions form a **continuous spectrum**. Their boundaries are conventional, and X-rays and gamma rays can overlap in energy; they are commonly distinguished by their origin.
 
-### Ionizing Versus Non-Ionizing Electromagnetic Radiation
+#### Ionizing Versus Non-Ionizing Electromagnetic Radiation
 
 - **Non-ionizing radiation** generally does not have enough energy *per photon* to remove a tightly bound electron from an atom or molecule. Examples include radio waves, microwaves, infrared, and visible light.
 - **Ionizing electromagnetic radiation** includes X-rays and gamma rays, which can transfer enough energy to ionize matter.
@@ -2676,33 +3449,47 @@ These regions form a **continuous spectrum**. Their boundaries are conventional,
 
 **Important:** *Non-ionizing* does **not** mean *incapable of causing harm*. Different parts of the spectrum interact with tissue through different mechanisms.
 
-## 4.10 Familiar Sources of Non-Ionizing Radiation
+## Non-Ionizing Radiation: Exposure and Protection
 
-### Infrared Radiation
+::: {.callout-note title="Lecture Development Placeholder: Non-Ionizing Radiation" collapse="true"}
+**To develop:** Provide an overview of UV, visible light, infrared, microwave/RF, and low-frequency fields. Emphasize different mechanisms of harm and measurement units; do not imply all non-ionizing radiation has identical health effects.
+
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
+
+### Familiar Sources of Non-Ionizing Radiation
+
+#### Infrared Radiation
 
 **Infrared (IR)** lies beyond the red end of visible light, at longer wavelengths. Warm objects emit infrared radiation. At sufficiently high intensities, IR can contribute to **heating** and thermal injury, particularly to the skin and eyes.
 
 **Occupational examples:** Furnaces, molten materials, heat lamps, and high-temperature industrial processes.
 
-### Visible Light
+#### Visible Light
 
 **Visible light** is the portion of the electromagnetic spectrum detected by the human eye. Very intense light, including some laser beams and welding arcs, can damage the eyes.
 
 **Occupational examples:** High-intensity lamps, lasers, and welding operations.
 
-### Ultraviolet Radiation
+#### Ultraviolet Radiation
 
 **Ultraviolet (UV)** has shorter wavelengths and higher photon energies than visible light. UV exposure can cause **sunburn**, **photokeratitis** (painful inflammation of the cornea), and longer-term damage to the skin and eyes.
 
 **Occupational examples:** Outdoor work in sunlight, welding arcs, and certain UV disinfection equipment.
 
-### Microwaves and Radio Waves
+#### Microwaves and Radio Waves
+
+::: {.callout-note title="Lecture Development Placeholder: Radiofrequency (RF) Radiation" collapse="true"}
+**To develop:** Explain frequency, field strength, power density, and specific absorption rate (SAR) at an introductory level; distinguish near-field and far-field measurements where relevant. Include occupational RF sources, thermal effects at sufficiently high exposures, and controls such as access restriction and de-energization. NASA AFRC RF training may be used as an instructor reference, with applicable FCC/OSHA/IEEE sources checked.
+
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
 
 **Radiofrequency (RF) radiation** includes radio waves and the microwave region. These waves are used to transmit information wirelessly. At sufficiently high exposure levels, RF energy can produce **heating** in biological tissue.
 
 **Everyday and occupational examples:** Broadcast antennas, radar, telecommunications equipment, wireless networking, and certain industrial heating equipment.
 
-### Where Do Mobile Phones, Wi-Fi, Bluetooth, and AirDrop Fit?
+#### Where Do Mobile Phones, Wi-Fi, Bluetooth, and AirDrop Fit?
 
 | Technology | What it uses | Region of the spectrum |
 |:-----------------------|:-----------------------|:-----------------------|
@@ -2717,18 +3504,15 @@ These regions form a **continuous spectrum**. Their boundaries are conventional,
 
 **Important distinction:** A wireless signal carrying data is not the same as radioactive decay. A phone or router transmitting RF signals is not thereby a radioactive source.
 
-## 4.11 Radiation Safety, Standards, and Regulation
+## Lasers: A Focused Non-Ionizing Radiation Hazard
 
-Different kinds of radiation fall under different regulatory and professional frameworks. No single agency regulates every radiation source or every possible exposure.
+::: {.callout-note title="Lecture Development Placeholder: Lasers" collapse="true"}
+**To develop:** Introduce laser light, wavelength, direct and reflected beam hazards, retinal/corneal/skin injury, and basic laser classes. Explain wavelength-specific protective eyewear, optical density, beam enclosures, interlocks, warning signs, and non-beam hazards. Instructor reference: NASA Armstrong Flight Research Center Laser Safety Training (2021), especially electromagnetic spectrum, eye/skin hazards, laser classifications, and controls. Verify applicable ANSI and NASA standards before publishing specific requirements.
 
-### Ionizing Radiation
+**Teaching framework:** What is it? What harm can it cause? How is it measured? How are people protected?
+:::
 
-In the United States, relevant organizations may include:
-
-- **Nuclear Regulatory Commission (NRC):** Regulates certain uses of radioactive materials and nuclear facilities, alongside authorized state programs.
-- **Occupational Safety and Health Administration (OSHA):** Enforces applicable workplace safety and health requirements, including ionizing-radiation provisions in covered workplaces.
-- **Environmental Protection Agency (EPA):** Establishes certain environmental radiation standards and provides radiological emergency guidance.
-- **Food and Drug Administration (FDA):** Regulates medical radiation-emitting electronic products and radiopharmaceuticals within its statutory responsibilities.
+## Non-Ionizing Radiation Standards and Regulation
 
 ### Non-Ionizing Radiation and Wireless Technologies
 
@@ -2740,7 +3524,7 @@ In the United States, relevant organizations may include:
 
 **Regulatory distinction:** A scientific exposure guideline, an industry standard, and an enforceable regulation are not necessarily the same thing. Applicable requirements depend on the radiation source, workplace, device, and jurisdiction.
 
-### Closing Perspective: Thinking Like a Chemist and a HazMat Responder
+## Closing Perspective: Thinking Like a Chemist and a HazMat Responder
 
 We began by examining how scientists used experimental evidence to identify electrons, protons, neutrons, and the atomic nucleus. We then used that model to explain **nuclear stability**, **radioactive decay**, **ionization**, and **biological effects**.
 
@@ -2760,11 +3544,17 @@ Our goal is to use scientific evidence to evaluate those questions and make defe
 2.  Atkins, Peter, Loretta Jones, Leroy Laverman, James Patterson, and Michael Young. *Chemical Principles*, 8th edition. **Focus 9: Nuclear Chemistry**. Used for nuclear radiation classifications and comparative properties.
 3.  Bevelacqua, Armando S., and Laurie A. Norman. *Hazardous Materials Chemistry*, 3rd edition. Jones & Bartlett Learning, radiation chapter. Used for alpha, beta, gamma, penetration, shielding, and hazardous materials response context.
 4.  Cember, Herman, and Thomas E. Johnson. *Introduction to Health Physics*, 4th edition. Used as a conceptual reference for ionization, biological effects, radiation dosimetry, and protection. Confirm chapter/page details against the instructor's edition before final publication.
-5.  **Study.com educational materials.** Previously consulted during lecture development; exact lesson titles, authors, and URLs remain to be documented if retained as cited sources.
+5.  Stewart, James, Lothar Redlin, and Saleem Watson. *Precalculus: Mathematics for Calculus*, 6th edition. Chapter 4, **Exponential and Logarithmic Functions**, especially Section 4.6 and Example 6. Used for the mathematical foundations of exponential decay, natural logarithms, radioactive half-life, the decay constant, and the worked radioactive-decay calculations in the earlier portion of Lecture 04.
+6.  **Study.com educational materials.** Previously consulted during lecture development; exact lesson titles, authors, and URLs remain to be documented if retained as cited sources.
 
 ## Regulatory and Standards References for Final Verification
 
 The lecture identifies the **NRC, OSHA, EPA, FDA, FCC, ICNIRP, and IEEE** by their general responsibilities. Before publishing the regulatory section, add links to the specific official regulations, guidance, and standards selected for the course. **No numerical exposure limits are asserted here**, because limits and their applicability depend on the source, frequency, exposure conditions, and jurisdiction.
+
+## Instructor Training Materials for Future Development
+
+- NASA Armstrong Flight Research Center (AFRC). *Laser Safety Training* (2021). Instructor-provided training slides; use as a conceptual reference for laser hazards, classifications, eye/skin injury, warning signs, and controls. Third-party content remains outside the course license.
+- NASA Armstrong Flight Research Center (AFRC). *RF Safety Training*. Instructor-provided training slides; verify dates, technical details, and applicable standards before adding content to the lecture.
 
 ## Figures and Third-Party Materials
 
