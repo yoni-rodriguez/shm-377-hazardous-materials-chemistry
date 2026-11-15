@@ -2896,7 +2896,6 @@ When electrical power is removed, X-ray production stops. This does not mean tha
 In hazardous materials management, understanding how radiation is produced helps us distinguish between **radiation-generating equipment** and **radioactive materials**.
 
 
-
 ### Ionizing Radiation Exposure Sources
 
 We have examined how ionizing radiation is produced and how it interacts with matter. But where does our exposure to ionizing radiation come from?
@@ -2905,37 +2904,112 @@ Humans are continuously exposed to ionizing radiation from both **natural backgr
 
 #### Annual Radiation Exposure
 
-Natural background radiation comes from several sources, including:
+The following figure illustrates the estimated contributions of natural background radiation and human-made sources to annual radiation exposure in the United States.
 
-- **Radon and thoron:** Radioactive gases and their decay products found in the environment.
-- **Cosmic radiation:** Radiation originating from space that reaches Earth's atmosphere and surface.
-- **Terrestrial radiation:** Radiation emitted by naturally occurring radioactive materials in soil, rocks, and other materials.
-- **Internal radiation:** Radiation from naturally occurring radionuclides already present in the body.
+![EPA chart showing the estimated sources of average annual radiation exposure in the United States.](nasa-afrc-annual-radiation-exposure.jpg){#fig-annual-radiation-exposure fig-alt="EPA pie chart showing the distribution of average annual U.S. radiation exposure from natural background radiation, medical procedures, and other sources" width="100%"}
 
-Human-made sources include medical imaging, nuclear medicine, occupational activities, industrial applications, and consumer products.
+According to the [U.S. Environmental Protection Agency (EPA)](https://www.epa.gov/radiation/radiation-sources-and-doses#averagedoses), citing the National Council on Radiation Protection and Measurements (NCRP), Report No. 160, the estimated **average annual effective dose from ionizing radiation in the United States is 6.2 millisieverts (mSv), or 620 millirem (mrem), per person**.
 
-![Annual radiation exposure from natural background, medical, occupational, industrial, and consumer sources.](nasa-afrc-annual-radiation-exposure.jpg){#fig-annual-radiation-exposure fig-alt="Chart showing the estimated distribution of annual radiation exposure from radon and thoron, cosmic radiation, terrestrial radiation, internal radionuclides, medical imaging, and other sources" width="100%"}
+The figure highlights several important sources of radiation exposure:
 
-*Source: NASA Armstrong Flight Research Center (AFRC), Radiation Safety Training. Data attributed to the National Council on Radiation Protection and Measurements (NCRP), Report No. 160.*
+- **Natural background radiation (approximately 3.1 mSv/year):** Includes radon and thoron, cosmic radiation, terrestrial radiation, and naturally occurring radionuclides that enter the body through food, drinking water, and inhalation.
+- **Medical radiation (approximately 3.0 mSv/year):** Includes diagnostic imaging, particularly computed tomography (CT), and nuclear medicine procedures.
+- **Other human-made sources:** Include consumer products, occupational activities, and industrial applications, which contribute comparatively little to the population average.
 
-Notice that **radon and thoron** represent a substantial contribution to natural background radiation exposure.
+Notice that **radon and thoron are major contributors to natural background radiation exposure**, while medical procedures account for much of the human-made contribution.
 
-Medical procedures, particularly computed tomography (CT) and nuclear medicine, also contribute to population radiation exposure.
+**Note:** These values represent historical U.S. population averages based primarily on 2006 exposure data, as reported in NCRP Report No. 160 (2009). Individual radiation doses vary depending on geographic location, medical procedures, occupation, and other exposure conditions.
 
-**Note:** The percentages shown represent historical estimates of average radiation exposure in the United States, based primarily on data from 2006. They do not describe the exposure received by every individual. Actual exposure depends on location, medical procedures, occupation, and other factors.
+*Source: [U.S. Environmental Protection Agency (EPA), Radiation Sources and Doses: Average U.S. Doses and Sources](https://www.epa.gov/radiation/radiation-sources-and-doses#averagedoses). Data attributed to NCRP Report No. 160 (2009).*
+
+
 
 ##### Natural Background Sources of Ionizing Radiation in the United States
 
-The primary natural background source of ionizing radiation in the United States is **radon**, a naturally occurring radioactive gas that can accumulate inside homes and other buildings.
+According to NCRP Report No. 160, the historical average annual effective dose from natural background radiation in the United States is approximately **3.11 mSv/year (311 mrem/year)**.
 
-According to the historical estimates presented in NCRP Report No. 160, natural background radiation exposure in the United States comes from several sources:
+The major contributors include:
 
-- **Radon and thoron (approximately 68%):** Naturally occurring radioactive gases and their decay products that can accumulate indoors and contribute to radiation exposure through inhalation.
-- **Internal radionuclides (approximately 14%):** Naturally occurring radioactive isotopes, including potassium-40 (${}^{40}_{19}\mathrm{K}$) and polonium-210 (${}^{210}_{84}\mathrm{Po}$), that may be present in the body. Radioactive isotopes in the environment can enter the food chain and eventually the human body.
-- **Cosmic radiation (approximately 11%):** Radiation originating from space, including particles associated with solar activity and other cosmic sources. Exposure varies with altitude and geographic location.
-- **Terrestrial radiation (approximately 7%):** Radiation emitted by naturally occurring radioactive materials in soil, rocks, and building materials, including granite, marble, and brick.
+- **Radon and thoron (2.28 mSv/year):** Naturally occurring radioactive gases and their decay products, which contribute to internal radiation exposure primarily through inhalation.
+- **Cosmic radiation (0.33 mSv/year):** Radiation originating from space. Exposure varies with altitude and geographic location.
+- **Internal radionuclides (0.29 mSv/year):** Naturally occurring radioactive isotopes, including potassium-40 (${}^{40}_{19}\mathrm{K}$) and polonium-210 (${}^{210}_{84}\mathrm{Po}$), that enter the body through food, drinking water, and other environmental exposure pathways.
+- **Terrestrial radiation (0.21 mSv/year):** Radiation emitted by naturally occurring radioactive materials in soil, rocks, and building materials.
 
-**Note:** These percentages describe the estimated distribution of natural background radiation exposure, not total exposure from all sources. They are based on historical U.S. population estimates and may not represent current exposure patterns or individual circumstances.
+Of these sources, **radon and thoron account for the largest contribution to natural background radiation exposure**.
+
+*Source: National Council on Radiation Protection and Measurements (NCRP), Report No. 160 (2009), as summarized by the [U.S. Environmental Protection Agency (EPA)](https://www.epa.gov/radiation/radiation-sources-and-doses#averagedoses).*
+
+###### How Is Radon Gas Formed?
+
+Radon is a naturally occurring radioactive noble gas produced through the decay of radioactive elements found in rocks and soils.
+
+In the uranium-238 decay series, uranium undergoes several radioactive transformations before producing radium-226. Radium-226 then undergoes alpha decay to produce radon-222:
+
+$$
+{}^{226}_{88}\mathrm{Ra}
+\rightarrow
+{}^{222}_{86}\mathrm{Rn}
++
+{}^{4}_{2}\mathrm{He}
+$$
+
+Where:
+
+- **Radium-226 (${}^{226}_{88}\mathrm{Ra}$):** The radioactive parent nuclide.
+- **Radon-222 (${}^{222}_{86}\mathrm{Rn}$):** The radioactive daughter nuclide produced by alpha decay.
+- **Alpha particle (${}^{4}_{2}\mathrm{He}$):** A helium nucleus consisting of two protons and two neutrons.
+
+Because radon is a gas, it can escape from mineral grains and migrate through pores, fractures, and other openings in surrounding soil and rock.
+
+Some radon reaches the outdoor atmosphere, while some enters groundwater or migrates toward buildings.
+
+*Sources: [U.S. Geological Survey (USGS), What Is Radon?](https://www.usgs.gov/faqs/what-radon); [U.S. Environmental Protection Agency (EPA), How Does Radon Get Into Your Home?](https://www.epa.gov/radon/how-does-radon-get-your-home).*
+
+###### Why Do Radon Concentrations Vary Across the United States?
+
+Although radon is produced naturally, its concentration is not uniform across the United States.
+
+The amount of radon produced and its movement through the environment depend on several factors:
+
+- **Geology:** The concentrations of uranium and radium in local rocks and soils influence the amount of radon that can be produced.
+- **Soil permeability:** The ability of soil and rock to transmit gases influences how readily radon can migrate toward the surface.
+- **Glacial deposits:** In some regions, glacially transported sediments contain uranium- and radium-bearing minerals that contribute to local radon potential.
+- **Building characteristics:** Foundations, basements, crawl spaces, and openings around pipes can provide pathways for radon to enter indoor spaces.
+- **Ventilation and pressure differences:** Air movement and pressure differences between buildings and the surrounding soil influence how much radon enters and accumulates indoors.
+
+The following map illustrates generalized geologic radon potential across the United States.
+
+![Generalized geologic radon potential across the United States, showing regions of low, moderate, and high predicted indoor radon concentrations.](geological-radon-potentail-united-states.jpg){#fig-usgs-geologic-radon-potential fig-alt="USGS map showing generalized geologic radon potential across the United States. Cyan indicates low potential below 2 pCi/L, yellow indicates moderate or variable potential between 2 and 4 pCi/L, and magenta indicates high potential above 4 pCi/L." width="100%"}
+
+*Source: U.S. Geological Survey (USGS), Generalized Geologic Radon Potential of the United States. Based on USGS Open-File Report 93-292 (1993). Map reproduced in [U.S. EPA, Pennsylvania Radon Program: An Update (2022)](https://www.epa.gov/system/files/documents/2022-08/An-Update-PA-Radon-Program.pdf).*
+
+The researchers identified elevated predicted indoor radon concentrations in portions of the **Midwest and northern Great Plains**, including parts of North Dakota, South Dakota, Iowa, and Nebraska.
+
+However, **a regional map cannot determine the radon concentration inside an individual building**. Indoor concentrations also depend on local geology, building construction, ventilation, and other factors.
+
+###### How Does Radon Enter Buildings?
+
+The geographic distribution of radon helps us understand where elevated concentrations may occur, but it does not explain how radon reaches people.
+
+To understand the potential for exposure, we must consider how radon moves from its source in the environment into indoor spaces.
+
+The following illustration from the Centers for Disease Control and Prevention (CDC) shows how radon can enter buildings from the surrounding soil and through groundwater.
+
+![Illustration showing pathways through which radon can enter a home from surrounding soil and groundwater.](cdc-radon-home.jpg){#fig-cdc-radon-home fig-alt="CDC illustration showing radon moving from surrounding soil through foundation openings and entering a home through groundwater and household water use" width="100%"}
+
+Radon can enter homes and other buildings through cracks and openings in foundations, floors, walls, and around plumbing penetrations.
+
+Radon can also dissolve in groundwater and enter buildings through the household water supply, particularly when water comes from underground sources such as private wells.
+
+According to the [Connecticut Department of Public Health](https://portal.ct.gov/dph/environmental-health/radon/radon-in-water?language=en_US), radon dissolved in water can be released into indoor air when water is heated or agitated during activities such as showering, washing clothes, or cooking.
+
+Once indoors, radon may accumulate depending on building ventilation, air pressure differences, and other environmental conditions.
+
+*Sources: Centers for Disease Control and Prevention (CDC), [Radon in the Home](https://www.cdc.gov/radon/about/radon-home.html); Connecticut Department of Public Health, [Radon in Water](https://portal.ct.gov/dph/environmental-health/radon/radon-in-water?language=en_US).*
+
+The presence of naturally occurring radioactive materials in the environment does not automatically determine an individual's radiation exposure. We must also consider **how radioactive substances move through the environment, how they enter buildings, and whether an exposure pathway exists**.
+
+These pathways are particularly important for understanding radon as an indoor air quality hazard.
 
 #### Average Background Radiation and Common Exposure Sources
 
@@ -2953,13 +3027,59 @@ Similarly, exposure to radon can vary considerably depending on local geology an
 
 The figure provides examples to help us put radiation exposure into perspective. However, it is important to distinguish between **annual exposure**, **dose from a single procedure**, and **regulatory dose limits**.
 
-These values describe different circumstances and should not be interpreted as equivalent exposure scenarios.
+##### Radioactive Materials in Cigarette Smoke
+
+Another example of radiation exposure comes from cigarette smoking.
+
+Tobacco plants can accumulate naturally occurring radioactive materials, particularly **lead-210 (${}^{210}_{82}\mathrm{Pb}$)** and **polonium-210 (${}^{210}_{84}\mathrm{Po}$)**.
+
+These radionuclides originate from naturally occurring radioactive decay processes involving uranium, radium, and radon in the environment.
+
+According to the [U.S. Environmental Protection Agency (EPA)](https://www.epa.gov/radtown/radioactivity-tobacco), radioactive materials can enter tobacco plants through their roots or become deposited on the surfaces of their leaves. Some radioactive decay products remain attached to tobacco leaves even after processing.
+
+When a person smokes a cigarette, radioactive particles can be inhaled and deposited within the respiratory tract.
+
+This is particularly important for **polonium-210**, which undergoes alpha decay:
+
+$$
+{}^{210}_{84}\mathrm{Po}
+\rightarrow
+{}^{206}_{82}\mathrm{Pb}
++
+{}^{4}_{2}\mathrm{He}
+$$
+
+Where:
+
+- **Polonium-210 (${}^{210}_{84}\mathrm{Po}$):** The radioactive parent nuclide.
+- **Lead-206 (${}^{206}_{82}\mathrm{Pb}$):** The stable daughter nuclide.
+- **Alpha particle (${}^{4}_{2}\mathrm{He}$):** A helium nucleus consisting of two protons and two neutrons.
+
+Although alpha particles have limited penetration through intact skin, they can deposit energy in nearby biological tissues when emitted by radioactive material inside the body.
+
+The [Centers for Disease Control and Prevention (CDC)](https://www.cdc.gov/radiation-health/data-research/facts-stats/cigarette-smoking.html) explains that lead-210 and polonium-210 can accumulate in the lungs of people who smoke, contributing to radiation exposure and lung cancer risk.
+
+**Important distinction:** The principal causes of smoking-related cancer include the many chemical carcinogens present in tobacco smoke. Radioactive materials represent an additional potential contributor to radiation-induced cellular damage.
+
+This example illustrates an important concept in hazardous materials chemistry: **the biological hazard associated with radioactive material depends not only on the type of radiation emitted, but also on where the radioactive material is located relative to the body**.
+
+To understand this distinction, we must differentiate between radiation reaching the body from an external source and radioactive material entering the body through inhalation, ingestion, or other exposure pathways.
+
+*Sources: [U.S. Environmental Protection Agency (EPA), Radioactivity in Tobacco](https://www.epa.gov/radtown/radioactivity-tobacco); [Centers for Disease Control and Prevention (CDC), Facts About Cigarette Smoking and Radiation](https://www.cdc.gov/radiation-health/data-research/facts-stats/cigarette-smoking.html).*
+
+##### Comparing Radiation Doses from Different Sources
+
+We have examined several sources of ionizing radiation, including natural background radiation, medical procedures, and radon.
+
+However, **not all radiation exposures deliver the same dose**, and the presence of radioactive material does not necessarily mean that a person receives a high radiation dose.
+
+The following figure compares radiation doses associated with different sources and activities. Notice how the relative magnitudes differ depending on the source and exposure conditions.
 
 ![Comparison of average radiation doses from common natural and medical sources.](average-radiation-doses-from-common-sources.jpg){#fig-average-radiation-doses fig-alt="Radiation dose comparison chart showing millirem and millisievert values for CT scans, medical X-rays, radon, cosmic radiation, and terrestrial radiation" width="100%"}
 
 *Source: National Council on Radiation Protection and Measurements (NCRP), Report No. 160, as attributed in the figure.*
 
-The figures use two units commonly encountered in radiation protection:
+The figure uses two units commonly encountered in radiation protection:
 
 - **Millirem (mrem):** One-thousandth of a rem, a traditional unit used for radiation protection dose quantities.
 - **Millisievert (mSv):** One-thousandth of a sievert, the corresponding SI unit for equivalent or effective dose.
@@ -2970,47 +3090,870 @@ $$
 1\ \mathrm{mSv}=100\ \mathrm{mrem}
 $$
 
-We will examine radiation dose quantities and their interpretation in greater detail in Part IV.
+When interpreting the figure, remember that **annual background radiation, a single medical procedure, and occupational dose limits describe different exposure scenarios**. Their numerical values should not be interpreted as directly equivalent situations.
 
-##### Radon Exposure and Indoor Air Quality
+#### Types of Radiation Exposure: External vs. Internal
 
-Radon is a major contributor to natural background ionizing radiation exposure, although the amount of exposure varies considerably with local geology, soil conditions, and building characteristics.
+Radiation can reach the body from a source outside it, or radioactive material can enter the body. These situations require different exposure assessments and protective measures.
 
-The U.S. Environmental Protection Agency (EPA) identifies radon as the **second leading cause of lung cancer in the United States after cigarette smoking**, with an estimated 21,000 radon-related lung cancer deaths annually.
+![University of Washington illustration comparing external radiation exposure and internal radiation exposure.](uw-types-of-radiation-exposure.jpg){#fig-types-radiation-exposure fig-alt="Comparison of external radiation reaching a person from outside the body and internal radiation emitted by radioactive material inside the body" width="100%"}
 
-Radon can enter homes and other buildings through cracks and openings in foundations, floors, and walls. Once inside, it may accumulate, particularly in areas with limited ventilation.
+Two important distinctions are:
 
-![Illustration of radon entering a building and contributing to indoor radiation exposure.](cdc-radon-home.jpg){#fig-ncrp-radon-home fig-alt="Illustration showing pathways through which radon can enter a home from the surrounding soil" width="100%"}
+- **External irradiation:** Radiation emitted by a source outside the body reaches a person. This does not necessarily leave radioactive material on or inside the person.
+- **Internal contamination:** Radioactive material enters the body through inhalation, ingestion, a wound, or injection and can irradiate tissues from within.
 
-The EPA recommends taking action to reduce indoor radon concentrations when testing identifies levels at or above:
+An alpha emitter may present a relatively limited external radiation hazard because alpha particles have low penetrating ability. However, the same radioactive material may present a significant hazard if inhaled or ingested.
+
+In contrast, penetrating gamma radiation can expose internal tissues even when the radioactive source remains outside the body.
+
+**Important distinction:** A person can be exposed to radiation without becoming contaminated with radioactive material.
+
+For hazardous materials responders, determining whether the primary concern is external irradiation, radioactive contamination, or both helps guide exposure assessments and protective measures.
+
+*Source: University of Washington, Environmental Health & Safety, Ionizing Radiation Safety – Internal Radiation, Philip Campbell, CHP, Spring 2022.*
+
+### Internal Contamination and Biological Distribution
+
+What happens when radioactive material enters the body?
+
+Unlike an external radiation source, radioactive material taken into the body may remain present and continue irradiating surrounding tissues.
+
+Its **chemical behavior** affects where it travels, how it interacts with biological systems, and which tissues may receive a radiation dose.
+
+Radioactive material may circulate through the bloodstream, accumulate in particular organs, or be eliminated through biological processes.
+
+![Radiological contamination and its relationship to radiation exposure.](contamination.jpg){#fig-radiological-contamination fig-alt="University of Washington radiation safety educational illustration addressing radioactive contamination." width="85%"}
+
+
+#### Exposure Pathways and Movement Through the Body
+
+There are several pathways through which radioactive material may enter the body:
+
+- **Ingestion:** Radioactive material enters through the gastrointestinal tract, where some may be absorbed into the bloodstream.
+- **Inhalation:** Airborne radioactive particles or gases enter the respiratory tract. Depending on their properties, they may be retained, cleared, swallowed, or absorbed into the bloodstream.
+- **Injection or wounds:** Radioactive material may enter through punctures, contaminated wounds, or other breaches in the skin.
+- **Absorption:** Certain radioactive substances may enter through the skin, depending on their chemical and physical properties.
+
+Once radioactive material enters the body, it may move through several biological compartments.
+
+For example, inhaled radioactive material may initially deposit in the respiratory tract. Some material may remain in the lungs, while other material may enter systemic circulation or be transported to the gastrointestinal tract.
+
+Material entering the bloodstream may subsequently reach other organs and tissues.
+
+The body may also eliminate radioactive material through urine, feces, or other biological processes.
+
+![Occupational radiation exposure pathways and the movement of radioactive material through the body.](worker-exposure.jpg){#fig-worker-exposure fig-alt="University of Washington diagram illustrating ingestion, inhalation, injection, and absorption pathways, with movement through the lung and gastrointestinal models, systemic circulation, organs, and elimination." width="85%"}
+
+**Chemical connection:** Radioactive isotopes of an element generally participate in the same chemical processes as their stable counterparts. Consequently, understanding the chemical behavior of an element can help predict where its radioactive isotopes may travel or accumulate in the body.
+
+
+
+##### Example: Radioactive Iodine, the Thyroid Gland, and Chernobyl
+
+To understand why the chemical properties of radioactive material matter, consider the thyroid gland.
+
+The **thyroid** is a small, butterfly-shaped gland located in the front of the neck. Its primary function is to produce hormones that help regulate the body's metabolism.
+
+![Anatomy of the thyroid gland, showing its location in the neck and its two lobes connected by the isthmus.](thyroid-anatomy-cleaveland-clinic.jpg){#fig-thyroid-anatomy fig-alt="Anatomical illustration of the thyroid gland located at the front of the neck, showing its butterfly-shaped structure and two lobes connected by the isthmus." width="75%"}
+
+*Image source: [Cleveland Clinic, Thyroid: What It Is, Function & Problems](https://my.clevelandclinic.org/health/body/23188-thyroid).*
+
+
+
+To produce these hormones, the thyroid requires **iodine**, an essential element obtained through the diet from sources such as iodized salt, dairy products, and seafood.
+
+After iodine is absorbed into the bloodstream, the thyroid takes up some of it and uses it to produce thyroid hormones.
+
+However, the thyroid cannot distinguish between stable iodine and radioactive isotopes of iodine.
+
+This creates a potential radiation hazard.
+
+**Iodine-131 ($^{131}\mathrm{I}$)** is a radioactive isotope produced during nuclear fission. It emits beta particles and gamma radiation and has a physical half-life of approximately 8 days.
+
+![Iodine, the chemical element essential for thyroid hormone production, including its radioactive isotope iodine-131.](iodine.jpg){#fig-iodine-131 fig-alt="CDC illustration of iodine on the periodic table, highlighting the chemical element with atomic number 53 and symbol I." width="75%"}
+
+*Image source: [Centers for Disease Control and Prevention (CDC), Iodine-131, Radiation Emergencies](https://www.cdc.gov/radiation-emergencies/hcp/isotopes/iodine-131.html), updated January 31, 2025.*
+
+If iodine-131 enters the body through contaminated food, water, or air, some of it may be absorbed into the bloodstream and subsequently concentrated in the thyroid gland.
+
+As the iodine-131 undergoes radioactive decay, it can deliver radiation dose to thyroid tissue.
+
+The amount of radiation dose received depends on how much radioactive iodine enters the body, how much accumulates in the thyroid, and how long it remains there.
+
+This provides an important example of how **the chemical behavior of an element influences where radioactive material accumulates and which organs may be exposed**.
+
+###### Historical Example: The Chernobyl Nuclear Accident (1986)
+
+On April 26, 1986, a reactor accident at the Chernobyl Nuclear Power Plant in present-day Ukraine released radioactive materials into the environment, including iodine-131.
+
+Radioactive iodine entered the environment through atmospheric releases and contaminated vegetation and food supplies.
+
+One important exposure pathway involved dairy products.
+
+Radioactive iodine deposited on pasture grass could be consumed by grazing cows and transferred into their milk.
+
+People who drank contaminated milk could then ingest iodine-131, which could subsequently accumulate in their thyroid glands.
+
+This pathway was particularly important for children, whose thyroid glands are more sensitive to radiation-related cancer risks.
+
+Following the Chernobyl accident, a substantial increase in thyroid cancer was observed among people exposed as children or adolescents in affected regions.
+
+![Thyroid cancer and the health consequences of radioactive iodine exposure following the 1986 Chernobyl nuclear accident.](thyroid-cance-chernobyl.jpg){#fig-thyroid-cancer-chernobyl fig-alt="Illustration accompanying an article about the relationship between radioactive fallout from the Chernobyl nuclear accident and thyroid cancer." width="85%"}
+
+*Image source: [Medizzy Journal, Study Assesses Link Between Thyroid Cancer and Chernobyl Fallout](https://journal.medizzy.com/study-assesses-link-between-thyroid-cancer-and-chernobyl-fallout/).*
+
+**Chemical connection:** The thyroid's normal biological function requires iodine. Unfortunately, that same biological process can concentrate radioactive iodine in thyroid tissue following internal contamination.
+
+The Chernobyl example illustrates how environmental contamination can move through the food chain and result in radiation exposure to a particular organ.
+
+*Sources: Centers for Disease Control and Prevention (CDC), [Iodine-131](https://www.cdc.gov/radiation-emergencies/hcp/isotopes/iodine-131.html), updated January 31, 2025; Cember, H., & Johnson, T. E., Introduction to Health Physics (4th ed.), discussion of the thyroid gland and iodine metabolism.*
+
+###### Why Is Iodine Added to Table Salt?
+
+You may be wondering whether iodine is added to table salt in the United States to protect people from radioactive fallout.
+
+**The answer is no.**
+
+Iodine is added to table salt primarily to prevent dietary iodine deficiency and associated health conditions, including goiter.
+
+Although the thyroid requires iodine for normal function, consuming iodized table salt does not provide effective protection against radioactive iodine exposure during a nuclear or radiological emergency.
+
+Instead, public health officials may recommend **potassium iodide (KI)** in certain emergencies involving radioactive iodine.
+
+Potassium iodide contains stable, non-radioactive iodine.
+
+When taken at the appropriate time and in the appropriate amount, KI can saturate the thyroid with stable iodine, reducing its uptake of radioactive iodine.
+
+However, several important limitations apply:
+
+- **KI protects only the thyroid gland** and does not protect other organs from radiation exposure.
+- **KI protects against radioactive iodine**, not against other radioactive materials or external radiation.
+- **Timing matters:** KI is most effective when taken shortly before or soon after exposure to radioactive iodine.
+- **Iodized salt is not a substitute for KI.** Consuming large amounts of salt to obtain iodine can be dangerous.
+- **KI should only be taken when instructed by public health officials, emergency responders, or healthcare providers.**
+
+This distinction reinforces an important principle of radiation protection: **protective measures must be selected according to the specific radioactive material and exposure pathway involved**.
+
+*Source: Centers for Disease Control and Prevention (CDC), [Potassium Iodide (KI)](https://www.cdc.gov/radiation-emergencies/treatment/potassium-iodide.html), updated January 30, 2025.*
+
+---
+
+*Additional source: University of Washington, Environmental Health & Safety, Ionizing Radiation Safety – Internal Radiation, Philip Campbell, CHP, Spring 2022. See also UW radiation safety training, "Worker Exposure Pathways," p. 17.*
+
+
+
+#### What Determines the Radiation Dose to an Organ?
+
+The location of radioactive material inside the body is important because different tissues may receive different radiation doses.
+
+![Anatomical illustration of human internal organs and their locations within the body.](netter-organ-anatomy.jpg){#fig-netter-organ-anatomy fig-alt="Medical anatomical illustration showing human internal organs and their relative positions within the body." width="85%"}
+
+*Image source: [Netter Images, Elsevier, Human Anatomy Illustration](https://www.netterimages.com/chapters.htm?book_id=160&id=23817&page=274).*
+
+When evaluating internal contamination, radiation protection professionals consider several questions:
+
+- **Radionuclide identity:** Which radioactive isotope entered the body?
+- **Amount taken in:** How much radioactive material was inhaled, ingested, or otherwise introduced?
+- **Particle size:** If radioactive material was inhaled, how large were the airborne particles, and where might they deposit in the respiratory tract?
+- **Biological distribution:** Which organs or tissues retain the radioactive material, and how much activity reaches each?
+- **Radiation type and energy:** Does the material emit alpha particles, beta particles, gamma rays, or other radiation?
+- **Exposure duration:** Was the intake a single event, or did exposure continue over an extended period?
+- **Physical decay:** How quickly does the radionuclide undergo radioactive decay?
+- **Biological elimination:** How quickly does the body remove the material?
+
+These factors help explain why the **activity of a radioactive substance alone does not determine the radiation dose received by a person**.
+
+For example, an alpha-emitting radionuclide deposited inside sensitive tissue can deliver energy over a very short distance, potentially damaging nearby cells.
+
+Furthermore, radioactive material retained in one organ may emit penetrating radiation that deposits energy in another organ.
+
+
+This introduces an important distinction between a **source organ**, where radioactive material is located, and a **target organ**, where radiation energy is deposited.
+
+The source and target organs are not necessarily the same.
+
+![Source and target organs in internal radiation dosimetry, illustrating how radioactive material located in one organ may deliver radiation dose to another organ.](source-target-organs.jpg){#fig-source-target-organs fig-alt="Scientific illustration of source and target organs in internal radiation dosimetry, showing the relationship between the location of radioactive material and the tissues receiving radiation dose." width="85%"}
+
+*Image source: [Research article available through PubMed Central (PMC11440950)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11440950/).*
+
+*Additional source: University of Washington, Environmental Health & Safety, radiation safety training, "Dose to an Organ" and "Doses to Other Organs," pp. 18 and 21.*
+
+
+
+
+#### Physical, Biological, and Effective Half-Life
+
+When radioactive material enters the body, its activity may decrease through two processes: **radioactive decay** and **biological elimination**.
+
+These processes are described using three related concepts:
+
+- **Physical Half-Life ($T_{\mathrm{phys}}$):** The time required for half of the radioactive nuclei of an isotope to undergo spontaneous nuclear decay. The physical half-life is a characteristic property of each radionuclide and is not meaningfully affected by ordinary changes in temperature, chemical form, or biological environment.
+
+- **Biological Half-Life ($T_{\mathrm{biol}}$):** The time required for the body's biological processes, including metabolism and excretion, to eliminate half of a substance from the body or a particular organ or compartment, without considering radioactive decay. Elimination may occur through urine, feces, perspiration, respiration, or other biological pathways.
+
+- **Effective Half-Life ($T_{\mathrm{eff}}$):** The time required for the radioactive activity retained in the body or a particular organ to decrease by half through the combined effects of radioactive decay and biological elimination.
+
+![Physical, biological, and effective half-life of radioactive material within the body.](effective-half-life.jpg){#fig-effective-half-life fig-alt="Illustration comparing physical half-life, biological half-life, and effective half-life, showing how radioactive decay and biological elimination combine to reduce retained radioactivity." width="85%"}
+
+*Image source: Thayalan K. [The Physics of Radiology and Imaging](https://www.jaypeedigital.com/book/9789351521716), Chapter 12, "Gamma Imaging." Jaypee Brothers Medical Publishers. DOI: 10.5005/jp/books/12361_12.*
+
+Because radioactive decay and biological elimination can occur simultaneously, the **effective half-life is shorter than either the physical or biological half-life**, provided both processes follow exponential behavior with finite, positive half-lives.
+
+For example, a radioactive substance may undergo nuclear decay while the body simultaneously removes some of that substance through urine or other biological processes.
+
+**The important distinction is that physical half-life describes a nuclear property, biological half-life describes how the body processes and eliminates a substance, and effective half-life describes the combined reduction in retained radioactivity.**
+
+Actual biological distribution and elimination may involve multiple organs or compartments and require more complex models.
+
+*Additional sources: [U.S. Nuclear Regulatory Commission, Effective Half-Life](https://www.nrc.gov/education-regulatory-research/glossary/half-life-effective); [HyperPhysics, Biological and Effective Half-Life](http://hyperphysics.phy-astr.gsu.edu/hbase/Nuclear/biohalf.html).*
+
+
+
+##### Activity Retained in an Organ Over Time
+
+Activity of radioactive material in an organ can change following an intake.
+
+Immediately following an intake, the activity measured in an organ may increase as radioactive material is transported to and taken up by that tissue.
+
+After reaching a maximum, the activity may begin to decrease as radioactive decay and biological elimination occur.
+
+![Activity of radioactive material retained in an organ or tissue over time following an intake.](activity-organ-tissue-uw.jpg){#fig-activity-organ-tissue fig-alt="University of Washington radiation safety illustration showing how radioactive activity in an organ or tissue changes over time following an intake, initially increasing as material accumulates and subsequently decreasing through radioactive decay and biological elimination." width="85%"}
+
+*Image source: University of Washington, Environmental Health & Safety, Ionizing Radiation Safety Training, "Activity in an Organ/Tissue," p. 19.*
+
+The amount of activity present in the organ therefore changes over time.
+
+Importantly, the radiation dose delivered to an organ depends not only on the activity present at one moment, but also on **how much radioactive activity is retained over time**.
+
+A radionuclide that remains in an organ for an extended period may continue irradiating nearby tissue even after the original exposure event has ended.
+
+**Conceptual connection:** Physical half-life and biological elimination help explain how long radioactive material may continue contributing to internal radiation exposure.
+
+*Source: University of Washington, Environmental Health & Safety, radiation safety training, "Activity in an Organ/Tissue" and "Effective Decay Constant," pp. 19–20.*
+
+
+
+### Biological Effects of Ionizing Radiation
+
+We have examined how radioactive materials can enter the body, accumulate in different organs, and continue emitting radiation over time.
+
+But what happens when ionizing radiation interacts with living tissue?
+
+Ionizing radiation can transfer energy to atoms and molecules within cells, potentially damaging important biological structures, including DNA.
+
+Cells may successfully repair this damage, die as a result of the injury, or survive with changes that affect their normal function.
+
+**Not every radiation exposure results in observable biological injury.** The consequences depend on several factors, including the amount of radiation received, how quickly the radiation dose is delivered, the type of radiation, and which tissues are exposed.
+
+Radiation protection professionals distinguish between two broad categories of biological effects:
+
+- **Tissue Reactions (Deterministic or Non-Stochastic Effects):** These are health effects that generally occur when a sufficiently high radiation dose is delivered to a particular tissue or organ. A **threshold dose** is believed to exist, meaning that the effect is not expected to occur below a certain radiation dose. Once that threshold is exceeded, the **severity of the injury generally increases as the radiation dose increases**. Examples include skin reddening (erythema), hair loss (epilation), cataracts, impaired reproductive function, and acute radiation syndrome (ARS).
+
+- **Stochastic Effects:** These are health effects that occur by chance. In radiation protection, the primary concern is **radiation-induced cancer**. Unlike tissue reactions, radiation protection models generally assume that there is no threshold dose below which the risk is completely absent. Instead, the **probability of developing cancer increases with radiation dose**, while the severity of the cancer does not depend on the radiation dose that initially contributed to its development.
+
+#### Historical Evidence: Survivors of Hiroshima and Nagasaki
+
+One important source of scientific evidence about the long-term health effects of ionizing radiation comes from studies of survivors of the atomic bombings of Hiroshima and Nagasaki in August 1945.
+
+Researchers have followed populations of atomic-bomb survivors over many decades to investigate relationships between radiation exposure and subsequent cancer development.
+
+![Historical photographs of survivors of the atomic bombing of Hiroshima, Japan, in August 1945.](atomic-bomb-survivors.jpg){#fig-atomic-bomb-survivors fig-alt="Historical photographs documenting survivors of the atomic bombing of Hiroshima and its human consequences." width="85%"}
+
+*Image source: [LIFE Magazine, Hiroshima: Portraits of Survivors](https://www.life.com/history/hiroshima-portraits-of-survivors/).*
+
+The following table presents cancer incidence data from a population of **86,572 atomic-bomb survivors with known radiation doses**.
+
+![Cancer incidence among 86,572 atomic-bomb survivors with known radiation doses, illustrating epidemiological evidence used to evaluate the relationship between ionizing radiation exposure and cancer risk.](cancer-incidence-among-atomic-bomb-survivors.jpg){#fig-cancer-incidence-atomic-bomb-survivors fig-alt="Table 7-9 presenting cancer incidence among 86,572 atomic-bomb survivors with known radiation doses. Excess relative risk per sievert is reported for exposure at age 30 and attained age 60, with 95 percent confidence intervals. The source also references Table 7-10, which presents BEIR VII estimates of increased cancer cases and deaths." width="95%"}
+
+*Source: National Research Council, Committee to Assess Health Risks from Exposure to Low Levels of Ionizing Radiation. BEIR VII: Health Risks from Exposure to Low Levels of Ionizing Radiation. Washington, DC: National Academies Press, 2005. Table 7-9. Reproduced with permission from the National Academies Press. Copyright © 2005, National Academy of Sciences.*
+
+Studies of atomic-bomb survivors provide important epidemiological evidence relating radiation dose to cancer risk.
+
+These findings help scientists estimate radiation-related cancer risks and develop radiation protection recommendations.
+
+
+Understanding these differences helps explain why radiation protection programs seek to prevent tissue injuries while minimizing unnecessary radiation exposure and reducing the risk of radiation-related cancer.
+
+
+
+# Part IV. Radiation Dosimetry and Protection
+
+In the previous section, we examined how ionizing radiation interacts with living tissue and how radiation exposure can produce biological effects.
+
+We learned that sufficiently high radiation doses can cause tissue reactions, while the probability of stochastic effects, particularly radiation-induced cancer, generally increases with radiation dose.
+
+These biological effects raise an important question:
+
+**If ionizing radiation can cause biological harm, how do we protect ourselves and others from unnecessary exposure?**
+
+Radiation protection programs address this question through a principle known as **ALARA**.
+
+
+
+## ALARA: As Low As Reasonably Achievable
+
+**ALARA (As Low As Reasonably Achievable)** is a fundamental principle of radiation protection that emphasizes minimizing unnecessary radiation exposure.
+
+The goal is to maintain radiation exposures as far below applicable dose limits as reasonably achievable, considering the purpose of the activity, available technology, and practical circumstances.
+
+![ALARA radiation protection principles.](alara.jpg){#fig-alara fig-alt="Illustration of the ALARA principle of radiation protection, emphasizing measures to minimize unnecessary exposure to ionizing radiation." width="85%"}
+
+*Image source: [Landauer, What Does ALARA Mean and Why Is It So Important?](https://www.landauer.com/blog/what-does-alara-mean-and-why-it-so-important)*
+
+ALARA does not mean that all radiation exposure can be eliminated. Instead, it encourages radiation safety professionals to evaluate potential exposures and implement reasonable measures to reduce them.
+
+Three fundamental methods of controlling external radiation exposure are:
+
+1. **Time:** Reduce the amount of time spent near a radiation source.
+2. **Distance:** Increase the distance between yourself and the radiation source.
+3. **Shielding:** Place appropriate protective materials between yourself and the radiation source.
+
+These principles are especially important for hazardous materials responders who may encounter radioactive materials or radiation-generating equipment.
+
+When radioactive contamination is possible, additional measures include containment, preventing inhalation or ingestion, controlling access, and conducting appropriate surveys.
+
+However, before we can determine whether radiation protection measures are effective, we must first understand **how radiation is measured**.
+
+### NRC Occupational Dose Limits
+
+The U.S. Nuclear Regulatory Commission establishes occupational and public radiation protection requirements for activities under its jurisdiction in **10 CFR Part 20**. Specific limits and monitoring requirements differ for occupational whole-body dose, individual tissues, declared pregnant workers, and members of the public. NRC rules may be administered by authorized Agreement States for certain activities; other workplaces may fall under different authorities.
+
+![NRC occupational radiation dose limits presented in radiation safety training.](nrc-occupational-dose-limits.jpg){#fig-nrc-occupational-dose-limits fig-alt="NASA Armstrong Flight Research Center radiation safety training material presenting NRC occupational radiation dose limits." width="85%"}
+
+*Source: NASA Armstrong Flight Research Center, Radiation Safety Office, Ionizing Radiation Safety Training.*
+
+![Radiation protection requirements concerning declaration of pregnancy and fetal dose limits.](declaration-of-pregnancy-and-fetus-limit.jpg){#fig-declaration-of-pregnancy-and-fetus-limit fig-alt="NASA Armstrong Flight Research Center radiation safety training material addressing declaration of pregnancy and radiation dose limits for the embryo or fetus." width="85%"}
+
+*Source: NASA Armstrong Flight Research Center, Radiation Safety Office, Ionizing Radiation Safety Training.*
+
+**Before using numerical limits for incident decisions, consult the current applicable regulation and radiation safety officer.** [NRC, 10 CFR Part 20](https://www.nrc.gov/reading-rm/doc-collections/cfr/part020/).
+
+### Relevant U.S. Agencies
+
+In the United States, relevant organizations may include:
+
+- **Nuclear Regulatory Commission (NRC):** Regulates certain uses of radioactive materials and nuclear facilities, alongside authorized state programs.
+- **Occupational Safety and Health Administration (OSHA):** Enforces applicable workplace safety and health requirements, including ionizing-radiation provisions in covered workplaces.
+- **Environmental Protection Agency (EPA):** Establishes certain environmental radiation standards and provides radiological emergency guidance.
+- **Food and Drug Administration (FDA):** Regulates medical radiation-emitting electronic products and radiopharmaceuticals within its statutory responsibilities.
+
+
+
+
+
+## How Do We Measure Ionizing Radiation?
+
+We have learned that unstable atomic nuclei release radiation as they decay and that ionizing radiation can remove electrons from atoms.
+
+But how do scientists measure something they cannot see?
+
+Radiation detection instruments allow us to measure radiation in our surroundings, including workplaces, buildings, and outdoor environments.
+
+Depending on the instrument, we can detect **alpha particles, beta particles, gamma rays, and certain other forms of ionizing radiation**.
+
+Some instruments measure radiation levels in an area, while others help us determine whether radioactive material is present on surfaces, equipment, or in the air.
+
+Before discussing how these instruments work, we need to understand two important measurements: **activity** and **exposure**.
+
+### Activity: Measuring Radioactive Decay
+
+**Activity** tells us how quickly radioactive atoms are decaying.
+
+The unit of activity is the **becquerel (Bq)**, named after Henri Becquerel.
 
 $$
-4.0\ \mathrm{pCi/L}=0.148\ \mathrm{Bq/L}
+1\ \mathrm{Bq}=1\ \mathrm{decay/s}
 $$
 
-Where:
+In other words, a radioactive source with an activity of 100 Bq undergoes an average of 100 nuclear transformations every second.
 
-- **pCi/L:** Picocuries per liter, a unit of radioactive activity concentration.
-- **Bq/L:** Becquerels per liter, the SI unit of radioactive activity concentration.
+Another unit is the **curie (Ci)**, named in honor of Pierre and Marie Curie.
 
-This is an **action level**, not a boundary between safe and unsafe exposure. Radon exposure can still present a risk below this concentration.
+$$
+1\ \mathrm{Ci}=3.7\times10^{10}\ \mathrm{Bq}
+$$
+
+This means that one curie represents 37 billion nuclear transformations per second.
+
+**Important:** Activity tells us how much radioactive decay is occurring, but it does not tell us how much radiation a person is exposed to or absorbs.
+
+*Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.); University of Washington Environmental Health and Safety, Ionizing Radiation Safety: External Radiation (2022); Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20.*
+
+### Exposure in Air
+
+**Exposure ($X$)** describes the electrical charge produced by X-rays or gamma rays through ionization in air, per unit mass of air.
+
+When these forms of radiation pass through air, they can remove electrons from atoms and molecules, producing electrically charged particles.
+
+Scientists can measure this electrical charge to help evaluate radiation exposure.
+
+Two units used to describe exposure are:
+
+- **Coulomb per kilogram (C/kg):** The SI unit of exposure.
+- **Roentgen (R):** A traditional unit of exposure, named after Wilhelm Röntgen.
+
+The conversion between these units is:
+
+$$
+1\ \mathrm{R}=2.58\times10^{-4}\ \mathrm{C/kg}
+$$
+
+**Important:** Exposure in air is not the same as the radiation dose absorbed by a person's body.
+
+### Detecting Different Types of Radiation
+
+Different types of radiation interact with matter in different ways. As a result, we need instruments designed for the radiation we want to detect.
+
+| Radiation type | How we can detect it |
+|:----------------|:----------------|
+| Alpha ($\alpha$) | Specialized alpha probes or detectors that measure radiation from radioactive material collected on filters |
+| Beta ($\beta$) | Radiation survey probes and Geiger-Müller counters designed to detect beta particles |
+| Gamma ($\gamma$) | Ionization chambers, Geiger-Müller counters, and other gamma-sensitive detectors |
+
+: Examples of Radiation Detection Methods
+
+**Not every radiation detector can detect every type of radiation.** Selecting the appropriate instrument is an important part of radiation safety.
+
+## Radiation Detection Instruments
+
+Radiation detection instruments allow radiation safety professionals to identify ionizing radiation, evaluate potential exposure hazards, and make informed decisions about worker protection.
+
+Different instruments are designed for different purposes. Some measure radiation exposure or dose rate, while others detect radioactive contamination on surfaces, equipment, or clothing.
+
+### Ionization Chambers
+
+An **ionization chamber** measures the electrical charge produced when radiation ionizes gas inside the detector.
+
+A **coulomb (C)** measures electrical charge. An **ampere (A)** measures current, or charge flowing per second:
+
+$$
+1\ \mathrm{A}=1\ \mathrm{C/s}
+$$
+
+When radiation enters an ionization chamber, it can remove electrons from gas molecules, producing positively charged ions and free electrons.
+
+For example, nitrogen gas can be ionized:
+
+$$
+\mathrm{N_2}+\text{energy}\longrightarrow\mathrm{N_2^+}+\mathrm{e^-}
+$$
+
+An electric field collects these charged particles, producing a small electrical current that the instrument can measure.
+
+![Schematic of an ionization chamber showing how ionizing radiation produces charged particles in a gas-filled chamber. Negatively charged electrons move toward the positive anode, while positively charged ions move toward the negative cathode. The resulting electrical current is measured by an ammeter.](ionization-chamber.jpg){#fig-ionization-chamber fig-alt="Diagram of a gas-filled ionization chamber with an external radiation source, positive anode, negative cathode, electrons moving toward the anode, positive ions moving toward the cathode, a DC voltage source, and an ammeter measuring the resulting ionization current" width="100%"}
+
+*Figure: Principle of operation of an ionization chamber. Adapted from [Aubase, Ionization Chamber Principle](https://aubase.com/ionization-chamber-principle/).*
+
+Properly calibrated ionization chambers can be used to evaluate radiation exposure rates or dose rates.
+
+![Ionization chamber used for radiation detection and measurement.](ion-chamber.jpg){#fig-ion-chamber fig-alt="Ionization chamber instrument presented in NASA Armstrong ionizing radiation safety training." width="85%"}
+
+*Source: NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training.*
+
+### Radiation Survey Probes
+
+Radiation survey instruments may use different types of **probes**, or detectors, depending on the radiation being measured.
+
+For example, some probes are designed to detect beta particles or gamma rays, while others are designed to identify alpha contamination.
+
+![Examples of radiation detection probes used in radiation safety surveys.](probes.jpg){#fig-radiation-probes fig-alt="Radiation survey probes presented in NASA Armstrong ionizing radiation safety training." width="85%"}
+
+*Source: NASA Armstrong Flight Research Center, Ionizing Radiation Safety Training.*
+
+Selecting the appropriate probe is important because **not every radiation detector can measure every type of ionizing radiation**.
+
+### How Does a Geiger Counter Work?
+
+A **Geiger-Müller counter**, commonly called a **Geiger counter**, is an instrument used to detect ionizing radiation, including beta particles and gamma rays when the detector is appropriately designed.
+
+The detector contains a gas-filled tube with electrodes connected to a high-voltage electrical supply.
+
+When ionizing radiation enters the tube, it interacts with the gas and produces charged particles.
+
+The process can be summarized in five steps:
+
+1. **Radiation enters the detector.** Ionizing radiation interacts with gas atoms inside the tube.
+
+2. **Ionization occurs.** Electrons are removed from gas atoms, producing positively charged ions and free electrons.
+
+3. **Electrons accelerate.** The electric field attracts electrons toward the positively charged central wire. Accelerating electrons produce additional ionization through collisions with gas atoms.
+
+4. **An electrical pulse forms.** The resulting avalanche of charged particles produces a measurable electrical pulse.
+
+5. **The instrument registers a count.** The electrical pulse is recorded electronically and may be displayed as a numerical count, a meter response, or an audible click.
+
+![Gas-filled radiation detector illustrating the operating principles of a Geiger-Müller counter.](gas-probes.jpg){#fig-gas-filled-radiation-detector fig-alt="Educational illustration of a gas-filled radiation detector showing how ionizing radiation produces charged particles that generate an electrical pulse." width="85%"}
+
+*Source: Linda Hall Library, [The Atomic Age: What Is a Geiger Counter and What Makes It Tick?](https://www.lindahall.org/experience/digital-exhibitions/the-atomic-age/02-it-s-a-question-of-physics/e-what-is-a-geiger-counter-and-what-makes-it-tick/).*
+
+The number of pulses detected over a specified period is reported as a **count rate**, commonly expressed in counts per minute (CPM) or counts per second (CPS).
+
+A higher count rate generally indicates that more radiation interactions are being detected under the same measurement conditions.
+
+However, **a higher count rate does not automatically indicate a proportional increase in absorbed dose or equivalent dose**. The relationship depends on the radiation type, energy, detector response, geometry, and instrument calibration.
+
+### Monitoring Alpha Radiation
+
+Alpha particles have a relatively short range in air and can be stopped by materials such as paper or the outer layer of intact skin.
+
+However, alpha-emitting radioactive material can be particularly hazardous if it enters the body through inhalation, ingestion, or a wound.
+
+One way to monitor for airborne alpha-emitting radioactive material is to **collect particles from the air on a filter**.
+
+The collected material can then be examined using an appropriate alpha radiation detector.
 
 
------> YOU ARE HERE <----------------
+#### Continuous Air Monitoring
 
-maybe we incorporate the map of groundwater, maybe not. we are stopping here today at 8:02 pm. 
+At nuclear facilities and other locations where radioactive material may be present, specialized instruments can continuously monitor the air for radioactive particles.
+
+These instruments include **continuous particulate air monitors (CPAMs)** and **alpha continuous air monitors (alpha-CAMs)**.
+
+They operate using a straightforward process:
+
+1. **A pump draws air into the monitor.** Air from the surrounding environment enters the sampling system.
+
+2. **A filter collects airborne particles.** If radioactive material is attached to these particles, it may also be collected.
+
+3. **A radiation detector measures the collected material.** The instrument monitors radiation emitted by radioactive material on the filter.
+
+4. **The instrument reports the measurement.** Changes in the detected radiation can help identify possible airborne radioactive contamination.
+
+![Continuous particulate air monitoring equipment used to detect airborne radioactive contamination.](cpams.jpg){#fig-cpams fig-alt="Continuous particulate air monitoring equipment installed outdoors to collect airborne particles and monitor for radioactive contamination." width="85%"}
+
+*Image source: [Continuous Air Monitoring, YouTube](https://youtu.be/A93KgE9v8KA?si=cBcH1mq3fYOn5bB0).*
+
+Some systems use a stationary filter, while others move the filter through the instrument.
+
+**Why is this important?**
+
+Natural background radiation is always present in our environment. Radiation monitoring systems must distinguish normal background levels from changes that could indicate a release of radioactive material.
+
+**HazMat application:** Detecting radiation in an area and detecting radioactive contamination in the air are different tasks. Responders must select instruments and sampling methods appropriate for the hazard.
 
 
-Radon may also be present in groundwater. When water containing dissolved radon is used for showering, bathing, or other household activities, radon can be released into indoor air and subsequently inhaled.
+### Radioactive Materials Versus Radiation-Generating Equipment
 
-![EPA radon information and geographic variation in radon potential.](ncrp-160-figure-4.png){#fig-ncrp-radon-epa fig-alt="Radon information reproduced from the NCRP Report No. 160 review article" width="100%"}
+Not all sources of ionizing radiation are radioactive materials.
 
-![Additional illustration of radon exposure and testing.](ncrp-160-figure-5.png){#fig-ncrp-radon-testing fig-alt="Radon exposure and testing information reproduced from the NCRP Report No. 160 review article" width="100%"}
+It is important to distinguish between **radioactive materials** and **radiation-generating equipment**.
 
-Because indoor radon concentrations vary between buildings, **testing is necessary to determine the radon concentration in a particular home or workplace**.
+- **Radioactive materials:** Contain unstable atomic nuclei that release radiation as they decay. This process continues regardless of whether nearby equipment is powered on.
+- **Radiation-generating equipment:** Devices such as X-ray machines produce radiation when energized. When a conventional X-ray machine is switched off, it stops producing X-rays.
 
-This is particularly relevant to hazardous materials management because radon illustrates how a naturally occurring radioactive substance can become an **indoor environmental exposure hazard**.
+![Comparison of radioactive materials and radiation-generating equipment.](radioactive-material-radiation-generating-equipment.jpg){#fig-radioactive-material-vs-equipment fig-alt="NASA Armstrong radiation safety training slide comparing radioactive materials, which emit radiation through nuclear decay, with radiation-generating equipment, which produces radiation when energized." width="100%"}
 
-It also introduces an important distinction: radiation exposure can occur not only from sources outside the body but also when radioactive material enters the body through inhalation or ingestion.
+*Source: NASA Armstrong Flight Research Center, Radiation Safety Office, Ionizing Radiation Safety Training.*
 
-*Sources: Bolus, N. E. (2013). Basic Review of Radiation Biology and Terminology. Journal of Nuclear Medicine Technology, 41(4), 255–260; NCRP Report No. 160 (2009); U.S. Environmental Protection Agency, Radon.*
+**Important distinction:** Being exposed to X-rays or gamma rays does not ordinarily cause a person to become radioactive.
+
+For example, when a patient receives a conventional medical X-ray, radiation passes through the body and interacts with tissues. However, the patient does not become a radioactive source or continue emitting X-rays afterward.
+
+### Fixed and Removable Radioactive Contamination
+
+**Radioactive contamination** means radioactive material is present where it is not intended.
+
+There are two important types of surface contamination:
+
+- **Fixed contamination:** Radioactive material that adheres to a surface.
+- **Removable contamination:** Radioactive material that can transfer to hands, clothing, tools, or other surfaces.
+
+![Comparison of fixed and removable radioactive contamination.](contamination-fixed-vs-removable.jpg){#fig-fixed-vs-removable-contamination fig-alt="NASA Armstrong radiation safety training illustration comparing radioactive material fixed to a surface with removable radioactive contamination that can transfer to other surfaces or objects." width="85%"}
+
+*Source: NASA Armstrong Flight Research Center, Radiation Safety Office, Ionizing Radiation Safety Training.*
+
+Survey instruments and wipe tests help assess contamination, but the correct method depends on the radionuclide and detector.
+
+**HazMat distinction:** Radiation exposure does not necessarily involve contamination. Removable contamination can create additional inhalation, ingestion, and spread hazards.
+
+
+
+### Selecting Shielding Materials
+
+Different types of radiation interact with matter in different ways. As a result, **the appropriate shielding material depends on the type and energy of radiation**.
+
+![Comparison of the penetrating abilities of alpha, beta, gamma, and neutron radiation through different shielding materials.](shielding-uw.jpg){#fig-shielding-uw fig-alt="University of Washington radiation safety illustration comparing alpha, beta, neutron, and gamma radiation as they interact with paper, human skin, metal, water, concrete, and lead." width="100%"}
+
+*Source: University of Washington, Radiation Safety Office.*
+
+Some common shielding materials include:
+
+- **Paper or clothing:** Can stop many alpha particles, although alpha-emitting radioactive material remains hazardous if inhaled or ingested.
+- **Plastic:** Often useful for beta radiation because its relatively low atomic number can reduce the production of bremsstrahlung X-rays compared with high-atomic-number shielding.
+- **Water and polyethylene:** Hydrogen-rich materials that can help slow fast neutrons.
+- **Concrete:** Used for penetrating photon radiation and, with appropriate design, some neutron fields.
+- **Lead:** Useful for attenuating many X-ray and gamma-ray fields.
+
+**Important:** Shielding reduces radiation intensity, but it does not necessarily eliminate all radiation. Its effectiveness depends on radiation energy, material composition, thickness, and geometry.
+
+#### How Does Shielding Reduce Radiation?
+
+When X-rays or gamma rays pass through matter, they can interact with atoms in the shielding material.
+
+These interactions reduce the intensity of radiation passing through the material.
+
+Dense materials such as lead are commonly used for X-ray and gamma-ray shielding, while concrete can provide effective shielding when sufficient thickness is available.
+
+![Radiation shielding materials and their densities.](shielding-nasa-2.jpg){#fig-shielding-nasa-density fig-alt="NASA Armstrong radiation safety training slide comparing the densities of aluminum, concrete, copper, glass, lead, polyethylene, water, and wood, and introducing the half-value layer." width="100%"}
+
+*Source: NASA Armstrong Flight Research Center, Radiation Safety Office, Ionizing Radiation Safety Training.*
+
+#### Half-Value Layer (HVL)
+
+A **half-value layer (HVL)** is the thickness of a shielding material needed to reduce the intensity of a specified X-ray or gamma-ray beam to one-half of its original value.
+
+For example, suppose a radiation beam passes through a material with a known half-value layer.
+
+- **After one HVL:** 50% of the original intensity remains.
+- **After two HVLs:** 25% of the original intensity remains.
+- **After three HVLs:** 12.5% of the original intensity remains.
+
+**Example:** How many half-value layers are needed to reduce the original radiation intensity to 25%?
+
+After the first half-value layer:
+
+$$
+100\%\times\frac{1}{2}=50\%
+$$
+
+After the second half-value layer:
+
+$$
+50\%\times\frac{1}{2}=25\%
+$$
+
+**Answer: Two half-value layers.**
+
+This example assumes a beam and shielding conditions for which the stated HVL applies.
+
+#### Time, Distance, and Shielding
+
+As discussed in the ALARA section, radiation protection relies on three fundamental principles:
+
+1. **Time:** Minimize the time spent near a radiation source.
+2. **Distance:** Increase the distance between yourself and the radiation source.
+3. **Shielding:** Use appropriate materials to reduce the radiation reaching you.
+
+![Illustration of time, distance, and shielding as methods of reducing external radiation exposure.](shielding-nasa.jpg){#fig-shielding-nasa-alara fig-alt="Radiation safety illustration showing how exposure can be reduced by limiting time, increasing distance from a radioactive source, and placing shielding between the source and workers." width="85%"}
+
+*Source: NASA Armstrong Flight Research Center, Radiation Safety Office, Ionizing Radiation Safety Training.*
+
+For a small radioactive source under suitable conditions, radiation intensity decreases approximately with the square of the distance.
+
+For example:
+
+- At twice the original distance, the intensity is approximately one-fourth.
+- At three times the original distance, the intensity is approximately one-ninth.
+
+This is known as the **inverse-square law**.
+
+**HazMat application:** Time, distance, and shielding help reduce external radiation exposure. However, a calculated dose or exposure time does not independently authorize entry into a hazardous area. Responders must use incident-specific monitoring, appropriate access controls, and qualified radiation safety oversight.
+
+*Sources: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.); Bevelacqua, A. S., & Norman, L. A. Hazardous Materials Chemistry (3rd ed.).*
+
+### Personal Radiation Dosimeters
+
+How do radiation workers know how much radiation exposure they have received over time?
+
+One way is through a **personal radiation dosimeter**, commonly called a **radiation badge**.
+
+A radiation dosimeter is a small device worn by workers to monitor and record their exposure to ionizing radiation.
+
+Radiation badges are commonly used in hospitals, nuclear facilities, research laboratories, and industrial workplaces where radiation exposure may occur.
+
+![Historical radiation safety poster reminding workers to wear their radiation monitoring badges.](dosimeter-badge.jpg){#fig-radiation-dosimeter-badge fig-alt="Historical U.S. Department of Energy Richland Operations Office radiation safety poster featuring Ronald Reagan and the message Always Wear Your Badge at Work." width="75%"}
+
+*Source: U.S. Department of Energy, Richland Operations Office, historical radiation safety poster.*
+
+#### How Does a Radiation Badge Work?
+
+When ionizing radiation interacts with the material inside a dosimeter, it produces a measurable change.
+
+Depending on the type of dosimeter, this change can be used to estimate the radiation dose received by the worker.
+
+Common technologies include:
+
+- **Optically Stimulated Luminescence (OSL):** Uses a material that stores information about radiation exposure and releases light when stimulated.
+- **Thermoluminescent Dosimeters (TLDs):** Use materials that release light when heated after radiation exposure.
+- **Electronic Dosimeters:** Can provide radiation dose measurements during use, with some models displaying readings in real time.
+
+Radiation badges are worn according to the radiation safety program's instructions. Their placement depends on the type of work, protective equipment, and monitoring requirements.
+
+**Important:** A radiation badge does not shield a worker from radiation. It measures or records exposure so that radiation safety professionals can evaluate occupational dose.
+
+Personal dosimeters also do not replace radiation survey instruments or contamination monitoring.
+
+**HazMat application:** Radiation monitoring helps workers recognize exposure hazards, evaluate protective measures, and document occupational radiation doses.
+
+*Sources: [Landauer, Understanding the Purpose of Radiation Badges and Personal Dosimetry](https://www.landauer.com/blog/understanding-purpose-radiation-badges-personal-dosimetry); Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.).*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----> YOU ARE HERE <-------
+
+
+
+
+# Part IV. Non-Ionizing Radiation
+
+We have spent most of this lecture examining **ionizing radiation**, which has sufficient energy to remove electrons from atoms.
+
+However, not all radiation is ionizing.
+
+**Non-ionizing radiation** refers to electromagnetic radiation whose individual photons do not generally possess sufficient energy to remove tightly bound electrons from atoms.
+
+Although non-ionizing radiation does not produce ionization in the same way as X-rays or gamma rays, sufficiently intense exposures can still cause biological harm through heating, photochemical reactions, or interactions with electrically excitable tissues.
+
+## The Electromagnetic Spectrum
+
+The **electromagnetic spectrum** describes the full range of electromagnetic radiation, organized by frequency and wavelength.
+
+- **Frequency:** The number of wave cycles passing a point each second, measured in hertz (Hz).
+- **Wavelength:** The distance between corresponding points on successive waves, commonly measured in meters (m).
+- **Energy:** Electromagnetic radiation with higher frequencies has greater energy per photon.
+
+Moving from radio waves toward gamma rays, frequency and photon energy increase while wavelength decreases.
+
+The non-ionizing portion includes radio waves, microwaves, infrared radiation, visible light, and most ultraviolet radiation.
+
+**Remember:** The boundary between ionizing and non-ionizing electromagnetic radiation is not perfectly defined by a single wavelength. The ability to ionize matter depends on photon energy and the material involved.
+
+*Source: NASA Armstrong Flight Research Center, Radio Frequency Safety Training.*
+
+## Radio Frequency (RF) Radiation
+
+**Radio frequency (RF) radiation** is electromagnetic energy used to transmit information wirelessly.
+
+- Common sources include radio transmitters, communication systems, radar equipment, and wireless networks.
+- At sufficiently high exposure levels, RF energy can produce tissue heating.
+- Occupational RF safety programs evaluate equipment, exposure levels, and access to potentially hazardous areas.
+
+### Antennas
+
+An **antenna** is a device used to transmit or receive electromagnetic waves.
+
+- **Omnidirectional antennas:** Radiate energy around the antenna, generally across horizontal directions.
+- **Directional antennas:** Concentrate more energy in particular directions, such as satellite dishes and radar antennas.
+- Workers near high-powered antennas must consider the direction of transmission, operating power, and restricted areas.
+
+**HazMat application:** An antenna does not need to be visibly moving or producing light to be transmitting RF energy. Workers should verify operating conditions before entering a controlled area.
+
+*Source: NASA Armstrong Flight Research Center, Radio Frequency Safety Training.*
+
+## Magnetic Fields
+
+A **magnetic field** is a physical field produced by magnets, electric currents, and changing electric fields.
+
+- Magnetic fields occur around permanent magnets, electrical equipment, motors, and MRI systems.
+- Strong magnetic fields can attract ferromagnetic objects and interfere with certain implanted medical devices.
+- Magnetic field strength is commonly expressed in tesla (T) or millitesla (mT).
+
+## Electric Fields
+
+An **electric field** is a physical field produced by electric charges and changing magnetic fields.
+
+- Electric fields occur around charged objects and energized electrical equipment.
+- Strong or time-varying fields can produce induced currents, shocks, or burns under certain conditions.
+- Electric field strength is commonly expressed in volts per meter (V/m).
+
+**Remember:** Electric and magnetic fields are related, but they are not identical. They can exist separately under static conditions and together as propagating electromagnetic waves.
+
+*Source: NASA Armstrong Flight Research Center, Radio Frequency Safety Training.*
+
+## Microwaves
+
+**Microwaves** are electromagnetic waves within the higher-frequency portion of the radio spectrum.
+
+- Common applications include microwave ovens, radar systems, satellite communications, and wireless technology.
+- Microwaves can transfer energy to materials, producing heating.
+- Excessive occupational exposure may cause thermal injury, particularly when high-powered equipment is involved.
+
+**HazMat application:** Microwave radiation is non-ionizing. Its primary established hazard at sufficiently high exposure levels is heating, not radioactive contamination.
+
+## Infrared Radiation (IR)
+
+**Infrared radiation** is electromagnetic radiation with wavelengths longer than visible red light.
+
+- Common sources include sunlight, furnaces, hot surfaces, heat lamps, and industrial processes.
+- Infrared radiation is frequently associated with radiant heat.
+- Intense exposure can cause thermal injury to the skin or eyes.
+
+## Ultraviolet Radiation (UV)
+
+**Ultraviolet (UV) radiation** lies between visible light and X-rays on the electromagnetic spectrum.
+
+- Common sources include sunlight, welding arcs, germicidal lamps, and some industrial processes.
+- UV radiation can cause sunburn, photokeratitis (welder's flash), and DNA damage.
+- Repeated or excessive exposure to certain UV wavelengths increases the risk of skin cancer.
+
+Unlike radiofrequency and microwave radiation, **UV radiation can produce significant photochemical effects without substantial tissue heating**.
+
+*Source: NASA Armstrong Flight Research Center, Laser Safety Training.*
+
+## Lasers
+
+**LASER** stands for *Light Amplification by Stimulated Emission of Radiation*.
+
+A laser produces a concentrated beam of electromagnetic radiation, commonly in the ultraviolet, visible, or infrared portions of the spectrum.
+
+- Lasers are used in medicine, manufacturing, research, surveying, and aerospace applications.
+- Depending on wavelength and power, laser exposure can damage the eyes or skin.
+- Laser safety controls include beam enclosures, restricted access, training, and protective eyewear selected for the laser's wavelength and optical density.
+
+**Important:** A laser beam does not have to be visible to be hazardous. Infrared laser radiation, for example, may be invisible while still presenting a serious eye hazard.
+
+*Source: NASA Armstrong Flight Research Center, Laser Safety Training.*
+
+## Final Considerations: Radiation Safety
+
+Both ionizing and non-ionizing radiation can present occupational hazards, but their mechanisms of interaction with matter differ.
+
+- **Ionizing radiation:** Can remove electrons from atoms, producing ions and potentially damaging biological molecules.
+- **Non-ionizing radiation:** Can cause heating, photochemical injury, or other biological effects depending on frequency, intensity, and exposure conditions.
+- **Radiation protection:** Requires understanding the source, evaluating the exposure, and selecting controls appropriate to the hazard.
+
+**The central lesson:** Identifying a source as ionizing or non-ionizing is only the beginning of a radiation hazard assessment. Understanding how that radiation interacts with matter helps us predict potential hazards and make informed safety decisions.
+
+*Sources: NASA Armstrong Flight Research Center, Radio Frequency Safety Training; NASA Armstrong Flight Research Center, Laser Safety Training; Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.).*
+
+
+# Source-Page Appendix
+
+## Referenced Textbooks and Educational Sources
+
+1.  Burdge, Julia, and Jason Overby. *Chemistry: Atoms First*, 2nd edition. Chapter 2, **Atoms and the Periodic Table**, and Chapter 20, **Nuclear Chemistry**. Used for atomic structure, nuclear stability, radioactive decay, technetium-99m, and biological effects of radiation.
+2.  Atkins, Peter, Loretta Jones, Leroy Laverman, James Patterson, and Michael Young. *Chemical Principles*, 8th edition. **Focus 9: Nuclear Chemistry**. Used for nuclear radiation classifications and comparative properties.
+3.  Bevelacqua, Armando S., and Laurie A. Norman. *Hazardous Materials Chemistry*, 3rd edition. Jones & Bartlett Learning, radiation chapter. Used for alpha, beta, gamma, penetration, shielding, and hazardous materials response context.
+4.  Cember, Herman, and Thomas E. Johnson. *Introduction to Health Physics*, 4th edition. Used as a conceptual reference for ionization, biological effects, radiation dosimetry, and protection. Confirm chapter/page details against the instructor's edition before final publication.
+5.  Stewart, James, Lothar Redlin, and Saleem Watson. *Precalculus: Mathematics for Calculus*, 6th edition. Chapter 4, **Exponential and Logarithmic Functions**, especially Section 4.6 and Example 6. Used for the mathematical foundations of exponential decay, natural logarithms, radioactive half-life, the decay constant, and the worked radioactive-decay calculations in the earlier portion of Lecture 04.
+6.  **Study.com educational materials.** Previously consulted during lecture development; exact lesson titles, authors, and URLs remain to be documented if retained as cited sources.
+
+## Regulatory and Standards References for Final Verification
+
+The lecture identifies the **NRC, OSHA, EPA, FDA, FCC, ICNIRP, and IEEE** by their general responsibilities. Before publishing the regulatory section, add links to the specific official regulations, guidance, and standards selected for the course. **Numerical occupational and public dose limits are not reproduced here**; applicability depends on the source, exposure conditions, and jurisdiction.
+
+
+## Figures and Third-Party Materials
+
+Textbook figures, the periodic table, historical photographs, and the radiation penetration illustration remain credited at their respective locations in the lecture. Verify original image attribution, reuse permissions, and any source-page references before distributing a public version.
+
+# Copyright & Use
+
+**SHM 377: Hazardous Materials Management**\
+© 2026 Yoni Rodriguez
+
+Except where otherwise noted, original course materials are licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
+
+Third-party textbook excerpts, figures, photographs, and other referenced materials are **not** covered by this license and remain subject to their respective copyright and licensing terms.
