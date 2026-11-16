@@ -3391,6 +3391,7 @@ Radiation protection programs address this question through a principle known as
 
 
 
+
 ## ALARA: As Low As Reasonably Achievable
 
 **ALARA (As Low As Reasonably Achievable)** is a fundamental principle of radiation protection that emphasizes minimizing unnecessary radiation exposure.
@@ -3400,6 +3401,10 @@ The goal is to maintain radiation exposures as far below applicable dose limits 
 ![ALARA radiation protection principles.](alara.jpg){#fig-alara fig-alt="Illustration of the ALARA principle of radiation protection, emphasizing measures to minimize unnecessary exposure to ionizing radiation." width="85%"}
 
 *Image source: [Landauer, What Does ALARA Mean and Why Is It So Important?](https://www.landauer.com/blog/what-does-alara-mean-and-why-it-so-important)*
+
+![ALARA radiation protection guidance from the University of Washington.](uw-alara.jpg){#fig-uw-alara fig-alt="University of Washington radiation safety training illustration explaining the ALARA principle and methods for minimizing occupational radiation exposure." width="85%"}
+
+*Source: University of Washington, Environmental Health and Safety, Radiation Safety Office.*
 
 ALARA does not mean that all radiation exposure can be eliminated. Instead, it encourages radiation safety professionals to evaluate potential exposures and implement reasonable measures to reduce them.
 
@@ -3418,6 +3423,7 @@ However, before we can determine whether radiation protection measures are effec
 ### NRC Occupational Dose Limits
 
 The U.S. Nuclear Regulatory Commission establishes occupational and public radiation protection requirements for activities under its jurisdiction in **10 CFR Part 20**. Specific limits and monitoring requirements differ for occupational whole-body dose, individual tissues, declared pregnant workers, and members of the public. NRC rules may be administered by authorized Agreement States for certain activities; other workplaces may fall under different authorities.
+
 
 ![NRC occupational radiation dose limits presented in radiation safety training.](nrc-occupational-dose-limits.jpg){#fig-nrc-occupational-dose-limits fig-alt="NASA Armstrong Flight Research Center radiation safety training material presenting NRC occupational radiation dose limits." width="85%"}
 
@@ -3801,94 +3807,523 @@ Personal dosimeters also do not replace radiation survey instruments or contamin
 
 
 
------> YOU ARE HERE <-------
+
 
 
 
 
 # Part IV. Non-Ionizing Radiation
 
+## The Electromagnetic Spectrum
+
+The **electromagnetic spectrum** describes the full range of electromagnetic radiation, organized according to wavelength and frequency.
+
+![Electromagnetic spectrum illustrating the relationship between wavelength, frequency, and different types of electromagnetic radiation.](electromagnetic-spectrum.jpg){#fig-electromagnetic-spectrum fig-alt="Diagram of the electromagnetic spectrum showing radio waves, microwaves, infrared, visible light, ultraviolet radiation, X-rays, and gamma rays" width="100%"}
+
 We have spent most of this lecture examining **ionizing radiation**, which has sufficient energy to remove electrons from atoms.
 
 However, not all radiation is ionizing.
 
-**Non-ionizing radiation** refers to electromagnetic radiation whose individual photons do not generally possess sufficient energy to remove tightly bound electrons from atoms.
+**Non-ionizing radiation** refers to electromagnetic radiation whose individual photons do not generally possess sufficient energy to remove electrons from atoms.
 
-Although non-ionizing radiation does not produce ionization in the same way as X-rays or gamma rays, sufficiently intense exposures can still cause biological harm through heating, photochemical reactions, or interactions with electrically excitable tissues.
+Although non-ionizing radiation does not produce ionization in the same way as X-rays or gamma rays, sufficiently intense exposure can still cause biological harm, including **tissue heating, skin burns, and eye injuries**.
 
-## The Electromagnetic Spectrum
+Before examining the different types of non-ionizing radiation, we need to understand how electromagnetic radiation behaves.
 
-The **electromagnetic spectrum** describes the full range of electromagnetic radiation, organized by frequency and wavelength.
 
-- **Frequency:** The number of wave cycles passing a point each second, measured in hertz (Hz).
-- **Wavelength:** The distance between corresponding points on successive waves, commonly measured in meters (m).
-- **Energy:** Electromagnetic radiation with higher frequencies has greater energy per photon.
 
-Moving from radio waves toward gamma rays, frequency and photon energy increase while wavelength decreases.
+## Electric and Magnetic Fields
 
-The non-ionizing portion includes radio waves, microwaves, infrared radiation, visible light, and most ultraviolet radiation.
+Electromagnetic radiation involves two closely related concepts: **electric fields** and **magnetic fields**.
+
+
+### Electric Fields
+
+An **electric field** is a region where an electric charge experiences an electrical force.
+
+- Electric fields are produced by electric charges.
+- They occur around charged objects and energized electrical equipment.
+- Electric field strength is commonly measured in volts per meter (V/m).
+
+
+![Illustration of an electric field.](electric-field.jpg){#fig-electric-field fig-alt="Illustration depicting an electric field and its spatial distribution." width="85%"}
+
+*Source: [Science Facts, Electric Field](https://www.sciencefacts.net/electric-field.html).*
+
+
+
+
+### Magnetic Fields
+
+A **magnetic field** is a region where moving electric charges or magnetic materials experience magnetic forces.
+
+- Magnetic fields are produced by magnets and moving electric charges, such as electric currents.
+- They occur around magnets, electrical motors, and current-carrying wires.
+- Magnetic field strength is commonly measured in tesla (T).
+
+
+![Illustration of a magnetic field.](magnetic-field.jpg){#fig-magnetic-field fig-alt="Illustration depicting a magnetic field and its spatial distribution." width="85%"}
+
+*Source: [Encyclopaedia Britannica, How Do Magnets Work?](https://www.britannica.com/science/How-Do-Magnets-Work).*
+
+
+**Important distinction:** An electric field exerts a force on charged particles whether they are stationary or moving, whereas the magnetic force on a charged particle depends on its motion.
+
+In other words:
+
+- **Electric fields:** Can exert forces on both stationary and moving electric charges.
+- **Magnetic fields:** Exert forces on moving electric charges, but not on stationary electric charges.
+
+*Source: Chemical Principles, Fundamentals A, discussion of electric and magnetic fields.*
+
+### Electromagnetic Waves
+
+Electric and magnetic fields are closely related.
+
+**Electromagnetic radiation** consists of oscillating, or changing, electric and magnetic fields that travel through space and carry energy.
+
+In an electromagnetic wave, the electric and magnetic fields oscillate perpendicular to one another and to the direction the wave travels.
+
+![Electromagnetic wave illustrating perpendicular oscillating electric and magnetic fields.](electric-magnetic-field.jpg){#fig-electric-magnetic-field fig-alt="Three-dimensional illustration of an electromagnetic wave showing an oscillating electric field and an oscillating magnetic field oriented perpendicular to one another and to the direction of wave propagation." width="85%"}
+
+*Source: Chemical Principles, Fundamentals A, Figure A.8.*
+
+
+![Illustration of an electromagnetic wave.](an-electromagentic-wave.jpg){#fig-an-electromagentic-wave fig-alt="Illustration of an electromagnetic wave showing its wave-like behavior." width="85%"}
+
+*Source: University of Washington, Department of Environmental & Occupational Health Sciences (DEOHS), ENVH 502, Dr. Michael Yost.*
+
+
+Examples include radio waves, microwaves, visible light, ultraviolet radiation, X-rays, and gamma rays.
+
+In a vacuum, all electromagnetic waves travel at the **speed of light**, represented by the symbol $c$:
+
+$$
+c \approx 3.00 \times 10^8\ \mathrm{m/s}
+$$
+
+This is approximately 300 million meters per second.
+
+*Source: Chemical Principles, Section 1A.2, Electromagnetic Radiation.*
+
+
+### Wavelength, Amplitude, and Frequency
+
+Electromagnetic waves can be described using three important properties: **wavelength, amplitude, and frequency**.
+
+#### Wavelength and Amplitude
+
+- **Wavelength ($\lambda$):** The distance between corresponding points on successive waves, such as one peak to the next. Wavelength is commonly measured in meters (m).
+- **Amplitude:** The maximum displacement of a wave from its center or equilibrium position. For an electromagnetic wave, this represents the strength of its oscillating electric or magnetic field.
+
+The following illustration shows how wavelength and amplitude are represented in an electromagnetic wave.
+
+![Electromagnetic wave illustrating wavelength and amplitude.](chemical-principles-wavelength.jpg){#fig-chemical-principles-wavelength fig-alt="Illustration of an electromagnetic wave showing the distance between successive peaks as wavelength and the height of the wave as amplitude." width="85%"}
+
+*Source: Chemical Principles, Section 1A.2, Electromagnetic Radiation, Figure 1A.7.*
+
+The height of a wave can change without changing its wavelength or frequency.
+
+![Sine waves with different amplitudes.](amplitude.jpg){#fig-wave-amplitude fig-alt="Graphs of sine functions with different amplitudes, illustrating how the maximum height of a wave changes while its period remains the same." width="85%"}
+
+*Source: Stewart, Precalculus, trigonometric functions, Figure 6.*
+
+#### Frequency and Wave Cycles
+
+A wave completes one **cycle** when it returns to the same position and direction of motion.
+
+The sine and cosine functions provide mathematical examples of repeating wave patterns.
+
+![Graphs of sine and cosine functions illustrating repeating wave cycles and their periods.](sin-cos-waves.jpg){#fig-sin-cos-waves fig-alt="Graphs of sine and cosine functions showing one complete cycle from zero to two pi and repeated cycles over time." width="100%"}
+
+*Source: Stewart, Precalculus, trigonometric functions, Figures 2 and 3.*
+
+**Frequency ($\nu$)** is the number of complete wave cycles passing a point each second.
+
+Frequency is measured in **hertz (Hz)**.
+
+One hertz represents one cycle per second:
+
+$$
+1\ \mathrm{Hz}=1\ \mathrm{s^{-1}}
+$$
+
+
+
+#### Relationship Between Wavelength and Frequency
+
+Wavelength and frequency are related through the **speed of light**.
+
+Albert Einstein established that the speed of light in a vacuum is constant, regardless of the motion of the observer.
+
+This speed is approximately:
+
+$$
+c=3.00\times10^8\ \mathrm{m/s}
+$$
+
+Because electromagnetic radiation travels at this constant speed in a vacuum, we can relate its wavelength and frequency using the following equation:
+
+$$
+\boxed{c=\lambda\nu}
+$$
+
+Where:
+
+- $c$ = speed of light in a vacuum ($3.00\times10^8\ \mathrm{m/s}$)
+- $\lambda$ = wavelength (m)
+- $\nu$ = frequency (Hz or $\mathrm{s^{-1}}$)
+
+**What does this equation tell us?**
+
+Because electromagnetic waves travel at the same speed in a vacuum:
+
+- **Shorter wavelengths** correspond to **higher frequencies**.
+- **Longer wavelengths** correspond to **lower frequencies**.
+
+![Comparison of high-frequency waves with short wavelengths and low-frequency waves with long wavelengths.](frequency.jpg){#fig-wavelength-frequency fig-alt="Two wave diagrams comparing a high-frequency wave with closely spaced peaks and short wavelength against a low-frequency wave with widely spaced peaks and long wavelength." width="85%"}
+
+*Source: [Techplayon, Wavelength, Frequency, Amplitude and Phase: Defining Waves](https://www.techplayon.com/wavelength-frequency-amplitude-phase-defining-waves/).*
+
+*Additional reference: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), discussion of Einstein's postulates and the speed of light.*
+Health Physics (4th ed.), discussion of Einstein's postulates and the speed of light.*
+
+
+
+### Electromagnetic Energy
+
+**Electromagnetic radiation** carries energy through space in the form of oscillating electric and magnetic fields.
+
+Electromagnetic radiation is a natural phenomenon that has existed since the beginning of the universe. **Visible light** is one of its most familiar forms.
+
+Electromagnetic fields (EMF) are among the most widespread environmental influences associated with modern technology.
+
+Electromagnetic fields occur across a broad range of frequencies, from static electric and magnetic fields to radiofrequency radiation and higher-frequency electromagnetic radiation.
+
+Today, populations are exposed to varying levels of electromagnetic fields from both natural and human-made sources.
+
+As technology advances, the number of potential sources of electromagnetic field exposure continues to increase.
+
+#### Frequency and Electromagnetic Energy
+
+As we learned earlier, electromagnetic waves are characterized by their wavelength ($\lambda$) and frequency ($\nu$).
+
+An important relationship is that **higher-frequency electromagnetic radiation carries more energy per photon**.
+
+Moving from radio waves toward gamma rays:
+
+- **Wavelength decreases.**
+- **Frequency increases.**
+- **Energy per photon increases.**
+
+The non-ionizing portion of the spectrum includes radio waves, microwaves, infrared radiation, visible light, and most ultraviolet radiation.
 
 **Remember:** The boundary between ionizing and non-ionizing electromagnetic radiation is not perfectly defined by a single wavelength. The ability to ionize matter depends on photon energy and the material involved.
 
-*Source: NASA Armstrong Flight Research Center, Radio Frequency Safety Training.*
+#### Occupational and Environmental Health Relevance
 
-## Radio Frequency (RF) Radiation
+Understanding electromagnetic fields is important because workers may encounter EMF from electrical equipment, communication systems, industrial machinery, and other technological sources.
 
-**Radio frequency (RF) radiation** is electromagnetic energy used to transmit information wirelessly.
+However, **exposure to an electromagnetic field does not automatically mean that a harmful health effect will occur**.
 
-- Common sources include radio transmitters, communication systems, radar equipment, and wireless networks.
-- At sufficiently high exposure levels, RF energy can produce tissue heating.
-- Occupational RF safety programs evaluate equipment, exposure levels, and access to potentially hazardous areas.
+The potential for adverse health effects depends on factors such as the frequency, field strength, exposure duration, and interaction with biological tissues.
+
+*Sources: [World Health Organization, Electromagnetic Fields](https://www.who.int/health-topics/electromagnetic-fields#tab=tab_1); Chemical Principles, Section 1A.2, Electromagnetic Radiation; NASA Armstrong Flight Research Center, Radio Frequency Safety Training.*
+
+
+
+
+
+## Radio Waves (30 kHz to 3 GHz)
+
+**Radio waves** are low-frequency, low-energy electromagnetic waves with the longest wavelengths in the electromagnetic spectrum. Their wavelengths range from approximately the length of a football to distances larger than our planet.
+
+In 1888, **Heinrich Hertz** experimentally demonstrated the existence of radio waves using electrical sparks to generate and detect electromagnetic signals.
+
+Commercial radio broadcasting began in 1920. Later, in 1932, **Karl Jansky**, working at Bell Laboratories, discovered radio waves originating beyond Earth. His discovery helped establish **radio astronomy**, which eventually allowed scientists to study objects and phenomena such as pulsars, plasma clouds, and quasars.
+
+Today, we use radio waves every day for:
+
+- Cellular networks and smartphones
+- Wi-Fi and Bluetooth
+- Global Positioning System (GPS)
+- Radio broadcasting (AM/FM stations)
+- Radar and weather tracking
+- Satellite and deep-space communications
+- Radio astronomy
+
+![NASA illustration of interstellar plasma clouds.](nasa-plasma-cloud.jpg){#fig-nasa-plasma-cloud fig-alt="NASA visualization of interstellar clouds, illustrating structures in space studied through astronomical observations." width="85%"}
+
+*Image source: [NASA Astrobiology, First Mapping of Interstellar Clouds in Three Dimensions](https://astrobiology.nasa.gov/news/first-mapping-of-interstellar-clouds-in-three-dimensions/).*
+
+*Sources: NASA, Tour of the Electromagnetic Spectrum (NASA-tour-of-the-ems.pdf); [Supplementary video](https://youtu.be/HPcAWNlVl-8?si=h60FAI7_wv9AN9xZ).*
+
+
+
+
+**Radio frequency (RF) radiation** is electromagnetic energy used in wireless communication and other technologies.
+
+- **Where encountered:** Radio transmitters, communication towers, antennas, radar equipment, and industrial RF systems.
+- **Primary occupational hazards:** Sufficiently intense RF exposure can produce tissue heating and injury.
+- **Safety consideration:** Workers must identify active transmitters and follow RF exposure controls.
+
 
 ### Antennas
 
-An **antenna** is a device used to transmit or receive electromagnetic waves.
+An **antenna** is a device that transmits or receives electromagnetic waves.
 
-- **Omnidirectional antennas:** Radiate energy around the antenna, generally across horizontal directions.
-- **Directional antennas:** Concentrate more energy in particular directions, such as satellite dishes and radar antennas.
-- Workers near high-powered antennas must consider the direction of transmission, operating power, and restricted areas.
+- **Omnidirectional antennas:** Radiate energy in many directions around the antenna, generally across the horizontal plane.
+- **Directional antennas:** Concentrate radiated energy in particular directions, such as radar antennas and satellite dishes.
 
-**HazMat application:** An antenna does not need to be visibly moving or producing light to be transmitting RF energy. Workers should verify operating conditions before entering a controlled area.
+#### How Does RF Transmission Work?
 
-*Source: NASA Armstrong Flight Research Center, Radio Frequency Safety Training.*
+A radio transmitter supplies an alternating electrical current to an antenna.
 
-## Magnetic Fields
+As the current oscillates, it produces changing electric and magnetic fields. Some of this energy travels away from the antenna as **electromagnetic radiation**.
 
-A **magnetic field** is a physical field produced by magnets, electric currents, and changing electric fields.
+![Radio antenna driven by an alternating electrical current.](uw-how-does-rf-transmission-work.jpg){#fig-rf-transmission fig-alt="Diagram of a radio transmitter connected to an antenna, with an oscillating electrical current represented by a sine wave." width="85%"}
 
-- Magnetic fields occur around permanent magnets, electrical equipment, motors, and MRI systems.
-- Strong magnetic fields can attract ferromagnetic objects and interfere with certain implanted medical devices.
-- Magnetic field strength is commonly expressed in tesla (T) or millitesla (mT).
+*Source: University of Washington, Department of Environmental & Occupational Health Sciences, ENVH 502, Dr. Michael Yost.*
 
-## Electric Fields
+#### Radio-Wave Propagation
 
-An **electric field** is a physical field produced by electric charges and changing magnetic fields.
+**Propagation** describes how electromagnetic waves travel away from their source.
 
-- Electric fields occur around charged objects and energized electrical equipment.
-- Strong or time-varying fields can produce induced currents, shocks, or burns under certain conditions.
-- Electric field strength is commonly expressed in volts per meter (V/m).
+As radio waves propagate, they carry energy through oscillating electric and magnetic fields.
 
-**Remember:** Electric and magnetic fields are related, but they are not identical. They can exist separately under static conditions and together as propagating electromagnetic waves.
+![Radio-wave propagation from a transmitting antenna.](uw-radio-wave-propagation.jpg){#fig-radio-wave-propagation fig-alt="Diagram of a radio antenna illustrating electric and magnetic fields associated with radio-wave propagation." width="85%"}
 
-*Source: NASA Armstrong Flight Research Center, Radio Frequency Safety Training.*
+*Source: University of Washington, Department of Environmental & Occupational Health Sciences, ENVH 502, Dr. Michael Yost.*
 
-## Microwaves
 
-**Microwaves** are electromagnetic waves within the higher-frequency portion of the radio spectrum.
+#### Near Field and Far Field
 
-- Common applications include microwave ovens, radar systems, satellite communications, and wireless technology.
-- Microwaves can transfer energy to materials, producing heating.
-- Excessive occupational exposure may cause thermal injury, particularly when high-powered equipment is involved.
+The electromagnetic field surrounding an antenna changes with distance.
 
-**HazMat application:** Microwave radiation is non-ionizing. Its primary established hazard at sufficiently high exposure levels is heating, not radioactive contamination.
+Two important regions are the **near field** and **far field**.
 
-## Infrared Radiation (IR)
+- **Near field:** The region close to an antenna where electric and magnetic fields have a complex relationship and some energy may be temporarily stored in the fields.
+- **Far field:** The region sufficiently far from the antenna where electromagnetic waves behave more predictably and the electric and magnetic fields are perpendicular to each other and to the direction of propagation.
 
-**Infrared radiation** is electromagnetic radiation with wavelengths longer than visible red light.
+##### Two Regions of the Near Field
 
-- Common sources include sunlight, furnaces, hot surfaces, heat lamps, and industrial processes.
-- Infrared radiation is frequently associated with radiant heat.
-- Intense exposure can cause thermal injury to the skin or eyes.
+The near field can be divided into two regions:
+
+1. **Reactive near field:** The region closest to the antenna, where energy is temporarily stored in the electric and magnetic fields and exchanged with the antenna rather than being entirely radiated away.
+
+2. **Radiative near field (Fresnel region):** A region farther from the antenna where energy propagates outward, but the radiation pattern and field distribution still depend on distance and antenna geometry.
+
+Beyond the near field is the **far field (Fraunhofer region)**, where the radiation pattern becomes more stable with distance.
+
+![Illustration of reactive near field, radiative near field, and far field surrounding an antenna.](uw-near-field-far-field.jpg){#fig-uw-near-field-far-field fig-alt="University of Washington illustration showing the reactive near field, radiative Fresnel region, and far-field Fraunhofer region surrounding an antenna." width="85%"}
+
+*Source: University of Washington, Department of Environmental & Occupational Health Sciences (DEOHS), ENVH 502, Dr. Michael Yost.*
+
+
+##### Inverse-Square Law
+
+In the far field of an antenna, under idealized conditions, **power density decreases approximately with the square of the distance from the source**.
+
+$$
+\boxed{S \propto \frac{1}{r^2}}
+$$
+
+Where:
+
+- $S$ = electromagnetic power density (W/m²)
+- $r$ = distance from the source (m)
+
+**What does this mean?**
+
+If the distance from an antenna doubles, the power density decreases to approximately **one-fourth** of its original value, assuming the same transmission direction and far-field conditions.
+
+**Important:** The inverse-square relationship should not automatically be applied to near-field exposures or complex antenna configurations.
+
+*Source: Cember & Johnson, Introduction to Health Physics (4th ed.), Chapter 14, discussion of antenna radiation zones.*
+
+![Near-field, intermediate-field, and far-field regions surrounding an antenna.](near-field-far-field.jpg){#fig-near-field-far-field fig-alt="Diagram from Introduction to Health Physics showing reactive and radiative near-field regions, an intermediate region, and the far field of an antenna." width="95%"}
+
+*Source: Cember & Johnson, Introduction to Health Physics (4th ed.), Figure 14-12.*
+
+
+
+### Interaction of RF Radiation with Matter
+
+When electromagnetic radiation encounters matter, several interactions are possible:
+
+- **Transmission:** Energy passes through the material.
+- **Absorption:** Energy is transferred to the material.
+- **Reflection:** Energy is redirected from a surface.
+- **Scattering:** Energy is redirected in different directions.
+
+![Interactions between electromagnetic radiation and matter.](uw-four-basic-interactions-between-electromagnetic-energy-and-matter.jpg){#fig-rf-interactions fig-alt="Diagram illustrating transmission, absorption, reflection, and scattering of electromagnetic energy interacting with matter." width="85%"}
+
+*Source: University of Washington, Department of Environmental & Occupational Health Sciences (DEOHS), ENVH 502, Dr. Michael Yost.*
+
+For occupational health, **absorption is especially important** because absorbed RF energy can produce heating in biological tissues.
+
+
+### Specific Absorption Rate (SAR)
+
+**Specific absorption rate (SAR)** describes the rate at which electromagnetic energy is absorbed per unit mass of biological tissue.
+
+$$
+\boxed{\mathrm{SAR}=\frac{\Delta E}{m\Delta t}}
+$$
+
+Where:
+
+- $\mathrm{SAR}$ = specific absorption rate (W/kg)
+- $\Delta E$ = energy absorbed by tissue (J)
+- $m$ = mass of tissue (kg)
+- $\Delta t$ = duration of energy absorption (s)
+
+Because one watt equals one joule per second:
+
+$$
+1\ \mathrm{W/kg}=1\ \mathrm{J/(kg\cdot s)}
+$$
+
+**Why is SAR important?**
+
+SAR helps describe how much RF energy is absorbed by the body.
+
+The amount and distribution of absorbed energy depend on the frequency, tissue properties, body geometry, and orientation relative to the electromagnetic field.
+
+*Source: Cember & Johnson, Introduction to Health Physics (4th ed.), Section 14, Equations 14.46–14.48.*
+
+### Biological Effects of RF Exposure
+
+The primary established hazard of sufficiently intense RF exposure is **tissue heating**.
+
+- **Internal tissue heating:** Absorbed RF energy can raise tissue temperature and cause thermal injury.
+- **Eye injuries:** Excessive RF exposure may damage sensitive eye tissues, including the lens.
+- **Skin heating:** At higher RF frequencies, energy is increasingly absorbed near the body's surface, potentially causing burns.
+
+**Important:** RF energy can produce tissue heating without an immediately noticeable sensation of warmth or pain.
+
+**Application:** An antenna does not need to produce visible light or movement to transmit RF energy. Before approaching transmitting equipment, workers and responders should verify operating conditions, identify restricted areas, and follow established RF safety procedures.
+
+*Sources: Cember & Johnson, Introduction to Health Physics (4th ed.), Chapter 14; NASA Armstrong Flight Research Center, Radio Frequency Safety Training.*
+
+
+
+
+
+## Microwaves (300 MHz to 300 GHz)
+
+**Microwaves** are a portion of the electromagnetic spectrum within the radiofrequency (RF) range, between longer-wavelength radio waves and infrared radiation.
+
+Different microwave frequencies are grouped into **bands**, which are used for different technological applications.
+
+- **L-band:** Used in GPS navigation and certain radar and satellite systems. Longer wavelengths can penetrate vegetation and provide information about soil moisture.
+- **S-band:** Used in weather radar, satellite communications, and microwave ovens.
+- **C-band:** Used in radar, satellite communications, and Earth observation. Certain C-band radar systems can observe the Earth's surface through clouds and some vegetation.
+- **X-band:** Used in radar systems, including weather monitoring, high-resolution Earth observation, and speed radar guns.
+- **Ku-band:** Used extensively in satellite communications, including television and data transmission.
+
+![Police speed radar gun used to measure vehicle speed.](speed-radar-gun.jpg){#fig-speed-radar-gun fig-alt="Handheld police radar gun used to measure the speed of moving vehicles using microwave radar technology." width="85%"}
+
+*Image source: [Stalker Radar, Police Radar Gun SI](https://stalkerradar.com/international/police-radar-gun-si/).*
+
+### How Do Microwave Ovens Work?
+
+Microwave ovens typically operate at approximately **2.45 GHz**, corresponding to a wavelength of approximately **12.2 centimeters**.
+
+Microwaves interact with polar molecules, particularly water, and dissolved ions within food.
+
+The oscillating electric field causes polar molecules to continually reorient and charged particles to move. These interactions transfer electromagnetic energy into the food, producing **heat**.
+
+### Occupational Health Hazards
+
+Microwave radiation is **non-ionizing**, meaning its individual photons do not have sufficient energy to ionize atoms through the mechanisms associated with X-rays or gamma rays.
+
+The primary established hazard of sufficiently intense microwave exposure is **tissue heating**.
+
+- **Thermal injury:** Excessive absorption of microwave energy can raise tissue temperature and cause burns or internal heating.
+- **Eye injuries:** The lens of the eye has limited blood circulation and is particularly vulnerable to excessive heating. Severe exposure may contribute to cataract formation.
+- **Testicular heating:** Excessive temperature increases can temporarily interfere with sperm production because normal testicular function depends on temperatures below core body temperature.
+
+The amount of energy absorbed depends on microwave frequency, exposure intensity, duration, and the electrical properties of the exposed tissues.
+
+**Safety consideration:** Microwave radiation does not produce radioactive contamination. When evaluating high-powered microwave equipment, workers should consider the potential for RF exposure, equipment operating conditions, and established safety controls.
+
+*Sources: Cember, H., & Johnson, T. E., Introduction to Health Physics (4th ed.), Chapter 14, discussion of RF and microwave biological effects; NASA, Tour of the Electromagnetic Spectrum.*
+
+## Infrared Radiation (IR) ($1000\ \mu\mathrm{m}$ to $0.7\ \mu\mathrm{m}$)
+
+**Infrared radiation (IR)** is electromagnetic radiation with wavelengths longer than visible red light and shorter than microwaves.
+
+Although infrared radiation is invisible to the human eye, we can experience some of its energy as **radiant heat**, such as the warmth felt when standing near a fire.
+
+Infrared radiation is commonly divided into three regions: **near-infrared, mid-infrared, and far-infrared**.
+
+![Radiant heat emitted by a fire.](heat-from-fire.jpg){#fig-heat-from-fire fig-alt="Fire emitting radiant heat, illustrating a common source of infrared radiation." width="85%"}
+
+*Source: Hazardous Materials Chemistry textbook.*
+
+### Types of Infrared Radiation and Their Applications
+
+#### Near-Infrared (0.7–3 $\mu\mathrm{m}$)
+
+Near-infrared radiation has wavelengths closest to visible red light.
+
+- **Common sources:** Sunlight, incandescent lamps, and certain infrared LEDs and lasers.
+- **Applications:** Night-vision equipment, infrared illumination, optical sensors, and some communication systems.
+- **Occupational hazards:** Intense near-infrared exposure can injure the eyes, particularly because some wavelengths can reach the retina.
+
+#### Mid-Infrared (3–30 $\mu\mathrm{m}$)
+
+Mid-infrared radiation is strongly associated with thermal emission and molecular absorption.
+
+- **Common sources:** Heated equipment, industrial furnaces, and other warm or hot surfaces.
+- **Applications:** Thermal imaging, gas detection, infrared spectroscopy, and industrial temperature measurements.
+- **Occupational hazards:** Intense exposure can produce heating of the skin and anterior structures of the eye.
+
+#### Far-Infrared (30–1000 $\mu\mathrm{m}$)
+
+Far-infrared radiation consists of longer-wavelength infrared energy.
+
+- **Common sources:** Warm surfaces, heating equipment, and thermal radiation from the environment.
+- **Applications:** Radiant heating systems, thermal sensing, and certain scientific instruments.
+- **Occupational hazards:** Excessive exposure can cause superficial tissue heating, skin burns, and heat strain.
+
+**Note:** The wavelength boundaries between near-, mid-, and far-infrared vary among scientific and technical classification systems.
+
+### Biological Effects of Infrared Radiation
+
+A **biological effect** is a response of living tissue to an environmental exposure. However, not every biological effect is harmful.
+
+For example, feeling warmth from a fire is a normal biological response to infrared radiation.
+
+A biological effect becomes harmful when the absorbed energy produces tissue damage or overwhelms the body's ability to regulate temperature.
+
+The primary established mechanism of injury from excessive infrared exposure is **thermal heating**.
+
+- **Skin:** Excessive radiant energy can increase skin temperature, producing discomfort, burns, or other thermal injuries.
+- **Eyes:** Intense infrared radiation can injure ocular tissues. Depending on wavelength and exposure conditions, the cornea, lens, or retina may be affected. Chronic occupational exposure to intense infrared radiation has also been associated with cataracts.
+- **Heat strain:** Infrared radiation from furnaces, molten materials, and other high-temperature sources can increase a worker's total heat load, particularly when environmental temperatures are elevated.
+
+### Occupational and Environmental Health Relevance
+
+Workers may encounter infrared radiation in foundries, glass manufacturing, welding operations, firefighting, industrial heating, and other high-temperature environments.
+
+**Safety consideration:** Infrared radiation is non-ionizing. Its primary established occupational hazard is excessive heating of biological tissues, not radioactive contamination.
+
+Exposure assessments should consider the intensity of the radiation, exposure duration, distance from the source, wavelength, and effectiveness of protective controls.
+
+### Additional Applications of Infrared Radiation
+
+- **Thermal imaging:** Infrared cameras detect differences in emitted thermal radiation, allowing scientists and firefighters to observe temperature patterns and identify hotspots during wildfires.
+- **Earth observation:** NASA satellites use infrared measurements to monitor land and sea surface temperatures, vegetation conditions, and fires.
+- **Vegetation monitoring:** Near-infrared light reflected by plants helps scientists assess vegetation health because healthy leaves reflect substantial near-infrared radiation.
+- **Astronomy:** Infrared telescopes, including the James Webb Space Telescope, can observe cooler astronomical objects and detect light from regions obscured by interstellar dust.
+
+*Source: NASA, Tour of the Electromagnetic Spectrum, Infrared Waves and Reflected Near-Infrared Waves.*
+
+*Sources: Cember, H., & Johnson, T. E., Introduction to Health Physics (4th ed.), Chapter 14, discussion of biological and thermal effects of non-ionizing radiation; Hazardous Materials Chemistry textbook.*
+
+
 
 ## Ultraviolet Radiation (UV)
 
@@ -3900,7 +4335,20 @@ An **electric field** is a physical field produced by electric charges and chang
 
 Unlike radiofrequency and microwave radiation, **UV radiation can produce significant photochemical effects without substantial tissue heating**.
 
-*Source: NASA Armstrong Flight Research Center, Laser Safety Training.*
+![Clinical examples of skin cancer, including Merkel cell carcinoma, squamous cell carcinoma, basal cell carcinoma, and melanoma.](skin-cancer-mayo-clinc.jpg){#fig-skin-cancer-mayo-clinc fig-alt="Four clinical photographs illustrating Merkel cell carcinoma, squamous cell carcinoma, basal cell carcinoma, and melanoma." width="100%"}
+
+*Source: [Mayo Clinic, Skin Cancer: Symptoms and Causes](https://www.mayoclinic.org/diseases-conditions/skin-cancer/symptoms-causes/syc-20377605).*
+
+### Additional Applications of Ultraviolet Radiation
+
+- **Ozone monitoring:** Satellite instruments measure ultraviolet radiation to study atmospheric ozone, which absorbs much of the Sun's harmful UV radiation.
+- **Solar and astronomical observations:** Ultraviolet imaging helps scientists study the Sun, hot stars, and energetic processes that may be difficult to observe in visible light.
+- **Auroral observations:** Ultraviolet imaging can reveal auroras produced when energetic charged particles interact with gases in a planet's atmosphere.
+
+*Source: NASA, Tour of the Electromagnetic Spectrum, Ultraviolet Waves.*
+
+
+
 
 ## Lasers
 
@@ -3914,7 +4362,18 @@ A laser produces a concentrated beam of electromagnetic radiation, commonly in t
 
 **Important:** A laser beam does not have to be visible to be hazardous. Infrared laser radiation, for example, may be invisible while still presenting a serious eye hazard.
 
-*Source: NASA Armstrong Flight Research Center, Laser Safety Training.*
+### Additional Applications of Lasers
+
+- **Distance measurement:** Laser ranging instruments measure distance by transmitting light and measuring its return from a target.
+- **Atmospheric research:** Lidar (light detection and ranging) systems use laser pulses to study aerosols, clouds, and other atmospheric properties.
+- **Remote sensing:** Airborne and satellite-based laser instruments can measure surface elevation, vegetation structure, and changes in ice or terrain.
+
+![ISS Space Sky Laser illustration.](nasa-iss-space-laser.jpg){#fig-nasa-iss-space-laser fig-alt="Illustration associated with the International Space Station Space Sky Laser concept." width="85%"}
+
+*Image source: [ISS Space Sky Laser, Wikipedia](https://en.wikipedia.org/wiki/ISS_Space_Sky_Laser).*
+
+*Sources: NASA, Earth-observing lidar applications; NASA Armstrong Flight Research Center, Laser Safety Training.*
+
 
 ## Final Considerations: Radiation Safety
 
@@ -3929,25 +4388,115 @@ Both ionizing and non-ionizing radiation can present occupational hazards, but t
 *Sources: NASA Armstrong Flight Research Center, Radio Frequency Safety Training; NASA Armstrong Flight Research Center, Laser Safety Training; Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.).*
 
 
+
 # Source-Page Appendix
+
+This appendix identifies the principal textbooks, educational materials, institutional training resources, regulatory references, and third-party figures used in developing Lecture 04.
+
+Source citations accompanying individual figures, examples, and discussions throughout the lecture provide additional attribution. References listed here do not imply that all third-party materials are available under the course's Creative Commons license.
 
 ## Referenced Textbooks and Educational Sources
 
-1.  Burdge, Julia, and Jason Overby. *Chemistry: Atoms First*, 2nd edition. Chapter 2, **Atoms and the Periodic Table**, and Chapter 20, **Nuclear Chemistry**. Used for atomic structure, nuclear stability, radioactive decay, technetium-99m, and biological effects of radiation.
-2.  Atkins, Peter, Loretta Jones, Leroy Laverman, James Patterson, and Michael Young. *Chemical Principles*, 8th edition. **Focus 9: Nuclear Chemistry**. Used for nuclear radiation classifications and comparative properties.
-3.  Bevelacqua, Armando S., and Laurie A. Norman. *Hazardous Materials Chemistry*, 3rd edition. Jones & Bartlett Learning, radiation chapter. Used for alpha, beta, gamma, penetration, shielding, and hazardous materials response context.
-4.  Cember, Herman, and Thomas E. Johnson. *Introduction to Health Physics*, 4th edition. Used as a conceptual reference for ionization, biological effects, radiation dosimetry, and protection. Confirm chapter/page details against the instructor's edition before final publication.
-5.  Stewart, James, Lothar Redlin, and Saleem Watson. *Precalculus: Mathematics for Calculus*, 6th edition. Chapter 4, **Exponential and Logarithmic Functions**, especially Section 4.6 and Example 6. Used for the mathematical foundations of exponential decay, natural logarithms, radioactive half-life, the decay constant, and the worked radioactive-decay calculations in the earlier portion of Lecture 04.
-6.  **Study.com educational materials.** Previously consulted during lecture development; exact lesson titles, authors, and URLs remain to be documented if retained as cited sources.
+1. Burdge, Julia, and Jason Overby. *Chemistry: Atoms First*, 2nd edition. Chapter 2, **Atoms and the Periodic Table**, and Chapter 20, **Nuclear Chemistry**. Used for atomic structure, isotopes, nuclear stability, radioactive decay, natural radioactivity, technetium-99m, and biological effects of ionizing radiation. Specific references include Chapter 20, Table 20.1 and Figure 20.2.
 
-## Regulatory and Standards References for Final Verification
+2. Atkins, Peter, Loretta Jones, Leroy Laverman, James Patterson, and Michael Young. *Chemical Principles*, 8th edition. **Focus 9: Nuclear Chemistry**, **Fundamentals A**, **Section 1A.2: Electromagnetic Radiation**, and **Section 7B.2: Half-Lives for First-Order Reactions**. Used for nuclear radiation classifications, radioactive decay, electric and magnetic fields, electromagnetic waves, wavelength, frequency, and the mathematical description of first-order decay. Figures referenced include A.8 and 1A.7.
 
-The lecture identifies the **NRC, OSHA, EPA, FDA, FCC, ICNIRP, and IEEE** by their general responsibilities. Before publishing the regulatory section, add links to the specific official regulations, guidance, and standards selected for the course. **Numerical occupational and public dose limits are not reproduced here**; applicability depends on the source, exposure conditions, and jurisdiction.
+3. Bevelacqua, Armando S., and Laurie A. Norman. *Hazardous Materials Chemistry*, 3rd edition. Jones & Bartlett Learning. Chapter 3, **Atomic and Nuclear Structure and Radiation**. Used for alpha, beta, and gamma radiation, radiation penetration, shielding, radioactive materials, biological effects, and hazardous materials response applications.
 
+4. Cember, Herman, and Thomas E. Johnson. *Introduction to Health Physics*, 4th edition. Used for radioactive decay, physical and effective half-life, ionization, biological effects, radiation dosimetry, detection instruments, shielding, and radiation protection. Chapter 14 was also consulted for radiofrequency radiation, antennas, radiation zones, microwave exposure, and thermal effects of non-ionizing radiation.
+
+5. Stewart, James, Lothar Redlin, and Saleem Watson. *Precalculus: Mathematics for Calculus*, 6th edition. Chapter 4, **Exponential and Logarithmic Functions**, particularly Section 4.6 and Example 6. Used to introduce exponential decay, natural logarithms, half-life calculations, and the mathematical relationship between the decay constant and half-life. Material on trigonometric functions, including Figures 2, 3, and 6, was also used to illustrate periodic waves, amplitude, and repeating cycles.
+
+6. **Study.com educational materials.** Consulted during preliminary lecture development. Specific lessons, authors, and URLs should be documented before retaining these materials as formal references in a publicly distributed version.
+
+## NASA Educational and Training Resources
+
+1. **National Aeronautics and Space Administration (NASA).** [*Introduction to the Electromagnetic Spectrum*](https://science.nasa.gov/ems/01_intro/). Used to introduce electromagnetic radiation and its relationship to the electromagnetic spectrum.
+
+2. **NASA.** *Tour of the Electromagnetic Spectrum*. Used for radio waves, microwaves, infrared radiation, reflected near-infrared radiation, ultraviolet radiation, and scientific applications of electromagnetic radiation. Applications discussed include thermal imaging, wildfire detection, vegetation monitoring, atmospheric observations, astronomy, and planetary auroras.
+
+3. **NASA Armstrong Flight Research Center (AFRC), Radiation Safety Office.** *Ionizing Radiation Safety Training*. Instructor-provided training materials used for radiation protection principles, radiation detection instruments, occupational dose limits, contamination, shielding, and radiation safety practices.
+
+4. **NASA Armstrong Flight Research Center (AFRC).** *Radio Frequency Safety Training*. Instructor-provided training materials used for radiofrequency radiation, antennas, occupational exposure considerations, and non-ionizing radiation safety.
+
+5. **NASA Armstrong Flight Research Center (AFRC).** *Laser Safety Training* (2021). Instructor-provided training materials used for laser hazards, eye and skin injuries, laser classifications, protective eyewear, warning signs, and engineering and administrative controls.
+
+6. **NASA Earth Science and Earth-observing missions.** Educational materials concerning lidar and remote sensing. Used for applications involving atmospheric aerosols, clouds, surface elevation, vegetation structure, and environmental observations. Specific mission and webpage references should be added when finalized.
+
+## University of Washington Educational and Radiation Safety Resources
+
+1. **University of Washington, Environmental Health & Safety (EH&S), Radiation Safety Office.** *Ionizing Radiation Safety* training materials. Used for internal and external radiation exposure, radiation monitoring, contamination, and radiation protection practices.
+
+2. **University of Washington, Environmental Health & Safety.** *Ionizing Radiation Safety: Internal Radiation*, Philip Campbell, CHP, Spring 2022. Used for internal radiation exposure and associated biological considerations.
+
+3. **University of Washington, Environmental Health & Safety.** *Ionizing Radiation Safety: External Radiation* (2022). Used for external exposure, radiation protection, and shielding.
+
+4. **University of Washington, Environmental Health & Safety.** Training materials discussing activity in organs and tissues and effective decay constants, particularly pages 19–20. Used for biological retention and effective half-life.
+
+5. **University of Washington, Department of Environmental & Occupational Health Sciences (DEOHS).** ENVH 502 instructional materials, Dr. Michael Yost. Used for electromagnetic fields, radiofrequency radiation, antennas, and non-ionizing radiation exposure concepts.
+
+6. **University of Washington, Environmental Health & Safety.** Background radiation instructional materials, November 12, 2026. Used for contextual comparisons of natural and other radiation exposures.
+
+## Public Health, Scientific, and Government References
+
+The following organizations and publications provide supporting information for the lecture's discussions of environmental radiation, biological effects, radiation monitoring, and public health.
+
+- **U.S. Environmental Protection Agency (EPA):** [Radiation Sources and Doses](https://www.epa.gov/radiation/radiation-sources-and-doses), including average U.S. exposure estimates and information attributed to NCRP Report No. 160.
+
+- **National Council on Radiation Protection and Measurements (NCRP):** *Report No. 160, Ionizing Radiation Exposure of the Population of the United States* (2009). Used for background radiation and population exposure comparisons.
+
+- **U.S. Geological Survey (USGS):** [What Is Radon?](https://www.usgs.gov/faqs/what-radon) and *Generalized Geologic Radon Potential of the United States*, based on Open-File Report 93-292 (1993). Used for radon formation, geology, and environmental distribution.
+
+- **U.S. Environmental Protection Agency (EPA):** [How Does Radon Get Into Your Home?](https://www.epa.gov/radon/how-does-radon-get-your-home) and [Radioactivity in Tobacco](https://www.epa.gov/radtown/radioactivity-tobacco). Used for environmental exposure pathways.
+
+- **Centers for Disease Control and Prevention (CDC):** [Radon in the Home](https://www.cdc.gov/radon/about/radon-home.html), [Iodine-131](https://www.cdc.gov/radiation-emergencies/hcp/isotopes/iodine-131.html), [Potassium Iodide (KI)](https://www.cdc.gov/radiation-emergencies/treatment/potassium-iodide.html), and [Facts About Cigarette Smoking and Radiation](https://www.cdc.gov/radiation-health/data-research/facts-stats/cigarette-smoking.html). Used for radiation exposure pathways, internal contamination, thyroid uptake of radioactive iodine, and public health applications.
+
+- **Connecticut Department of Public Health:** [Radon in Water](https://portal.ct.gov/dph/environmental-health/radon/radon-in-water?language=en_US). Used for discussion of radon in drinking water.
+
+- **National Research Council, Committee to Assess Health Risks from Exposure to Low Levels of Ionizing Radiation:** *BEIR VII: Health Risks from Exposure to Low Levels of Ionizing Radiation*. National Academies Press, 2005. Table 7-9. Used for discussion of radiation-related health risks. The referenced table is reproduced with permission from the National Academies Press, as noted at its location in the lecture.
+
+- **World Health Organization (WHO):** [Electromagnetic Fields](https://www.who.int/health-topics/electromagnetic-fields). Used for general information on electromagnetic fields and exposure considerations.
+
+## Regulatory and Standards References
+
+The lecture distinguishes between regulatory requirements, scientific exposure guidelines, and voluntary technical standards.
+
+- **U.S. Nuclear Regulatory Commission (NRC):** [10 CFR Part 20, Standards for Protection Against Radiation](https://www.nrc.gov/reading-rm/doc-collections/cfr/part020/). Referenced for occupational and public radiation protection requirements, including considerations for declared pregnant workers.
+
+- **Occupational Safety and Health Administration (OSHA):** Occupational radiation and workplace safety requirements. Applicable provisions depend on the workplace, source, and exposure conditions.
+
+- **U.S. Environmental Protection Agency (EPA):** Environmental radiation protection and public health guidance.
+
+- **U.S. Food and Drug Administration (FDA):** Radiation-emitting electronic products, medical devices, and applicable product safety requirements.
+
+- **Federal Communications Commission (FCC):** Radiofrequency exposure requirements associated with regulated communications equipment and facilities.
+
+- **International Commission on Non-Ionizing Radiation Protection (ICNIRP):** Scientific exposure guidelines for non-ionizing radiation. ICNIRP is not a government regulatory agency.
+
+- **Institute of Electrical and Electronics Engineers (IEEE):** Technical standards concerning electromagnetic fields and radiofrequency exposure. IEEE is not a government regulatory agency.
+
+**Important:** Regulatory dose limits, scientific exposure guidelines, and technical standards are not interchangeable. Their applicability depends on the radiation source, exposure conditions, workplace, and jurisdiction.
+
+Numerical occupational dose limits are illustrated in the lecture using radiation safety training materials. For regulatory interpretation or incident response decisions, consult the current applicable regulations and qualified radiation safety personnel.
 
 ## Figures and Third-Party Materials
 
-Textbook figures, the periodic table, historical photographs, and the radiation penetration illustration remain credited at their respective locations in the lecture. Verify original image attribution, reuse permissions, and any source-page references before distributing a public version.
+Figures and illustrations used throughout Lecture 04 include textbook diagrams, nuclear decay illustrations, radiation detection instruments, radiation shielding examples, electromagnetic wave diagrams, historical materials, environmental exposure maps, and NASA educational graphics.
+
+Additional figure sources include:
+
+- **Landauer:** Personal dosimetry and radiation badge educational materials.
+- **Linda Hall Library:** Historical information and illustrations concerning Geiger counters.
+- **U.S. Department of Energy, Richland Operations Office:** Historical radiation safety materials.
+- **PhysicsOpenLab:** X-ray tube illustration.
+- **Science Facts:** Electric field illustration.
+- **Encyclopaedia Britannica:** Magnetic field educational illustration.
+- **Techplayon:** Wavelength and frequency comparison illustration.
+- **NASA, University of Washington, and other institutional sources:** Radiation safety, electromagnetic radiation, and environmental monitoring illustrations.
+
+Individual figures retain their source attributions at their respective locations in the lecture.
+
+Before distributing a public version, verify original figure attribution, source-page details, and applicable reproduction permissions. Citation of a figure does not, by itself, grant permission to reproduce or redistribute it.
 
 # Copyright & Use
 
@@ -3956,4 +4505,4 @@ Textbook figures, the periodic table, historical photographs, and the radiation 
 
 Except where otherwise noted, original course materials are licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
 
-Third-party textbook excerpts, figures, photographs, and other referenced materials are **not** covered by this license and remain subject to their respective copyright and licensing terms.
+Third-party textbook excerpts, figures, photographs, institutional training materials, and other referenced materials are **not** covered by this license and remain subject to their respective copyright and licensing terms.
