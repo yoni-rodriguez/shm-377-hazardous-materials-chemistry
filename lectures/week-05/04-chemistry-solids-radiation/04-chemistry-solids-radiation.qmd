@@ -604,7 +604,6 @@ General patterns:
 
 ## 4.4 Nuclei and Nuclear Reactions
 
-
 ### Nuclei
 
 Rutherford showed that each type of radiation is produced by **nuclear decay**. A change in the composition of a nucleus is called a **nuclear reaction**.
@@ -612,7 +611,6 @@ Rutherford showed that each type of radiation is produced by **nuclear decay**. 
 A specific atom with a given atomic number (Z) and mass number (A) is called a **nuclide**. For example, ${}^{1}_{1}\mathrm{H}$, ${}^{2}_{1}\mathrm{H}$, and ${}^{16}_{8}\mathrm{O}$ are three different nuclides, with the first two being isotopes of the same element.
 
 Nuclei that change their *structure spontaneously* and *emit radiation* are described as **radioactive**. Often, the result is a nucleus of a different element.
-
 
 ### Understanding the Nuclear Notation
 
@@ -645,7 +643,6 @@ Nuclear reactions differ in some important ways from chemical reactions.
 
 2.  Some nuclear reactions, such as those in which $\alpha$ or $\beta$ particles are emitted from the nucleus, leave behind a nucleus with a different number of protons and which is therefore the nucleus of an atom of a different element. The product nucleus is called a **daughter nucleus.**
 
-
 For example, when atmospheric ${}^{14}_{7}\mathrm{N}$ is converted to ${}^{14}_{6}\mathrm{C}$ and ${}^{1}_{1}\mathrm{H}$, **nuclear transmutation** has taken place. This transformation occurs when nitrogen-14 is bombarded by neutrons produced through cosmic-ray interactions in the atmosphere.
 
 $$
@@ -659,7 +656,6 @@ $$
 $$
 
 This type of transmutation occurs naturally, but nuclear transmutation can also be achieved artificially.
-
 
 3.  Another important difference between nuclear and chemical reactions is that energy changes are very much greater for nuclear reactions than for chemical reactions.
 
@@ -825,7 +821,6 @@ Patients may receive a radiopharmaceutical containing technetium-99m by injectio
 
 *Source: Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, Nuclear Chemistry.*
 
-
 ### Additional Nuclear Transformations and Radiation Types
 
 #### Electron Capture: Iodine-125
@@ -871,9 +866,6 @@ A **positron** ($\beta^{+}$ or ${}^{0}_{+1}\mathrm{e}$) is the electron's antipa
 
 The table describes general tendencies, not universal stopping distances. Radiation energy and shielding thickness matter. Gamma radiation often accompanies other nuclear transformations and can penetrate deeply into matter; lead or sufficiently thick concrete can reduce its intensity.
 
-
-
-
 ### Returning to Nuclear Stability
 
 Earlier, we introduced the **neutron-to-proton ratio** and the **belt of nuclear stability**. We can now ask: **Why do different unstable nuclei emit different types of radiation?**
@@ -892,9 +884,7 @@ Earlier, we introduced the **neutron-to-proton ratio** and the **belt of nuclear
 
 The spontaneous emission of particles or electromagnetic radiation by unstable nuclei is known as **radioactivity**.
 
-
 The main nuclear transformations we have examined include the emission of alpha ($\alpha$) particles, beta ($\beta$) particles, and gamma ($\gamma$) rays, as well as positron ($\beta^{+}$) emission and electron capture.
-
 
 The disintegration of a radioactive nucleus is often the beginning of a **radioactive decay series**.
 
@@ -906,18 +896,9 @@ The uranium-238 decay series illustrates how a radioactive parent nucleus can pr
 
 ![Decay series of uranium-238 showing successive nuclear transformations and the half-lives of radioactive nuclides.](decay-series-for-uranium-238.jpg){#fig-uranium-238-decay-series fig-alt="Decay series beginning with uranium-238 and ending with stable lead-206, showing alpha and beta emissions, daughter nuclides, branching pathways, and their physical half-lives" width="85%" fig-align="center"}
 
-Notice that the decay series includes **polonium-210 (${}^{210}_{84}\mathrm{Po}$)**, the isotope we used in our earlier half-life calculations.
+Notice that the decay series includes **polonium-210 (**${}^{210}_{84}\mathrm{Po}$), the isotope we used in our earlier half-life calculations.
 
 *Source: Burdge, J., & Overby, J. Chemistry: Atoms First (2nd ed.), Chapter 20, Section 20.3, "Natural Radioactivity," Figure 20.2, p. 881.*
-
-
-
-
-
-
-
-
-
 
 # The Mathematics of Radioactive Decay
 
@@ -2325,7 +2306,7 @@ Neither quantity alone establishes the radiation dose or health risk associated 
 
 *Mathematical approach based on Stewart, Redlin, and Watson, Precalculus: Mathematics for Calculus, 6th ed., Section 4.6, Example 6.*
 
-Suppose a sample initially contains 300 mg of polonium-210.
+You have 300 mg of polonium-210. The physical half-life is 140 days. One year has passed. How much polonium-210 is left after one-year? What is the rate of natural decay for polonium-210? How many days until 200 mg of polonium-210 remains?
 
 For this example, we will use a half-life of 140 days. This is a rounded instructional value; the measured physical half-life of polonium-210 is approximately 138.4 days.
 
@@ -2816,10 +2797,6 @@ Radiation type, activity, exposure pathways, distance, shielding, and whether ra
 
 *Sources: Atkins, P., Jones, L., & Laverman, L., Chemical Principles: The Quest for Insight, Section 7B.2, "Half-Lives for First-Order Reactions"; Cember, H., & Johnson, T. E., Introduction to Health Physics (4th ed.), radioactive decay and physical half-life.*
 
-
-
-
-
 # Part III. Biological Effects of Ionizing Radiation
 
 ## Ionization and Biological Effects of Radiation
@@ -2861,11 +2838,9 @@ On November 8, 1895, **Wilhelm Conrad Röntgen**, a German physicist, discovered
 The development of controllable X-ray sources helped establish the field of **radiography**, which uses penetrating radiation to produce images of objects and internal structures.
 
 ::: {layout-ncol="2"}
-
 ![Wilhelm Conrad Röntgen (1845–1923), the German physicist who discovered X-rays in 1895, alongside the famous early X-ray image of his wife Anna Bertha Ludwig's hand. Source: [Wikipedia](https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen).](wilhelm-conrad-rontgen.jpg){#fig-wilhelm-conrad-rontgen fig-alt="Historical portrait of Wilhelm Conrad Röntgen alongside an early radiograph of Anna Bertha Ludwig's hand, showing the bones of her fingers and her wedding ring" height="300px"}
 
 ![Historical illustration of Wilhelm Conrad Röntgen experimenting with an electrical discharge tube to investigate X-rays. Source: [Alamy](https://www.alamy.com/stock-photo-wilhelm-conrad-roentgen-1845-1923-german-experimental-physicist-and-104020180.html).](electrical-discharge-tube.jpg){#fig-electrical-discharge-tube fig-alt="Historical illustration depicting Wilhelm Conrad Röntgen and electrical discharge tube apparatus used during early X-ray experiments" height="300px"}
-
 :::
 
 ##### How Are X-Rays Produced?
@@ -2895,7 +2870,6 @@ When electrical power is removed, X-ray production stops. This does not mean tha
 
 In hazardous materials management, understanding how radiation is produced helps us distinguish between **radiation-generating equipment** and **radioactive materials**.
 
-
 ### Ionizing Radiation Exposure Sources
 
 We have examined how ionizing radiation is produced and how it interacts with matter. But where does our exposure to ionizing radiation come from?
@@ -2921,8 +2895,6 @@ Notice that **radon and thoron are major contributors to natural background radi
 **Note:** These values represent historical U.S. population averages based primarily on 2006 exposure data, as reported in NCRP Report No. 160 (2009). Individual radiation doses vary depending on geographic location, medical procedures, occupation, and other exposure conditions.
 
 *Source: [U.S. Environmental Protection Agency (EPA), Radiation Sources and Doses: Average U.S. Doses and Sources](https://www.epa.gov/radiation/radiation-sources-and-doses#averagedoses). Data attributed to NCRP Report No. 160 (2009).*
-
-
 
 ##### Natural Background Sources of Ionizing Radiation in the United States
 
@@ -2955,9 +2927,9 @@ $$
 
 Where:
 
-- **Radium-226 (${}^{226}_{88}\mathrm{Ra}$):** The radioactive parent nuclide.
-- **Radon-222 (${}^{222}_{86}\mathrm{Rn}$):** The radioactive daughter nuclide produced by alpha decay.
-- **Alpha particle (${}^{4}_{2}\mathrm{He}$):** A helium nucleus consisting of two protons and two neutrons.
+- **Radium-226 (**${}^{226}_{88}\mathrm{Ra}$): The radioactive parent nuclide.
+- **Radon-222 (**${}^{222}_{86}\mathrm{Rn}$): The radioactive daughter nuclide produced by alpha decay.
+- **Alpha particle (**${}^{4}_{2}\mathrm{He}$): A helium nucleus consisting of two protons and two neutrons.
 
 Because radon is a gas, it can escape from mineral grains and migrate through pores, fractures, and other openings in surrounding soil and rock.
 
@@ -3031,7 +3003,7 @@ The figure provides examples to help us put radiation exposure into perspective.
 
 Another example of radiation exposure comes from cigarette smoking.
 
-Tobacco plants can accumulate naturally occurring radioactive materials, particularly **lead-210 (${}^{210}_{82}\mathrm{Pb}$)** and **polonium-210 (${}^{210}_{84}\mathrm{Po}$)**.
+Tobacco plants can accumulate naturally occurring radioactive materials, particularly **lead-210 (**${}^{210}_{82}\mathrm{Pb}$) and **polonium-210 (**${}^{210}_{84}\mathrm{Po}$).
 
 These radionuclides originate from naturally occurring radioactive decay processes involving uranium, radium, and radon in the environment.
 
@@ -3051,9 +3023,9 @@ $$
 
 Where:
 
-- **Polonium-210 (${}^{210}_{84}\mathrm{Po}$):** The radioactive parent nuclide.
-- **Lead-206 (${}^{206}_{82}\mathrm{Pb}$):** The stable daughter nuclide.
-- **Alpha particle (${}^{4}_{2}\mathrm{He}$):** A helium nucleus consisting of two protons and two neutrons.
+- **Polonium-210 (**${}^{210}_{84}\mathrm{Po}$): The radioactive parent nuclide.
+- **Lead-206 (**${}^{206}_{82}\mathrm{Pb}$): The stable daughter nuclide.
+- **Alpha particle (**${}^{4}_{2}\mathrm{He}$): A helium nucleus consisting of two protons and two neutrons.
 
 Although alpha particles have limited penetration through intact skin, they can deposit energy in nearby biological tissues when emitted by radioactive material inside the body.
 
@@ -3125,7 +3097,6 @@ Radioactive material may circulate through the bloodstream, accumulate in partic
 
 ![Radiological contamination and its relationship to radiation exposure.](contamination.jpg){#fig-radiological-contamination fig-alt="University of Washington radiation safety educational illustration addressing radioactive contamination." width="85%"}
 
-
 #### Exposure Pathways and Movement Through the Body
 
 There are several pathways through which radioactive material may enter the body:
@@ -3147,8 +3118,6 @@ The body may also eliminate radioactive material through urine, feces, or other 
 
 **Chemical connection:** Radioactive isotopes of an element generally participate in the same chemical processes as their stable counterparts. Consequently, understanding the chemical behavior of an element can help predict where its radioactive isotopes may travel or accumulate in the body.
 
-
-
 ##### Example: Radioactive Iodine, the Thyroid Gland, and Chernobyl
 
 To understand why the chemical properties of radioactive material matter, consider the thyroid gland.
@@ -3159,8 +3128,6 @@ The **thyroid** is a small, butterfly-shaped gland located in the front of the n
 
 *Image source: [Cleveland Clinic, Thyroid: What It Is, Function & Problems](https://my.clevelandclinic.org/health/body/23188-thyroid).*
 
-
-
 To produce these hormones, the thyroid requires **iodine**, an essential element obtained through the diet from sources such as iodized salt, dairy products, and seafood.
 
 After iodine is absorbed into the bloodstream, the thyroid takes up some of it and uses it to produce thyroid hormones.
@@ -3169,7 +3136,7 @@ However, the thyroid cannot distinguish between stable iodine and radioactive is
 
 This creates a potential radiation hazard.
 
-**Iodine-131 ($^{131}\mathrm{I}$)** is a radioactive isotope produced during nuclear fission. It emits beta particles and gamma radiation and has a physical half-life of approximately 8 days.
+**Iodine-131 (**$^{131}\mathrm{I}$) is a radioactive isotope produced during nuclear fission. It emits beta particles and gamma radiation and has a physical half-life of approximately 8 days.
 
 ![Iodine, the chemical element essential for thyroid hormone production, including its radioactive isotope iodine-131.](iodine.jpg){#fig-iodine-131 fig-alt="CDC illustration of iodine on the periodic table, highlighting the chemical element with atomic number 53 and symbol I." width="75%"}
 
@@ -3237,11 +3204,9 @@ This distinction reinforces an important principle of radiation protection: **pr
 
 *Source: Centers for Disease Control and Prevention (CDC), [Potassium Iodide (KI)](https://www.cdc.gov/radiation-emergencies/treatment/potassium-iodide.html), updated January 30, 2025.*
 
----
+------------------------------------------------------------------------
 
 *Additional source: University of Washington, Environmental Health & Safety, Ionizing Radiation Safety – Internal Radiation, Philip Campbell, CHP, Spring 2022. See also UW radiation safety training, "Worker Exposure Pathways," p. 17.*
-
-
 
 #### What Determines the Radiation Dose to an Organ?
 
@@ -3268,7 +3233,6 @@ For example, an alpha-emitting radionuclide deposited inside sensitive tissue ca
 
 Furthermore, radioactive material retained in one organ may emit penetrating radiation that deposits energy in another organ.
 
-
 This introduces an important distinction between a **source organ**, where radioactive material is located, and a **target organ**, where radiation energy is deposited.
 
 The source and target organs are not necessarily the same.
@@ -3279,20 +3243,17 @@ The source and target organs are not necessarily the same.
 
 *Additional source: University of Washington, Environmental Health & Safety, radiation safety training, "Dose to an Organ" and "Doses to Other Organs," pp. 18 and 21.*
 
-
-
-
 #### Physical, Biological, and Effective Half-Life
 
 When radioactive material enters the body, its activity may decrease through two processes: **radioactive decay** and **biological elimination**.
 
 These processes are described using three related concepts:
 
-- **Physical Half-Life ($T_{\mathrm{phys}}$):** The time required for half of the radioactive nuclei of an isotope to undergo spontaneous nuclear decay. The physical half-life is a characteristic property of each radionuclide and is not meaningfully affected by ordinary changes in temperature, chemical form, or biological environment.
+- **Physical Half-Life (**$T_{\mathrm{phys}}$): The time required for half of the radioactive nuclei of an isotope to undergo spontaneous nuclear decay. The physical half-life is a characteristic property of each radionuclide and is not meaningfully affected by ordinary changes in temperature, chemical form, or biological environment.
 
-- **Biological Half-Life ($T_{\mathrm{biol}}$):** The time required for the body's biological processes, including metabolism and excretion, to eliminate half of a substance from the body or a particular organ or compartment, without considering radioactive decay. Elimination may occur through urine, feces, perspiration, respiration, or other biological pathways.
+- **Biological Half-Life (**$T_{\mathrm{biol}}$): The time required for the body's biological processes, including metabolism and excretion, to eliminate half of a substance from the body or a particular organ or compartment, without considering radioactive decay. Elimination may occur through urine, feces, perspiration, respiration, or other biological pathways.
 
-- **Effective Half-Life ($T_{\mathrm{eff}}$):** The time required for the radioactive activity retained in the body or a particular organ to decrease by half through the combined effects of radioactive decay and biological elimination.
+- **Effective Half-Life (**$T_{\mathrm{eff}}$): The time required for the radioactive activity retained in the body or a particular organ to decrease by half through the combined effects of radioactive decay and biological elimination.
 
 ![Physical, biological, and effective half-life of radioactive material within the body.](effective-half-life.jpg){#fig-effective-half-life fig-alt="Illustration comparing physical half-life, biological half-life, and effective half-life, showing how radioactive decay and biological elimination combine to reduce retained radioactivity." width="85%"}
 
@@ -3307,8 +3268,6 @@ For example, a radioactive substance may undergo nuclear decay while the body si
 Actual biological distribution and elimination may involve multiple organs or compartments and require more complex models.
 
 *Additional sources: [U.S. Nuclear Regulatory Commission, Effective Half-Life](https://www.nrc.gov/education-regulatory-research/glossary/half-life-effective); [HyperPhysics, Biological and Effective Half-Life](http://hyperphysics.phy-astr.gsu.edu/hbase/Nuclear/biohalf.html).*
-
-
 
 ##### Activity Retained in an Organ Over Time
 
@@ -3331,8 +3290,6 @@ A radionuclide that remains in an organ for an extended period may continue irra
 **Conceptual connection:** Physical half-life and biological elimination help explain how long radioactive material may continue contributing to internal radiation exposure.
 
 *Source: University of Washington, Environmental Health & Safety, radiation safety training, "Activity in an Organ/Tissue" and "Effective Decay Constant," pp. 19–20.*
-
-
 
 ### Biological Effects of Ionizing Radiation
 
@@ -3372,10 +3329,7 @@ Studies of atomic-bomb survivors provide important epidemiological evidence rela
 
 These findings help scientists estimate radiation-related cancer risks and develop radiation protection recommendations.
 
-
 Understanding these differences helps explain why radiation protection programs seek to prevent tissue injuries while minimizing unnecessary radiation exposure and reducing the risk of radiation-related cancer.
-
-
 
 # Part IV. Radiation Dosimetry and Protection
 
@@ -3388,9 +3342,6 @@ These biological effects raise an important question:
 **If ionizing radiation can cause biological harm, how do we protect ourselves and others from unnecessary exposure?**
 
 Radiation protection programs address this question through a principle known as **ALARA**.
-
-
-
 
 ## ALARA: As Low As Reasonably Achievable
 
@@ -3410,9 +3361,9 @@ ALARA does not mean that all radiation exposure can be eliminated. Instead, it e
 
 Three fundamental methods of controlling external radiation exposure are:
 
-1. **Time:** Reduce the amount of time spent near a radiation source.
-2. **Distance:** Increase the distance between yourself and the radiation source.
-3. **Shielding:** Place appropriate protective materials between yourself and the radiation source.
+1.  **Time:** Reduce the amount of time spent near a radiation source.
+2.  **Distance:** Increase the distance between yourself and the radiation source.
+3.  **Shielding:** Place appropriate protective materials between yourself and the radiation source.
 
 These principles are especially important for hazardous materials responders who may encounter radioactive materials or radiation-generating equipment.
 
@@ -3423,7 +3374,6 @@ However, before we can determine whether radiation protection measures are effec
 ### NRC Occupational Dose Limits
 
 The U.S. Nuclear Regulatory Commission establishes occupational and public radiation protection requirements for activities under its jurisdiction in **10 CFR Part 20**. Specific limits and monitoring requirements differ for occupational whole-body dose, individual tissues, declared pregnant workers, and members of the public. NRC rules may be administered by authorized Agreement States for certain activities; other workplaces may fall under different authorities.
-
 
 ![NRC occupational radiation dose limits presented in radiation safety training.](nrc-occupational-dose-limits.jpg){#fig-nrc-occupational-dose-limits fig-alt="NASA Armstrong Flight Research Center radiation safety training material presenting NRC occupational radiation dose limits." width="85%"}
 
@@ -3443,10 +3393,6 @@ In the United States, relevant organizations may include:
 - **Occupational Safety and Health Administration (OSHA):** Enforces applicable workplace safety and health requirements, including ionizing-radiation provisions in covered workplaces.
 - **Environmental Protection Agency (EPA):** Establishes certain environmental radiation standards and provides radiological emergency guidance.
 - **Food and Drug Administration (FDA):** Regulates medical radiation-emitting electronic products and radiopharmaceuticals within its statutory responsibilities.
-
-
-
-
 
 ## How Do We Measure Ionizing Radiation?
 
@@ -3488,7 +3434,7 @@ This means that one curie represents 37 billion nuclear transformations per seco
 
 ### Exposure in Air
 
-**Exposure ($X$)** describes the electrical charge produced by X-rays or gamma rays through ionization in air, per unit mass of air.
+**Exposure (**$X$) describes the electrical charge produced by X-rays or gamma rays through ionization in air, per unit mass of air.
 
 When these forms of radiation pass through air, they can remove electrons from atoms and molecules, producing electrically charged particles.
 
@@ -3512,7 +3458,7 @@ $$
 Different types of radiation interact with matter in different ways. As a result, we need instruments designed for the radiation we want to detect.
 
 | Radiation type | How we can detect it |
-|:----------------|:----------------|
+|:-----------------------------------|:-----------------------------------|
 | Alpha ($\alpha$) | Specialized alpha probes or detectors that measure radiation from radioactive material collected on filters |
 | Beta ($\beta$) | Radiation survey probes and Geiger-Müller counters designed to detect beta particles |
 | Gamma ($\gamma$) | Ionization chambers, Geiger-Müller counters, and other gamma-sensitive detectors |
@@ -3579,15 +3525,15 @@ When ionizing radiation enters the tube, it interacts with the gas and produces 
 
 The process can be summarized in five steps:
 
-1. **Radiation enters the detector.** Ionizing radiation interacts with gas atoms inside the tube.
+1.  **Radiation enters the detector.** Ionizing radiation interacts with gas atoms inside the tube.
 
-2. **Ionization occurs.** Electrons are removed from gas atoms, producing positively charged ions and free electrons.
+2.  **Ionization occurs.** Electrons are removed from gas atoms, producing positively charged ions and free electrons.
 
-3. **Electrons accelerate.** The electric field attracts electrons toward the positively charged central wire. Accelerating electrons produce additional ionization through collisions with gas atoms.
+3.  **Electrons accelerate.** The electric field attracts electrons toward the positively charged central wire. Accelerating electrons produce additional ionization through collisions with gas atoms.
 
-4. **An electrical pulse forms.** The resulting avalanche of charged particles produces a measurable electrical pulse.
+4.  **An electrical pulse forms.** The resulting avalanche of charged particles produces a measurable electrical pulse.
 
-5. **The instrument registers a count.** The electrical pulse is recorded electronically and may be displayed as a numerical count, a meter response, or an audible click.
+5.  **The instrument registers a count.** The electrical pulse is recorded electronically and may be displayed as a numerical count, a meter response, or an audible click.
 
 ![Gas-filled radiation detector illustrating the operating principles of a Geiger-Müller counter.](gas-probes.jpg){#fig-gas-filled-radiation-detector fig-alt="Educational illustration of a gas-filled radiation detector showing how ionizing radiation produces charged particles that generate an electrical pulse." width="85%"}
 
@@ -3609,7 +3555,6 @@ One way to monitor for airborne alpha-emitting radioactive material is to **coll
 
 The collected material can then be examined using an appropriate alpha radiation detector.
 
-
 #### Continuous Air Monitoring
 
 At nuclear facilities and other locations where radioactive material may be present, specialized instruments can continuously monitor the air for radioactive particles.
@@ -3618,13 +3563,13 @@ These instruments include **continuous particulate air monitors (CPAMs)** and **
 
 They operate using a straightforward process:
 
-1. **A pump draws air into the monitor.** Air from the surrounding environment enters the sampling system.
+1.  **A pump draws air into the monitor.** Air from the surrounding environment enters the sampling system.
 
-2. **A filter collects airborne particles.** If radioactive material is attached to these particles, it may also be collected.
+2.  **A filter collects airborne particles.** If radioactive material is attached to these particles, it may also be collected.
 
-3. **A radiation detector measures the collected material.** The instrument monitors radiation emitted by radioactive material on the filter.
+3.  **A radiation detector measures the collected material.** The instrument monitors radiation emitted by radioactive material on the filter.
 
-4. **The instrument reports the measurement.** Changes in the detected radiation can help identify possible airborne radioactive contamination.
+4.  **The instrument reports the measurement.** Changes in the detected radiation can help identify possible airborne radioactive contamination.
 
 ![Continuous particulate air monitoring equipment used to detect airborne radioactive contamination.](cpams.jpg){#fig-cpams fig-alt="Continuous particulate air monitoring equipment installed outdoors to collect airborne particles and monitor for radioactive contamination." width="85%"}
 
@@ -3637,7 +3582,6 @@ Some systems use a stationary filter, while others move the filter through the i
 Natural background radiation is always present in our environment. Radiation monitoring systems must distinguish normal background levels from changes that could indicate a release of radioactive material.
 
 **HazMat application:** Detecting radiation in an area and detecting radioactive contamination in the air are different tasks. Responders must select instruments and sampling methods appropriate for the hazard.
-
 
 ### Radioactive Materials Versus Radiation-Generating Equipment
 
@@ -3672,8 +3616,6 @@ There are two important types of surface contamination:
 Survey instruments and wipe tests help assess contamination, but the correct method depends on the radionuclide and detector.
 
 **HazMat distinction:** Radiation exposure does not necessarily involve contamination. Removable contamination can create additional inhalation, ingestion, and spread hazards.
-
-
 
 ### Selecting Shielding Materials
 
@@ -3737,9 +3679,9 @@ This example assumes a beam and shielding conditions for which the stated HVL ap
 
 As discussed in the ALARA section, radiation protection relies on three fundamental principles:
 
-1. **Time:** Minimize the time spent near a radiation source.
-2. **Distance:** Increase the distance between yourself and the radiation source.
-3. **Shielding:** Use appropriate materials to reduce the radiation reaching you.
+1.  **Time:** Minimize the time spent near a radiation source.
+2.  **Distance:** Increase the distance between yourself and the radiation source.
+3.  **Shielding:** Use appropriate materials to reduce the radiation reaching you.
 
 ![Illustration of time, distance, and shielding as methods of reducing external radiation exposure.](shielding-nasa.jpg){#fig-shielding-nasa-alara fig-alt="Radiation safety illustration showing how exposure can be reduced by limiting time, increasing distance from a radioactive source, and placing shielding between the source and workers." width="85%"}
 
@@ -3794,31 +3736,13 @@ Personal dosimeters also do not replace radiation survey instruments or contamin
 
 *Sources: [Landauer, Understanding the Purpose of Radiation Badges and Personal Dosimetry](https://www.landauer.com/blog/understanding-purpose-radiation-badges-personal-dosimetry); Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.).*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Part IV. Non-Ionizing Radiation
 
 ## The Electromagnetic Spectrum
 
 The **electromagnetic spectrum** describes the full range of electromagnetic radiation, organized according to wavelength and frequency.
 
-![Electromagnetic spectrum illustrating the relationship between wavelength, frequency, and different types of electromagnetic radiation.](electromagnetic-spectrum.jpg){#fig-electromagnetic-spectrum fig-alt="Diagram of the electromagnetic spectrum showing radio waves, microwaves, infrared, visible light, ultraviolet radiation, X-rays, and gamma rays" width="100%"}
+![Electromagnetic spectrum illustrating the relationship between wavelength, frequency, and different types of electromagnetic radiation.](electromagnetic-spectrum.jpg){fig-alt="Diagram of the electromagnetic spectrum showing radio waves, microwaves, infrared, visible light, ultraviolet radiation, X-rays, and gamma rays" width="100%"}
 
 We have spent most of this lecture examining **ionizing radiation**, which has sufficient energy to remove electrons from atoms.
 
@@ -3830,12 +3754,9 @@ Although non-ionizing radiation does not produce ionization in the same way as X
 
 Before examining the different types of non-ionizing radiation, we need to understand how electromagnetic radiation behaves.
 
-
-
 ## Electric and Magnetic Fields
 
 Electromagnetic radiation involves two closely related concepts: **electric fields** and **magnetic fields**.
-
 
 ### Electric Fields
 
@@ -3845,13 +3766,9 @@ An **electric field** is a region where an electric charge experiences an electr
 - They occur around charged objects and energized electrical equipment.
 - Electric field strength is commonly measured in volts per meter (V/m).
 
-
 ![Illustration of an electric field.](electric-field.jpg){#fig-electric-field fig-alt="Illustration depicting an electric field and its spatial distribution." width="85%"}
 
 *Source: [Science Facts, Electric Field](https://www.sciencefacts.net/electric-field.html).*
-
-
-
 
 ### Magnetic Fields
 
@@ -3861,11 +3778,9 @@ A **magnetic field** is a region where moving electric charges or magnetic mater
 - They occur around magnets, electrical motors, and current-carrying wires.
 - Magnetic field strength is commonly measured in tesla (T).
 
-
 ![Illustration of a magnetic field.](magnetic-field.jpg){#fig-magnetic-field fig-alt="Illustration depicting a magnetic field and its spatial distribution." width="85%"}
 
 *Source: [Encyclopaedia Britannica, How Do Magnets Work?](https://www.britannica.com/science/How-Do-Magnets-Work).*
-
 
 **Important distinction:** An electric field exerts a force on charged particles whether they are stationary or moving, whereas the magnetic force on a charged particle depends on its motion.
 
@@ -3888,11 +3803,9 @@ In an electromagnetic wave, the electric and magnetic fields oscillate perpendic
 
 *Source: Chemical Principles, Fundamentals A, Figure A.8.*
 
-
 ![Illustration of an electromagnetic wave.](an-electromagentic-wave.jpg){#fig-an-electromagentic-wave fig-alt="Illustration of an electromagnetic wave showing its wave-like behavior." width="85%"}
 
 *Source: University of Washington, Department of Environmental & Occupational Health Sciences (DEOHS), ENVH 502, Dr. Michael Yost.*
-
 
 Examples include radio waves, microwaves, visible light, ultraviolet radiation, X-rays, and gamma rays.
 
@@ -3906,14 +3819,13 @@ This is approximately 300 million meters per second.
 
 *Source: Chemical Principles, Section 1A.2, Electromagnetic Radiation.*
 
-
 ### Wavelength, Amplitude, and Frequency
 
 Electromagnetic waves can be described using three important properties: **wavelength, amplitude, and frequency**.
 
 #### Wavelength and Amplitude
 
-- **Wavelength ($\lambda$):** The distance between corresponding points on successive waves, such as one peak to the next. Wavelength is commonly measured in meters (m).
+- **Wavelength (**$\lambda$): The distance between corresponding points on successive waves, such as one peak to the next. Wavelength is commonly measured in meters (m).
 - **Amplitude:** The maximum displacement of a wave from its center or equilibrium position. For an electromagnetic wave, this represents the strength of its oscillating electric or magnetic field.
 
 The following illustration shows how wavelength and amplitude are represented in an electromagnetic wave.
@@ -3938,7 +3850,7 @@ The sine and cosine functions provide mathematical examples of repeating wave pa
 
 *Source: Stewart, Precalculus, trigonometric functions, Figures 2 and 3.*
 
-**Frequency ($\nu$)** is the number of complete wave cycles passing a point each second.
+**Frequency (**$\nu$) is the number of complete wave cycles passing a point each second.
 
 Frequency is measured in **hertz (Hz)**.
 
@@ -3947,8 +3859,6 @@ One hertz represents one cycle per second:
 $$
 1\ \mathrm{Hz}=1\ \mathrm{s^{-1}}
 $$
-
-
 
 #### Relationship Between Wavelength and Frequency
 
@@ -3985,10 +3895,7 @@ Because electromagnetic waves travel at the same speed in a vacuum:
 
 *Source: [Techplayon, Wavelength, Frequency, Amplitude and Phase: Defining Waves](https://www.techplayon.com/wavelength-frequency-amplitude-phase-defining-waves/).*
 
-*Additional reference: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), discussion of Einstein's postulates and the speed of light.*
-Health Physics (4th ed.), discussion of Einstein's postulates and the speed of light.*
-
-
+*Additional reference: Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.), discussion of Einstein's postulates and the speed of light.* Health Physics (4th ed.), discussion of Einstein's postulates and the speed of light.\*
 
 ### Electromagnetic Energy
 
@@ -4030,11 +3937,6 @@ The potential for adverse health effects depends on factors such as the frequenc
 
 *Sources: [World Health Organization, Electromagnetic Fields](https://www.who.int/health-topics/electromagnetic-fields#tab=tab_1); Chemical Principles, Section 1A.2, Electromagnetic Radiation; NASA Armstrong Flight Research Center, Radio Frequency Safety Training.*
 
-
-
-
-
-
 ## Radio Waves (30 kHz to 3 GHz)
 
 **Radio waves** are low-frequency, low-energy electromagnetic waves with the longest wavelengths in the electromagnetic spectrum. Their wavelengths range from approximately the length of a football to distances larger than our planet.
@@ -4069,8 +3971,6 @@ Today, we use radio waves every day for:
 - **Primary occupational hazards:** Sufficiently intense RF exposure can produce tissue heating and injury.
 - **Safety consideration:** Workers must identify active transmitters and follow RF exposure controls.
 
-
-
 ### Antennas
 
 An **antenna** is a device that transmits or receives electromagnetic waves.
@@ -4098,7 +3998,6 @@ As radio waves propagate, they carry energy through oscillating electric and mag
 
 *Source: University of Washington, Department of Environmental & Occupational Health Sciences, ENVH 502, Dr. Michael Yost.*
 
-
 #### Near Field and Far Field
 
 The electromagnetic field surrounding an antenna changes with distance.
@@ -4112,16 +4011,15 @@ Two important regions are the **near field** and **far field**.
 
 The near field can be divided into two regions:
 
-1. **Reactive near field:** The region closest to the antenna, where energy is temporarily stored in the electric and magnetic fields and exchanged with the antenna rather than being entirely radiated away.
+1.  **Reactive near field:** The region closest to the antenna, where energy is temporarily stored in the electric and magnetic fields and exchanged with the antenna rather than being entirely radiated away.
 
-2. **Radiative near field (Fresnel region):** A region farther from the antenna where energy propagates outward, but the radiation pattern and field distribution still depend on distance and antenna geometry.
+2.  **Radiative near field (Fresnel region):** A region farther from the antenna where energy propagates outward, but the radiation pattern and field distribution still depend on distance and antenna geometry.
 
 Beyond the near field is the **far field (Fraunhofer region)**, where the radiation pattern becomes more stable with distance.
 
 ![Illustration of reactive near field, radiative near field, and far field surrounding an antenna.](uw-near-field-far-field.jpg){#fig-uw-near-field-far-field fig-alt="University of Washington illustration showing the reactive near field, radiative Fresnel region, and far-field Fraunhofer region surrounding an antenna." width="85%"}
 
 *Source: University of Washington, Department of Environmental & Occupational Health Sciences (DEOHS), ENVH 502, Dr. Michael Yost.*
-
 
 ##### Inverse-Square Law
 
@@ -4148,8 +4046,6 @@ If the distance from an antenna doubles, the power density decreases to approxim
 
 *Source: Cember & Johnson, Introduction to Health Physics (4th ed.), Figure 14-12.*
 
-
-
 ### Interaction of RF Radiation with Matter
 
 When electromagnetic radiation encounters matter, several interactions are possible:
@@ -4164,7 +4060,6 @@ When electromagnetic radiation encounters matter, several interactions are possi
 *Source: University of Washington, Department of Environmental & Occupational Health Sciences (DEOHS), ENVH 502, Dr. Michael Yost.*
 
 For occupational health, **absorption is especially important** because absorbed RF energy can produce heating in biological tissues.
-
 
 ### Specific Absorption Rate (SAR)
 
@@ -4208,10 +4103,6 @@ The primary established hazard of sufficiently intense RF exposure is **tissue h
 **Application:** An antenna does not need to produce visible light or movement to transmit RF energy. Before approaching transmitting equipment, workers and responders should verify operating conditions, identify restricted areas, and follow established RF safety procedures.
 
 *Sources: Cember & Johnson, Introduction to Health Physics (4th ed.), Chapter 14; NASA Armstrong Flight Research Center, Radio Frequency Safety Training.*
-
-
-
-
 
 ## Microwaves (300 MHz to 300 GHz)
 
@@ -4326,8 +4217,6 @@ Exposure assessments should consider the intensity of the radiation, exposure du
 
 *Sources: Cember, H., & Johnson, T. E., Introduction to Health Physics (4th ed.), Chapter 14, discussion of biological and thermal effects of non-ionizing radiation; Hazardous Materials Chemistry textbook.*
 
-
-
 ## Ultraviolet Radiation (UV)
 
 **Ultraviolet (UV) radiation** lies between visible light and X-rays on the electromagnetic spectrum.
@@ -4349,9 +4238,6 @@ Unlike radiofrequency and microwave radiation, **UV radiation can produce signif
 - **Auroral observations:** Ultraviolet imaging can reveal auroras produced when energetic charged particles interact with gases in a planet's atmosphere.
 
 *Source: NASA, Tour of the Electromagnetic Spectrum, Ultraviolet Waves.*
-
-
-
 
 ## Lasers
 
@@ -4377,7 +4263,6 @@ A laser produces a concentrated beam of electromagnetic radiation, commonly in t
 
 *Sources: NASA, Earth-observing lidar applications; NASA Armstrong Flight Research Center, Laser Safety Training.*
 
-
 ## Final Considerations: Radiation Safety
 
 Both ionizing and non-ionizing radiation can present occupational hazards, but their mechanisms of interaction with matter differ.
@@ -4390,8 +4275,6 @@ Both ionizing and non-ionizing radiation can present occupational hazards, but t
 
 *Sources: NASA Armstrong Flight Research Center, Radio Frequency Safety Training; NASA Armstrong Flight Research Center, Laser Safety Training; Cember, H., & Johnson, T. E. Introduction to Health Physics (4th ed.).*
 
-
-
 # Source-Page Appendix
 
 This appendix identifies the principal textbooks, educational materials, institutional training resources, regulatory references, and third-party figures used in developing Lecture 04.
@@ -4400,45 +4283,45 @@ Source citations accompanying individual figures, examples, and discussions thro
 
 ## Referenced Textbooks and Educational Sources
 
-1. Burdge, Julia, and Jason Overby. *Chemistry: Atoms First*, 2nd edition. Chapter 2, **Atoms and the Periodic Table**, and Chapter 20, **Nuclear Chemistry**. Used for atomic structure, isotopes, nuclear stability, radioactive decay, natural radioactivity, technetium-99m, and biological effects of ionizing radiation. Specific references include Chapter 20, Table 20.1 and Figure 20.2.
+1.  Burdge, Julia, and Jason Overby. *Chemistry: Atoms First*, 2nd edition. Chapter 2, **Atoms and the Periodic Table**, and Chapter 20, **Nuclear Chemistry**. Used for atomic structure, isotopes, nuclear stability, radioactive decay, natural radioactivity, technetium-99m, and biological effects of ionizing radiation. Specific references include Chapter 20, Table 20.1 and Figure 20.2.
 
-2. Atkins, Peter, Loretta Jones, Leroy Laverman, James Patterson, and Michael Young. *Chemical Principles*, 8th edition. **Focus 9: Nuclear Chemistry**, **Fundamentals A**, **Section 1A.2: Electromagnetic Radiation**, and **Section 7B.2: Half-Lives for First-Order Reactions**. Used for nuclear radiation classifications, radioactive decay, electric and magnetic fields, electromagnetic waves, wavelength, frequency, and the mathematical description of first-order decay. Figures referenced include A.8 and 1A.7.
+2.  Atkins, Peter, Loretta Jones, Leroy Laverman, James Patterson, and Michael Young. *Chemical Principles*, 8th edition. **Focus 9: Nuclear Chemistry**, **Fundamentals A**, **Section 1A.2: Electromagnetic Radiation**, and **Section 7B.2: Half-Lives for First-Order Reactions**. Used for nuclear radiation classifications, radioactive decay, electric and magnetic fields, electromagnetic waves, wavelength, frequency, and the mathematical description of first-order decay. Figures referenced include A.8 and 1A.7.
 
-3. Bevelacqua, Armando S., and Laurie A. Norman. *Hazardous Materials Chemistry*, 3rd edition. Jones & Bartlett Learning. Chapter 3, **Atomic and Nuclear Structure and Radiation**. Used for alpha, beta, and gamma radiation, radiation penetration, shielding, radioactive materials, biological effects, and hazardous materials response applications.
+3.  Bevelacqua, Armando S., and Laurie A. Norman. *Hazardous Materials Chemistry*, 3rd edition. Jones & Bartlett Learning. Chapter 3, **Atomic and Nuclear Structure and Radiation**. Used for alpha, beta, and gamma radiation, radiation penetration, shielding, radioactive materials, biological effects, and hazardous materials response applications.
 
-4. Cember, Herman, and Thomas E. Johnson. *Introduction to Health Physics*, 4th edition. Used for radioactive decay, physical and effective half-life, ionization, biological effects, radiation dosimetry, detection instruments, shielding, and radiation protection. Chapter 14 was also consulted for radiofrequency radiation, antennas, radiation zones, microwave exposure, and thermal effects of non-ionizing radiation.
+4.  Cember, Herman, and Thomas E. Johnson. *Introduction to Health Physics*, 4th edition. Used for radioactive decay, physical and effective half-life, ionization, biological effects, radiation dosimetry, detection instruments, shielding, and radiation protection. Chapter 14 was also consulted for radiofrequency radiation, antennas, radiation zones, microwave exposure, and thermal effects of non-ionizing radiation.
 
-5. Stewart, James, Lothar Redlin, and Saleem Watson. *Precalculus: Mathematics for Calculus*, 6th edition. Chapter 4, **Exponential and Logarithmic Functions**, particularly Section 4.6 and Example 6. Used to introduce exponential decay, natural logarithms, half-life calculations, and the mathematical relationship between the decay constant and half-life. Material on trigonometric functions, including Figures 2, 3, and 6, was also used to illustrate periodic waves, amplitude, and repeating cycles.
+5.  Stewart, James, Lothar Redlin, and Saleem Watson. *Precalculus: Mathematics for Calculus*, 6th edition. Chapter 4, **Exponential and Logarithmic Functions**, particularly Section 4.6 and Example 6. Used to introduce exponential decay, natural logarithms, half-life calculations, and the mathematical relationship between the decay constant and half-life. Material on trigonometric functions, including Figures 2, 3, and 6, was also used to illustrate periodic waves, amplitude, and repeating cycles.
 
-6. **Study.com educational materials.** Consulted during preliminary lecture development. Specific lessons, authors, and URLs should be documented before retaining these materials as formal references in a publicly distributed version.
+6.  **Study.com educational materials.** Consulted during preliminary lecture development. Specific lessons, authors, and URLs should be documented before retaining these materials as formal references in a publicly distributed version.
 
 ## NASA Educational and Training Resources
 
-1. **National Aeronautics and Space Administration (NASA).** [*Introduction to the Electromagnetic Spectrum*](https://science.nasa.gov/ems/01_intro/). Used to introduce electromagnetic radiation and its relationship to the electromagnetic spectrum.
+1.  **National Aeronautics and Space Administration (NASA).** [*Introduction to the Electromagnetic Spectrum*](https://science.nasa.gov/ems/01_intro/). Used to introduce electromagnetic radiation and its relationship to the electromagnetic spectrum.
 
-2. **NASA.** *Tour of the Electromagnetic Spectrum*. Used for radio waves, microwaves, infrared radiation, reflected near-infrared radiation, ultraviolet radiation, and scientific applications of electromagnetic radiation. Applications discussed include thermal imaging, wildfire detection, vegetation monitoring, atmospheric observations, astronomy, and planetary auroras.
+2.  **NASA.** *Tour of the Electromagnetic Spectrum*. Used for radio waves, microwaves, infrared radiation, reflected near-infrared radiation, ultraviolet radiation, and scientific applications of electromagnetic radiation. Applications discussed include thermal imaging, wildfire detection, vegetation monitoring, atmospheric observations, astronomy, and planetary auroras.
 
-3. **NASA Armstrong Flight Research Center (AFRC), Radiation Safety Office.** *Ionizing Radiation Safety Training*. Instructor-provided training materials used for radiation protection principles, radiation detection instruments, occupational dose limits, contamination, shielding, and radiation safety practices.
+3.  **NASA Armstrong Flight Research Center (AFRC), Radiation Safety Office.** *Ionizing Radiation Safety Training*. Instructor-provided training materials used for radiation protection principles, radiation detection instruments, occupational dose limits, contamination, shielding, and radiation safety practices.
 
-4. **NASA Armstrong Flight Research Center (AFRC).** *Radio Frequency Safety Training*. Instructor-provided training materials used for radiofrequency radiation, antennas, occupational exposure considerations, and non-ionizing radiation safety.
+4.  **NASA Armstrong Flight Research Center (AFRC).** *Radio Frequency Safety Training*. Instructor-provided training materials used for radiofrequency radiation, antennas, occupational exposure considerations, and non-ionizing radiation safety.
 
-5. **NASA Armstrong Flight Research Center (AFRC).** *Laser Safety Training* (2021). Instructor-provided training materials used for laser hazards, eye and skin injuries, laser classifications, protective eyewear, warning signs, and engineering and administrative controls.
+5.  **NASA Armstrong Flight Research Center (AFRC).** *Laser Safety Training* (2021). Instructor-provided training materials used for laser hazards, eye and skin injuries, laser classifications, protective eyewear, warning signs, and engineering and administrative controls.
 
-6. **NASA Earth Science and Earth-observing missions.** Educational materials concerning lidar and remote sensing. Used for applications involving atmospheric aerosols, clouds, surface elevation, vegetation structure, and environmental observations. Specific mission and webpage references should be added when finalized.
+6.  **NASA Earth Science and Earth-observing missions.** Educational materials concerning lidar and remote sensing. Used for applications involving atmospheric aerosols, clouds, surface elevation, vegetation structure, and environmental observations. Specific mission and webpage references should be added when finalized.
 
 ## University of Washington Educational and Radiation Safety Resources
 
-1. **University of Washington, Environmental Health & Safety (EH&S), Radiation Safety Office.** *Ionizing Radiation Safety* training materials. Used for internal and external radiation exposure, radiation monitoring, contamination, and radiation protection practices.
+1.  **University of Washington, Environmental Health & Safety (EH&S), Radiation Safety Office.** *Ionizing Radiation Safety* training materials. Used for internal and external radiation exposure, radiation monitoring, contamination, and radiation protection practices.
 
-2. **University of Washington, Environmental Health & Safety.** *Ionizing Radiation Safety: Internal Radiation*, Philip Campbell, CHP, Spring 2022. Used for internal radiation exposure and associated biological considerations.
+2.  **University of Washington, Environmental Health & Safety.** *Ionizing Radiation Safety: Internal Radiation*, Philip Campbell, CHP, Spring 2022. Used for internal radiation exposure and associated biological considerations.
 
-3. **University of Washington, Environmental Health & Safety.** *Ionizing Radiation Safety: External Radiation* (2022). Used for external exposure, radiation protection, and shielding.
+3.  **University of Washington, Environmental Health & Safety.** *Ionizing Radiation Safety: External Radiation* (2022). Used for external exposure, radiation protection, and shielding.
 
-4. **University of Washington, Environmental Health & Safety.** Training materials discussing activity in organs and tissues and effective decay constants, particularly pages 19–20. Used for biological retention and effective half-life.
+4.  **University of Washington, Environmental Health & Safety.** Training materials discussing activity in organs and tissues and effective decay constants, particularly pages 19–20. Used for biological retention and effective half-life.
 
-5. **University of Washington, Department of Environmental & Occupational Health Sciences (DEOHS).** ENVH 502 instructional materials, Dr. Michael Yost. Used for electromagnetic fields, radiofrequency radiation, antennas, and non-ionizing radiation exposure concepts.
+5.  **University of Washington, Department of Environmental & Occupational Health Sciences (DEOHS).** ENVH 502 instructional materials, Dr. Michael Yost. Used for electromagnetic fields, radiofrequency radiation, antennas, and non-ionizing radiation exposure concepts.
 
-6. **University of Washington, Environmental Health & Safety.** Background radiation instructional materials, November 12, 2026. Used for contextual comparisons of natural and other radiation exposures.
+6.  **University of Washington, Environmental Health & Safety.** Background radiation instructional materials, November 12, 2026. Used for contextual comparisons of natural and other radiation exposures.
 
 ## Public Health, Scientific, and Government References
 
