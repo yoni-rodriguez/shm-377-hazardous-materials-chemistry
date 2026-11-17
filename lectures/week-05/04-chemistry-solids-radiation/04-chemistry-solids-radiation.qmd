@@ -4034,9 +4034,12 @@ The potential for adverse health effects depends on factors such as the frequenc
 
 
 
+
 ## Radio Waves (30 kHz to 3 GHz)
 
 **Radio waves** are low-frequency, low-energy electromagnetic waves with the longest wavelengths in the electromagnetic spectrum. Their wavelengths range from approximately the length of a football to distances larger than our planet.
+
+![Illustration of radio waves in the electromagnetic spectrum.](radio-waves.jpg){#fig-radio-waves fig-alt="Illustration showing radio waves and their relationship to the electromagnetic spectrum." width="85%"}
 
 In 1888, **Heinrich Hertz** experimentally demonstrated the existence of radio waves using electrical sparks to generate and detect electromagnetic signals.
 
@@ -4052,20 +4055,20 @@ Today, we use radio waves every day for:
 - Satellite and deep-space communications
 - Radio astronomy
 
+![Illustration comparing amplitude modulation and frequency modulation of radio waves.](am-fm-modulation.jpg){#fig-am-fm-modulation fig-alt="Diagram comparing amplitude modulation (AM), where the amplitude of a carrier wave varies, and frequency modulation (FM), where the frequency of a carrier wave varies." width="85%"}
+
 ![NASA illustration of interstellar plasma clouds.](nasa-plasma-cloud.jpg){#fig-nasa-plasma-cloud fig-alt="NASA visualization of interstellar clouds, illustrating structures in space studied through astronomical observations." width="85%"}
 
 *Image source: [NASA Astrobiology, First Mapping of Interstellar Clouds in Three Dimensions](https://astrobiology.nasa.gov/news/first-mapping-of-interstellar-clouds-in-three-dimensions/).*
 
 *Sources: NASA, Tour of the Electromagnetic Spectrum (NASA-tour-of-the-ems.pdf); [Supplementary video](https://youtu.be/HPcAWNlVl-8?si=h60FAI7_wv9AN9xZ).*
 
-
-
-
 **Radio frequency (RF) radiation** is electromagnetic energy used in wireless communication and other technologies.
 
 - **Where encountered:** Radio transmitters, communication towers, antennas, radar equipment, and industrial RF systems.
 - **Primary occupational hazards:** Sufficiently intense RF exposure can produce tissue heating and injury.
 - **Safety consideration:** Workers must identify active transmitters and follow RF exposure controls.
+
 
 
 ### Antennas
