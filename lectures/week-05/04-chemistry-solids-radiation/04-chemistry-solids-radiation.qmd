@@ -3937,6 +3937,7 @@ The potential for adverse health effects depends on factors such as the frequenc
 
 *Sources: [World Health Organization, Electromagnetic Fields](https://www.who.int/health-topics/electromagnetic-fields#tab=tab_1); Chemical Principles, Section 1A.2, Electromagnetic Radiation; NASA Armstrong Flight Research Center, Radio Frequency Safety Training.*
 
+
 ## Radio Waves (30 kHz to 3 GHz)
 
 **Radio waves** are low-frequency, low-energy electromagnetic waves with the longest wavelengths in the electromagnetic spectrum. Their wavelengths range from approximately the length of a football to distances larger than our planet.
@@ -3959,6 +3960,14 @@ Today, we use radio waves every day for:
 
 ![Illustration comparing amplitude modulation and frequency modulation of radio waves.](am-fm-modulation.jpg){#fig-am-fm-modulation fig-alt="Diagram comparing amplitude modulation (AM), where the amplitude of a carrier wave varies, and frequency modulation (FM), where the frequency of a carrier wave varies." width="85%"}
 
+### Supplementary Video: Radio Waves
+
+The following video provides an additional visual resource for understanding radio waves and their applications.
+
+{{< video https://www.youtube.com/watch?v=OzDmEA8x0nQ >}}
+
+*Video source: [Watch on YouTube](https://youtu.be/OzDmEA8x0nQ?si=1gssjjPcFxlJBiZR).*
+
 ![NASA illustration of interstellar plasma clouds.](nasa-plasma-cloud.jpg){#fig-nasa-plasma-cloud fig-alt="NASA visualization of interstellar clouds, illustrating structures in space studied through astronomical observations." width="85%"}
 
 *Image source: [NASA Astrobiology, First Mapping of Interstellar Clouds in Three Dimensions](https://astrobiology.nasa.gov/news/first-mapping-of-interstellar-clouds-in-three-dimensions/).*
@@ -3970,6 +3979,7 @@ Today, we use radio waves every day for:
 - **Where encountered:** Radio transmitters, communication towers, antennas, radar equipment, and industrial RF systems.
 - **Primary occupational hazards:** Sufficiently intense RF exposure can produce tissue heating and injury.
 - **Safety consideration:** Workers must identify active transmitters and follow RF exposure controls.
+
 
 ### Antennas
 
